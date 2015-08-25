@@ -5,21 +5,21 @@ init python:
 label lb_event_mobilization_increase:
     show expression get_random_image("img/scene/mobilization") as bg
     nvl clear
-    "Rulers of the Free Kingdoms concerned with dragom mischief. Mobilization raises."
+    "Rulers of the Free Kingdoms are concerned with dragon mischief. The level of mobilization rises."
     return
 
 label lb_event_poverty_increase:
     show expression get_random_image("img/scene/poverty") as bg
     nvl clear
-    "Dragon evil deeds lead to devastation thorouht the Free Kingdoms. Poverty rises and mobilization piotential diminishing."
+    "The dragon\'s evil deeds lead to devastation throughout the Free Kingdoms. Poverty rises and the ability to mobilize diminishes."
     return
     
 label lb_event_no_thief:
-    "There no thief in this land whio wants to take humble treashures of [game.dragon.fullname]."
+    "There is no thief in this land who wants to take the paltry treasures of [game.dragon.fullname]."
     return
 
 label lb_event_no_knight:
-    "[game.dragon.fullname] have not famous enough to attract questing knights."
+    "[game.dragon.fullname] is not famous enough to attract questing knights."
     return
 
 label lb_event_sleep_start:
@@ -32,5 +32,5 @@ label lb_event_sleep_new_year:
 
 label lb_event_sleep_end:
     nvl clear
-    '[game.dragon.fullname] rises from slumber!'
+    '[game.dragon.fullname] rises from his slumber!'
     return

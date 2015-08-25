@@ -3,16 +3,16 @@ label lb_event_knight_spawn(knight):
     scene
     show expression "img/scene/oath.jpg" as bg
     nvl clear
-    "[knight.title] pleges a sacrament vow to kill a dragon!"
-    knight "Готовься исчадие зла, я иду за тобой!"
+    "[knight.title] pledges a sacred vow to kill a dragon!"
+    knight "Prepare yourself, fiend, I am coming for you!"
     return
 
 label lb_event_knight_receive_item(knight, item):
     scene
     show expression "img/scene/quest_knight.jpg" as bg
     nvl clear
-    "Рыцарь выполняет квест и получает [item.name]"
-    knight "Теперь дракону не уйти от моего возмездия!"
+    "Knight performs his quest and receives [item.name]" #Translator:should this be "receives a"? I haven't tested in game
+    knight "Now the dragon has no escape from my vengeance!"
     return
 
 label lb_event_knight_challenge_start(knight):
@@ -20,25 +20,25 @@ label lb_event_knight_challenge_start(knight):
     show expression "img/scene/quest_knight.jpg" as bg
     nvl clear
     $ game.foe = knight
-    "[knight.title] нашел логово где спит [game.dragon.name] [game.dragon.surname] и вызывает его на бой."
-    knight "Выходи подлый [game.dragon.kind] на честной бой, на побраночку!!!"
+    "[knight.title] I have found the lair where [game.dragon.name] [game.dragon.surname] sleeps! I will call it out to fight."
+    knight "Come forth, sneaking [game.dragon.kind]! Give an honest battle!!!"
     $ narrator(knight.intro % game.format_data)
-    $ narrator(show_chances(knight))  #TODO: уровень опасности боя
+    $ narrator(show_chances(knight))  #TODO: danger level of battle
     menu:
         "Protect your lair":
-            "Вы вступаете в бой"
+            "You enter into combat"
             return True
         "Flee and abandon your lair":
-            # Тут, неверное должна быть проверка на успех побега дракона от рыцаря, но ее нет. (Нет, не нужна. Побег всегда успешен, просто дракон теряет логово, золото и баб - OH)
-            if random.choice(range(4)) in range(3): # 75% что рыцарь останется
-                knight "Я все равно тебя найду!"
+            # Here we should check the chance to escape the lair. (No, it's not necessary, escape should always succeed. Losing gold, women, etc is enough. - OH)
+            if random.choice(range(4)) in range(3): # 75% chance knight continues
+                knight "I will find you!"
                 return False
             else:
-                knight "Ты подлый трус [game.dragon.kind], такой враг меня не достоин"
+                knight "Cowardly [game.dragon.kind], such an enemy is not worthy of my efforts."
                 return False
 
 label lb_event_knight_challenge_end(knight, result):
     if result in ["defeat", "retreat"]:
-        "Дракон был повержен доблестным рыцарем."
+        "The dragon was defeated by the valiant knight."
     if result in ["win"]:
-        "Дракон разорвал в клочья рыцаря."
+        "The dragon ripped the knight to shreds."

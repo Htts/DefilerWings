@@ -2,9 +2,9 @@
 label lb_event_thief_spawn(thief):
     show expression "img/scene/thief.jpg" as bg
     nvl clear
-    "[thief.title] known as [game.thief.name] going to get some trinkets from great dragon treashury!"
+    "[thief.title] known as [game.thief.name] is going to pilfer some trinkets from the great dragon treasury!"
     nvl clear
-    thief "Сокровища станут моими!"
+    thief "These riches will be mine!"
     return
 
 label lb_event_thief_steal_items(thief, items):
@@ -12,49 +12,49 @@ label lb_event_thief_steal_items(thief, items):
     show expression "img/scene/loot.jpg" as bg
     nvl clear
     "[game.thief.name] steals: [descriptions]"
-    thief "Вот это дело! Еле живым ушел. Зато теперь я могу жить в роскоши как король до конца дней своих!"
+    thief "I got it! I barely made it out, but now I can live like a king for the rest of my life!"
     nvl clear
     return
 
 label lb_event_thief_lair_unreachable(thief):
     nvl clear    
-    thief "Чертов [game.dragon.kind] не мог выбрать себе логово в более доступном месте? Как туда добраться-то? Вот же гадство.."
+    thief "Fucking [game.dragon.kind], couldn\'t you make your lair somewhere easier to reach? How am I supposed to get up there?"
     return
 
 label lb_event_thief_prepare(thief):
     # nvl clear    
-    # thief "Если я хочу уйти из дракньей берлоги живым и богатым, мне лучше как следует подготовиться к Делу."
+    # thief "To make it out alive and rich, I need to prepare."
     return
 
 label lb_event_thief_prepare_usefull(thief):
     nvl clear    
-    thief "Хе-хе... точно по плану!."
+    thief "Hehe...just as I planned" #Alternate translation: just according to keikaku 
     return
 
 label lb_event_thief_receive_item(thief, item):
     show expression "img/scene/quest_thief.jpg" as bg
     nvl clear
-    "[game.thief.name] планомерно готовится к большому делу. Его новое приобретение: [item.name]"
-    thief "Это мне пригодится!"
+    "[game.thief.name] is carefully preparing for the heist. His latest acquisition: [item.name]"
+    thief "This will be useful."
     nvl clear
     return
 
 label lb_event_thief_prepare_useless(thief):
     nvl clear
     show expression "img/scene/quest_thief.jpg" as bg
-    '[game.thief.name] хочет найти логово дракона, но безуспешно.'
-    thief "Да где же прячется эта змеюка... Чёрт!"
+    '[game.thief.name] searches for the dragon\'s lair without succes'
+    thief "Where is this bastard hiding... shit!"
     return
 
 label lb_event_thief_lair_enter(thief):
     nvl clear
     show expression "img/scene/thief_in_lair.jpg" as bg
-    thief "Ну вот и оно - логово дракона. Я войду словно тень и выскользну обратно с мешком сокровищ тяжким как мои грехи..."
+    thief "There it is, the dragon's lair. I'll go in like a shadow and slip out the back with a bag of treasure as heavy as my sins." 
     return
 
 label lb_event_thief_die_inaccessability(thief):
-    "[thief.title] [game.thief.name] не смог даже забраться в логово - укрепления слишком надёжные."
-    thief 'Проклятый [game.dragon.kind] окопался лучше чем король цвергов - стены, рвы, ставни, решётки и запоры... я не вижу ни единой лазейки. Видать такое дело мне не по зубам.'
+    "[thief.title] [game.thief.name] could not even get into the lair - the fortifications were too strong."
+    thief 'Damned [game.dragon.kind], entrenched better than a dwarven king. Walls, ditches, shutters, grilles, and locks. I don\'t see a single weak point. Too tough for me.'
     return
 
 label lb_event_thief_die_trap(thief, trap):
@@ -75,43 +75,43 @@ label lb_event_thief_pass_trap(thief, trap):
 label lb_event_thief_receive_no_item(thief):
     nvl clear    
     show expression "img/scene/thief_in_lair.jpg" as bg    
-    "Вор ничего не получил"
+    "The theif gets nothing"
     return
     
 # @Review: Alex: Added a bunch of new events to fill in the gaps:
-label lb_event_thief_checking_accessability(thief):
+label lb_event_thief_checking_accessibility(thief):
     # Checking if thief can get past layer defences:
-    # Debug message: thief(u"Проверяю неприступность")
+    # Debug message: thief(u"checking accessibility")
     return
     
 label lb_event_thief_checking_accessability_success(thief):
     # Thief can gain access:
-    # Debug message: thief(u"I can get into the Layer!")
+    # Debug message: thief(u"I can get into the Lair!")
     return
     
 label lb_event_thief_trying_to_avoid_traps_and_guards(thief):
     # Thief is trying to avoid traps and guards:
-    # Debug message: thief(u"Пробую обойти ловушки и стражей")
+    # Debug message: thief(u"I try to get around the traps and gaurds")
     return
     
 label lb_event_thief_retreat_and_try_next_year(thief):
-    # Could not get passed traps and guards but did not die either:
+    # Could not get past traps and guards but did not die either:
     # Debug message: thief(u"Ниосилить, попробую в следущем году")
-    thief "Пока что тут для меня крутовато... Надо подготовиться получше. Но я не сдамся!"
+    thief "That's as far as I can go...I have to plan this better. I won\'t give up!" #Translator: a word doesn't translate. "it's necessary to prepare крутовато better".  
     return
     
 label lb_event_thief_starting_to_rob_the_lair(thief):
     # Got past all traps and guards, thief is starting to rob the lair:
     # Debug message: thief(u"Начинаю вычищать логово")
     show expression "img/scene/loot.jpg" as bg    
-    thief "Ух ты! Вот она сокровищница. И [game.dragon.kind], зараза прямо на золоте лежит... Ничего, я аккуратненько... надо только выбрать вещи поценнее."
+    thief "Ooh! What a treasure trove." #Translator: can't translate the rest. #And [game.dragon.kind], зараза прямо на золоте лежит... Ничего, я аккуратненько... надо только выбрать вещи поценнее."
     return
 
 label lb_event_thief_took_an_item(thief, item):
     # Got an item!
     # Debug message: thief(u"Взял шмотку %s" % stolen_items[i])
     # show expression "img/scene/loot.jpg" as bg    
-    # "[game.thief.name] аккуратно вытягивает из под брюха спящего дракона понравившийся предмет:"
+    # "[game.thief.name] gently pulls a prized object from under the dragon\'s belly:"
     # "[item]"
     return
     
@@ -119,16 +119,16 @@ label lb_event_thief_lair_empty(thief):
     # There were no treasures in the lair:
     # Debug message: thief(u"В сокровищнице нечего брать. Сваливаю.")
     show expression "img/scene/thief_in_lair.jpg" as bg        
-    thief "Тут больше нечем поживиться... проклятье, я думал драконы кудв богаче. Надо сваливать!"
+    thief "Nothing else to take... damn it, I thought dragons were richer. Time to blow this joint."
     return
     
 label lb_event_thief_awakened_dragon(thief, stolen_items):
     # Thief awakens the dragon and gets killed... stolen_items: items that dragon takes back from the thief.
     # Debug message: thief(u"Разбудил дракона")
     show expression "img/scene/wokeup.jpg" as bg    
-    "Зазевашийся вор обрушивает кучку монет, которые со звоном раскатываются по полу."
-    thief "Упс..."
-    game.dragon "Так-так... какая встреча. А я то думал кто тут шебуршится."
+    "The thief disturbes a pile of coins, which roll down clattering on the floor"
+    thief "Oops..."
+    game.dragon "Well, well...what a meeting." #Translator: Can't translate 2nd senetence. "А я то думал кто тут шебуршится."
     nvl clear
-    "[game.dragon.fullname] раздирает неудачливого расхитителя сокровищ в клочья и перекусив снова ложится спать."
+    "[game.dragon.fullname] tears the unlucky robber to ribbons and, having had a bite to eat, goes back to bed."
     return
