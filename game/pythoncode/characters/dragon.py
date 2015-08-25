@@ -79,7 +79,7 @@ class Dragon(Fighter):
         ddescription += self.kind + u'. '
         ddescription += self._accentuation(data.dragon_size_description[self.size - 1], self._gift == 'size')
         for i in xrange(len(self.heads)):
-            dscrptn = u"Его %s голова " % data.head_num[i] + data.head_description[self.heads[i]]
+            dscrptn = u"Its %s head " % data.head_num[i] + data.head_description[self.heads[i]]
             dscrptn = self._accentuation(dscrptn, self.heads[i] == self._gift)
             if self._gift == 'head':
                 dscrptn = self._accentuation(dscrptn, i == len(self.heads) - 1)
@@ -219,30 +219,30 @@ class Dragon(Fighter):
         heads = len(self.heads)
         # Защита от ошибок в случае мёртвого дракона
         if heads == 0:
-            return u"останки дракона"
+            return u"dragon remains"
         if wings == 0:
             if heads == 1:
                 if paws == 0:
-                    return u"ползучий гад"
+                    return u"serpent"
                 else:
-                    return u"линдвурм"
+                    return u"lindwurm"
             else:
-                return u"гидрус"
+                return u"hydra"
         else:
             if paws == 0 and heads == 1:
-                return u"летучий гад"
+                return u"flying serpent"
             elif paws == 0 and heads > 1:
-                return u"многоглавый летучий гад"
+                return u"multi headed flying serpent"
             elif paws == 1 and heads == 1:
-                return u"виверн"
+                return u"wyvern"
             elif paws == 1 and heads > 1:
-                return u"многоглавый виверн"
+                return u"multi headed wyvern"
             elif paws == 2 and heads == 1:
-                return u"дракон"
+                return u"dragon"
             elif paws > 1 and heads > 1:
-                return u"многоглавый дракон"
+                return u"multi headed dragon"
             else:
-                return u"дракон"  # название для дракона с paws == 3 and heads == 1
+                return u"dragon"  # название для дракона с paws == 3 and heads == 1
 
     @property
     def size(self):
