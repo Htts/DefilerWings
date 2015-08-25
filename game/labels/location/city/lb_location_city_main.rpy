@@ -13,21 +13,21 @@ label lb_location_city_main:
     nvl clear
     
     if game.dragon.energy() == 0:
-        'Даже драконам надо иногда спать. Особенно драконам!'
+        'Even dragons have to sleep sometime. Especially dragons!'
         return      
         
-    'Столица королевства людей.'
+    'The capital of the kingdom of men'
     menu:
-        'Disguise as a human' if game.dragon.mana > 0:
-            'Дракон превращается в человека и проходит в город. На это пришлось потратить драгоценную волшебную силу...'
+        'Disguise yourself as a human' if game.dragon.mana > 0:
+            'Spending some precious magic power, the dragon turns into a man and goes into the city.'
             $ game.dragon.drain_mana()
             nvl clear
             call lb_city_walk from _call_lb_city_walk
-        'Shtorm the gates' if not game.dragon.can_fly:
-            'Заметив приближение опасности бдительные стражники закрывают ворота. Прийдётся порываться с боем...'
+        'Storm the gates' if not game.dragon.can_fly:
+            'Seeing the approach of danger the watchful guards close the gate, preventing a battle.'
             call lb_city_gates from _call_lb_city_gates
         'Fly in' if game.dragon.can_fly:
-            'Легко перемахнув через городскую стену, [game.dragon.kind] оказывается в самом центре города. От летучего врага укрепления не спасут...'
+            'Easily passing over the wall, the [game.dragon.kind] is in the heart of the city. Fortifications will not save them from a flying enemy.'
             call lb_city_raze from _call_lb_city_raze
         'Get away':
             return
@@ -42,7 +42,7 @@ label lb_city_gates:
     return
 
 label lb_city_raze:
-    'Беззащитный город готов познать ярость отродья Госпожи.'
+    'The defenseless city is ready to learn the rage of the Lady\'s offspring'
     nvl clear
     menu:
         'Royal palace':
@@ -57,14 +57,14 @@ label lb_city_raze:
         'Rich district':
             call lb_city_jew_atk from _call_lb_city_jew_atk
             
-        'Get away':
+        'Go back':
             return
             
     return
 
 label lb_city_walk:
     show expression 'img/bg/city/inside.jpg' as bg
-    'Загадочный путник проходит мимо бдительной стражи и входит в бурлящий жизнью город.'
+    'The mysterious stranger walks past the watching guards and enters the bustling city'
     nvl clear
 
     menu:
@@ -80,20 +80,20 @@ label lb_city_walk:
         'Jewelers shop':
             call lb_city_jewler from _call_lb_city_jewler
             
-        'Get away':
+        'Go back':
             return
             
     return
 
 label lb_city_palace:
-    'Гордая цитадель возвышается на холме в центре города. Здесь находится зимняя резиденция короля. Изнутри доносятся соблазнительные ароматы драгоценностей и благородных дев. На воротах стоят бдительные гвардейцы.'
+    'A proud citadel on a hill in the city center. Here is the winter residence of the king. Inside are noble maidens and seductive aromas. Vigilant guards stand at the gate.'
     $ game.foe = Enemy('palace_guards', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear
     menu:
         'Attack':
             call lb_city_palace_atk from _call_lb_city_palace_atk_1
-        'Get away':
+        'Go back':
             call lb_city_walk from _call_lb_city_walk_1
     
     return
@@ -103,82 +103,82 @@ label lb_city_palace_atk:
     $ game.foe = Enemy('palace_guards', game_ref=game)
     $ chances = show_chances(game.foe)
     call lb_fight from _call_lb_fight
-    'Пока остальные защитники цитадели находятся в замешательстве, у дракона появился отилинчый шанс для грабежа и разбоя.'
+    'With the defenders of the citadel in disarray, the dragon has the chance to rape and pillage.'
     $ game.dragon.reputation.points += 3
     '[game.dragon.reputation.gain_description]'
     menu:
-        'Defile noble lady':
+        'Defile a noble lady':
             $ game.dragon.drain_energy()
             $ description = game.girls_list.new_girl('princess')
-            '[game.dragon.fullname] ловит благородную девицу'
+            '[game.dragon.fullname] preys upon noble maidens'
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             nvl clear
             game.girl.third "[description]"
             call lb_nature_sex from _call_lb_nature_sex     
-        'plunder @ murder':
+        'Plunder and murder':
             $ game.dragon.drain_energy()
             python:
                 count = random.randint(4, 9)
                 alignment = 'knight'
                 min_cost = 200
                 max_cost = 2000
-                obtained = "Это предмет из королевской сокровищницы."
+                obtained = "This is from the royal treasury."
                 trs = treasures.gen_treas(count, data.loot['palace'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
-            'С кровожадным рёвом [game.dragon.fullname] проносится по коридорам дворца убивая всех на своём пути и присваивая каждую понравившуся ему вещь:'
+            'With a bloodthirsty roar [game.dragon.fullname] sweeps through the corridors of the palace killing all in its path, and looting objects:' #translator: Don't know how to translate "пути и присваивая каждую понравившуся ему вещь:'"
             '[trs_descrptn]'
             $ game.lair.treasury.receive_treasures(trs)
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
         'Flee':
-            'Решив не искушать судьбу и использовать поднявшуюся суматоху для безопасного отхода, [game.dragon.kind] уходит прочь из города.'
+            'Having decided not to tempt fate and instead use the commotion for a safe withdrawl, [game.dragon.kind] leaves the city.'
     return
 
 label lb_city_market:
     show expression 'img/bg/city/market.jpg' as bg
-    'Рыночная площадь полна народу. Люди покупают и продают всевозможные ненужные вещи вроде картошки и одежды. Глупые смертные даже не догадываются что прямо здесь стоит их самый жуткий ночной кошмар. Они беззащитны перед внезапной атакой.'
+    'The market square is full of people. They buy and sell all sorts of unnecessary things like potatos and clothing. The foolish mortals have no idea that right here is their most terrifying nightmare. They are vulnerable to a surprise attack.'
     nvl clear
     menu:
         'Drop the disguise':
             call lb_city_market_atk from _call_lb_city_market_atk_1
-        'Get away':
+        'Go back':
             call lb_city_walk from _call_lb_city_walk_2
 
     return
 
 label lb_city_market_atk:
     show expression 'img/bg/city/market.jpg' as bg
-    'Дракон возвращает себе истинную форму. Люди в ужасе разбегаются.'
+    'The dragon regains its true form, and the people flee in terror.'
     nvl clear
     menu:
         'Massacre':
             $ game.dragon.drain_energy()
             play sound "sound/eat.ogg"
             show expression 'img/scene/fire.jpg' as bg
-            'Зря эти обыватели думали, что за стенами столицы они в безопсности. [game.dragon.fullname] отрывается по полной, чтобы люди уж точно его не забыли. Кровь, кишки, распидорасило...'
+            'These inhabitants vainly believed that they were safe behind city walls. [game.dragon.fullname] has a fun time making sure they see their error. Blood, guts, gore...' #Translator: Can't translate the third word. "Кровь, кишки, распидорасило..."
             $ game.dragon.reputation.points += 10
             '[game.dragon.reputation.gain_description]'
-        'Defile merchant daughter':
+        'Defile a merchant\'s daughter':
             $ game.dragon.drain_energy()
             $ description = game.girls_list.new_girl('citizen')
-            '[game.dragon.fullname] ловит девицу покрасивее да побогаче. Благородных дам на рынке конечно не найти, но вот дочери богатеев тут иногда появляются.'
+            'Nobles are certainly not found in the market, but the daughters of the rich appear here. [game.dragon.fullname] catches a maiden.'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
             nvl clear
             game.girl.third "[description]"
             call lb_nature_sex from _call_lb_nature_sex_1     
-        'Get away':
+        'Go back':
             return
     return
 
 label lb_city_cathedral:
-    'Огромный готический собор, высится над городом. Кругом нет ни одного здания котором могло бы по вышине сравниться со шпилем соборной колокольни.'
+    'A huge gothic cathedral, towering over the city. No other building here can match the heights of the cathedral bell tower and its spire.'
     nvl clear
     menu:
         'Pillage the Cathedral':
-            'Загадочный незнакомец входит под своды храма и прямо на глазах у молящихся преображается в чудовище.'
+            'The mysterious stranger comes through the archway and in front of the congregation transforms into a monster.'
             call lb_city_cathedral_atk from _call_lb_city_cathedral_atk_1
 
         'Get away':
@@ -192,11 +192,11 @@ label lb_city_cathedral_atk:
         alignment = 'cleric'
         min_cost = 10
         max_cost = 500
-        obtained = "Это предмет из столичного кафедрального собора."
+        obtained = "This is from the city cathedral."
         trs = treasures.gen_treas(count, data.loot['church'], alignment, min_cost, max_cost, obtained)
         trs_list = game.lair.treasury.treasures_description(trs)
         trs_descrptn = '\n'.join(trs_list)
-    'С демоническим хохотом [game.dragon.fullname] врывается в святилище, убивая всех на своём пути и присваивая каждую понравившуся ему вещь:'
+    'With demonic laughter [game.dragon.fullname] bursts into the sanctuary, killing all in its path, and taking loot:' #Translator: not sure about this
     '[trs_descrptn]'
     $ game.lair.treasury.receive_treasures(trs)
     $ game.dragon.reputation.points += 5
@@ -204,7 +204,7 @@ label lb_city_cathedral_atk:
     return
 
 label lb_city_jewler:
-    'В этом богатом квартале работают самые искустные ремесленники - оружейники, ювелиры и краснодеревщики. Кругом стоит одуряющий запах сокровищ и благородных женщин вышедших за покупками. К сожалению стражи тут тоже много - стоят на каждом углу.'
+    'In this quarter the most affluent craftsmen work. Armorers, jewlers, cabinetmakers. All around are intoxicating treasures and noblewomen shopping. Unfortunately, guards stand on every corner.'
     $ game.foe = Enemy('city_guard', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear
@@ -214,13 +214,13 @@ label lb_city_jewler:
             if new_item:
                 $ game.lair.treasury.receive_treasures([new_item])
                 $ test_description = new_item.description()
-                "Куплено: [test_description]."
+                "Purchased: [test_description]."
             call lb_city_jewler from _call_lb_city_jewler_1
         'Sell jewels':
             menu:
                 'Most expensive' if len(game.lair.treasury.jewelry) > 0:
                     $ item_index = game.lair.treasury.most_expensive_jewelry_index
-                'Chipiest' if len(game.lair.treasury.jewelry) > 0:
+                'Cheapest' if len(game.lair.treasury.jewelry) > 0:
                     $ item_index = game.lair.treasury.cheapest_jewelry_index
                 'Random' if len(game.lair.treasury.jewelry) > 0:
                     $ item_index = random.randint(0, len(game.lair.treasury.jewelry) - 1)
@@ -230,10 +230,10 @@ label lb_city_jewler:
                     call lb_city_jewler from _call_lb_city_jewler_2
             python:
                 if (item_index is None):
-                    description = u"Продать все украшения за %s?" % (
+                    description = u"Sell all jewels for %s?" % (
                         treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"фартинг"))
                 else:
-                    description = u"%s.\nПродать украшение за %s?" % (
+                    description = u"%s.\nSell jewel for %s?" % (
                         game.lair.treasury.jewelry[item_index].description().capitalize(),
                         treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost, u"фартинг"))
             menu:
@@ -241,12 +241,12 @@ label lb_city_jewler:
                 'Sell':
                     python:
                         if (item_index is None):
-                            description = u"Все украшения проданы за %s?" % (
+                            description = u"All jewelery sold for %s?" % (
                                 treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"фартинг"))
                             game.lair.treasury.money += game.lair.treasury.all_jewelries
                             game.lair.treasury.jewelry = []
                         else:
-                            description = u"%s.\nПродано за %s" % (
+                            description = u"%s.\nSold for %s" % (
                                 game.lair.treasury.jewelry[item_index].description().capitalize(),
                                 treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost, u"фартинг"))
                             game.lair.treasury.money += game.lair.treasury.jewelry[item_index].cost
@@ -260,7 +260,7 @@ label lb_city_jewler:
             if new_item:
                 $ game.lair.treasury.receive_treasures([new_item])
                 $ test_description = new_item.description()
-                "Изготовлено: [test_description]."
+                "Crafted: [test_description]."
             call lb_city_jewler from _call_lb_city_jewler_5
         'Drop the disguise':
             call lb_city_jew_atk from _call_lb_city_jew_atk_1
@@ -273,7 +273,7 @@ label lb_city_jew_atk:
     $ game.dragon.drain_energy()
     $ game.foe = Enemy('city_guard', game_ref=game)
     call lb_fight from _call_lb_fight_1
-    'В ближайшей округе не осталось ни одного живого стражника. Кругом царит паника, люди бегут прочь от дракона спасая самое ценное. [game.dragon.name] оглядывает сцену разрушения и хаоса. Толстый ювелир, тащит тяжелую деревянную шкатулку с драгоценностями. Благнородная девица с визгом убегает прочь. В подвале горящего дома, который вот вот обрушится лежат без присмотра драгоценные слитки и камни.'
+    'Not a living guard is left in the quarter. People flee from the dragon in a panic and try to save their valuables. [game.dragon.name] looks at the scene of destruction and chaos. A fat jeweler drags a heavy wooden box. A noble girl runs away squealing. A burning shop filled with precious bars and jewels is about to collapse." 
     $ game.dragon.reputation.points += 3
     '[game.dragon.reputation.gain_description]'
     menu:
@@ -283,11 +283,11 @@ label lb_city_jew_atk:
                 alignment = 'human'
                 min_cost = 10
                 max_cost = 500
-                obtained = "Это предмет из лавки ювелира."
+                obtained = "This is from the jeweler."
                 trs = treasures.gen_treas(count, data.loot['jeweler'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
-            'Ограбить неуклюжего ювелира всё равно что отнять конфетку у ребёнка. В шкатулке много интересного:'
+            'Robbing the bumbling jeweler is like taking candy from a child. In the box are interesting things:'
             '[trs_descrptn]'
             $ game.lair.treasury.receive_treasures(trs)
             $ game.dragon.reputation.points += 5
@@ -296,7 +296,7 @@ label lb_city_jew_atk:
         'Rape the noble virgin':
             $ game.dragon.drain_energy()
             $ description = game.girls_list.new_girl('princess')
-            'Дракон ловит благородную девицу'
+            'The dragon catches the noble maiden'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
             nvl clear
@@ -310,11 +310,11 @@ label lb_city_jew_atk:
                 alignment = 'human'
                 min_cost = 10
                 max_cost = 1000
-                obtained = "Это предмет из лавки ювелира."
+                obtained = "This is from the goldsmith's shop."
                 trs = treasures.gen_treas(count, data.loot['raw_material'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
-            'Действовать надо быстро, пока горящий дом не обрушился и не похоронил под своими обломками ценности:'
+            'Acting quickly, valuables are snatched before they are buried under the rubble:'
             '[trs_descrptn]'
             $ game.lair.treasury.receive_treasures(trs)
             $ game.dragon.reputation.points += 3
