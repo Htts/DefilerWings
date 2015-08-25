@@ -33,7 +33,7 @@ python early:
 
     # Описания дракона
     hunger_texts = {
-        0: '{font=fonts/AnticvarShadow.ttf}{color=#ff0000}Overfeed{/color}{/font}',
+        0: '{font=fonts/AnticvarShadow.ttf}{color=#ff0000}Overfed{/color}{/font}',
         1: '{font=fonts/AnticvarShadow.ttf}{color=#ff00ff}Full{/color}{/font}',
         2: '{font=fonts/AnticvarShadow.ttf}{color=#0000ff}Hungry{/color}{/font}',
         3: '{font=fonts/AnticvarShadow.ttf}{color=#00ff00}Starving{/color}{/font}'
@@ -61,26 +61,26 @@ python early:
         2: '{font=fonts/AnticvarShadow.ttf}{color=#00ff00}Healthy{/color}{/font}'
     }
 
-    womennum = ['основная', 'вторая', 'третья', 'четвёртая', 'пятая', 'шестая', 'седьмая']
+    womennum = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh']
     
     # Описания эффекта события на дурную славу
     reputation_rise = [
-        'Этот дурной поступок люди наверняка заметят.',
-        'Дурная слава о поступках дракона разносится по королевству.',
-        'Сегодня дракон стяжал немалую дурную славу.',
-        'Об этом деянии услышат  жители всего королевства. И ужаснутся.',
-        'О деянии столь ужасном будут сложены легенды, которые не забудутся и через сотни лет'
+        'People will notice this evil deed.',
+        'News of the dragon\'s notorious acts spread throughout the Kingdom.',
+        'Today the dragon gained great infamy.',
+        'All inhabitants of the kingdom will hear about this action and be terrified.',
+        'Such a terrible act will live in legends for hundreds of years.'
     ]
 
     # Описание деревень
     village = {
         'overview': [
-            u'Заброшенное поселение',
-            u'Одинокий хутор. У людей сдесь нет другой защиты, кроме крупного цепного пса.',
-            u'Маленький посёлок. Завидев приближение дракона люди хватают любые подручные предметы, которые можно использовтаь в качестве оружия и сбиваются в толпу.',
-            u'Деревня. Дракона заметили издалека, это очевидно по отчаянному звону рынды. Жители спешно собирают отряд ополчения, готовясь к самому худщему.',
-            u'Село. Колокол в церкви отчанно звонит, призывая людей укрыться. На центральной улице собирается небольшой отряд арбалетчиков, готовых защитить село от супостата.',
-            u'Городок. Стоит дракону приблизиться как его ворота спешно закрываются а на стены поднимаются воины, вооруженные луками и копьями.',
+            u'Abandoned settlement',
+            u'Single farm. The people here have no protection except a large chained dog.',
+            u'Small village. Seeing the approach of the dragon people grab any materials at hand which can be used as improvised weapons, and look for safety in numbers.',
+            u'Village. A ship\'s bell rings desperately as the dragon is noticed from afar. Residents quickly organize into militias.',
+            u'Large village. The bell of a church urges people to take cover, and a detachment of crossbowmen file onto the main street.',
+            u'Town. As the dragon approaches the gates are hastly closed, and warriors armed with bows and spears rise up on the walls.'
         ],
         'deffence': [
             'dog',
@@ -93,108 +93,109 @@ python early:
     }
 
 # Прыдстория игры
-    intro_text = '{font=fonts/AnticvarShadow.ttf}{size=+10}    Давным-давно, в незапамятные времена, наш мир был юн и чист. Все пять народов, жили в мире и гармонии, процветали и развивались. Люди, народ равнин, засеяли бескрайние поля золотой пшеницей и разбили на холмах цветущие сады полные сладких плодов. Дети богини Дану, мудрые и прекрасные альвы сплетали магические узоры из песен и лунного света в глубине своих обширных лесов. Искусные цверги ковали металлы и гранили сияющие словно звезды самоцветы под сенью своих резных чертогов. Беспечные русалки играли с серебристыми рыбками и танцевали хороводы под синей гладью океана. И даже старые словно сам мир великаны не трогали малых народов, но наставляли их в древнем знании.     {vspace=30}Те дни минули без следа, когда в наш мир вошло зло. Никто доподлинно не знает, откуда явилась Она. Нагая, крылатая, прекрасная как полуденная греза и ужасная как полуночный кошмар. В преданиях сказано, что она вышла из белого как молоко утреннего тумана что сгустился в глубине непролазного бурелома. Но многие верят что ее породила сама преисподняя.    {vspace=30}Способная принять любой облик, соблазнительный или внушающий леденящий страх, она несла за собой гниль и раздор. В своей противоестественной, неуемной похоти она сходилась со всеми до кого могла добраться. Жаждала всякого мужского семени от гордых королей и от грязных крестьян, от людей и от зверей. В сих противоестественных союзах она породила сонмы тварей, искаженных и злобных, жестоких, жадных и полных греха.    {vspace=30}Страхом и ненавистью Владычица Тьмы выковала себе армию и двинула ее на вольные народы, чтобы навеки поработить весь свет и заставить каждого служить себе. Могучая и безжалостная армия Тьмы оставляла за собой лишь трупы, пепелища и бесплодную землю.     {vspace=30}Но пять свободных народов дали ей отпор. Собравшись вместе армии людей, альвов, цвергов, русалок и великанов одолели темную силу и загнали исчадий Владычицы в бесплодные вулканические земли далеко на востоке. Чтобы защититься, люди построили неприступные крепости и возвели города с высокими стенами и башнями, цверги создали боевые машины и автоматы, альвы оградили свои рощи чарами сокрытия и выставили на границах бдительных стражей. Даже беспечные русалки взяли в руки трезубцы и сети, готовые отразить нападение.     {vspace=30}Глядя на эту неодолимую силу Владычица поклялась создать чудовище, перед мощью которого не устоит никто на свете. В дышащих ядовитыми испарениям южных болотах она сошлась с самым откормленным змеем которого только смогла сыскать и отложила три больших яйца из которых вылупились чудовища, подобных которым еще не знала земля - драконы.    {vspace=30}   Все смертные грехи слились в этих тварях. Яростные и кровожадные, драконы не знают пощады и милосердия. Их гордыня и зависть заставляет драконов стяжать себе дурную славу, разрушая все прекрасное и неся страдание всему живому. В неуемной похоти своей они оскверняют невинных девушек и те рожают им чудовищ подобных выродкам самой Владычицы. Ненасытные, пожирают драконы равно добрых людей и лесных зверей, и морских рыб, и птиц небесных. Алчные до серебра и злата, сгребают в своих зловонных пещерах груды сокровищ и спят на них годами, предаваясь праздности и самодовольству.     {vspace=30}Первые из драконов были не так уж и могучи, не многим больше чем огромные болотные змеи. Но Владычица раз за разом отбирает лучших, чтобы в кровосмесительно-мерзостном соитии породить новое, беспрестанно мутирующее потомство. Все крупнее, сильнее, все злобнее и коварнее становятся драконы. Если не пресечь их род, то наступит день когда перед их мощью не устоят ни самые высокие стены, ни самые большие армии. Даже богоподобные титаны в своих облачных цитаделях не смогут спать спокойно. Но покамест надежда еще жива...{/size}{/font}'
-    
+    intro_text = '{font=fonts/AnticvarShadow.ttf}{size=+10}    Long ago, in ancient times, the world was young and unspoiled. All five nations lived in peace and harmony, developing and propsering. The men of the plains planted endless fields of golden wheat, and on the hills planted blooming gardens of sweet fruit. The children of the goddess Danu, wise and beautiful elves, wove maigc patterns of songs and moonlight deep in the vast forests. Skilled dwarves forged metal and cut gems shining like stars in the shadow of carved stone palaces. Mermaids played carelessly with silver fish and danced under the blue surface of the ocean. And even the giants, old as the world itself, did not harm the small nations, but instructed them in ancient knowledge.   {vspace=30}Those days have passed without a trace, when evil came into the world. Nobody is sure where she came from. Naked, winged, beautiful, she was as beautiful as a noon daydream and as terrible as a midnight nightmare. Tradition says she came out of the milk white morning fog that thickened in the depths of an impassible windbreak. Others believe she came from the pit of hell itself.   {vspace=30} Able to take on any shape, seductive or terrifying, she carried decay and strife. In insatiable lust she went to all who she could get. She craved all male seed, from proud kings to peasants and filthy animals. In unnatural unions legions of creatures were spawned, deformed and vicious, cruel, greedy, and full of sin.  {vspace=30}With fear and hatred, the Mistress of Darkness forged an army and marched it to the free nations to enslave the whole world and make everyone serve themselves. The ruthless army of darkess left behind only corpses, ashes, and barren earth.     {vspace=30}But five free nations fought back. Gathering together, an army of men, elves, dwarves, mermaids, and giants defeated the dark forces and drove the Mistress\'s spawn into a barren volcanic land far to the east. Since then, to protect themselves, men have built impregnable fortress citis with high walls and towers, dwarves have created machines and engines of war, elves have put spells concealment on their groves and guards on their boundaries. Even carefree mermaids wield tridents and nets, ready to repel an attack.      {vspace=30}Looking at this irresistable alliance, the Mistress vowed to create a monster, of such power no one in the world could stand before it. Breathing the poisonous fumes of the southern marshes, she took up the fattest snake which she could find, and set aide three large eggs, from which she hatched a monster the likes of which has never been seen on the earth - a dragon.    {vspace=30}   All motal sins merged into these creatures. The violent and bloodthirsty dragons know nothing of mercy and compassion. Their pride and envy makes them seek infamy, destroying all that is beautiful and spreading suffering. In their insatiable lust they defile innocent girls, who give birth like the Mistress to more degenerate monsters. Voracious, they devour men, animals, fish and birds. Greedily they rake silver and gold into their fetid caves, hoarding treasure and sleeping it on for years, indulging in sloth and complacency.       {vspace=30}The first of the dragons were not so mighty, not much more than vast swamp snakes. But Mistress repeatedly selects the best, and incestuous, abominable intercourse generates new, constantly mutating offpsring. All larger, stronger, more vicious, and more insidious. If their race is not stopped, the day will come when the highest wall and largest army cannot stand against their might. Even the god-like titans in their strongholds could not sleep easy. But for now, hope is still alive... {/size}{/font}'
+
+	
     # Названия мест
     toptxt = {
-        'plain': u'СЕЛЬСКАЯ МЕСТНОСТЬ \n\n'
+        'plain': u'THE COUNTRYSIDE \n\n'
     }
 
     # Тексты для энкаунтеров
     txt_enc_fair = [
-        ['%(dragon_name)s замечает разноцветные шатры на лугу, это большая ярмарка на которую собрались крестьне со всех окрестных деревень. Тут они торгуют, общаются и выставляют на показ свой лучший скот и самых завидных невест. Есть чем поживиться!'],
-        ['%(dragon_name)s врывается в толпу крестьян и издаёт громовой рык. Люди бегут в ужасе, но ящер не тратит времени на погоню, ему нужда всего лишь одна девушка - самая красивая девственница, которая надеялась приглядеть себе лучщего жениха. Пришла пора ей узнать, кто первый парень на деревне!']
+        ['%(dragon_name)s notices colorful tents in a meadow. It\'s a big fair, which has brought together all the people from surrounding villages. Here they trade, talk, and show off their best animals and most eligible brides. Do something to make money!],
+        ['%(dragon_name)s bursts into a crowd of peasants and utters a thunderous roar. People flee in terror, but the snake does not spend time chasing them all down, he needs only one woman - the most beautiful virgin, who had hoped to find a good groom. It\'s time for her to find out who comes first in this village!']
     ]
 
 # Тексты для особых мест
     txt_place_manor = [
-        ['Неподалёку от дороги стоит укреплённая каменная усадьба - манор какого-то небогатого рыцаря. Внутри могут быть женщины и золото, так что стоит разведать внимательнее.'],
-        ['%(dragon_name)s принюхивается. Внутри явно есть девственница благородных кровей и немного сокровищ. Но пробиться внутрь будет не просто, слуги уже заметили приближение ящера и теперь хозяин манора спешно облачается в доспехи. Старый рыцарь не сдастся без боя!'],
-        ['Не обращая внимания на бегущую в ужасе челядь, %(dragon_name)s обшаривает поместье в поисках ценностей:'],
-        ['В просторной и светлой комнате на втором этаже дрожит спрятавшись под кроватью дочь убитого рыцаря. Но %(dragon_name)s способен учуять запах невинной плоти за много миль, от него не скрыться в маленькой комнате.'],
-        ['Укрепления не спасли эту ныне уже безлюдную усадьбу от разграбления, однако крепкие стены могут послужить хорошей защитой для драконьих сокровищ. Не слишком крупный ящер мог бы устроить в винном погребе уютное логово, надо только протиснуться в узкие двери.'],
-        ['%(dragon_name)s издаёт победный рык. Больше никто не стоит у него на пути и рыцарская усадьба беззащитна.']
+        ['Not far from the road is a fortified stone manor - the manor of a poor knight. Inside could be some gold or a woman, so it pays to look closely.'],
+        ['%(dragon_name)s sniffs. Inside, there is the clear scent of a virgin of noble blood and a little treasure. But it won\'t be gotten just yet, servants have noticed the approach of the dragon and now the owner of the manor hurriedly puts on his armor. The Old Knight won\'t give up without a fight!'],
+        ['Ignoring the terrified fleeing servants, %(dragon_name)s searches the mansion in for valuables:'],
+        ['In a spacious and brightly lit room on the second floor, the trembling daughter of the slain knight hides under the bed. But %(dragon_name)s can smell innocent flesh many miles away.'],
+        ['The fortifications did not save the now-deserted mansion from your looting, but strong walls can serve as a good protection for a dragon\'s treasure. A small enough dragon could arrange a cozy lair in the wine cellar, you just have to squeeze through the narrow door.'],
+        ['%(dragon_name)s gives a victory roar. No one else stands in his way and the knightly manor is defenseless.']
     ]
 
     txt_place_wooden_fort = [
-        ['На холме у дороги стоит деревянный форт. %(dragon_name)s решает разведать что там внутри.'],
-        ['Этот деревянный форт построен по обычной схеме - большой двор окруженный рвом и частоколом, над которым доминирует башня возведённая на вершине рукотворной насыпи. Гарнизон составляют обычные пехотинцы, а хозяина и вовсе нет на месте. Зато с верхнего этажа башни доносится аромат девственницы.'],
-        ['Сопротивление защитников сломлено. Всего минута нужна чтобы снести ворота башни на холме и ворваться внутрь. Слуги разбегаются в ужасе, но %(dragon_name)s не обращает на них внимания, методично извлекая всё ценное чем тут можно поживиться:'],
-        ['На верхнем этаже башни расположена светлица. Там в страхе жмутся к углам две женщины - юная дева и нянька-старуха. %(dragon_name_full)s зашибает старуху одним щелчком хвоста и поворачивает голову к девушке.'],
-        ['Деревянные укрепления находятся в плачевном состоянии, но башня на холме всё ещё стоит. В главном зале можно устроить логово и свалить сокровища а наверху держать пленных девиц. Не самое замечательное место для логова, но всё же лучше чем овраг или дыра в земле.'],
-        ['%(dragon_name)s издаёт победный рык. Больше никто не стоит у него на пути и форт на холме теперь беззащитен.']
+        ['On a hill near the road stands a wooden fort. %(dragon_name)s decides to scout out what\'s inside.'],
+        ['This wooden fort was build in the usual way - a large courtyard surrounded by a moat and palisade, dominated by the tower built on a man-made mound. The garrison consists of ordinary foot soldiers, and the owner isn\'t present. From the top floor of the tower comes the scent of a virgin.'],
+        ['The resistance of the defenders is broken. Just a minute is needed to tear down the gates of the tower on the hill and burst inside. Servants flee in terror, but %(dragon_name)s pays them no attention, methodically stripping the place of everything of value:'],
+        ['On the top floor of the front room, a young maiden and a old nurse woman huddle in fear in the corner. %(dragon_nam_full)s smacks the old woman with a flick on the tail and turns his head to the girl.'],
+        ['The wooden walls are in poor condition, but the tower on the hill still stands. In the main hall you can make a den and dump treasures, and keep captive maidens on the upper floors. Not a great place for a den, but better than a ravine or a hole in the ground.'],
+        ['%(dragon_name)s gives a victory roar. No one else stands in the way, the fort on the hill is now defenseless.']
     ]
     
     txt_place_abbey = [
-        ['Вдалеке видны стены и башни, но это не крепость - это укреплённый монастырь. Монахи часто собирают сокровища, почти как драконы. Но гораздо хуже умеют их охранять так что стоит посмотреть.'],
-        ['Довольно богатый и хорошо укреплённый женский монастырь. Изнутри доносится запах золота, серебра и невинных женщин, но не только... Обитель защищают рыцари-крестоносцы.'],
-        ['Глупые монахини собрали всё ценное в одной единственной комнате - возле алтаря которому они молятся. %(dragon_name)s прихватывает церковную утварь:'],
-        ['В задней части обители находятся кельи монашек. Большинство из них невинны, хотя многие так стары что давно протухли, но есть тут и особый сладкий запах. Ориентируясь по нему %(dragon_name)s обнаруживает в самой дальней келье деву благородных кровей, которая только готовилась принять постриг в монахини. Но теперь её ждёт совсем иная судьба!'],
-        ['У этого старого монастыря крепкие и высокие стены, а большой обеденный зал достаточно просторен чтобы обеспечить логово даже для крупного дракона. Здесь можно неплохо обустроиться.'],
-        ['%(dragon_name_full)s издаёт победный рык. Больше никто не стоит у него на пути и монастырь теперь беззащитен.']
+        ['In the distance are seen walls and towers, but it\'s not a fortress - it\'s a fortified monastery. Monks often collect treasures, almost like dragons. It is much more than they are able to protect, so it\'s worth a look.'],
+        ['Pretty rich and well fortified convent. From inside comes the smell of gold, silver, and innocent women, but also something else...Knights Crusaders.'],
+        ['The foolish nuns gathered everything of value in asingle room - near the altar where they pray. %(dragon_name)s takes the church\'s loot:'],
+        ['At the rear of the monastery cells are nuns. Most of them are virgins, although many are old and rotten, but here and there is a special sweet smell. Focusing on it, %(dragon_name)s finds in the farthest cell a maiden of noble blood, who took vows of chastity as a nun - but now a quite different fate awaits!'],
+        ['The old convent has strong and high walls, and a large dining room spacious enough to allow for a large den, even for a dragon. It may be a good idea to settle here.'],
+        ['%(dragon_name_full)s roars in victory. No one else stands in his way, and the monastery is now defenseless.']
     ]
 
     txt_place_castle = [
-        ['%(dragon_name)s находит большую каменную крепость, которую видно издалека.'],
-        ['Таких сильно укреплённых замков с высокими стенами и башнями в королевстве не много. Драконье чутьё подсказывает, что в сокровищнице полно золота и драгоценных камней, а в высокой башне томится от безделия благородная девица. Надо бы её развлечь, однако этому будет упорно мешать гарнизон крепости.'],
-        ['Центральная цитадель замка держалась упорнее всего и разломать её ворота оказалось непростым делом. Внутри находится всё самое ценное и первым делом надо обезопасить от разбегающихмя в ужасе слуг сокровища:'],
-        ['На верхнем этаже башни расположена светлица. Там в страхе жмутся к углам две женщины - юная дева и нянька-старуха. %(dragon_name_full)s зашибает старуху одним щелчком хвоста и поворачивает голову к девушке.'],
-        ['Этот заброшенный каменный замок великолепно укреплён и имеет множество просторных помещений - почти идеальное место для драконьего логова.'],
-        ['%(dragon_name_full)s издаёт победный рык. Больше никто не стоит у него на пути и могучая крепость беззащитна.']
+        ['%(dragon_name)s spies a huge stone fortress from afar.'],
+        ['Such heavily fortified castles with high walls and towers in the kingdom are rare. The dragon\'s instincts tell him there is a treasury full of gold and precious stones, and in the high tower noble maidens are languishing. It should be entertained, but the garrison will be hard to defeat.'],
+        ['The central stronghold of the castle was protected by a sturdy gate that proved hard to break. Inside are valuable treasures:'],
+        ['On the top floor of the front room, a young maiden and a old nurse woman huddle in fear in the corner. %(dragon_nam_full)s smacks the old woman with a flick on the tail and turns his head to the girl.'],
+        ['The great stone castle has intact fortifications and many spacious rooms - an almost perfect place for the dragon\'s lair.'],
+        ['%(dragon_name_full)s roars in victory. No one else stands in his way, and the mighty fortress is now defenseless.']
     ]
     
     txt_place_palace = [
-        ['Вдалеке виднеется величественная крепость, это явно что-то стоящее внимания!'],
-        ['Похоже что %(dragon_name)s нашёл королевский замок. Такие могучие укрепления в землях вольных народов встречаются очень редко, позволить себе такой дворец может только очень богатый лорд. И разумеется внутри много всего интересного... и куча охраны.'],
-        ['%(dragon_type)s стремительно врывается в сокровищницу, жадно сгребая к себе драгоценности:'],
-        ['В каждом уважающем себя дворце должна томиться принцесса и конечно она тут есть, как обычно в светлице на последнем этаже самой высокой башни.'],
-        ['Этот обезлюдивший дворец просто огромен и великолепно размещён. Если устроить тут логово, люди будут трепетать при одном упоминаннии имени дракона который был настолько могущественен чтобы завоевать его для себя!'],
-        ['%(dragon_name_full)s издаёт победный рык. Больше никто не стоит у него на пути и королевский дворец теперь беззащитен!']
+        ['In the distance you can see a majestic fortified palace, this is clearly something worth attention!'],
+        ['It appears that %(dragon_name)s found a royal castle. Such a mighty stronghold in the land of free people is very rare, and its owner must be a very rich lord. Of course many interesting things are inside... and a lot of protection.'],
+        ['%(dragon_type)s quickly rushes to the treasury, eagerly shovelling piles of jewelry:'],
+        ['Every self respecting palace must have a princess languishing, and of course there she is, on the top floor of the tallest tower.'],
+        ['This recently depopulated palace is huge and perfectly placed. If you make your lair here, people will tremble at the mere mention of the name of the dragon who was so powerful that he took it for himself!'],
+        ['%(dragon_name_full)s roars in victory. No one else stands in his way, and the royal palace is now defenseless.']
     ]
     
     txt_place_enfr = [
-        ['Эльфийский замок. Бинго!'],
-        ['Священное древо альвов, выращенное из сменеи подареного самой богиней Дану огромно и необъятно. На его ветвях, под корнями и в дуплах альвы обустроили причудливый дворец из которого праят лесным краем король и королева. Внутри множество реких сокровищ, но к сожалепнию сердце леса бережёт огромный древесный страж, сразить которого будет непросто.'],
-        ['Альвы не делают специальных сокровищниц для своих драгоценностей, а носят их с собой, однако тут достаточно богатых детей Дану с которых можно кое что позаимствовать:'],
-        ['%(dragon_name)s находит королеву альвов.'],
-        ['Теперь роща пуста, но древняя магия всё ещё теплится в стволе Великого Древа, оберегая окружающие места. Тут можно сделать тайное логово.'],
-        ['%(dragon_name_full)s издаёт победный рык. Больше никто не стоит у него на пути и лесной дворец альвов беззащитен.']
+        ['An elven castle. Bingo!'],
+        ['The sacred tree of the elve, grown from a gift of the goddess Danu, is huge and immense. In its branches, under the roots and in the hollows, elves have arranged a splendid palace in which the king and queen reside. Inside reside many treasures, but a large forest guard protects this place, and will be difficult to combat.'],
+        ['Elves carry their treasures on themselves, and here there are enough of them to borrow a few things from:'],
+        ['%(dragon_name)s finds the Queen of the Elves.'],
+        ['Now the grove is empty, but the old magic still glimmers in the trunk of the great tree, protecting the surrounding area. Here you can make a secret lair.'],
+        ['%(dragon_name_full)s roars in victory. No one else stands in his way, and the elven forest palace is now defenseless.']
     ]
     
     txt_enc_forest_guardian = [
-        ['%(dragon_name_full)s некоторое время бродит по лесу. Внезапно...'],
-        ['Появляется страж границ. Альвы тщательно охраняют свою священную рощу, выставляя дозорных с луками. Это один из них, возможно он знает путь в зачарованный край.'],
-        ['%(dragon_name)s торжествует победу. Но найти тайную тропу что охранял страж никак не получается...'],
-        ['%(dragon_name)s коварством выуживает у побеждённого стража информацию о тайных тропах, позволяющих пройти в заколдованный лес где живут альвы.']
+        ['%(dragon_name_full)s is wandering through the woods. Suddenly...'],
+        ['A border guard with a bow appears. Elves carefully guard their sacred groves. Maybe he knows the way to the enchanted land.'],
+        ['%(dragon_name)s triumphs. But trying to find the secret path that the guardian was protecting does not work...'],
+        ['%(dragon_name)s cunning interrogation has revealed information about the secret paths, allowing him to enter the enchanted forest of the elves.']
     ]
     
     txt_place_jotun = [
-        ['В этом исполинском дворце, сложенном из глыб векового льда живёт инеистый великан - йотун. Изнутри раздаётся запах сокровищ и большой женщины, а кроме того здесь можно было бы обустроить отличное логово. Но великан бдительно охраняет свой дом.'],
-        ['В глубине логова прячестся инеистая великанша. В её холодной утробе драконье семя смогло бы дать исключительный всход.'],
-        ['Ледяная цитадель теперь пустует. Тут можно устроить отличное логово, ведь защиту дадут не только выскоие ледяные стены но и отвесные горы и пронзительный морозный ветер.']
+        ['In this gigantic palace, built of blocks of ice, a frost giant - Jotun - lives in seclusion. Inside is the smell of treasure and a big woman, and this would be a great place for a lair. But the giant vigilantly guards his home.'],
+        ['In the depths of the den is a frost giantess. Her womb would be an exceptional place for dragon seed.'],
+        ['The ice citadel is now empty. Here you can make a perfect lair, with the protection of ice walls, steep mountains, and piercing frosty wind.']
     ]
     
     txt_place_ifrit = [
-        ['Укреплённая кузня, сложенная из черных обсидиановых глыб расположена в самом жерле действующего вулкана. Судя по запаху там есть чем поживиться, но огненный великан - ифрит, не отдасть свои сокровища без боя.'],
-        ['Огненная великанша пытается дать отпор незванному гостю, но она намного слабее чем ифрит и не вооружена, поэтому дракон может делать с ней всё что пожелает.'],
-        ['Вулканическая кузня огненного великана теперь пустует. Тут можно устроить отличное логово, ведь его будут охранять не только толстые стены но и отвесные скалы, и нестерпимый жар магматического озера.']
+        ['Fortified forge, built of black obsidian blocks, located in the crater of an active volcano. Judging by the smell there is something valuable - but the fire giants - Ifrit - will not give up their treasures without a fight.'],
+        ['The fire giantess tries to put up a fight, but it is much weaker than the men and not armed, so the Dragon can do with her whatever he wants.'],
+        ['The volcanic forge of the molten giants is now empty. Here you can make a great den, because it is protected by thick walls, cliffs, and the unbearable heat of the magma lake.']
     ]
 
     txt_place_triton = [
-        ['Это подводный дворец тритона - морского великана. Наверняка он скопил изрядные сокровища, но хотя тритоны и не так сильны как большинство великанов, это всё же серьёзный противник.'],
-        ['В роскошно обставленных подводных покоях дожидается своей участи великанша с рыбьим хвостом - серена. Это шанс породить могучих морских тварей!'],
-        ['Подводные хоромы где когда-то жил горды тритон, теперь могут стать отличным логовом для водоплавающего дракона. Добраться сюда сможет мало кто, ведь вход находится под водой!']
+        ['This is the underwater palace of Triton - the sea giant. Surely he has amassed a sizeabe treasure, but a giant is a serious opponent.'],
+        ['In the luxuriously furnished underwater apartments, a giantess with a fish tail waits for her fate. It\'s a chance to produce mighty sea creatures!'],
+        ['The umansion where the proud Triton once lived can be a good den for a water dragon. Few will be able to reach the underwater entrance.']
     ]
     
     txt_place_titan = [
-        ['Этот летучий остров держтся над облаками благодаря волшебной силе грозового исполина - титана. Сам замок поражает монументальными размерами и роскошью. Наверняка внутри таятся несметные богатства, но титаны одни из самых могучих противников каких только можно предствить.'],
-        ['Дракон идёт на запах женщины. По обычаю всех принцесс, титанида сидит в комнате на вершине башни. Похоже она даже не слышала звуков битвы вниз - вот это сюрприз!'],
-        ['Этот пустой ныне замок раньше принадлежал могучему титану. Старая магия всё ещё держит остров в небе, над уровнем облаков. Учитывая как не просто сюда забраться и как просторны и прочны здешие строения лучшее логово придумать сложно.']
+        ['This island flies about the clouds thanks to the magic power of the lighting giant - Titan. The catle itself is striking in its monumental size and luxury. Surely untold riches await inside, but the Titans are one of the mightest enemies that one can face.'],
+        ['The dragon goes to the scent of a woman. According to the custom of princesses, the giantess is sitting in a room on the top of the tower. It looks like she did not even hear the sounds of the battle down below!'],
+        ['This is now an empty castle, once belonging to the mighty Titan. The old magic still keeps the island in the sky, floating above the clouds. Such a spacious, durable, and unreachable structure, it is difficult to imagine a better den.']
     ]
     
     #Сцены секса с госпожой в человеческом облике
     txt_human_mistress_fuck = {}
-    txt_human_mistress_fuck['dragon remains'] = ['Это ошибка, текущий дракон мёртв.',]
+    txt_human_mistress_fuck['dragon remains'] = ['This is an error, the current dragon is dead',]
     txt_human_mistress_fuck['serpent'] = ['Владычица сошла со своего трона одновременно принимая человеческий облик и подходящий размер - вдвое меньше своего сына. Так чтобы он мог чувствовать себя большим и сильным, но в то же время чтобы ему была за что подержаться. \n Змей облизнулся и открыл пасть в предвкушении, он так давно мечтал об этом моменте. Волнообразными движениями %(dragon_name)s подполз к ногам Владычицы и обвил из своим телом, забираясь с каждым витком всё выше и выше пока его пасть не оказалась на одном уровне с ярко алыми губами жещины. Она застонала, сдавленная сильным чешуйчатым телом, и змей тут же запустил свой раздвоенный язык в её рот. Распустив нижние витки хвоста, %(dragon_name_full)s раздвинул ноги Владычицы чтобы проникнуть в неё уже с двух сторон одновременно. \n Змей сжимает свои чешуйчатые объятья с такой силой, что любая смертная женщина была бы немедленно раздавлена, но Госпожа лишь стонет от наслаждения чувствуя как её сын таранит её узкое влажное лоно своим нечеловеческим детородным органом. В этих страстных объятьях они будут сплетаться раз за разом в течение многих дней и ночей пока не станет понятно что в чреве Владычицы уже зреют яйца новых драконов.',]
     txt_human_mistress_fuck['lindwurm'] = ['Владычица сошла с трона и глядя своему сыну прямо в глаза произнесла “Я твоя. Делай что пожелаешь”. Сбросив с себя робость и оцепенение, ящер взревел и яростно набросился на женщину которую он желал столь давно. Сбив её с ног метким ударом хвоста он прижал её голову лапой к земле, а затем грубо вошёл в её желанное лоно. Хотя Владычице не досталось никаких ласк перед этим проникновением, внутри она оказалась мокрой и горячей. Лишь на секунду ящер задумался значило ли это что она тоже заждалась этого момента или Владычица лишь воспользовалась способностью манипулировать собственным телом чтобы имитировать эту страсть? Но мысли ушли прочь, унесённые животным наслаждением от проникновения в это плодородное но доселе запретное чрево. Распалённый ящер поклялся себе, что он будет насиловать мать раз за разом до тех пор пока сперма не польётся у неё отовсюду, даже из ушей... ',]
     txt_human_mistress_fuck['hydra'] = ['%(dragon_name_full)s подобрался к подножию трона и вытянул шеи так чтобы разглядывать Владычицу с разу с нескольких сторон. В ответ она с улыбкой протянула руки и положила их на две его клыкастые морды, крепко сжимая пальцы. Поняв задумку матери %(dragon_type)s перевернулся на спину так что его уд смотрел теперь точно вверх словно отточенный для казни деревянный кол, в то время как держащаяся за его морды демоница поднялась высоко в воздух. %(dragon_name)s резко развёл шеи в стороны и Владычица рухнула вниз, слёту напоровшись на мясистый детородный орган зверя. Двое издали вопль смешанной боли и наслаждения.  %(dragon_type)s обвил корчащуюся на его елдаке ведьму своими длинными шеями и  приподнял её, чтобы насадить снова, поражаясь тому насколько глубоко такое не крупное вроде бы тело способно вогнать в себя этот внушительный орган. \n Сплетаясь в танце страти %(dragon_name)s и его похотливая мать провели много горячих ночей, пока её живот не стал расти от зреющих внутри яиц нового поколения.',]

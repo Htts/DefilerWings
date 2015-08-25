@@ -34,8 +34,8 @@ label lb_fight(foe=game.foe, skip_fear=False):
                     pass
                 'Retreat' if not battle.army_battle:
                     if foe.kind == 'knight':
-                        # Отступаем в новое логово
-                        "[game.dragon.name] retreats in disgrace and covers in a makeshift lair"
+                        #Retreat to a new lair
+                        "[game.dragon.name] retreats in disgrace and cowers in a makeshift lair"
                         $ game.create_lair()
                     else:
                         "[game.dragon.name] retreats to his lair, to recuperate and make up a new strategy."

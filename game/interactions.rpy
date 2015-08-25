@@ -49,7 +49,7 @@ label lb_nature_sex:
 
 
 label lb_lair_sex:
-    game.girl "Я хочу домой. Ну пожалуйста..."
+    game.girl "I want to go home. Please..."
     python:
         if game.girl.type == 'ice' or game.girl.type == 'fire' or game.girl.type == 'ogre' or game.girl.type == 'titan' or game.girl.type == 'siren':
             renpy.jump('lb_gigant_sex')
@@ -69,7 +69,7 @@ label lb_gigant_sex:
             hide xxx
         'Magical growth' if not game.girls_list.is_mating_possible and game.girl.virgin and game.dragon.mana > 0 and game.dragon.lust > 0:
             $ game.dragon.drain_mana()
-            game.dragon 'Заклятье временного роста!'
+            game.dragon 'Spell of temporary growth!'
             $ description = game.girls_list.impregnate()
             game.girl "[description]"
             show expression sex_imgs("girl") as xxx
@@ -110,7 +110,7 @@ label lb_gigant_sex:
 
 label lb_knight_new:
     show expression 'img/bg/special/oath.jpg' as bg
-    'Рыцарь дал клятву убить дракона.'
+    'Knight vowed to slay the dragon.'
     return
 
 label lb_water_sex:
