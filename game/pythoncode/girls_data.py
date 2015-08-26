@@ -440,307 +440,307 @@ girls_texts = {
     # %(rob_list)s - список украденного
     'girl': {  # используется, если нет подходящего текста или отсутствует нужный тип девушки
         'shout': (  # Реакция девушки, прямой речью
-            u"Ой, а мне текст не написали (((",
+            u"Ой, а мне текст не написали (((", #translator: idk."Oh, and I never wrote my poem"?
         ),
         'prelude': (  # Описание прелюдий
-            u"Одним неуловимым движением %(dragon_name)s подобрался вплотную к женщине и сбил её с "
-            u"ног, а затем начал рвать зубами её одежду словно остервенелый пёс. %(girl_name)s "
-            u"отчаянно отбивалась и кричала, но толку от этого было не много, изодранная одежда "
-            u"разлетелась клочками оставляя её полностью обнаженной и беззащитной перед охваченным "
-            u"похотью ящером.",
+            u"With silent movement %(dragon_name)s crept close to the woman and knocked her to the "
+            u"ground, and then began to tear her clothes with his teeth like a frenzied dog. %(girl_name)s "
+            u"desperately struggled and screamed, but it did no good, her clothes were tattered "
+            u"into scattered scraps, leaving her bare naked and defenseless before the "
+            u"lustful lizard.",
         ),
         'sex': (  # Описание секса с девушкой
-            u"Отчаянно пытаясь спасти свою невинность, %(girl_title)s закрылась руками но %(dragon_type)s "
-            u"предпринял обходной манёвр. Широко разинув свою зубастую пасть он обхватил голову девушки "
-            u"челюстями, так что всё её лицо оказалось внутри, лишаясь доступа к воздуху. Девушка широко "
-            u"открыла рот пытаясь вдохнуть хоть немного кислорода, но вместо этого в её глотку проник "
-            u"длинный раздвоенный язык ящера. Теперь все когда все силы девушки были направлены на то "
-            u"чтобы оторвать смрадную пасть от своего лица она и думать забыла о невинности. Скребя "
-            u"ногтями по твёрдой чешуе дракона и дрыгая ногами %(girl_name)s внезапно почувствовала как "
-            u"снизу в неё проникает что-то большое и твёрдое. Покрытый слизью рептилоидный член с "
-            u"лёгкостью прорвал тонкую плёнку защищавшую вход в тугое молодое влагалище, безжалостно "
-            u"растягивая и продавливая всё на своём пути. Почти теряя сознание от боли и недостатка "
-            u"воздуха, %(girl_name)s внезапно почувствовала что челюсти насильника размыкаются, вновь "
-            u"позволяя ей вдохнуть. %(dragon_name)s хотел насладиться её воплями и плачем.",
+            u"Desperate to save her innocence, %(girl_title)s covered herself with her hands, but %(dragon_type)s "
+            u"manuevered around her. With his gaping toothy maw, he grabbed the girl\'s head "
+            u"in his jaws so that her whole face was inside, losing access to the air. She opened "
+            u"her mouth to try to breathe, but instead the lizard forced his long forked tongue "
+            u"into her throat. The girl used all her efforts trying to tear away the stinking mouth, "
+            u" forgetting to think of her innocence. Scraping her nails on the hard dragon scales "
+            u"and kicking her feet, %(girl_name)s suddenly felt something big and firm between her legs. "
+            u"The reptillian member, covered with slime, easily broke through the thin film  "
+            u"protecting the entrance to her tight young vagina, ruthlessly stretching everything in its path. "
+            u"Almost losing consciousnes from the pain and lack of air, "
+            u"%(girl_name)s suddenly felt her rapist\'s jaw open again, "
+            u"allowing her to breathe. %(dragon_name)s wanted to take pleasure in her screaming and crying.",
         ),
         'impregnate': (  # Оплодотворение
-            u"Сдавленная в безжалостных объятьях ящера, %(girl_title)s почувствовала как он "
-            u"ускоряет темп своих движений. Боль стала практически невыносимой но крик девушки "
-            u"потерялся, перекрытый рёвом наслаждения насильника. Конвульсивно содрагаясь всем "
-            u"телом %(dragon_type)s вливал в истерзанное лоно девушки целые литры липкого и "
-            u"густого семени, заставляя её маленький животик раздуться изнутри. Когда "
-            u"%(dragon_name)s наконец отстранился от своей жертвы из неё вытек целый водопад "
-            u"семени, но тем не менее количества оставшегося внутри было более чем достаточно "
-            u"чтобы гарантировать надёжное оплодотворение. Дело было сделано надёжно.",
+            u"Squeezed in the pitiless embrance of a lizard, %(girl_title) felt the dragon moving faster. "
+            u"The pain became almost unbearable, but the girl\'s screams "
+            u"were drowned out by her rapist'\s roar of pleasure. "
+            u"The convulsing %(dragon_type)s poured liters of thick, sticky seed "
+            u"into her womb, causing her belly to swell. When "
+            u"%(dragon_name)s finally pulled away from his victim a waterfall of seed poured out,"
+            u"but more than enough remained to ensure insemination. "
         ),
         'new': (  # Описание новой девушки
             u"%(girl_name)s - %(girl_title)s.",
         ),
         'free': (  # Описание процесса выпускания на свободу
-            u"She may go now, whith your offspring in her belly. If she will survive...",
+            u"She may go now, with your offspring in her belly. Maybe she will survive...",
         ),
         'free_prison': (  # Описание процесса выпускания на свободу из тюрьмы
-            u"Незачем держать её взаперти, охранять ещё... пусть катится на все четыре стороны.",
+            u"There is no need to keep her locked up and guarded anymore...let her go where she wishes.",
         ),
         'steal': (  # Описание процесса воровства девушки
-            u"%(dragon_name)s относит пленницу в своё логово...",
+            u"%(dragon_name)s carries the captive into his lair...",
         ),
         'jail': (  # Описание процесса заточения в темницу
-            u"...и сажает её под замок.",
+            u"...and I put it under lock and key.",
         ),
         'jailed': (  # Описание процесса возврата в темницу
-            u"%(dragon_name)s возвращает девушку в темницу.",
+            u"%(dragon_name)s returns the girl to the dungeon.",
         ),
         'eat': (  # Описание процесса поедания девушки. Как же ему не стыдно, червяку подколодному.
-            u"Ты меня съешь?",
+            u"Are you going to eat me?",
         ),
         'rob': (  # Описание процесса ограбления девушки.
-            u"%(dragon_name)s грабит девушку и получает: \n %(rob_list)s.",
+            u"%(dragon_name)s robs the girl and gets: \n %(rob_list)s.",
         ),
         'traps': (  # Описание процесса побега и гибели в ловушке.
-            u"%(girl_name)s убегает из темницы и гибнет в ловушках.",
+            u"%(girl_name)s escapes from the prison, but is killed in a trap.",
         ),
         'escape': (  # Описание успешного побега
-            u"%(girl_name)s спасается бегством",
+            u"%(girl_name)s escapes",
         ),
         'spawn_common': (  # Описание родов
-            u"%(girl_name)s откладывает яйца из которых под наблюдением слуг вылупятся новые отродья. \n %(spawn_name)s.",
+            u"%(girl_name)s lays eggs from which new %(spawn_name)s will hatch, under the supervision of the servants.",
         ),
         'spawn_elite': (  # Описание родов
-            u"%(girl_name)s в мучениях откладывает огромное яйцо с толстой чешуйчатой скорлупой. \n %(spawn_name)s.",
+            u"%(girl_name)s painfully lays a huge egg with a thick scaly shell. \n %(spawn_name)s.",
         ),
         'anguish': (  # Описание смерти от тоски
-            u"%(girl_name)s умирает в тоске.",
+            u"%(girl_name)s dies in anguish.",
         ),
         'hunger_death': (  # Описание смерти от голода
-            u"%(girl_name)s умирает от голода.",
+            u"%(girl_name)s starves to death.",
         ),
         'kill': (  # Описание смерти от селян
-            u"Someone, discovers that %(girl_name)s is impregnated by a dragon. The angry mob kills her ruthlesly...",
+            u"Someone discovers that %(girl_name)s was impregnated by a dragon. The angry mob kills her ruthlessly...",
         ),
         'free_spawn': (  # Описание родов на свободе
-            u"%(girl_name)s в тайне от людей откладывает яйца из которых вылупляются кровожадные монстры... Теперь они будут резвиться на воле, терроризируя округу и возможно сожрут собственную мать.",
+            u"%(girl_name)s secretly lays eggs from which bloodthirsty monsters will hatch...Now they will go free into the wild, terrorizing the countryside, and perhaps devouring their own mother.",
         ),
         'prison': (  # Проведываем девушку в тюрьме
-            u"%(girl_name)s находится в заключении.",
+            u"%(girl_name)s is imprisoned.",
         ),
     },
     'peasant': {  # используется для крестьянок
         'new': (  # описание крестьянки
-            u"Сельская девица по имени %(girl_name)s.",
+            u"The rural girl is named %(girl_name)s.",
         ),
-        'shout': (  # Реакция девушки, прямой речью
-            u"Ой, божечки!..", 
-            u"Ай мамочка!..", 
-            u"Ты куда языком своим слюнявым тычешь змеюка поганая?!",
-            u"Ой-ой-ой, только не ешь меня пожалуйста...", 
-            u"Ай. Нет-нет-нет, только не туда... ох...",
-            u"Драконьчик, миленький, я всё сделаю тебе, только не кушай меня пожалуйста!",
-            u"Ты что собрался делать этим елдаком, бесстыдник?! Да он не влезет же, ящерица смердячая! Ааааааааай...",
-            u"Ай, что ты делаешь?! Больно... нет, пожалуйста... такой то здоровенный... уууй больно же!!!",
-            u"Ишь что удумал, чудище. Пусти... ай, падла... пусти говорят тебе.",
-            u"Неужто правду бабы говорят что драконы девок портат? Ой, не рычи. Понялая я, поняла. Не кусайся только.", 
-            u"Что, люба я тебе змей? Ишь елдаком махает как пастух погонялом!",
-            u"Ох пресвятая дева, срамота то какая...",
-            u"(тихонько плачет и закрывает лицо руками)",
-            u"(яростно отбивается и пыхтит сквозь сжатые зубы)",
-            u"Ой, ну не надо драконьчик, меня же маменька убьёт если узнает что я от тебя понесла. Может я ручками тебя там поглажу?",
+        'shout': (  # Реакция девушки, прямой речью 
+			#translator: some of these lines I had to make a vague guess at and others I commented out.
+            #u"Ой, божечки!..", 
+			u"Oh, mama..", 
+            u"Where are you poking that vile dripping tongue?!",
+            u"Oh,oh,oh, just don\'t eat me, please...", 
+            u"Ah...no, no, not there...oh...",
+            u"Dragon, darling, please, I\'ll do everything with you, just don\'t eat me!",
+            u"What are you doing with that cock, you perverted lizard? Aaaaaaaah....",
+            u"Ah, what are you doing?! hurts...no, please...this is huge...uuuy it hurts!!!",
+            u"You ugly bastard, let me go...",
+            u"Then it\'s true what they say about dragons and girls? Oh, just don\'t roar and bite...",
+            #u"Что, люба я тебе змей? Ишь елдаком махает как пастух погонялом!",
+            u"Oh Blessed Virgin, what a disgrace...",
+            u"(softly cries and covers her face)",
+            u"(shakes and puffs furiously through clenched teeth)",
+            u"Don\'t, dragon, mama would kill me if she learned that you defiled me. Maybe I can just stroke you there?",
         ),
         'eat': (  # Описание процесса поедания девушки.
-            u"Ой, божечки!..", 
-            u"Ай мамочка!..", 
-            u"Неееееет!...",
-            u"Аааааааа!....",
-            u"Ой не рычи так, мне страшно...",
-            u"Ну и зубищи у тебя... ай нет-нет-нет...",
+            #u"Ой, божечки!..", 
+            u"Mama!...", 
+            u"Noooooo!...",
+            u"Ааааааааh!....",
+            u"Don\'t growl, it\'s so scary...",
+            u"ah, no, no no...",
             u"Oh shi~",
-            u"Не жри меня,... пожалуйста, я всё сделаю, только не жри!",
-            u"Спаси-ите! Лю-юди!",
-            u"Сожрать меня вздумал, уродина?! Чтобы ты подавился!",
-            u"Я описилась...",
-            u"Ой какой взгляд у тебя голодный...",
-            u"Нет. Фу. Брысь. Ай не кусай меня.",
-            u"Пошел вон скотина! А ну ка брысь-кому говорят. Облизывается он, ишь ты!",
-            u"(сдавленно хрипит)",
-            u"(тихонько плачет и закрывает лицо руками)",
-            u"(яростно отбивается и пыхтит сквозь сжатые зубы)",
+            u"Don\'t eat me... please, I\'ll do anything, just don\'t eat me!",
+            u"He-elp!Someooone!",
+            u"You want to eat me, ugly? I hope you choke!",
+            u"I\'m just livestock...",
+            u"What are you looking at? Oh, you\'re hungry...",
+            u"No. Shoo. Ah, do not bite me!",
+            u"Get out brute! Why are you licking your lips?",
+            u"(muffled groans)",
+            u"(softly cries and covers her face)",
+            u"(shakes and puffs furiously through clenched teeth)",
         ),
         
     },
     'citizen': {  # используется для горожанок
         'new': (  # описание крестьянки
-            u"%(girl_name)s, дочь богача.",
+            u"%(girl_name)s, the daughter of a rich man.",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"О, Господи!..", 
-            u"Проклятая гадина!", 
-            u"Не смей! Мой отец тебя на шашлык за такое пустит, змеюка!",
-            u"Прошу вас, господин дракон, не надо. Отпустите меня, умоляю...", 
-            u"Ай. Нет-нет-нет, только не туда... ох...",
-            u"Только не надо зубов, я всё сделаю. Умоляю. Я же знаю чего вы хотите.",
-            u"Ой нет, убеерите эту... это... от меня. Стыд то какой!",
-            u"Ай, что вы делаете?! Больно... нет, умоляю... он же огромный... уууй больно же!!!",
-            u"Ты что задумал, отродье Ехидны?! Пусти... ай, тварь... пусти говорят тебе.",
-            u"Я слышала что драконы делают с девушками... Нет. пожалуйста не надо рычать. Я понимаю. Нет, не рвите я сниму... вот снимаю...", 
-            u"Ох, Господи, я такого срама даже у коня в деревне не видала! Жуть то какая...",
-            u"Ох пресвятая дева, спаси и сохрани...",
-            u"(тихонько плачет и закрывает лицо руками)",
-            u"(яростно отбивается и пыхтит сквозь сжатые зубы)",
-            u"Зачем вы сдираете с меня платье? Нет, я не могу. У меня же жених... Это свершенно не... ааааАХ!",
+            u"Oh God!", 
+            u"Cursed reptile!", 
+            u"Don\'t you dare! My father will put you a skewer for that, scum!",
+            u"I\'m begging you, Mr. Dragon, you don\'t have to do this, let me go...", 
+            u"Ah. No, no, no...not there...oh...",
+            u"Just don\'t eat me, I\'ll do anything, I beg you. I know what you want...",
+            #u"Ой нет, убеерите эту... это... от меня. Стыд то какой!",
+            u"Ah, what are you doing?! It hurts...no, I beg you, it'\s too big... uuuy it hurts!!!",
+            u"What are you doing, you spawn of an anteater? Let go...ah, wait!",
+            u"I have heard what dragons do with girls...please don\'t growl...don\'t tear it, I\'ll take it off, I\'ll take it off...", 
+            #u"Ох, Господи, я такого срама даже у коня в деревне не видала! Жуть то какая...",
+            u"Oh Blessed Virgin, save me, protect me...",
+            u"(quietly cries and hides her face in her hands)",
+            u"(furiously struggles and breathes hard through clenched teeth)",
+            u"Why are you tearing off my dress? No, I can\'t, I have a groom, don\'t...!",
         ),
         'eat': (  # Описание процесса поедания девушки.
-            u"(молится) Отец наш небесный, да святится имя твоё, да пребудет воля твоя...", 
-            u"(молится) Если я пойду и долиною смертной тени, не убоюсь зла, потому что Ты со мной...", 
-            u"Неееееет!...",
+            u"(praying) Our Father in heaven, hallowed be thy name, thy will be done...", 
+            u"(praying) Though I walk through the valley of the shadow of death, I will fear no evil, for thou art with me...", 
+            u"Nooooooo!...",
             u"Аааааааа!....",
-            u"(кашляет от исходящего изо рта дракона смрада)",
-            u"Ну и зубищи у вас... ай нет-нет-нет...",
+            u"(coughs from the stench from the dragon\'s mouth)",
+            u"Well damn you... ah, no, no, no...",
             u"Oh shi~",
-            u"Не кушайте меня,... умоляю, я всё сделаю, только не ешьте!",
-            u"Спаси-ите! Помогите! Кто-ниб... аааа....",
-            u"Сожрать меня вздумал, уродина?! Чтобы ты подавился!",
-            u"Нет, пожалуйста... я куплю вам целое стадо свиней... зачем меня то??",
-            u"Ох этот алчный взгляд...",
-            u"Нет. Фу. Брысь. Плохой дракон! Сидеть! Кому сказала сидеть!!!.",
-            u"Пошел вон скотина! А ну ка брысь-кому говорят. Облизывается он, ишь ты!",
-            u"(сдавленно хрипит)",
-            u"(тихонько плачет и закрывает лицо руками)",
-            u"(яростно отбивается и пыхтит сквозь сжатые зубы)",
+            u"Don\'t eat me... I beg you, I\'ll do anything, just don\'t eat me!",
+            u"He-elp! Save me! Somebody! aaah...",
+            u"You want to eat me, ugly? I hope you choke!",
+            u"No, please...I can buy you a whole herd of pigs...why me??",
+            u"I don\'t like this greedy look...",
+            u"No! Shoo! Bad dragon! Sit! I told you to sit!!!",
+            #u"Пошел вон скотина! А ну ка брысь-кому говорят. Облизывается он, ишь ты!",
+            u"(muffled groans)",
+            u"(softly cries and covers her face)",
+            u"(furiously struggles and breathes hard through clenched teeth)",
         ),
         
     },
     'princess': {  # используется для благородных дам
         'new': (  # описание 
-            u"%(girl_name)s, дама благородных кровей.",
+            u"%(girl_name)s, lady of noble blood",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"О, Господи!..", 
-            u"Не тронь меня бесовское исчадие!", 
-            u"Не смей! Мой отец тебя на шашлык за такое пустит, змеюка!",
-            u"Некоторые сичтают драконов благородными животными. Может вы будете так добры и перестанете распускать свои лапы и язык?", 
-            u"Ай. Нет-нет-нет, только не туда... ох...",
-            u"Только не надо зубов, я всё сделаю. Умоляю. Я же знаю чего вы хотите.",
-            u"Ой нет, убеерите эту... это... от меня. Стыд то какой!",
-            u"Ай, что вы делаете?! Больно... нет, умоляю... он же огромный... уууй больно же!!!",
-            u"Ты что задумал, отродье Ехидны?! Пусти... ай, тварь... пусти говорят тебе.",
-            u"Я слышала что драконы делают с девушками... Нет. пожалуйста не надо рычать. Я понимаю. Нет, не рвите я сниму... вот снимаю...", 
-            u"Ох, Господи, я такого срама даже у коня в деревне не видала! Жуть то какая...",
-            u"Ох пресвятая дева, спаси и сохрани...",
-            u"(тихонько плачет и закрывает лицо руками)",
-            u"(яростно отбивается и пыхтит сквозь сжатые зубы)",
-            u"Зачем вы сдираете с меня платье? Нет, я не могу. У меня же жених... Это свершенно не... ааааАХ!",
+            u"Оh, God!...", 
+            u"Do not touch me, demonic fiend!", 
+            u"Don\'t you dare! My dather will put you a skewer, pig!",
+            u"Some say dragons are noble animals. Maybe you\'ll be so kind as to desist with your paws and tongue?", 
+            u"Ah, no, no, not there...oh",
+            u"Just not the teeth, I beg you. I\'ll do it, I know what you want...",
+            #u"Ой нет, убеерите эту... это... от меня. Стыд то какой!",
+            u"Ah, what are you doing!? It hurts, I beg you, it\'s too big, uuuy!!!",
+            u"What are you doing, you vermin? Let go...ah, wait!",
+			u"I have heard what dragons do with girls...please don\'t growl...don\'t tear it, I\'ll take it off, I\'ll take it off...", 
+            #u"Ох, Господи, я такого срама даже у коня в деревне не видала! Жуть то какая...",
+            u"Oh Blessed Virgin, save me, protect me...",
+            u"(quietly cries and hides her face in her hands)",
+            u"(furiously struggles and breathes hard through clenched teeth)",
+            u"Why are you tearing off my dress? No, I can\'t, I have a groom, we haven\'t consummated... don\'t...!",
         ),
         'eat': (  # Описание процесса поедания девушки.
-            u"(молится) Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua,..", 
-            u"(молится) Nam etsi ambulavero in medio umbrae mortis, non timebo mala, quoniam tu mecum es. Virga tua, et baculus tuus,..", 
-            u"Неееееет!...",
+            u"(praying) Our Father in heaven, hallowed be thy name, thy will be done...", 
+            u"(praying) Though I walk through the valley of the shadow of death, I will fear no evil, for thou art with me...", 
+            u"Nooooooo!...",
             u"Аааааааа!....",
-            u"(кашляет от исходящего изо рта дракона смрада)",
-            u"Ну и зубищи у вас... ай нет-нет-нет...",
+            u"(coughs from the stench from the dragon\'s mouth)",
+            u"Well damn you... ah, no, no, no...",
             u"Oh shi~",
-            u"Не кушайте меня,... умоляю, я всё сделаю, только не ешьте!",
-            u"Спаси-ите! Помогите! Кто-ниб... аааа....",
-            u"Сожрать меня вздумал, уродина?! Чтобы ты подавился!",
-            u"Нет, пожалуйста... я куплю вам целое стадо свиней... зачем меня то??",
-            u"Ох этот алчный взгляд...",
-            u"Нет. Фу. Брысь. Плохой дракон! Сидеть! Кому сказала сидеть?!!.",
-            u"Пошел вон скотина! А ну ка брысь-кому говорят. Облизывается он, ишь ты!",
-            u"(сдавленно хрипит)",
-            u"(тихонько плачет и закрывает лицо руками)",
-            u"(яростно отбивается и пыхтит сквозь сжатые зубы)",
+            u"Don\'t eat me... I beg you, I\'ll do anything, just don\'t eat me!",
+            u"He-elp! Save me! Somebody! aaah...",
+            u"You want to eat me, ugly? I hope you choke!",
+            u"No, please...I can buy you a whole herd of pigs...why me??",
+            u"I don\'t like this greedy look...",
+            u"No! Shoo! Bad dragon! Sit! I told you to sit!!!",
+            #u"Пошел вон скотина! А ну ка брысь-кому говорят. Облизывается он, ишь ты!",
+            u"(muffled groans)",
+            u"(softly cries and covers her face)",
+            u"(furiously struggles and breathes hard through clenched teeth)",
         ),
     },
     'elf': {  # используется для лесных дев
         'new': (  # описание девы
-            u"%(girl_name)s, прекрасная лесная дева из народа альвов, детей богини Дану.",
+            u"%(girl_name)s, beautiful virgin of the forest elves, the children of the goddess Danu.",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"О, Дану!..", 
-            u"Не тронь меня исчадие скверны!", 
-            u"Не смей! Духи леса отомсят за мою поргуанную честь!",
-            u"Уебери от меня эту... этот... Такой союз противен природе!", 
-            u"Чем я заслужила такое унижение?!",
-            u"Ты можешь взять моё тело, но моей душой тебе не завладеть!",
+            u"Оh, Danu!...", 
+            u"Do not touch me, demonic filth!", 
+            u"Don\'t you dare! the spirits of the wood will protect my honor!",
+            u"Deliver me from this...such a union is an abomination to nature!", 
+            u"What have I done to deserve this humililation?!",
+            u"You can take my body, but you will never own my soul!",
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"Неееееет!...",
+            u"Nooooooo!...",
             u"Аааааааа!....",
-            u"Если хочешь чтобы я просила пощады - не надейся!",
-            u"(кашляет от исходящего изо рта дракона смрада)",
+            u"If you want me to beg for mercy - forget it!",
+            u"(coughs from the stench from the dragon\'s mouth)",
         ),
     },        
     'mermaid': {  # используется для русалок
         'new': (  # описание русалки
-            u"%(girl_name)s, экзотическая морская дева.",
+            u"%(girl_name)s, exotic mermaid",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"О, Дагон!..", 
-            u"Не тронь меня сухопутная ящерица!", 
-            u"Не смей! Духи вод отомсят за мою поргуанную честь!",
-            u"Что это за хрень у тебя между ног?! Щупальце???", 
+            u"Оh, Dagon!..", 
+            u"Do not touch me, you land lizard!", 
+            u"Don\'t you dare! Spirits of the water will protect my honor!",
+            u"What is this between your legs? A tentacle???", 
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"Неееееет!...",
-            u"Аааааааа!....",
+            u"Noooooo!...",
+            u"Аааааааh!....",
         ),
     },        
     'siren': {  # используется для сирен
         'new': (  # описание
-            u"%(girl_name)s, экзотическая морская великанша.",
+            u"%(girl_name)s, exotic sea giantess.",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"О, Дагон!..", 
-            u"Не тронь меня сухопутная ящерица!", 
-            u"Не смей! Духи вод отомсят за мою поргуанную честь!",
-            u"Что это за хрень у тебя между ног?! Щупальце???", 
+            u"Оh, Dagon!..", 
+            u"Do not touch me, you land lizard!", 
+            u"Don\'t you dare! Spirits of the water will protect my honor!",
+            u"What is this crap between your legs? A tentacle???", 
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"Неееееет!...",
+            u"Noooooo!...",
             u"Аааааааа!....",
         ),
     },        
     'ogre': {  # людоедка
         'new': (  # описание
-            u"%(girl_name)s, глупая и диковатая людоедка.",
+            u"%(girl_name)s, dimwitted ogre.",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"Твоя меня не выебать! Моя сама выебать твоя!!! АРррргх! Смерть через СНУ-СНУ!", 
+            u"You won\'t fuck me! I\'ll fuck you! ARRRGHh! DEATH BY SNU-SNU!", #yes, it really says that xD 
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"Большая ящерица кусать? Я тоже кусать! КТО БОЛЬШЕ ОТКУСИТ?!.",
+            u"The lizard is going to bite me? I bite him back! WHO WILL BITE OFF MORE!?.",
         ),
     },      
     'ice': {  # ледяная великанша
         'new': (  # описание
-            u"%(girl_name)s, холодная и надменная ледяная великашна.",
+            u"%(girl_name)s, cold and haughty ice giantess.",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"Хочешь моих обьятий, змей? Твоя чешуя покроется инеем, а стручок скукожится от стужи в моих чреслах. Дерзай...", 
+            u"You want my embrace, snake? Your scales will cover with frost, and your balls will shrink with the cold in my loins. I dare you...", 
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"Ашшшшь... Я отморожу твои ничтожные кишки!..",
+            u"Аhhhhh!..I\'ll freeze your pathetic guts!..",
         ),
     },      
     'fire': {  # огненная великанша
         'new': (  # описание
-            u"%(girl_name)s, темпераментная и страстная огненная великанша.",
+            u"%(girl_name)s, temperamental and fiesty fire giantess",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"Ха! Поглядим какой из тебя любовник, змеюка. Хоть два раунда то выдержишь?", 
+            u"Ha! Let\'s see how you handle me, lover. Do you think you will last two rounds?", 
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"Решил меня сожрать? Без боя я не дамся!!!",
+            u"You think you\'re going to eat me? Not without a fight!!!",
         ),
     },      
     'titan': {  # людоедка
         'new': (  # описание
-            u"%(girl_name)s, совершенная и величественная титанида.",
+            u"%(girl_name)s, perfect and majestic Titaness",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"Повелеваю тебе оставить грязные мысли! Ты не достоин моей любви, червь!", 
+            u"Clear your dirty mind! You\'re unworthy of my love, worm!", 
         ),
         'eat': (  # Описание процесса поедания девушки
-            u"О Боги, почему вы оставляете меня в смертый час?! Или я не ваша возлюбленная дщерь?",
+            u"Oh gods, why did you leave me in the hour of my death? Am I not your beloved daughter?",
         ),
     },   
 }
