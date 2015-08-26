@@ -115,12 +115,12 @@ class Game(store.object):
                         for salary_i in salary:
                             summ += salary_i.cost
                         salary_tuple = (self.lair.upgrades[upgrade]['name'], summ - self.lair.upgrades[upgrade]['cost'])
-                        self.narrator(u"%s в качестве платы за год воруют: %s ф." % salary_tuple)
+                        self.narrator(u"%s Salary for this year: %s." % salary_tuple)
                     salary = self.lair.treasury.treasures_description(salary)
                     salary_tuple = (self.lair.upgrades[upgrade]['name'], ' '.join(salary))
-                    self.narrator(u"%s в качестве платы за год получают:\n %s" % salary_tuple)
+                    self.narrator(u"%s Salary this year:\n %s" % salary_tuple)
                 else:
-                    self.narrator(u"%s не получили обещанной платы и уходят." % self.lair.upgrades[upgrade]['name'])
+                    self.narrator(u"%s They did not receive the promised payment, and leave." % self.lair.upgrades[upgrade]['name'])
                     del self.lair.upgrades[upgrade]
         # Applies stored for year devastation, considering new builds
         self.poverty.value -= 1
@@ -144,15 +144,15 @@ class Game(store.object):
         # If there is not thief, try to create him
         if self.thief is None or self.thief.is_dead:
             if renpy.config.debug:
-                self.narrator(u"Вора не было или он был мертв, попробуем его создать.")
+                self.narrator(u"Trying to create thief.")
             self._create_thief()
             if self.thief is None:
                 if renpy.config.debug:
-                    self.narrator(u"Вор не появился.")
+                    self.narrator(u"Thief has not appeared")
                 call(data.game_events["no_thief"])
             else:
                 if renpy.config.debug:
-                    self.narrator(u"Вор появился.")
+                    self.narrator(u"The thief has appeared")
                 self.thief.event("spawn")
         else:  # Esle try to send him to theft
             if self.thief.forced_to_rob or \
@@ -309,7 +309,7 @@ class Game(store.object):
             elif len(lair_list) == 1:
                 lair_type = lair_list[0][1]  # one lair in a list, choose it automatically
             else:
-                lair_list.insert(0, (u"Выберите логово:", None))
+                lair_list.insert(0, (u"Select lair:", None))
                 lair_type = renpy.display_menu(lair_list)  # more than one lair in list, give a list to choose from
             self.lair = Lair(lair_type)
             data.achieve_target(self.lair.type_name, "lair")# achievements event
@@ -439,17 +439,17 @@ class Game(store.object):
     def quest_time_text(self):
         number = self.quest_time
         if number == 1:
-            return u"Последний год на выполнение задания!"
+            return u"Last year of the quest!"
         elif 1 < number < 5:
-            return u"Тебе нужно выполнить задание за %s года!" % str(number)
+            return u"There are only %s years left to complete the quest!" % str(number)
         elif (number % 100 > 20) and (number % 10 == 1):
-            return u"Задание нужно выполнить за %s год." % str(number)
+            return u"Your task should be completed within %s years." % str(number)
         elif (number % 100 > 20) and (1 < number % 10 < 5):
-            return u"Задание нужно выполнить за %s года." % str(number)
+            return u"Your task should be completed within %s years." % str(number)
         else:
-            return u"Задание нужно выполнить за %s лет." % str(number)
+            return u"Your task should be completed within %s years." % str(number)
 
-    def choose_spell(self, back_message=u"Вернуться"):
+    def choose_spell(self, back_message=u"Go back"):
         """
         Implements spell choose menu
         :param back_message: name for item with choose refusion in menu.

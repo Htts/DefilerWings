@@ -39,7 +39,7 @@ class GirlsList(object):
         alignment = girl_info['t_alignment']
         min_cost = girl_info['t_price_min']
         max_cost = girl_info['t_price_max']
-        obtained = u"Принадлежало красавице по имени %s" % self.game.girl.name
+        obtained = u"Was owned by a beauty named %s" % self.game.girl.name
         return gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
 
     def impregnate(self):
@@ -185,7 +185,7 @@ class GirlsList(object):
 
     def next_year(self):
         """
-        All actions with girrls in a year.
+        All actions with girls in a year.
         """
         # jailed girls
         for girl_i in reversed(xrange(self.prisoners_count)):
@@ -276,39 +276,39 @@ class GirlsList(object):
             # TODO: Возможно стоит сделать умирание слуги, если оно не морское и в морском логове.
             marine_check = ('marine' not in spawn_mod) or \
                            (self.game.lair.type.require and 'swimming' in self.game.lair.type.require)
-            spawn_menu = [(u"К Вам приходит %s и просит назначения" % spawn['name'], None)]  # меню отродий
+            spawn_menu = [(u"Comes to you and asks what to do with" % spawn['name'], None)]  # меню отродий
             # Possible menu points
             if ('poisonous' in spawn_mod) and ('poison_guards' not in self.game.lair.upgrades) and marine_check:
-                spawn_menu.append((u"Выпустить в логово", u'poison_guards'))
+                spawn_menu.append((u"Release into lair", u'poison_guards'))
             if ('servant' in spawn_mod) and ('servant' not in self.game.lair.upgrades) and marine_check:
-                spawn_menu.append((u"Сделать слугой", 'servant'))
+                spawn_menu.append((u"Make a servant", 'servant'))
             if ('warrior' in spawn_mod) and ('regular_guards' not in self.game.lair.upgrades) and marine_check:
-                spawn_menu.append((u"Сделать охранником", 'regular_guards'))
+                spawn_menu.append((u"Make a guard", 'regular_guards'))
             if ('elite' in spawn_mod) and ('elite_guards' not in self.game.lair.upgrades) and marine_check:
-                spawn_menu.append((u"Сделать элитным охранником", 'elite_guards'))
-            spawn_menu.append((u"Выпустить в королевство", 'free'))
+                spawn_menu.append((u"Make an elite guard", 'elite_guards'))
+            spawn_menu.append((u"Release into the kingdom", 'free'))
             if (('servant' in spawn_mod) or
                     ('warrior' in spawn_mod) or
                     ('elite' in spawn_mod)) and \
                     ('marine' not in spawn_mod):
-                spawn_menu.append((u"Отправить в армию тьмы", 'army_of_darkness'))
+                spawn_menu.append((u"Send to the army of darkness", 'army_of_darkness'))
 
             menu_action = renpy.display_menu(spawn_menu)
 
             if menu_action == 'free':
-                renpy.say(self.game.narrator, u"%s отправляется бесчинствовать в королевстве." % spawn['name'])
+                renpy.say(self.game.narrator, u"%s Sent out to rampage in the kingdom." % spawn['name'])
                 self.free_spawn(spawn['power'])
             elif menu_action == 'army_of_darkness':
-                renpy.say(self.game.narrator, u"%s отправляется в армию тьмы." % spawn['name'])
+                renpy.say(self.game.narrator, u"%s Sent into the army of darkness" % spawn['name'])
                 self.army_of_darkness(spawn_type)
             else:
                 # Message about work start
-                renpy.say(self.game.narrator, u"%s приступает к выполнению обязанностей." % spawn['name'])
+                renpy.say(self.game.narrator, u"%s starts performing its duties." % spawn['name'])
                 # Message about work end
                 if 'replaces' in data.lair_upgrades[menu_action].keys():
                     replace = data.lair_upgrades[menu_action]['replaces']
                     renpy.say(self.game.narrator,
-                              u"%s больше не требуются и уходят." % data.lair_upgrades[replace]['name'])
+                              u"%s Work is finished." % data.lair_upgrades[replace]['name'])
                 # add lair improvement
                 self.game.lair.add_upgrade(menu_action)
                 

@@ -223,57 +223,54 @@ thief_last_names = [
     u"Sliptoe",
     u"the Nimble",
     u"the Cunning",
-    u"Fox",
-    u"Jumper",
+    u"the Fox",
+    u"the Jumper",
     u"Fastlegs",
-    u"Joker",
-    u"Rascal",
-    u"Spliner",
-    u"Smelly",
+    u"the Joker",
+    u"the Rascal",
+    u"the Splinter",
+    u"the Smelly",
     u"Thorn",
     u"the Shadow",
-    u"Stealthy",
+    u"the Stealthy",
     u"the Calm",
-    u"Smugh",
+    u"the Smug",
     u"Agile Fingers",
-    u"Snealing",
-    u"cross-eyed",
-    u"Shuher",
-    u"Crazed",
-    u"Con-artist",
-    u"Pretender",
-    u"Alpinist",
+    u"the Sneaking",
+    u"cross-eyes",
+    u"the Crazed",
+    u"the Con-artist",
+    u"the Pretender",
+    u"the Climber",
     u"the Crawler",
-    u"Rimer",
-    u"the Indescent",
-    u"Unprincipled",
-    u"Cock",
-    u"Nervous",
+    u"the Rhymer",
+    u"the Indecent",
+    u"the Unprincipled",
+    u"the Cocky",
+    u"the Nervous",
     u"the Scretchy",
     u"the Stutterer",
-    u"Pockmarked",
-    u"Curva",
-    u"the Throaty",
+    u"the Pockmarked",
+    u"Cutthroat",
     u"Hungman",
     u"the Angry",
-    u"Shycopant",
-    u"Headoff",
+    u"the Sycophant",
+    u"the Headless",
     u"Frostbite",
-    u"Immature",
-    u"Snakethongue",
+    u"the Immature",
+    u"the Snaketongue",
     u"the Venomous",
-    u"Speedy",
+    u"the Speedy",
     u"the Cautious",
     u"Blacktooth",
     u"Whitetooth",
-    u"the Witehands",
+    u"Witehands",
     u"the Handsome",
-    u"Cacksone",
-    u"the Pussycat",
-    u"Smutthy",
+    u"the Cat",
+    u"the Smutty",
     u"the Hellspawn",
     u"the Greasy",
-    u"Fastone",
+    u"Fast one",
     u"the Rasp",
     u"the Woomaniser",
     u"the Bull",
@@ -281,7 +278,7 @@ thief_last_names = [
     u"Masterkey",
     u"the Pig Nose",
     u"the Daredevil",
-    u"the Sweet Talk",
+    u"the Sweet Talker",
 ]
 
 thief_abilities = Container(
@@ -289,17 +286,17 @@ thief_abilities = Container(
     {
         "climber": {
             "name": u"Alpinist",
-            "description": u"can get high",
+            "description": u"can climb high",
             "provide": ["alpinism"]
         },
         "diver": {
             "name": u"Diver",
-            "description": u"holdes breath",
+            "description": u"holds his breath",
             "provide": ["swimming"]
         },
         "greedy": {
             "name": u"Greedy",
-            "description": u"will get more treashues from you",
+            "description": u"will get more treasure from you",
             "provide": []
         },
         "mechanic": {
@@ -349,8 +346,8 @@ thief_items = Container(
             "description": u"more chances to suceed"
         },
         "scheme": {
-            "name": u"Secret passage scheme",
-            "description": u"ignors fortifications"
+            "name": u"Secret passage map",
+            "description": u"ignores fortifications"
         },
         "sleep_dust": {
             "name": u"Sleepdust",
@@ -359,7 +356,7 @@ thief_items = Container(
         "bottomless_sac": {
             "name": u"Bag of holding",
             "dropable": True,
-            "description": u"can get more treashures from you"
+            "description": u"can get more treasures from you"
         },
         "antidot": {
             "name": u"Antidote",
@@ -385,13 +382,13 @@ thief_items = Container(
             "provide": ["flight", "alpinism"]
         },
         "cooling_amulet": {
-            "name": u"Cool amulet",  # Applied
+            "name": u"Freezing amulet",  # Applied
             "dropable": True,
             "description": u"protection from fire",
             "provide": ["fireproof"]
         },
         "warming_amulet": {
-            "name": u"Hot amulet",  # Applied
+            "name": u"Firey amulet",  # Applied
             "dropable": True,
             "description": u"protection from cold",
             "provide": ["coldproof"]
@@ -457,7 +454,7 @@ thief_titles = [
     u"Burglar",
     u"Tomb Raider",
     u"Master-thief",
-    u"Thief Prince"
+    u"Prince of Thieves"
 ]
 
 '''
@@ -504,12 +501,12 @@ thief_events = {
 
 knight_first_names = [
     u"Havein",
-    u"Lancelott",
+    u"Lancelot",
     u"Gallahad",
-    u"Parcivail",
+    u"Percevail",
     u"Boris",
     u"Kay",
-    u"Mordredd",
+    u"Mordred",
     u"Harret",
     u"Urience",
     u"Yveyn",
@@ -625,7 +622,7 @@ knight_last_names = [
     u"the Kind",
     u"the Courageous",
     u"the Brave",
-    u"the Faithfull",
+    u"the Faithful",
     u"the Gallant",
     u"the Glorious",
     u"the Handsome",
@@ -634,13 +631,13 @@ knight_last_names = [
     u"the Whiteshield",
     u"the Strong",
     u"the Kin Eye",
-    u"the Lionehart",
+    u"the Lionhart",
     u"Oakenshield",
     u"the Patient",
     u"the Timid",
     u"the Seeker",
     u"the Adherent",
-    u"the Deffender",
+    u"the Defender",
     u"the Savior",
     u"the Benevolent",
     u"the Exemplar",
@@ -649,7 +646,7 @@ knight_last_names = [
     u"the Wise",
     u"the Marvellous",
     u"the Daydreamer",
-    u"a Choosen One",
+    u"the Chosen One",
     u"the Honorable",
     u"the Blessed One",
     u"the Fine",
@@ -659,8 +656,8 @@ knight_last_names = [
     u"the Generous",
     u"the Thrifty",
     u"the Merciful",
-    u"the Benignant",
-    u"the Sweet Woice",
+    u"the Beneficent",
+    u"the Sweet Voice",
     u"the Witty",
     u"the Landless",
     u"the White Face",
@@ -682,8 +679,8 @@ knight_abilities = Container(
         },
         "liberator": {
             # Implemented at Knight._ability_modifiers
-            "name": u"Liverator",
-            "description": u"goes stronger if you hold a captives",
+            "name": u"Liberator",
+            "description": u"becomes stronger if you hold captives",
             "modifiers": []
         },
         "fiery": {
@@ -706,7 +703,7 @@ knight_items = Container(
         "basic_vest": {
             "id": "basic_vest",
             "name": u"Chainmail",
-            "description": u"standart armor",
+            "description": u"standard armor",
             "type": "vest",
             "basic": True,
             "modifiers": []
@@ -740,14 +737,14 @@ knight_items = Container(
         "basic_spear": {
             "id": "basic_spear",
             "name": u"Steel lance",
-            "description": u"standart weapon",
+            "description": u"standard weapon",
             "type": "spear",
             "basic": True,
             "modifiers": []
         },
         "blued_spear": {
             "id": "blued_spear",
-            "name": u"Burhished lance",
+            "name": u"Burnished lance",
             "description": u"strong weapon",
             "type": "spear",
             "basic": False,
@@ -774,7 +771,7 @@ knight_items = Container(
         "basic_sword": {
             "id": "basic_sword",
             "name": u"Longsword",
-            "description": u"standart weapon",
+            "description": u"standard weapon",
             "type": "sword",
             "basic": True,
             "modifiers": []
@@ -813,7 +810,7 @@ knight_items = Container(
         },
         "thunderer_sword": {
             "id": "thunderer_sword",
-            "name": u"The Thunderrer",
+            "name": u"The Thunderer",
             "description": u"thunder weapon",
             "type": "sword",
             "basic": False,
@@ -849,7 +846,7 @@ knight_items = Container(
         "basic_horse": {
             "id": "basic_horse",
             "name": u"Horse",
-            "description": u"standart mount",
+            "description": u"standard mount",
             "type": "horse",
             "basic": True,
             "modifiers": []
@@ -864,7 +861,7 @@ knight_items = Container(
         },
         "pegasus": {
             "id": "pegasus",
-            "name": u"Pegassus",
+            "name": u"Pegasus",
             "description": u"can fly",
             "type": "horse",
             "basic": False,
@@ -896,7 +893,7 @@ knight_items = Container(
         },
         "griffon": {
             "id": "griffon",
-            "name": u"Griffin",
+            "name": u"Griffon",
             "description": u"can fly, strong mount",
             "type": "horse",
             "basic": False,
@@ -937,7 +934,7 @@ knight_items = Container(
         },
         "thaumaturge": {
             "id": "thaumaturge",
-            "name": u"Wisard",
+            "name": u"Wizard",
             "description": u"more atk and def",
             "type": "follower",
             "basic": False,
@@ -951,7 +948,7 @@ knight_titles = [
     u"Questing knight",
     u"Knight of the Mark",
     u"Noble knight",
-    u"Palladin",
+    u"Paladin",
     u"Prince"]
 
 knight_events = {
@@ -975,7 +972,7 @@ lair_types = Container(
     "lair_types",
     {
         "impassable_coomb": {
-            "name": u"impassable comb",
+            "name": u"impassable combe",
             "inaccessability": 0
         },
         "impregnable_peak": {
@@ -985,13 +982,13 @@ lair_types = Container(
             'prerequisite': ['wings']
         },
         "solitude_citadel": {
-            "name": u"Solitude citadel",
+            "name": u"Solitary citadel",
             "inaccessability": 0,
             "require": ["alpinism", "coldproof"],
             'prerequisite': ['wings', 'ice_immunity']
         },
         "vulcano_chasm": {
-            "name": u"Voolcano chasm",
+            "name": u"Volcano chasm",
             "inaccessability": 0,
             "require": ["alpinism", "fireproof"],
             'prerequisite': ['wings', 'fire_immunity']
@@ -1092,8 +1089,8 @@ lair_upgrades = Container(
                 u'Thief bypasses the traps.',
             ],
             "fail": [
-                u'Unlucky thief steps on a shiftplate and activates'
-                u'deadly blade trap.',
+                u'Unlucky thief steps on a shift-plate and activates'
+                u'a deadly blade trap.',
             ]
         },
         "magic_traps": {
@@ -1103,18 +1100,18 @@ lair_upgrades = Container(
                 u'Cunning thief spots a glimer and avoids a magical trap.',
             ],
             "fail": [
-                u'Magical trap desintegtates the tresspasser.',
+                u'Magical trap disintegrates the trespasser.',
             ]
         },
         "poison_guards": {
             "name": u"Venomous guards",
             "protection": 1,
             "success": [
-                u"Venomous beasts can't stop the tresspasser.",
+                u"Venomous beasts can't stop the trespasser.",
             ],
             "fail": [
                 u'Sneaky venomous beast bites the unlucky thief. '
-                u'He dies in a great pain...',
+                u'He dies in great pain...',
             ]
         },
         "regular_guards": {
@@ -1122,11 +1119,11 @@ lair_upgrades = Container(
             "replaces": "smuggler_guards",  # какое улучшение автоматически заменяет
             "protection": 2,
             "success": [
-                u'Burglar stealthily stabs guards with dagger, one by one.',
+                u'Burglar stealthily stabs guards with his dagger, one by one.',
             ],
             "fail": [
                 u'Guard spots the thief and raises the alarm. '
-                u'After a short but brutal fight thef is defeated and murdered.',
+                u'After a short but brutal fight thef is defeated and executed.',
             ]
         },
         "smuggler_guards": {
@@ -1134,23 +1131,23 @@ lair_upgrades = Container(
             "cost": 100,
             "protection": 2,
             "success": [
-                u'Burglar stealthily stabs guards with dagger, one by one.',
+                u'Burglar stealthily stabs guards with his dagger, one by one.',
             ],
             "fail": [
                 u'Guard spots the thief and raises the alarm. '
-                u'After a short but brutal fight thef is defeated and murdered.',
+                u'After a short but brutal fight thef is defeated and executed.',
             ]
         },
         "elite_guards": {
             "name": u"Elite guard",
             "protection": 3,
             "success": [
-                u'Under the cower of darkness, thief slips behind '
-                u'the elite guard into the treashure chamber.',
+                u'Under the cover of darkness, thief slips behind '
+                u'the elite guard and into the treasure chamber.',
             ],
             "fail": [
-                u'Thef tried to sneak on an guard of treashure chamber but fails.'
-                u'Bloodthirsty beast rips him apart.',
+                u'Thef tried to sneak on an guard of treasure chamber but fails.'
+                u'The bloodthirsty monster rips him apart.',
 
             ]
         },
@@ -1160,7 +1157,7 @@ lair_upgrades = Container(
             "protection": 0
         },
         "gremlin_servant": {
-            "name": u"Gremlin-servants",
+            "name": u"Gremlin servants",
             "cost": 100,
             "protection": 0
         },
@@ -1204,11 +1201,11 @@ reputation_levels = {
 }
 
 reputation_gain = {
-    1: u"Common folk will notice this mischief.",
-    3: u"Ill fame of dragon rises in Free Kingdoms.",
-    5: u"Defiler ill fame rised considerably.",
+    1: u"Common folk will notice this misdeed.",
+    3: u"Ill fame of the dragon rises in the Free Kingdoms.",
+    5: u"Defiler\'s ill fame rises considerably.",
     10: u"This dread deed will be remembered far and wide.",
-    25: u"The legend of this dread deed will persist in ages."
+    25: u"The legend of this dread deed will persist through the ages."
 }
 
 #
@@ -1280,18 +1277,18 @@ dragon_surnames = [
     u'the Furious',
     u'the Mighty',
     u'the Sinister',
-    u'the Shtormborn',
+    u'the Stormborn',
     u'the Omnious',
     u'the Dark',
     u'the Baleful',
     u'the Arrogant',
     u'the Greedy',
     u'the Covetous',
-    u'the Mercyless',
+    u'the Merciless',
     u'the Ruthless',
     u'the Proud',
     u'the Glutton',
-    u'the Loudroar',
+    u'Loudroar',
     u'the Horrendous',
     u'the Deadly',
     u'the Quarellsome',
@@ -1299,43 +1296,43 @@ dragon_surnames = [
     u'the Envious',
     u'the Vicious',
     u'the Snakeeyed',
-    u'the Longtail',
+    u'the Longtailed',
     u'the Ugly',
-    u'the Spikescale',
+    u'the Spikescaled',
     u'the Isidious',
     u'the Defiller',
     u'the Devourer',
     u'the Vivisector',
-    u'the Doomuide',
+    #u'the Doomuide', #what?
     u'the Deathstalker',
     u'the Shaded',
     u'the Bloody',
-    u'the Saberthooth',
-    u'the Temper',
+    u'the Sabertooth',
+    u'the Tempestuous',
     u'the Shameless',
     u'the Foul',
     u'the Crazed',
     u'the Impaler',
-    u'the Voloptous',
-    u'the Angersome',
+    u'the Voluminous',
+    u'the Angry',
     u'the Gutspiller',
     u'the Flayer',
-    u'the Vorewhole',
+    u'the Swallower',
     u'the Indolent',
     u'the Slimy',
-    u'the Destroer',
+    u'the Destroyer',
     u'the Snakeeater',
     u'the Cursed',
     u'the Bloodthirsty',
     u'the Molester',
     u'the Godless',
-    u'the Powerfull',
-    u'the Lier',
+    u'the Powerful',
+    u'the Liar',
     u'the Thunderbird',
     u'the Sneaky',
-    u'the Duplitious',
+    u'the Duplicitous',
     u'the Wise',
-    u'the Kineyed',
+   # u'the Kineyed',
     u'the Impetuous',
     u'the Unholy',
 ]
@@ -1343,7 +1340,7 @@ dragon_surnames = [
 # Sizes
 dragon_size = [
     u'Small',
-    u'Modestsized',
+    u'Modest-sized',
     u'Large',
     u'Huge',
     u'Gigantic',
@@ -1356,23 +1353,23 @@ dragon_size_description = [
 
     u'It weighs about the same as an healthy adult man, nothing special.',
 
-    u'Large enough to be compared with a horse or a well fed sculpin',
+    u'Large enough to be compared with a horse',
 
-    u'There are barely any animals that can compare with his size in the local forests. '
-    u'Only the most well fed bulls or cave bears can compare with him.',
+    u'There are few animals in the local forests that come close to his size. '
+    u'Only the most well fed bulls or cave bears compare with him.',
 
-    u'He can give even an elephant a run for the belt in size and weight. '
+    u'He can give even an elephant a run for it\'s money in size and weight. '
     u'Other than that there is no equal in the forests and fields of the kingdom.',
 
-    u'Even titans pale in comparison, only cachalots and krakens come even close in weight. '
-    u'But can he be as agile and deadly on both land and in the sky?',
+    u'Even titans pale in comparison, only whales and krakens come even close in weight. '
+    u'As agile and deadly as they are in the sea, he is on land and in the sky!',
 ]
 
 head_description = {
-    'green': u'have no special abilities',
+    'green': u'has no special abilities',
     'red': u'spews fire',
     'white': u'chilling breath',
-    'blue': u'have gills',
+    'blue': u'has gills',
     'black': u'spews poisonous gas',
     'iron': u'covered in tough steel-like scales',
     'bronze': u'can dig the earth',
@@ -1402,32 +1399,32 @@ special_description = [
 
     u'He has a deadly poison sting in the tip of the tail.',
 
-    u'His claws are razor shatp.',
+    u'His claws are razor sharp.',
 
-    u'The mighty horns are topping his head, providing protection and scary look.',
+    u'Mighty horns top his head, providing protection and a scary appearance.',
 
     u'He has a saber-claws.',
 
-    u'He is so ugly and scary, that no one can look at him straight, '
-    u'and weeklings are simply flee in terror.',
+    u'He is so ugly and terrifying that no one can look straight at him, '
+    u'and weaklings simply flee in terror.',
 ]
 
 special_features_rus = {
     "tough_scale": u"Tough scales",
-    "poisoned_sting": u"Venomous sting",
+    "poisoned_sting": u"Venemous sting",
     "clutches": u"Razor claws",
     "horns": u"Magnificent horns",
-    "fangs": u"Saberthoos fangs",
+    "fangs": u"Sabertooth fangs",
     "ugly": u"Ugliness",
 }
 
 cunning_description = [
-    u'The magical spark are flickering in his eyes.',
+    u'The magical spark is flickering in his eyes.',
 
     u'The flame of magic fires in his eyes. '
-    u'His maggical power is great.',
+    u'His magical power is great.',
 
-    u'He comands the immense magical powers.',
+    u'He comands immense magical powers.',
 ]
 
 # TODO: Text module with numerals
@@ -1446,16 +1443,16 @@ head_num = [
 
 # heads amount description
 head_count = {
-    2: u"twoheaded",
-    3: u"threheaded",
-    4: u"forheaded",
-    5: u"fiveheaded",
-    6: u"sixheaded",
-    7: u"sevenheaded",
-    8: u"eightheaded",
-    9: u"manyheaded",
-    10: u"manyheaded",
-    11: u"manyheaded",
+    2: u"two-headed",
+    3: u"three-headed",
+    4: u"four-headed",
+    5: u"five-headed",
+    6: u"six-headed",
+    7: u"seven-headed",
+    8: u"eight-headed",
+    9: u"many-headed",
+    10: u"many-headed",
+    11: u"many=headed",
 }
 
 # Head types(colors)
@@ -1659,7 +1656,7 @@ special_places = {
     'backdor_sealed': (u"Back door", 'lb_backdor_sealed'),
     # мория
     'frontgates_guarded': (u"Mountain Gate", 'lb_frontgates'),
-    'frontgates_open': (u"Brocken Gates", 'lb_dwarf_ruins'),
+    'frontgates_open': (u"Broken Gates", 'lb_dwarf_ruins'),
 }
 
 quest_list = (
@@ -1675,7 +1672,7 @@ quest_list = (
         'min_lvl': 1,  # минимальный уровень дракона для получения квеста
         'max_lvl': 1,  # максимальный уровень дракона для получения квеста
         # текст квеста, {0} будет заменён на требуемый уровень
-        'text': u"(Gain 1 infamity) \n Ты уже вырос, пора заняться настоящим делом, сыночек. Там за пределами моих владений, лежат земли Вольных Народов, это они унизили меня и изгнали в эти бесплодные пустоши. Ты станешь началом Рода несущего вольным погибель. \n Давай-ка проверим на что ты способен родной. Отправляйся в земли Вольных Народов и стяжай себе дурную славу - пусть о тебе говорят, пусть тебя боятся. Только не лезь на рожон, мы же не хотим чтобы ты умер не оставив сыновей, верно? Если видишь что враг силён - убегай. Бей исподтишка. Рыскай по лесам и полям, убивай одиноких женщин, разоряй стада. Мы увидим как растёт твоя дурная слава. Когда люди начнут шептаться возвращайся ко мне и я подарю тебе сына, который станет сильнее тебя и сможет сделать больше. \n Мой совет - не оставайся спать в Землях Вольных. Когда ты устанешь то захочешь вздремнуть. И сон твой продлится год, а может быть и дольше если надо будет залечивать раны. А пока ты спишь, люди будут охотиться за тобой и твоими сокровищами. Чем больше твоя дурная слава, тем больше внимания ты привлечёшь, а пока что тебе это не нужно. Если успеешь достаточно набедокурить до того как совсем устанешь и захочешь спать, иди лучше сразу сюда. В крайнем случае переночуй в овражке. \n Но если пропадёшь больше чем на пять лет, я сделаю продолжателем рода другого. ",
+        'text': u"My son, you're all grown up, and it\'s time to get down to real business. Beyond my possession are the Free Peoples of the earth, they humiliated me and drove me into the barren wasteland. You will be start of a bloodline that will bring them destruction. \n Let\'s see what you are capable of. Travel to the land of the Free Peoples and make a name for yourself - let them speak of you and fear you. But do not go on a thoughtless rampage, we don\'t want you to die without leaving a son, right? If you see that the enemy is strong - run away. Fight stealthily. Scour the woods and fields, kill lone women and ruin herds. When the people begin to whisper, come back to me and I\'ll give you a son, who will become stronger and achieve more than you. \n My advice - do not sleep in the Free Lands. When you sleep, you will slumber for a year, or more if you must heal wounds, and in the meantime men will hunt for you and your treasure. The more infamous you are, the more attention you attract, though that is not a concern just yet. If you have time before you are exhausted, return here. If unable, stay in a flood gulley as a last resort. \n If you are unable to accomplish this within five years, I will find another successor. ",
         'fixed_time': 5,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         # ключевое слово для описания задачи, 'reputation' - проверяется уровень дурной славы
         'task': 'reputation',
@@ -1684,7 +1681,7 @@ quest_list = (
     {   # Породить любое потомство.
         'min_lvl': 2,  # минимальный уровень дракона для получения квеста
         'max_lvl': 2,  # максимальный уровень дракона для получения квеста
-        'text': u"(make any offspring) \n Ну вот ты и подрос, родной. Ты сильнее совего папы, но всё же ещё не так могуч чтобы отомстить за меня - это дело для твоих потомков. А знаешь что нужно делать чтобы завести детей? Нет-нет, не со мной, глупыш. Пока что не со мной. Надо проверить на что ты способен, для продолжения Рода я выберу самого лучшего из выводка. \n   У тебя очень сильное семя, ты сможешь оплодотворить кого захочешь. Но принять и выносить твоего ребёнка смогут не все. Чем больше сил будет у женщины, тем лучше выйдет потомство. Обязательно бери дев, которые ещё не знали мужского прикосновения. Разве что для великанш это не имеет значения, одно отродье они смогут тебе подарить даже если уже рожали обычных детей до того. Ищи для себя лучшую кровь. Горожанка лучше крестьянки. Благородная дама лучше горожанки. У эльфийских дев в крови магия - а значит они дадут отличное потомство. \n   Ты первый в роду и поэтому тебе рано гоняться за волшебными девами, хватит на первой и крестьянок. Поймай где-нибудь у деревни одну, а лучше нескольких. Оплодотвори их и отпусти на волю, ведь в логове за ними некому будет смотреть пока ты спишь. Если их не убьют свои же, то через год, когда проснёшься, они породят тварей. Не драконов конечно, драконов могу породить лишь Я, но всё же это будут монстры которые попортят людям кровушку. Когда что-нибудь вылупится возвращайся ко мне и получишь особую награду!  \n   На всё про всё сроку тебе пять лет. Если не справишься за это время, то назад можешь не возвращаться.",  # текст квеста
+        'text': u"Well, you too have grown up. You are stronger than your father, but still are not mighty enough to avenge me - that is a task for your descendants. And do you know what to do to make children? No, not with me, silly. \n   You have a very strong seed, you will be able to impregnate any whom you desire. But not all will be able to bear strong children to term. The greater the strength of the woman, the better the reproduction will be. Be sure to take virgins who have not known the male touch. For giantesses it makes no difference, they will give you one offspring even if they have already had ordinary children. Look for the best blood. \n   You'\re the first in the family, and it\'s too early for you to chase magic maidens, for your first time peasants are enough. Somewhere near the village you must catch not just one, but several. Fertilize them and set them free, because there is no one in your den to guard them while you sleep. If they are not killed by their own people, in a year when you wake up they will have spawned creatures. Not dragons of course, dragons only I can produce, but monsters that will run rampant among the Free People. When something hatches come back to me, and I will give you a special reward! \n    For this you have five years. If you cannot handle it in that time, don'\t come back.",  # текст квеста
         'fixed_time': 5,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'offspring',  # ключевое слово для описания задачи, 'offspring' - породить потомство
         # кортеж с требованиями, для выполнения задания нужно выполнить любое из них,
@@ -1694,7 +1691,7 @@ quest_list = (
     {   # Снизить боеспособность королевства.
         'min_lvl': 3,  # минимальный уровень дракона для получения квеста
         'max_lvl': 3,  # максимальный уровень дракона для получения квеста
-        'text': u"(rise kingdom mobilization, then drop it down) \n Сегодня день твоего совершеннолетия. Это значит, что пришла пора и тебе как до того твоим предкам, отправляться в Земли Вольных народов. Среди всех, люди самые мерзкие. Они многочисленны и организованы. Их королевство огромно. И они уже знают о появлении драконов, а значит будут защищаться. \n   Когда твоя дурная слава растёт, вслед за ней растёт мобилизация королевства. Они будут увеличивать свою армию, вышлют на дороги патрули. Чем выше мобилизация, тем лучше защищено королевство. Но мы можем помешать людям собраться с силами. Для этого подойдут любые способы: можно разорять деревни, жечь амбары и мельницы. Тогда в стране начнётся разруха и мобилизация упадёт. Можно наводнить королевство отродьями, которые отвлекут войска на себя. А можно просто заплатить разбойникам с одинокого острова, чтобы они начали саботаж. Так или иначе, но ты должен уметь справляться с угрозой. Вот что ты должен сделать: \n   Сначала стяжай дурную славу и ложись спать. Как проснёшься, люди уже будут суетиться. Тогда то и надо будет сделать что-нибудь, чтобы умерить их пыл. Когда мобилизация упадёт, считай что сделал всё что нужно. Можешь возвращаться ко мне за наградой! \n   Сроку дам тебе десять лет. Этого должно быть более чем достаточно для такой простой задачи. ",  # текст квеста
+        'text': u"Today you have reached maturity. That means the time has come for you, like your ancestors before, to go to the Free Peoples of the earth. The People are the most vile things of all. They are numerous and organized. Their kingdom is enormous. And they already know about the appearance of the dragons, and thus will have protections. \n   When your notoriety increases, the kingdom will mobilize. They will increase their army size and begin to patrol the roads. The higher the mobilization, the better the kingdom will be protected. But we can prevent them from gathering strength. To do this, you can use many methods. You can ruin the countryside, burning barns and mills, reducing their ability to field armies. You can flood the kingdom with spawn, and troops will be diverted to deal with them. And you may simply pay robbers from the loney island to plunder and sabotage. One way or another, you should be able to cope with the threat. This is what you have to do: \n   First, acquire notoriety and go to sleep. When you wake up, the people will have arisen. Then, you must do something to reduce their enthusiasm. When their mobilization falls, I think that is all that is needed. Come back to me for a reward! \n	I will give you a term of ten years. That should be than enough for such a simple task.",  # текст квеста
         'fixed_time': 10,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         # ключевое слово для описания задачи, 'poverty' - проверяется уровень понижения мобилизации из-за разрухи
         'task': 'poverty',
@@ -1706,7 +1703,7 @@ quest_list = (
         # максимальный уровень дракона для получения квеста
         'max_lvl': 4,
         # текст квеста
-        'text': u"(Get good lair, with guards, servants, fortifications and traps) \n Ты уже совсем взрослый, сынок. И ты намного сильнее чем были первые в твоём Роде, настало время драконам вести себя по королевски. Я хочу чтобы ты хорошенько обосновался на Землях Вольных. Тебе понадобится настоящее драконье логово, не какой-нибудь сырой овраг или дыра в земле. Лучше найди хорошую пещеру или отбей у какого-нибудь рыцаря поместье или небольшой замок. Тебе потребуются слуги и охрана. Лучше всего если тебя будут охранять твои же отродья, но для начала сойдут и наёмники с разбойничьего острова. В качестве слуг можно нанять гремлинов, они будут присматривать за пленницами пока ты спишь. Тварям рождённым в твоём логове ты сможешь приказывать что делать. Если хочешь насолить людям - отпусти их резвиться на волю. Если нужна охрана или слуги которые не возьмут с тебя денег, оставь их в логове - там найдётся место для слуг, цепных ядовитых тварей, обычной охраны и элитного защитника сокровищ. Если же твоё логово уже под защитой, отправляй разумных отродий ко мне - они станут дополнением к войску гоблинов и размножатся под моей рукой. \n   Гремлины искусные мастера - обязательно закажи у них ловушки и укрепления для своего нового логова, чтобы ворам было сложнее добраться до сокровищницы. Отнесись к обустройству логова со всем возможным вниманием, ведь менять его дело хлопотное - переселяясь ты потеряешь всё что нажил до того, кроме разве что сокровищ. \n   Когда у тебя будет достойное жильё со слугами, охраной, ловушками и укреплениями, позови меня посмотреть. Сроку даю тебе десять лет, если справишься то станешь продолжателем Рода.",
+        'text': u"	Already you\'re quite an adult, son. And you\'re a lot stronger than the first of your kind were at your age. The time has come for dragons to behave like kings. I want you thoroughly settled on the lands of the free. You need to have a dragon\'s lair, not some crude gully or hole in the ground. It is better to find a good cave, or take from a knight a small estate or castle. You will need servants and guards. It is best to be protected by your own spawn, but for a start mercenaries are found on the predatory island. As servants hire gremlins, who will look after the captives while you sleep. Creatures born in your den can be told what to do. If you want them to harrass the people - let them go free. If you need protection or servants who will not steal from you, leave them in the den. There are roles for servants, chained poisonous creatures, guards and elite treasure defenders. If your den is protected enough, send intelligent spawn to me - they will be added to my army along with my goblins, and multiply under my hand. \n	Gremlins are skilled craftsmen - be sure to order them to build traps and fortifications for the new lair, so it is more difficult for thieves to get to the treasure. Attend carefully to the arrangement of the den, because if you are forced to move you will lose everything that you had made, keeping only the treasure. When you have decent housing with servants, guards, traps, and fortifications, call me to look. Ten years I give you, if you can handle this you will become the successor of your race.",
         # количество лет на выполнение квеста, не зависящее от уровня дракона
         'fixed_time': 10,
         # ключевое слово для описания задачи, 'lair' - проверяется тип логова и его улучшений
@@ -1727,7 +1724,7 @@ quest_list = (
     {   # Поймать вора или одолеть рыцаря в собственном логове.
         'min_lvl': 5,  # минимальный уровень дракона для получения квеста
         'max_lvl': 5,  # максимальный уровень дракона для получения квеста
-        'text': u"(Kill the thief or knight in your lair) \n В твоём возрасте, твой отец отправился в Земли Вольных и устроил там отличное логово. Правда в деле он его толком так и не проверил. Логово нужно дракону не просто так. Там ты хранишь сокровища и держишь пленниц вынашивающих твоё потомство. Чем больше твоя дурная слава, тем больше злодеев захочет тебя обидеть. \n   Рыцари будут приезжать пока ты спишь, будить тебя громкими звуками боевого рога и вызывать на бой. Ну как их за это ну убивать? Если же рыцарь тебя одолевает, то можно убежать, но тогда все сокровища и пленницы достанутся ему а логово будет потеряно навсегда! \n   Воры не так опасны, но они очень раздражают. Слетаются на золото, словно мухи на мёд. Вор будет пытаться проникнуть в сокровищницу пока ты спишь и стянуть самые ценные вещи прямо у тебя из под носа! Тут то и пригодятся охранники, укрепления и ловушки. \n Обустрой себе неприступное логово и проверь его в деле - поймай вора или одолей рыцаря. Тогда я смогу спать спокойно, зная что мои детки способны сами о себе позаботиться и прожить долгую жизнь в землях наших врагов. \n Четверти века должно хватить, но если справишься быстрее - приходи раньше.",  # текст квеста
+        'text': u" \n   At your age, your father went to the land of the Free and made a great lair. The truth is, he never dealt with the real concerns that a lair is necessary for. In the lair you keep your treasures and captives hatching your offspring. The more notorious you become, the more villains will come to harm you. \n	Knights will come while you sleep, wake you up with the sound of a battle horn, and call you out to fight. If the knight overpowers you, you can run, but all the treasures and prisoners will be lost forever! \n Thieves are not as dangerous, but they are very irritating. Like flies to honey, they come for gold. The thief will try to sneak into the treasury while you sleep and steal the most valuable things from right under your nose! \n   Here'\s the value of guards, fortifications, and traps.  \n Make yourself an unapproachable den and test it in action - catch the thief or overcome the night. Then I will be able to sleep peacefully, knowing that my children can take care of themselves and live a long life in the land of our enemies. \n A quarter century should be enough, but if you can handle it faster - come earlier.",  # текст квеста
         'fixed_time': 25,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'event',  # ключевое слово для описания задачи, 'event' - должно произойти какое-то событие
         # кортеж с требованиями, нужно либо 'thief_killer' - поймать вора, либо 'knight_killer' - убить рыцаря
@@ -1737,7 +1734,7 @@ quest_list = (
         'min_lvl': 6,  # минимальный уровень дракона для получения квеста
         'max_lvl': 11,  # максимальный уровень дракона для получения квеста
         # текст квеста, {0} будет заменён на требуемый уровень
-        'text': u"(Gain {0} infamity) \n Садись и слушай, дитя моё. Твои беззаботные дни окончены, теперь ты взрослый и будешь сам по себе, один в мире людей. Ты сможешь позаботиться о себе, как и все те твои предки. Если же хочешь стать продолжателем рода, то покажи себя в деле - стяжай дурную славу (не менее {0}) и возвращайся ко мне за наградой. \n   Впрочем не торопись особо. Времени у нас много, но надо думать о будущем. Золото которое ты соберёшь и отродья которых ты отправишь в мою армию очень пригодятся нам когда придёт час войны. \n   И да будет имя твоё ночным кошмаром для всех Вольных Народов!",
+        'text': u"Sit down and listen, my child. Your carefree days are over, and now you are an adult on your own, alone in the world of men. Can you take care of yourself as well as your ancestors did? If you want to be a successor, then prove yourself - gain infamy (not less than {0}) and return to me for a reward. \n   But do not hurry too much. We have a lot of time, but we must think about the future. Gold which you may gather, and offspring that you send my army will be very useful to us when the hour of war comes.  \n   Let thy name be a nightmare for all the Free Peoples!",
         'lvlscale_time': 5,  # на что нужно умножить уровень дракона, чтобы получить число лет на выполнение
         # ключевое слово для описания задачи, 'reputation' - проверяется уровень дурной славы
         'task': 'reputation',
@@ -1749,7 +1746,7 @@ quest_list = (
         'min_lvl': 6,  # минимальный уровень дракона для получения квеста
         'max_lvl': 10,  # максимальный уровень дракона для получения квеста
         # текст квеста, {0} будет заменён на требуемый уровень
-        'text': u"(Gain {0} wealth) \n Вижу как горят твои глаза при виде золота и женских форм. Ты стал совсем взрослым и в тебе окрепли драконьи страсти. Это отлично. Но здесь всё золото принадлежит мне, как и все женские прелести. Если хочешь что-то для себя, милый, отправляйся в земли Вольных Народов. Там достаточно металла и плоти иди и возьми! \n   Наша армия растёт, им нужно снаряжение, оружие, продовольствие. Нужно золото. Собери для меня сокровища которые стоили бы не меньше  {0} фартингов. Если твоё золотое ложе будет достаточно дорогим, я позволю тебе продолжить твой Род и твои потомки прославят тебя!",
+        'text': u"I can see how your eyes burn at the sight of gold and the female form. You've become quite an adult, a strong dragon. But here all the gold is mine, as well as all feminine charms. If you want something for yourself, my dear, go to the land of the Free Peoples. There\'s plenty of flesh and precious metal, go and take it! \n Our army grows, they need equipment, weapons, and food. We need gold. Collect treasure for me, no less than {0} f. If your golden bed is worth enough, I will allow you to continue your line and your descendants shall praise you!",
         'lvlscale_time': 5,  # на что нужно умножить уровень дракона, чтобы получить число лет на выполнение
         'task': 'wealth',  # ключевое слово для описания задачи, 'wealth' - проверяется стоимость сокровищ
         'fixed_threshold': 10000,  # задаёт фиксированное значения для задачи
@@ -1760,7 +1757,7 @@ quest_list = (
         'min_lvl': 6,  # минимальный уровень дракона для получения квеста
         'max_lvl': 12,  # максимальный уровень дракона для получения квеста
         # текст квеста, {0} будет заменён на требуемый уровень
-        'text': u"(Give me a gift, item {0} worth or more) \n Хочешь меня? Я знаю, знаю. Чем старше ты становишься, тем больше хочешь. Тебя снедает желание продолжить свой род, но это право надо заслужить, сын мой. Женщин знаешь ли не всегда похищают и насилуют, со мной этот трюк не пройдёт. Но я буду благосклонна, если ты подаришь мне что-нибудь красивое. И дорогое. Не меньше {0} фартингов, а лучше больше! Уверена ты сможешь отыскать что-нибудь подходящее в сокровищницах Вольных Народов или даже соберёшь нужные материалы и сделаешь что-то уникальное специально для меня. Ведь ты хочешь меня… но пройдут годы прежде чем сможешь получить. Пусть эта страсть питает тебя, дитя моё. Пусть перерастает в злобу. Я хочу чтобы Вольные почувствовали твою ярость! Иди и принеси мне подарок, я буду терпелива, я дождусь тебя. ",
+        'text': u"You want me? I know, I know. The older you get, the more you want. You\'re consumed by desire to continue your bloodline, but this right must be earned, my son. Kidnapping and raping is a trick that will not work on me. But I will be gracious if you give me something beautiful. And expensive. No less than {0} f, and bigger is better! I\'m sure you can find something suitable in the treasures of the Free People, or you may even gather materials and make something special. After all, you want me...but it will be years before you can have me. Let this passion feed you, my child. Let it develop into rage. I want to feel your lustful rage! Go and bring me a gift, I\'ll be patient, I\'ll wait for you.",
         'lvlscale_time': 5,  # на что нужно умножить уровень дракона, чтобы получить число лет на выполнение
         'task': 'gift',  # ключевое слово для описания задачи, 'wealth' - проверяется стоимость сокровищ
         'fixed_threshold': 1500,
@@ -1770,7 +1767,7 @@ quest_list = (
     {   # Породить потомка от великанши.
         'min_lvl': 7,  # минимальный уровень дракона для получения квеста
         'max_lvl': 11,  # максимальный уровень дракона для получения квеста
-        'text': u"(Make offspring wih giantess) \n Поздравляю с совершеннолетием. Ты уже вырос и готов, я вижу как ты на меня глядишь. Всему своё время. Сначала докажи что ты настоящий мужчина. Обрюхатить крестьянку много ума не надо, с этим и гоблин справится. Но если ты заведёшь потомство от великанши, это уже достижение. Тогда и я соглашусь что ты достоин стать продолжателем Рода. \n   Только не забывай пожалуйста, что кроме пушечного мяса нашей армии нужно и золото, чем больше ты соберёшь, тем лучше мы будем готовы к войне. \n   Теперь ступай, сей ужас в землях Вольных Народов!",  # текст квеста
+        'text': u"Congratulations on your day of maturity. You'\ve grown up and are ready, I see you looking at me. All in good time. First prove you'\re a real male. Knocking up peasants is easy, the goblins can handle it. But if you get offspring from a giantess, that is an an achievement. Then I would agree that you are worthy to become the successor of the dragon race. \n	Just please do not forget that in addition to cannon fodder, we need gold. The more you gather, the better we will be prepared for war. Now go, sow terror in the land of the Free Peoples!",  # текст квеста
         'fixed_time': 50,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'offspring',  # ключевое слово для описания задачи, 'offspring' - породить потомство
         # кортеж с требованиями, для выполнения задания нужно выполнить любое из них, 'giantess' - потомок от великанши
@@ -1786,7 +1783,7 @@ quest_list = (
     {   # Разорить рощу альвов
         'min_lvl': 8,  # минимальный уровень дракона для получения квеста
         'max_lvl': 12,  # максимальный уровень дракона для получения квеста
-        'text': u"(Raze elven forest) \n Ты вырос. Стал таким могучим и большим. Сильнее любого из твоих предков, я ведь помню каждого в твоём роду. Ещё немного и драконы будут готовы исполнить своё предназначение. Но не ты. Однако для тебя у меня есть испытание достойное твоего могущества и великолепия. До сих пор мы больше досаждали людям, а они и правда самые мерзкие среди всех. Но есть ещё и другие. В лесах прячутся трусливые альвы, дети богини Дану. Покажи им на что способны драконы. Найди и уничтожь их священное древо, убей их владык, оскверни их волшебные рощи. Там тебя ждут несметные богатства и прекрасные вечно-юные девы. Но помни, что ни одна из них не сравнится со мной. А меня ты сможешь получить только тогда, когда одолеешь лесной народ. \n   Ступай!",  # текст квеста
+        'text': u"You grew up. You'\ve become so large and powerful. Stronger than any of your ancestors, I remember them all. A little more and dragons will be ready to fulfill their destiny. But not you. For you, I have a test worthy of your power and splendor. Until now, we have attacked men, and they are really the most vile race of all. But there are others. The forests are hiding cowardly elves, children of the goddess Danu. Show them what dragons are capable of. Find and destroy their sacred tree, kill their rulers, defile their magical grove. Waiting for you are untold wealth and eternally young and beautiful maidens. But remember, none of them hold a candle to me. And you will only have me when you overcome the forest people. Now go!",  # текст квеста
         'fixed_time': 75,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'prerequisite': 'giantess',  # ключ для game.unique, который необходим для получения этой задачи
         'task': 'event',  # ключевое слово для описания задачи, 'event' - должно произойти какое-то событие
@@ -1800,7 +1797,7 @@ quest_list = (
     {   # Устроить логово в подгорном царстве цвергов
         'min_lvl': 9,  # минимальный уровень дракона для получения квеста
         'max_lvl': 12,  # максимальный уровень дракона для получения квеста
-        'text': u"(Make lair in Dwarves Kingdom) \n Ох, какой же ты большой стал. Сильнее всех прочих, я уверена что именно ты станешь продолжателем Рода, мой милый. Но как и всем твоим предкам, сначала тебе придётся доказать что ты этого достоин. Люди для тебя не угроза. Даже альвы не устоят. Но в Вольных Землях нет большего богатства чем таят в себе подгорные чертоги цвергов. Наложить на них лапу будет очень и очень не просто, задача как раз для такого могучего змея как ты. Одолей цевргов и устрой своё логово в сокровщнице их короля и тогда я стану твоей. \n    Ступай. Близок час когда все Вольные Народы склонятся перед могуществом моих детей.",  # текст квеста
+        'text': u"Oh, how did you become so big! Stronger than all the others, I think I know exactly who will become the sucessor of the draconic race. But like all your ancestors, first you have to prove that you deserve it, my dear. Men are not a threat to you. Even elves cannot resist. But in the Free Lands there is no greater wealth than that concealed in the halls of the dwarves. To impose your paw on them should be an easy task for a mighty snake like you. Defeat the dwarves, and build your den in their palace in mockery of their king. Then I will be yours. \n	Go. The hour is close when all free people bow before the power of my children.",  # текст квеста
         'fixed_time': 75,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'prerequisite': 'ravage_sacred_grove',  # ключ для game.unique, который необходим для получения этой задачи
         'task': 'lair',  # ключевое слово для описания задачи, 'lair' - проверяется тип логова и его улучшений
@@ -1814,7 +1811,7 @@ quest_list = (
     {   # Захватить столицу
         'min_lvl': 13,  # минимальный уровень дракона для получения квеста
         'max_lvl': 20,  # максимальный уровень дракона для получения квеста
-        'text': u"(Lead the Army of Darkness and raze the Capital) \n Подойди ко мне, сын мой. Каким же большим и сильным ты вырос. Нам нет нужды больше ждать, ты будешь тем кто отомстит за меня. Ты положишь к моим ногам короны владык Вольных Народов. Исполнишь предназначение ради которого был создан твой Род. \n   Не торопись, я дам тебе достаточно времени на подготовку. Позаботься о том, чтобы наша армия была в полной готовности, нам нужно много бойцов и чем разнообразнее они будут тем лучше. Когда настанет время выступать, помни что тебе придётся пройти несколько битв и времени на отдых не будет. В каждой битве у нас будут потери. Большие если ты останешься в стороне, меньшие если встанешь на остриё атаки. Если понадобится, один раз я сражусь сама. Когда столица людей падёт, остальные сдадутся сами...",  # текст квеста
+        'text': u"Come to me, my son. How big and strong you'\ve grown up. We need not wait any longer, you will be the one who will avenge me. You will fulfill the purpose of your existence, and put the crowns of the rulers of the Free Peoples at my feet. \n	Do not hurry, I will give you enough time for preparation. Take care that our army is at full readiness, we need more fighters, the more varied the better. When the time comes to act, remember that there will be many battles without time to rest. In each fight we will have losses, many if you stand aside and fewer if you spearhead the attack. If necessary, I will once myself. When the capital of man falls, the rest will surrender themselves...",  # текст квеста
         'fixed_time': 1000,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'event',  # ключевое слово для описания задачи, 'event' - должно произойти какое-то событие
         # кортеж с требованиями, для выполнения задания нужно выполнить любое из них,
@@ -2206,77 +2203,77 @@ game_events = {
 
 dark_army = {
     "grunts": {
-        0: u"После поражения Госпожи в Битве Шести Воинств от её армии остались жалкие ошмётки. "
-           u"Немногие выжившие гоблины прячутся по своим пещерам и "
-           u"размножаются словно кролики в попытке пополнить ряды войск. ",
-        10: u"Хорошая новость: на бесплодных равнинах собралось достаточно агрессивных тварей, "
-           u"чтобы из них можно было собрать настоящее войско. "
-           u"Плохая: это войско будет уступать по численности тому что могут собрать Вольные Народы.",
-        25: u"Пещер и дыр уже не хватает чтобы дать укрытие всем уродливым воинам живущим под рукой Госпожи. "
-            u"Бесплодные равнины стали местом огромной стройки - тут и там возникают целые городки из шатров, "
-            u"трудолюбиво окружаемые рвами, насыпями и частоколами. "
-            u"На первый взгляд бойцов тут не меньше чем может выставить на поле коалиция Вольных Народов.",
-        50: u"Взглянув на бесплодные равнины в ночи трудно понять где кончается усыпанное звёздами небо и "
-            u"начинается выгоревшая земля с мириадами костров дающих свет и тепло воинам Госпожи. "
-            u"Днём можно увидеть многие тысячи шатров покрывающие долину словно заросли ядовитых грибов. "
-            u"Тут и там снуют вестовые и дозорные. "
-            u"Эта огромная Орда захлестнёт малочисленные войска Вольных Народов словно морской прибой."
+        0: u"After defeat in the Battle of Six Armies, pathetic lumps of the Mistress'\s army remain. "
+           u"The few surviving goblins hide in their caves and "
+           u"multiply like rabits in an attempt to join the ranks of the troops. ",
+        10: u"The good news: in the barren plain enough aggressive creatures are gathered, "
+           u"that one could assemble an army now. "
+           u"The bad: this army will be inferior in number to that the free people can gather.",
+        25: u"Caves and holes no longer suffice to give shelter to all the hideous soldiers gathered before Mistress. "
+            u"The barren plains are the scene of a huge construction site - here and there, there are whole towns of tents. "
+            u"Ditches, embankments, and palisades are laboriously dug. "
+            u"At a glance this army seems the equal of any coalition of the Free Peoples..",
+        50: u"Looking at the barren plains at night, it is difficult to see where they end and the starry sky begins. "
+            u"The earth is burnt with countless fires giving light and warmth to the soldiers of Mistress. "
+            u"During the day, one can see thousands of tents covering the valley like a thicket of poisonous mushrooms.. "
+            u"Here and there, soldiers patrol and messengers scurry. "
+            u"This huge horde would engulf the armies of the Free Peoples like the surf."
     },
     "elites": {
-        0: u"Но каково бы не было количество этих войск их главной слабостью является отсутствие элитных бойцов. "
-           u"Столкнувшись на поле боя с великанами, эльфийскими магами и боевыми машинами цвергов, "
-           u"Госпожа поняла что противостоять им смогут лишь существа "
-           u"многократно превосходящие по силе людей или гоблинов. Именно таких должны породить драконы. "
-           u"Именно в них отчаянно нуждается войско Госпожи.",
-        1: u"Тут и там можно заметить огромные силуэты элитных бойцов. "
-           u"Их тут не много, однако в ключевой момент они встанут на острие атаки. ",
-        5: u"На каждый отряд мелких тварей вроде гоблинов тут приходится хотя бы один элитный боец, "
-           u"порождённый драконом от самой сильной крови Вольных Народов. "
-           u"Каждый их этих могучих гигантов сам стоит в бою целой армии.",
-        10: u"В этом войске столько элитных бойцов, "
-           u"что обычная мелочь вроде гоблинов служит лишь для разведки и поддержки их действий. "
-           u"Ударную мощь обеспечивают уродливые гиганты порождённые драконами от самой могучей крови Вольных Народов."
+        0: u"But whatever the number of these soliders, the biggest weakness is the lack of elite fighters. "
+           u"Having faced giants, elven mages, and dwarven fighting machines on the battlefield, "
+           u"Mistress learned that the only beings that can resist them "
+           u"surpass the strength of men or goblins. Dragons must generate such, "
+           u"the army desperately needs them.",
+        1: u"Here andthere, you notice huge silhouettes of elite fighters. "
+           u"There are not many, but they stand ready to attack at the crucial time and place. ",
+        5: u"Each detachment of small creatures includes at least one elite fighter, "
+           u"generated by the dragon from the most powerful blood of the Free Peoples. "
+           u"Each of these mighty giants is worth an army in a fight.",
+        10: u"In this army are so many elite fighters, "
+           u"that trifling creatures like goblins serve only as reconnassance and support. "
+           u"This shock power comes from ugly giants produced by dragons from the mightiest blood of the Free Peoples."
     },
     "diversity": {
-        0: u"Армия тьмы не отличается разнообразием, "
-           u"подавляющее большинство бойцов относится к одному единственному виду. "
-           u"Воины Вольных Народов уже отлично умеют сражаться с такими тварями и "
-           u"обладают отработанной тактикой против них.",
-        2: u"Разнообразие войск не слишком велико, "
-           u"хотя порождения драконов будут выгодно дополнять обычных гоблинов на поле боя. "
-           u"Тем не менее Вольным Народам не составит труда выработать тактику противодействия и "
-           u"изучить сильные и слабые места всех бойцов Госпожи.",
-        4: u"Порождения драконов собравшиеся под знамёна Госпожи очень разнообразны. "
-           u"Здесь есть дылды и коротышки, стремительные лазутчики и массивные штурмовики, всех цветов, размеров и форм. "
-           u"Кого-то украшает чеушая, кого-то рога. "
-           u"Выгодно дополняя друг друга на поле боя "
-           u"вся эта пёстрая компания не позволит Вольным Народам использовать простую и привычную тактику боя.",
-        7: u"Тут столько разнообразных тварей что наверное даже сама Госпожа не сможет различить их всех. "
-           u"Бесконтрольно смешиваясь между собой "
-           u"отродья драконов порождают новые мутатнтные гибриды с невероятными свойствами. "
-           u"Когда начнётся война, Вольные Народы не будут знать как бороться с ними."
+        0: u"The Army of Darkness lacks variety, "
+           u"the vast majority of fighters are from a single species. "
+           u"Warriors of the Free people are used to fighting with these creatures, "
+           u"and have proven tactics against them.",
+        2: u"The variety of forces is not too great, "
+           u"though the dragonspawn will be beneficial supplements to the usual goblins on the battlefield. "
+           u"Nevertheless, the free people will have little difficulty working out tactics "
+           u"to counter the strengths and weaknesses of all the Mistress\'s fighters.",
+        4: u"Under the banner of the Mistress are gathered many diverse	dragonspawn."
+           u"There are short and lanky, rapid spies and massive ground fighters, of all colors, shapes and sizes."
+           #u"Кого-то украшает чеушая, кого-то рога. " #trans: ??
+           u"Favorably complementing each other on the battlefield. "
+           u"All this motely company makes it impossible for the Free People to use simple and familiar battle tactics.",
+        7: u"There are so many different creatures that even the Mistress could probably not distinguish between them all. "
+           u"Mixing together uncontrollably "
+           u"the dragon\'s offspring generate new mutant hybrids with incredible properties. "
+           u"When the war begins, free people will not know how to deal with them."
     },
     "equipment": {
-        1: u"Денег на снаряжение армии катастрофически не хватает. Воины Госпожи ходят в одних набедренных повязках, "
-           u"вооружаются кривыми дубинами и заострёнными палками вместо копий. "
-           u"Только некоторые могут позволить себе грубую броню из плохо обработанных шкур.",
-        2: u"Армия снаряжена по минимуму. Рядовые воины могут надеяться получить железное копьё, "
-           u"плетёный щит и простой стёганный доспех. Элита вооружается чуть лучше, но всё же картина далека от желаемой.",
-        3: u"Сокровища драконов позволили неплохо снарядить бойцов Госпожи. "
-           u"Даже у рядовых воинов есть полный комплект вооружения и брони, "
-           u"а элита закована в воронёную сталь с ног до головы. "
-           u"Ряды чёрных пик и щитов на поле боя будут смотреться очень внушительно.",
-        4: u"За долгие годы драконы скопили для Госпожи такую кучу сокровищ, "
-           u"что её с лихвой хватает для вооружения всей армии по самому высшему разряду. "
-           u"Тяжёлая пехота и кавалерия вооружена до зубов, а элитные бойцы щеголяют волшебным оружием и доспехами. "
+        1: u"Money for military equipment is solely lacking. Some of Mistress\'s warriors walk about in loincloths, "
+           u"and are armed with clubs and sharpened sticks. "
+           u"Only a few can afford a crude armor of badly treated skins.",
+        2: u"The army is armed to a minimum. The rank and file soldiers can hope to obtain an iron spear, "
+           u"woven shield, and a simple quilted armor. The elite are armed a little better, but still far from the ideal.",
+        3: u"Treasures of the dragon allow decent equipment for the Mistress\'s fighters. "
+           u"Even ordinary soldiers have a full set of arms and armor "
+           u"And the elite are clad in blue steel from head to toe. "
+           u"Ranks of shields and iron points will look very impressive on the battlefield.",
+        4: u"Over the years, the Mistress\'s dragons hoarded many treasures, "
+           u"more than enough to arm the whole army at the highest level. "
+           u"Heavy infantry and cavalry are armed to the teeth, and the elite fighters flaunt magical weapons and armor. "
     },
     "force": {
-        0: u"Выступать с такими силами против Вольных Народов будет просто самоубийством. Разве что дракон сам выиграет все битвы.",
-        500: u"Хотя армия тьмы и окрепла за последние годы, к битве с Вольными Народами она пока не готова. Дракону прийдётся брать основной удар на себя в каждом бою, чтобы иметь хоть какие-то шансы.",
-        1000: u"В общем и целом Армия Тьмы достаточно боеспособна, чтобы иметь шансы в битвах с войском Вольных Народов. "
-              u"Однако полной уверенности в победе быть не может. Дракон должен будет поддержать свои войска личным примером.",
-        1800: u"За долгие годы подготовки Армия Тьмы не просто воспаряла, но и стала могущественнее чем когда-либо. "
-              u"Войско Вольных Народов будет смято и растоптано этой неодолимой силой. Даже не учитывая помощи которую могут лично оказать Дракон и сама Владычица."
+        0: u"To oppose the Free People with such forces would be suicide, unless the dragon itself could win every fight.",
+        500: u"Although the army of darkness has become stronger in recent years, it is not yet ready to battle the free people. The dragon will have to take the brunt of each fight to stand a chance.",
+        1000: u"Overall, the Army of Darkness is good enough to have a chance in battles with the armies of the Free People. "
+              u"However, there cannot be full confidence in victory. The dragon will have to support the troops by example.",
+        1800: u"Over the years of preparation the Army of Darkness has soared to incredible heights of power. "
+              u"The army of the Free Peoples will be crushed and tramped by this invincible force. Even ignoring the help the dragon and Mistress can personally render."
     }
 }
 #Achievements
@@ -2356,103 +2353,103 @@ class Achievement(object):
             self.targets.extend(self.targets_completed)
             self.targets_completed = []
 
-achievements_list = [Achievement(name = u"Великий змей",
-                                 description = u"Достиг победы в сюжетном режиме",
+achievements_list = [Achievement(name = u"The Great Snake",
+                                 description = u"Win in story mode",
                                  goal = "win",
                                  targets = ["win"]),
-                     Achievement(name = u"Осквернитель",
-                                 description=u"Сделал логово в эльфийском лесу",
+                     Achievement(name = u"Corruptor",
+                                 description=u"Make a lair in the elven forest",
                                  goal = "lair",
                                  targets = ["forest_heart"]),
-                     Achievement(name = u"Смауг Великолепный",
-                                 description = u"Сделал логово в подгорных чертогах",
+                     Achievement(name = u"Magnificent Smaug",
+                                 description = u"Make a den in the dwarven mountain palace",
                                  goal = "lair",
                                  targets = ["underground_palaces"]),
-                     Achievement(name = u"Великолепное ложе",
-                                 description = u"Достиг суммарной стоимости сокровищ 100.000 фартингов",
+                     Achievement(name = u"Excellent lodge",
+                                 description = u"Reached a total treasure value of 100,000 f.",
                                  goal = "wealth",
                                  targets = [100000]),
-                     Achievement(name = u"Венец коллекции",
-                                 description = u"Иметь в сокровищнице предмет стоимостью больше 3000 фартингов",
+                     Achievement(name = u"The crown of the collection",
+                                 description = u"Bear in the treasury an item worth more than 9,000 f.",
                                  goal = "treasure",
                                  targets = [9000]),
-                     Achievement(name = u"Легендарный тиран",
-                                 description = u"Достичь уровня дурной славы больше 19",
+                     Achievement(name = u"The legendary tyrant",
+                                 description = u"Reach a level of notoriety of over 19",
                                  goal = "reputation",
                                  targets = [19]),
-                     Achievement(name = u"Осеменитель",
-                                 description = u"Спарился со всеми видами не-великанш играя за одного дракона",
+                     Achievement(name = u"inseminator",
+                                 description = u"As one dragon, mate with all kinds of non-giantesses",
                                  goal = "impregnate",
                                  targets = ["peasant", "citizen", "princess", "elf", "mermaid"], #вернуть когда появятся  "thief", "knight",
                                  restartif = "new_dragon"),
-                     Achievement(name = u"Отец титанов",
-                                 description = u"Спарился со всеми видами великанш играя за одного дракона",
+                     Achievement(name = u"Father of Titans",
+                                 description = u"As one dragon, mate with all kinds of giantesses",
                                  goal = "impregnate",
                                  targets = ["ice", "fire", "titan", "ogre", "siren"],
                                  restartif = "new_dragon"),
-                     Achievement(name = u"Неуязвимый",
-                                 description = u"Достиг победы в сюжетном режиме не потеряв ни одной головы",
+                     Achievement(name = u"Unbreakable",
+                                 description = u"Win in story mode without losing your head",
                                  goal = "win",
                                  targets = ["win"],
                                  failif = "lost_head"),
-                     Achievement(name = u"Абсолютный хищник",
-                                 description = u"Победить ангела, титана, и железного голема одним и тем же драконом",
+                     Achievement(name = u"Absolute predator",
+                                 description = u"Defeat an angel, titan, and golem as one dragon.",
                                  goal = "kill",
                                  targets = ["golem", "angel", "titan"],
                                  restartif = "new_dragon"),
-                     Achievement(name = u"Дитя предназначения",
-                                 description = u"Выйграть игру захватом земель вольных народов",
+                     Achievement(name = u"Child of destiny",
+                                 description = u"Win the game by occupying the lands of the Free Peoples",
                                  goal = "win",
                                  targets = ["conquer"]),
-                     Achievement(name = u"Иуда",
-                                 description = u"Выйграть игру победой над владычицей",
+                     Achievement(name = u"Judas",
+                                 description = u"Win the game by defeating Mistress",
                                  goal = "win",
                                  targets = ["betray"]),
-                     Achievement(name = u"Архетип",
-                                 description = u"Достиг победы в сюжетном режиме с подтипом: дракон",
+                     Achievement(name = u"Archetype", 
+                                 description = u"Win with a regular dragon",
                                  goal = "win",
                                  targets = ["archetype"]),
-                     Achievement(name = u"Йормунгард",
-                                 description = u"Достиг победы в сюжетном режиме драконом не имеющем крыльев и конечностей",
+                     Achievement(name = u"Yormungard",
+                                 description = u"Win with a wingless, limbless wyrm",
                                  goal = "win",
                                  targets = [u"serpent"]),
-                     Achievement(name = u"Змей горыныч",
-                                 description = u"Достиг победы в сюжетном режиме с подтипом: многоглавый дракон",
+                     Achievement(name = u"The Hydra",
+                                 description = u"Win as a many-headed dragon",
                                  goal = "win",
                                  targets = [u"multi headed dragon"]),
-                     Achievement(name = u"Наследие Тиамат",
-                                 description = u"Достиг победы драконом с 3+ разными цветами",
+                     Achievement(name = u"Legacy of Tiamat",
+                                 description = u"Win as a dragon with 3+ colors",
                                  goal = "win",
                                  targets = ["colored_head", "colored_head", "colored_head"]),
-                     Achievement(name = u"Лернейская гидра",
-                                 description = u"Достиг победы с 4+ головами",
+                     Achievement(name = u"Learnaean Hydra",
+                                 description = u"Win as a dragon with 4+ heads",
                                  goal = "win",
                                  targets = ["head", "head", "head", "head"]),
-                     Achievement(name = u"Левиафан",
-                                 description = u"Достиг победы драконом максимального размера",
+                     Achievement(name = u"Leviathan",
+                                 description = u"Win as the maximum size of dragon",
                                  goal = "win",
                                  targets = ["size", "size", "size", "size", "size", "size"]),
                      Achievement(name = "T-Rex",
-                                 description = u"Достиг победы зеленым линдвурмом без магии, с одной головой и размером больше 4",
+                                 description = u"Win as a green Lindwurm without magic, with one head, and size larger than 4",
                                  goal = "win",
                                  targets = ["size", "size", "size", "size", u"lindwurm", "green"],
                                  failif = "dragon_magic"),
-                     Achievement(name = u"Годзила",
-                                 description = u"Достиг победы красным линдвурмом с размером больше 4",
+                     Achievement(name = u"Godzilla",
+                                 description = u"Win as a red Lindwurm larger than 4",
                                  goal = "win",
                                  targets = ["size", "size", "size", "size", u"lindwurm", "red"]),
-                     Achievement(name = u"Фейский дракончик",
-                                 description = u"Достиг победы драконом самого маленького размера",
+                     Achievement(name = u"Feysky  Drgagon",
+                                 description = u"win as a small dragon",
                                  goal = "win",
                                  targets = ["size"],
                                  failif = "too_big"),
-                     Achievement(name = u"Недрёмное око",
-                                 description = u"Достиг победы не потеряв ни одного сокровища из-за воров или рыцарей",
+                     Achievement(name = u"Watchful eye",
+                                 description = u"Win without losing any treasure to thieves or knights",
                                  goal = "win",
                                  targets = ["win"],
                                  failif = "lost_treasure"),
-                     Achievement(name = u"Пасхальный кролик",
-                                 description = u"Собрать все пасхалки",
+                     Achievement(name = u"Easter bunny",
+                                 description = u"collect all the easter eggs",
                                  goal = "easter_eggs",
                                  targets = ["domiki_done", "redhood_done"])
                     ]
