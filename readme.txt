@@ -3,7 +3,7 @@
 
 ----------------DISCLAIMER---------------------
 This game contains multiple scenes of the extreme violence and strong sexual content, and thus cannot be recommended to anyone. PG99.
-By clicking “proceed” you confirm that you are an adult and choose to play at your own risk. This game is NOT meant to be commercially distributed. All graphical, audio, and text elements used in the game are either freely aviable on the internet or created by autors of the game, and used for the sake of parody.
+By clicking “proceed” you confirm that you are an adult and choose to play at your own risk. This game is NOT meant to be commercially distributed. All graphical, audio, and text elements used in the game are either freely aviable on the internet or created by authors of the game, and used for the sake of parody.
 The code created by our team is licensed under BSD license. See LICENCE.txt for details
 
 Translation is currently partial. 

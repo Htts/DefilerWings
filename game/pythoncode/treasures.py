@@ -1,3 +1,5 @@
+
+
 # coding=utf-8
 
 import random
@@ -9,7 +11,7 @@ from copy import deepcopy
 from utils import weighted_random
 from data import achieve_target, get_description_by_count
 
-"""Словарь для драгоценных камней, ключи - названия камней, значения - кортежи вида(шанс появления, ценность)"""
+"""Dictionary for gems. Keys- the names of the stones. Values- tuples of form (chance of, value of)"""
 gem_types = {
     "amber": (5, 3),
     "crystall": (5, 5),
@@ -33,7 +35,7 @@ gem_types = {
     "rose_diamond": (1, 100),
 }
 
-"""словарь для типов материалов, ключи - названия материалов, значения - (шанс, ценность)"""
+"""As above, but for type of material"""
 material_types = {
     "jasper": (5, 1),
     "turquoise": (5, 1),

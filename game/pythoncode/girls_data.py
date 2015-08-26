@@ -144,7 +144,7 @@ girls_info = {
         'advanced_spawn': 'lizardman',
         'giantess': False,
         'avatar': 'knight',
-        'description': u'воительница',
+        'description': u'warrior',
         't_count_min': 2,
         't_count_max': 5,
         't_price_min': 25,
@@ -194,7 +194,7 @@ girls_info = {
         'advanced_spawn': 'sea_bastard',
         'giantess': False,
         'avatar': 'mermaid',
-        'description': u'merrimaid',
+        'description': u'mermaid',
         't_count_min': 0,
         't_count_max': 4,
         't_price_min': 10,
@@ -227,7 +227,7 @@ girls_info = {
         'advanced_spawn': 'naga',
         'giantess': True,
         'avatar': 'mermaid',
-        'description': u'syren',
+        'description': u'siren',
         't_count_min': 1,
         't_count_max': 4,
         't_price_min': 250,
@@ -278,7 +278,7 @@ girls_info = {
         'advanced_spawn': 'troll',
         'giantess': True,
         'avatar': 'titan',
-        'description': u'titanyd',
+        'description': u'titanid',
         't_count_min': 3,
         't_count_max': 6,
         't_price_min': 500,
@@ -296,128 +296,128 @@ spawn_info = {
     'goblin': {
         'power': 1,  # сила
         'modifier': [],  # возможные роли
-        'name': u'Гоблин',  # название
-        'born': u'Ошибка', # Описание при рождении
+        'name': u'goblin',  # название
+        'born': u'error', # Описание при рождении
     },
     'poisonous_asp': {
         'power': 1,  # сила
         'modifier': ['poisonous'],  # возможные роли
         'name': u'Venomous snake',  # название
-        'born': u'вылупившиеся из продолговатых мягких яиц ядовитые змеи ничем особенно не отличаются от болотных гадюк, разве что крупнее и агрессивнее. Вместо того чтобы прятаться в глухих местах, эти злобные ядовитые твари вечно ищут кого ужалить, будь то люди или домашний скот. От их токсина нет противоядия, а смерь медленная и крайне мучительная.', # Описание при рождении
+        'born': u'Hatched from an egg, this long, soft-bellied poisoned snake is not much different from a bog viper, except that it is larger and more aggressive. But instead of hiding in remote places, these venomous creatures are forever looking for someone to bite, whether men or livestock. Their toxin has no antidote, and the deaths they cause are extremely slow and painful.', # Описание при рождении
     },
     'winged_asp': {
         'power': 2,
         'modifier': ['poisonous'],
         'name': u'Winged snake',
-        'born': u'эти крупные ядовитые змеи в отличие от обычных пресмыкающихся наделены унаследованными от драконьей крови крыльями. Одно дело случайно наступить на гадюку, у совсем другое когда она приземляется тебе на шею прямо с неба. Яд крылатых аспидов приводит к долгой и мучительной смерти, а кусаться они ох как любят.', # Описание при рождении
+        'born': u'These large poisonous snakes, unlike normal reptiles, are endowed by their dragon\'s blood with wings. It\'s one thing to accidentally step on a viper, and quite another thing to have it drop down on your neck from the sky. The poison of asps leads to a long and painful death, and oh, how they love to bite!', # Описание при рождении
     },
     'krokk': {
         'power': 1,
         'modifier': ['servant'],
         'name': u'Krokk',
-        'born': u'рождённые от благородной дамы эти существа превосходят тварей которых способна родить любая простолюдинка. Впрочем, несмотря на мощное телосложение и кое-какие мозги в охранники логова Кроккки не годятся. Они подслеповаты и вечно дремлют устроившись на солнышке или нырнув в грязь. Впрочем их можно заставить выполнять работу по дому или на строителсьстве.', # Описание при рождении
+        'born': u'Born of a noble lady, these creatures are superior monsters which surpass the progeny of any commoner. However, desite their physical strength and some intelligence, Krokki are not the most suitable guards. They are indolent, always sleeping in the sun or swimming in the mud. However, they can be forced to do housework.', #translator: can't translate very last word. "Впрочем их можно заставить выполнять работу по дому или на строителсьстве." 
     },
     'basilisk': {
         'power': 3,
         'modifier': ['poisonous'],
         'name': u'Basilisk',
-        'born': u'это жуткого вида птенчики, с петушиными гребнями и змеиными хвостами. Хотя эти твари и безмозглые, они всё же намного опаснее обычных ядовитых аспидов, которых крестьянка могла бы родить от менее коварного дракона. Василиски, так же известные как кокатриксы, способны отравить человека просто поглядев ему в глаза и к тому же они летают хоть и неуклюже.', # Описание при рождении
+        'born': u'These hideous fledglings have a cock\'s comb and snake tails. Although brainless, they are still much more dangerous than a usual poison asp. The basilisk, also known as cocatrice, can poison a person with a mere glance, and can fly short distances.', # Описание при рождении
     },
     'kobold': {
         'power': 2,
         'modifier': ['servant'],
         'name': u'Kobold',
-        'born': u'мелкие, дохлые и скрюченные кобольды это всё что способна произвести на свет обычная женщина даже от очень могучего драконьего семени. Тем не менее эти драконоподобные гуманоиды обладают достаточным интеллектом чтобы выполнять работу по хозяйству. В бою они примерно равны обычным гоблинам, но ещё и трусливы до ужаса, так что ставить их на охрану логова было бы опрометчиво.', # Описание при рождении
+        'born': u'This small, gnarled Kobold is all that a common woman was able to give birth to, even from the seed of a mighty dragon. Nevertheless, these draconic humanoids possess sufficent intelligence to do manual labor. In battle, they are about equal to a goblin, but cower at danger, so it would be foolish to task them with the protection of a lair.', # Описание при рождении
     },
     'lizardman': {
         'power': 3,
         'modifier': ['warrior'],
         'name': u'Lizardman',
-        'born': u'сочетание могучего драконьего семени и чистой благородной крови дало лучших отродий которых только способна родить смертная женщина. Взрослый ящерик куда крупнее и сильнее обычного человека, покрыт прочной чешуёй и не чувствителен к боли. Рептилоиды быстры, наблюдательны и достаточно умны чтобы стать отличными воинами. Они так же любят строить коварные планы по тайному захвату мира, но тут им придётся встать в очередь за своей бабушкой - Владычицей.', # Описание при рождении
+        'born': u'THe combination of powerful dragon seed and pure noble blood has produced the best that a mortal woman can spawn. An adult lizardman is much bigger and stronger than the average man, covered with scales, and insensitive to pain. Reptillians are quick, observan and smart enough to become skilled warriors. They also like to hatch plans for secret domination of the world, but they will get in line behind their grandmother - Mistress.', # Описание при рождении
     },
     'dragonborn': {
         'power': 3,
         'modifier': ['elite'],
         'name': u'Dragonborn',
-        'born': u'драконорождённый потомок Aein Sidhe, сочетает в себе силу и ярость драконьего рода с колдовским могуществом старшей крови детей богини Дану. Его сила размеры и интеллект далеко превосходят возможности не только людей но и альвов с цвергами. Драконорождённый вполне может померяться силой с великаном и станет отличным элитным стражем сокровищ или воином армии тьмы.', # Описание при рождении
+        'born': u'The dragonborn descendant of a Aein Sidhe combines the fury and power of dragon magic with ancient blood of the children of the goddess Danu. His size and strength of mind is beyond the capacity of mortal men, elves, and dwarves. Dragonborn can compete with power of giants and can make excellent treasure guards or elite soldiers in the army of darkness.', # Описание при рождении
     },
     'gargoyle': {
         'power': 4,
         'modifier': ['warrior'],
         'name': u'Gargulie',
-        'born': u'драконьему семени не хватило потенциала чтобы полностью раскрыть возможности магической крови детей Дану, но даже такие уродливые горгулии будут полезны в армии тьмы или на охранной службе. Способность к полёту даёт им превосходство над обычными рептилодами, даже не говоря о гоблинах и людях.', # Описание при рождении
+        'born': u'The dragon seed did not have the power to fully open up the possibilities of the blood of the children of Danu. Even so, such ugly gargoyles will be useful in the army of darkness or as guards of the lair. Their ability to fly makes them superior to to the usual reptillians, not even considering goblins and men.', # Описание при рождении
     },
     'sea_bastard': {
         'power': 3,
         'modifier': ['poisonous', 'marine'],
         'name': u'Sea Bastard',
-        'born': u'в сочетании с могучим драконьем семенем кровь морского народа дала жуткую пародию на русалку - рыбоглаза. Эти злобные и уродливые твари способны жить лишь в морской воде и это единственное что мешает им стать дополнением к воинству тьмы что собирается в пустошах под рукой Владычицы. К тому же они слишком прожорливы и легко отвлекаются от караульной службы чтобы забить косяк рыб. Но всё же можно принудить их служить в морском логове.', # Описание при рождении
+        'born': u'Combined with mighty dragon seed, the blood of the sea people gave birth to a terrible parody of a mermaid - a sea bastard. These vicious and ugly creatures are able to live only in salt water, which is all that prevents them from joining the army of darkness that gathers at the hand of the Mistress. But besides, they are too gluttonous, and easily distracted from guard duty to score a school of fish. But still, you can force them to serve in the sea lair.', # Описание при рождении
     },
     'octopus': {
         'power': 5,
         'modifier': ['poisonous', 'marine'],
         'name': u'Venopus',
-        'born': u'похожие на здоровенных лиловых осьминогов, эти безмозглые морские твари отличаются агрессивыным нравом и наличием яда в присосках. Неудачливыми ныряльщикам не поздоровится.', # Описание при рождении
+        'born': u'Similar to a huge purple octopus, these brainless aquatic creatures differ only the the shortness of their temper and the quantity of poison in their suckers. Divers are not in luck.', # Описание при рождении
     },
     'hell_hound': {
         'power': 4,
         'modifier': ['poisonous'],
         'name': u'Hellhound',
-        'born': u'Семя дракона сильно пострадало от раскалённой матки огненной великанши. Из яиц на свет появились мутировавшие многоголовые твари напоминающие помесь собаки, ящерицы и газовой горелки. Они слишком дики и тупы для армейской службы, зато способны навести ужас на обжитые земли.', # Описание при рождении
+        'born': u'The dragon seed suffered badly from the heated uterus of the fiery giantess. From the eggs were born mutated, multi-headed creatures resembling a cross between a dog, lizard, and a gas torch. They are too wild and stupid for army service, but unleashed they will bring terror to the settled lands.', # Описание при рождении
     },
     'minotaur': {
         'power': 5,
         'modifier': ['elite'],
         'name': u'Minotaur',
-        'born': u'Семя коварного даркона отлично раскрыло потенциал  дикости и ярости в крови людоедки. Рогатый, мохнатый, склонный к припадкам ярости минотавр способен в одиночку разметать отряд тяжелой панцирной пехоты и перетрахать всех женщин деревни за одну ночь. Всё же он достаточно умён чтобы служить высшей силе, так что из него выйдёт неплохой страж сокровищницы или элитный боец.', # Описание при рождении
+        'born': u'The insidious seed of the dragon was perfect to unlock the potential for savagery and rage in the blood of the ogress. Horned, hairy, prone to fits of rage, the Minotaur can dispatch a detatchment of heavily armored infantry and rape every woman in a village in a single night. Still, it is smart enough to obey a higher power, so that it makes a good treasury guardian or elite fighter.', # Описание при рождении
     },
     'murloc': {
         'power': 3,
         'modifier': ['warrior', 'marine'],
         'name': u'Murloc',
-        'born': u'Жутко искажённые пародии сразу на людей, лягушек и рыб, мурлоки стали бы неплохими воинами в армии тьмы, если бы могли жить вдали от воды. Но так, максимум на что они способны - охранять от посягательств подводные логова драконов или терроризировать морской народ.', # Описание при рождении
+        'born': u'Weirdly distorted parody of frogs and fish, Murlocs would make good soldiers in the army of darkness if they could live away from water. But all they can do is protect the underwater lair, or terrorize the mermaids', # Описание при рождении
     },
     'naga': {
         'power': 6,
         'modifier': ['elite', 'marine'],
         'name': u'Naga',
-        'born': u'коварство дракона позволило породить от сирены огромную и могучую тварь именуемую Наг (змей). Наг сочетает в себе качества человека и морской змеи, но кроме того он обладает великанским размером, невероятной силой и живучестью. Он мог мы стать элитным бойцом армии тьмы, если бы не пересыхал на суше. Впрочем из него получится отличный страж сокровищницы. ', # Описание при рождении
+        'born': u'The insidiousness of the dragon allowed it to generate from the siren a huge and powerful creature called the Naga. The Naga combines the qualities of man and the sea serpent, but additionally has giant size and incredible strength and vitality. It could become an elite fighter in the army of darkness, if it didn\'t dry out on land. But it will make an excellent guard for the treasury.', # Описание при рождении
     },
     'ice_worm': {
         'power': 7,
         'modifier': ['poisonous'],
-        'name': u'Remorhaz',
-        'born': u'слишком слабое для ледяной великанши семя, сделало потомство неразумным. Это змеи. Огроменные, уродливые, с холодными как лёд панцирями и жуткими пастями змеи. Человека такая прожуёт не задумываясь, но для службы в армии ей не хватит мозгов. ', # Описание при рождении
+        'name': u'Ice Worm',
+        'born': u'The seed, too weak for the ice giantess, made degenerate offspring. This worm is hideous, with a cold ice shell and terrifying jaws. Men it will kill without hesitation, but it is too brainless for military service.', # Описание при рождении
     },
     'yettie': {
         'power': 6,
         'modifier': ['elite'],
-        'name': u'Yetti',
-        'born': u'Продуктом союза дракона и ледяной великанши стал мохнатый, рогатый великан больше похожий на обезьяну чем на разумное существо. И тем не менее, он хоть и дик но весьма умён. Йётти может стать отличным элитным бойцом в армии тьмы.', # Описание при рождении
+        'name': u'Yeti',
+        'born': u'The union of dragon and ice giantess produced a shaggy, horned giant, more like a monkey than a sapient being. But though he is wild, he is very smart. The Yeti can be an excellent elite soldier in the army of darkness.', # Описание при рождении
     },
     'troll': {
         'power': 8,
         'modifier': ['elite'],
         'name': u'Troll',
-        'born': u'Тролль - самое могучее из отродий драконов, которое только может появиться на свет без вмешательства Владычицы. Он крупнее и сильнее чем титан. Практически неуязвим и достаточно умён чтобы служить в воинстве тьмы. А ещё он зелёный, толстый и любит когда его кормят.', # Описание при рождении
+        'born': u'Troll - the most powerful of the dragonspawn that can be born without the intervention of the Mistress. Bigger and stronger than titanium, virtually invincible, and smart enough to serve in the army of darkness. It is also fat, green, and loves to be fed.', # Описание при рождении
     },
     'strigg': {
         'power': 6,
         'modifier': ['poisonous'],
-        'name': u'Strige',
-        'born': u'рождение можно считать неудачным. Семя дракона оказалось жидковатым для людоедки и в итоге на свет родились жуткие крылатые уродцы, лишенные каких либо мозгов. Стриги разумеется агрессивны и даже ядовиты, но слишком тупы для армейской службы. ', # Описание при рождении
+        'name': u'Striga',
+        'born': u'The birth was a failure. The seed of the dragon was too thin for the ogress, and brainless winged freaks were born. Striga are naturally agressive and even poisonous, but are too dumb to serve in the army.', # Описание при рождении
     },
     'barlog': {
         'power': 6,
         'modifier': ['elite'],
-        'name': u'Deva',
-        'born': u'драконьему семени хватило потенциала чтобы грамотно слиться с огненной сущностью великанши. Результатом стал огромный, пеперёк себя шире Дэв. Он не только чудовищно силён, но к тому же обладает властью над огнём. Это просто великолепный элитный воин для армии тьмы.', # Описание при рождении
+        'name': u'Balrog',
+        'born': u'The dragon seed had the ability to merge seamlessly with the firey essence of the giantess. The result was a huge Balrog, not only enormously strong, but with the power to control fire. An elite warrior for the army of darkness.', # Описание при рождении
     },
     'chimera': {
         'power': 10,
         'modifier': ['poisonous'],
         'name': u'Chimera',
-        'born': u'магическая сущность титаниды с трудом слилась с драконьей кровью, породив уродливую хищную химеру. Хотя эта многоголовая, агрессивная и ядовитая тварь способна разорвать в прямом бою даже великана, она не обладает даже зачатками разума. Служить в армии ей не суждено.', # Описание при рождении
+        'born': u'Titan blood merged badly with the magical essence of the dragon, creating an ugly predatory chimera. While this many-headed, aggressive and poisonous creature could smash even a giant in direct combat, it does not have even rudimentary intelligence. It is not destined to serve in the army of darkness.', # Описание при рождении
     },
 }
 

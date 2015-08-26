@@ -25,17 +25,17 @@ screen sc_container_editor(object, data_list):
                 renpy.restart_interaction()
     
     vbox:
-        text("Инструкции:\n"
-             "Кликните на объект в текущем контейнере чтобы удалить его.\n"
-             "Кликните на объект в номерном контейнере чтобы добавить его в текущий контейнер.")
+        text("Instructions:\n"
+             "Click on the object in the current container to remove it.\n"
+             "Click on the object in the list to add it to the current container.") 
         hbox:
             vbox:
-                text "Текущий контейнер:"
+                text "Current container:"
                 for i in object:
                     textbutton object[i].name action delete_object(object, i)
             for d in data_list:
                 vbox:
-                    text "Контейнер %d:" % (data_list.index(d) + 1)
+                    text "Container:" % (data_list.index(d) + 1)
                     for i in d:
                         if i not in object:
                             textbutton d[i].name action add_object(d, object, i)

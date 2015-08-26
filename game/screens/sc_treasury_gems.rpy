@@ -13,8 +13,8 @@ screen sc_treasury_gems:
         
         for i in range(0, len(game.lair.treasury.gems)):
             hbox:
-                text "Тип:%s Цена:%d" % (game.lair.treasury.gems[i].g_type, game.lair.treasury.gems[i].cost)
-                textbutton "Удалить" action del_gem(game.lair.treasury.gems, i)
+                text "Type:%s Price:%d" % (game.lair.treasury.gems[i].g_type, game.lair.treasury.gems[i].cost)
+                textbutton "Throw away" action del_gem(game.lair.treasury.gems, i)
     
     use sc_gem_creator
 
@@ -36,7 +36,7 @@ screen sc_gem_creator:
     vbox:
         # xalign 1.0
         xpos 640
-        textbutton "Добавить" action add_gem(game.lair.treasury,
+        textbutton "Add" action add_gem(game.lair.treasury,
                                              treasures.Gem(g_type=type, size=size, cut=cut))
         text "Type: %s" % type
         text "Cut: %s" % cut

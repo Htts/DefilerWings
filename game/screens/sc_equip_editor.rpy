@@ -23,9 +23,9 @@ screen sc_equip_editor(object, equip_variants):
                 renpy.restart_interaction()
     
     vbox:
-        text("Инструкции:\n"
-             "Кликните на объект в списке одетых вещей чтобы снять его.\n"
-             "Кликните на объект в номерном контейнере чтобы одеть его.")
+        text("Instructions:\n"
+             "Click on an object that is currently worn to remove it.\n"
+             "Click on an object in the list to put it on.")
         hbox:
             vbox:
                 text "Одето:"
