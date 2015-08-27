@@ -20,22 +20,22 @@ label lb_location_lair_main:
             game.dragon.third "{font=fonts/AnticvarShadow.ttf}{size=+5} [game.dragon.fullname] {/size}{/font} \n\n[game.dragon.description]"
         'Inspect your lair':
             python hide:
-                lair_description = u"Логово: %s.\n" % game.lair.type.name
+                lair_description = u"Lair: %s.\n" % game.lair.type.name
                 if len(game.lair.upgrades) > 0: 
-                    lair_description += u"Улучшения:\n"
+                    lair_description += u"Improvements:\n"
                     for upgrade in game.lair.upgrades.values():   
                         lair_description += u" %s\n" % upgrade.name
                 else:
-                    lair_description += u"Улучшений нет"
+                    lair_description += u"There are no improvements."
                 narrator(lair_description)
             call lb_location_lair_main from _call_lb_location_lair_main
-        'Conjure foul spell' if game.dragon.bloodiness < 5 and game.dragon.mana > 0:
-            if game.choose_spell(u"Вернуться в логово"):
+        'Conjure a foul spell' if game.dragon.bloodiness < 5 and game.dragon.mana > 0:
+            if game.choose_spell(u"Return to den"):
                 python:
                     game.dragon.drain_mana()
                     game.dragon.gain_rage()
             call lb_location_lair_main from _call_lb_location_lair_main_1
-        'Admire treashures' if game.lair.treasury.wealth > 0:
+        'Admire treasures' if game.lair.treasury.wealth > 0:
             python:
                 files = [f for f in renpy.list_files() if f.startswith("img/bg/hoard/%s" % game.dragon.color_eng)]    
                 if len(files) > 0:
@@ -55,21 +55,21 @@ label lb_location_lair_main:
                     "[game.lair.treasury.materials_list]"
                     nvl clear
                 '[game.lair.treasury.coin_mass_description]' if game.lair.treasury.coin_mass > 0:
-                    $ description = u"В сокровищнице:\n"
-                    $ description += u"%s\n" % treasures.number_conjugation_rus(game.lair.treasury.farting, u"фартинг")
-                    $ description += u"%s\n" % treasures.number_conjugation_rus(game.lair.treasury.taller, u"талер")
-                    $ description += u"%s" % treasures.number_conjugation_rus(game.lair.treasury.dublon, u"дублон")
+                    $ description = u"The treasure:\n"
+                    $ description += u"%s\n" % treasures.number_conjugation_rus(game.lair.treasury.farting, u"farthings")
+                    $ description += u"%s\n" % treasures.number_conjugation_rus(game.lair.treasury.taller, u"taller")
+                    $ description += u"%s" % treasures.number_conjugation_rus(game.lair.treasury.dublon, u"dubloons")
                     "[description]"
                     nvl clear
                 '[game.lair.treasury.jewelry_mass_description]' if len(game.lair.treasury.jewelry) > 0:
                     menu:
-                        'Most valuable trinket':
+                        'Most valuable piece':
                             "[game.lair.treasury.most_expensive_jewelry]"
                             nvl clear
-                        'Cheapest one':
+                        'Cheapest trinket':
                             "[game.lair.treasury.cheapest_jewelry]"
                             nvl clear
-                        'Random one':
+                        'A random treasure':
                             "[game.lair.treasury.random_jewelry]"
                             nvl clear
                         'Back':
@@ -85,17 +85,17 @@ label lb_location_lair_main:
             if new_item:
                 $ game.lair.treasury.receive_treasures([new_item])
                 $ test_description = new_item.description()
-                "Изготовлено: [test_description]."
+                "Manufactured: [test_description]."
             call lb_location_lair_main from _call_lb_location_lair_main_4                
         'Fire the gremlins' if 'gremlin_servant' in game.lair.upgrades:
             $ del game.lair.upgrades['gremlin_servant']
-            "Гремлины уходят"
+            "The gremlins leave"
             call lb_location_lair_main from _call_lb_location_lair_main_5            
         'Fire the mercenary guards' if 'smuggler_guards' in game.lair.upgrades:
             $ del game.lair.upgrades['smuggler_guards']
-            "Охрана покидает посты"
+            "The guards leave their posts"
             call lb_location_lair_main from _call_lb_location_lair_main_6
-        'Deep slumber':
+        'Go into a deep slumber':
             nvl clear
             python:
                 # Делаем хитрую штуку.
