@@ -2448,7 +2448,7 @@ achievements_list = [Achievement(name = u"The Great Snake",
                                  goal = "win",
                                  targets = ["win"],
                                  failif = "lost_treasure"),
-                     Achievement(name = u"Easter bunny",
+                     Achievement(name = u"Easter bunny", #if you change this name, also change it in lb_achievement_acquired
                                  description = u"collect all the easter eggs",
                                  goal = "easter_eggs",
                                  targets = ["domiki_done", "redhood_done"])

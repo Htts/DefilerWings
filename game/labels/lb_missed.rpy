@@ -1,7 +1,7 @@
 # coding=utf-8
 label lb_missed(label=None):
     if label:
-        "Отсутсвует label [label]"
+        "Missing label [label]"
     else:
-        "Отсутстует какой-то label"
+        "Error: fucked up label"
     return

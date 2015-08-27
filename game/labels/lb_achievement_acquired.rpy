@@ -1,6 +1,6 @@
 label lb_achievement_acquired:
     python:
-        if u"Пасхальный кролик" not in persistent.achievements.keys():            
+        if u"Easter bunny" not in persistent.achievements.keys():            
             for egg in persistent.easter_eggs:
                 data.achieve_target(egg, "easter_eggs")
     $ achieved = data.store_achievements(persistent.achievements)
@@ -8,7 +8,7 @@ label lb_achievement_acquired:
     while len(names_list) != 0:
         $ achievement_name = names_list.pop()
         $ achievement_description = achieved[achievement_name]
-        "Вы получили достижение [achievement_name]: [achievement_description]"
+        "Achievement unlocked: [achievement_name]: [achievement_description]"
     nvl clear
     return
 label lb_achievements_list:
@@ -16,7 +16,7 @@ label lb_achievements_list:
         if len(persistent.achievements) > 0:
             achievements_text = "\n".join(["%s: %s"%(name, desc) for name, desc in persistent.achievements.items()])
         else:
-            achievements_text = "Вы ещё не открыли достижений"
+            achievements_text = "You failed to unlock any achievements"
     "[achievements_text]"
     nvl clear
 screen sc_achievements_list:
@@ -24,7 +24,7 @@ screen sc_achievements_list:
         if len(persistent.achievements) > 0:
             achievements_text = "\n".join(["%s: %s"%(name, desc) for name, desc in persistent.achievements.items()])
         else:
-            achievements_text = "Вы ещё не открыли достижений"
+            achievements_text = "You have not unlocked any achievements"
     window:
         xmaximum 960
         xalign 0.0
