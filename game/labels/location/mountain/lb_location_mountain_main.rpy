@@ -13,7 +13,7 @@ label lb_location_mountain_main:
     nvl clear
     
     if game.dragon.energy() == 0:
-        '[game.dragon.name] need some sleep!'
+        '[game.dragon.name] needs to sleep!'
         return
         
     $ nochance = game.poverty.value * 3
@@ -43,11 +43,11 @@ label lb_location_mountain_main:
     
     
 label lb_enc_miner:
-    'Ветерок доносит едва заметный запах золота. Аромат приводит дракона к горному ручью. На берегу сидит человек с лотком, старательно просеивающий речной песок в поисках крупинок золота.'
+    'The breeze brings the faint smell of gold. The aroma leads the dragon to a mountain stream. On the beach sits a miner with a pan, carefully sifting the sand of the river in search of gold dust.'
     nvl clear
     menu:
         'Slay and loot':
-            'В мешке златоискателя обнаруживается почти фунт золотого песка и мелких самородков. Спасибо за работу, смертный.'
+            'In the prospector\'s bag is almost a pound of golden dust and nuggets. Thanks for the work, mortal.'
             python:
                 gold_trs = treasures.Ingot('gold')
                 gold_trs.weight = 1
@@ -62,7 +62,7 @@ label lb_enc_miner:
     return
     
 label lb_enc_dklad:
-    'Чуткий нюх дракона подсказывает, что где то неподалёку лежат сокровища. Странно. Место тут дикое. Видимо кто-то решил спрятать здесь клад. Как это мило с его стороны...'
+    'The sensitive nose of the dragon tells him that treasure lies somewhere nearby. Strange, nothing but wilderness here. Apparently someone decided to bury their treasure here. How nice of them...'
     nvl clear
     python:
         tr_lvl = random.randint(1, 100)
@@ -70,43 +70,43 @@ label lb_enc_dklad:
         alignment = 'human'
         min_cost = 1 * tr_lvl
         max_cost = 10 * tr_lvl
-        obtained = "Это предмет из клада, спрятанного в горной расщелине."
+        obtained = "From a treasure hidden in a mountain crevice."
         trs = treasures.gen_treas(count, data.loot['klad'], alignment, min_cost, max_cost, obtained)
         trs_list = game.lair.treasury.treasures_description(trs)
         trs_descrptn = '\n'.join(trs_list)
     menu:
-        'Find burried treashures':
+        'Find buried treasures':
             $ game.dragon.drain_energy()
-            'Перевернув каждый камень и заглянув в каждую расселину по близости [game.dragon.name] находит наконец тщательно схороненный тайник. Внутри лежит:'
+            'Turning every stone and thoroughly looking into every crevice [game.dragon.name] finally discovers the cache. Inside lies:'
             '[trs_descrptn]'
             $ game.lair.treasury.receive_treasures(trs)
                         
-        'Let them be' if game.dragon.bloodiness < 5:
+        'Let it be' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
-            'Конечно сокровища полезны, но то что тут могли спрятать жалкие смертные вряд ли стоит драгоценного времени благородного змея.'    
+            'Of course valuable treasures are useful, but whatever the pitiful mortals hid here is not worth the precious time of a noble dragon.'    
     return
 
     
 label lb_enc_ram:
-    'По скалам скачет здоровенный винторогий баран. Ничего, от дракона не ускачет. Закуска не выдающаяся, но питательная.'
+    'On the rocks stands a ram with huge twisted horns. Not the greatest meal, but a nutritious appetizer.'
     nvl clear
     menu:
         'Devour the ram' if game.dragon.hunger > 0:
             $ game.dragon.drain_energy()
             $ game.dragon.hunger -= 1
-            '[game.dragon.name] ловит и пожирает барана.'
+            '[game.dragon.name] catches and devours the ram.'
             python:
                 if game.dragon.bloodiness > 0:
                     game.dragon.bloodiness = 0
-        'Slay the ram' if game.dragon.bloodiness >= 5 and game.dragon.hunger == 0:
+        'Slaughter the ram' if game.dragon.bloodiness >= 5 and game.dragon.hunger == 0:
             $ game.dragon.drain_energy()
-            '[game.dragon.name] жестоко задирает барана просто ради забавы.'    
-        'Roar' if game.dragon.bloodiness < 5:
+            '[game.dragon.name] violently shreds the ram for fun.'    
+        'Roar and leave' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
     return
     
 label lb_enc_bear:
-    'В склоне горы обнаруживается вход в пещеру. Какой же дракон не сунет нос в пещеру? Но пещеры как оказалось представляют интерес не только для драконов. Вот эту например облюбовал огромный пещерный медведь. Опасный противник, однако его жесткое мясо обладает действием укрепляющим организм.'
+    'On the mountainside there is a secluded cave entrance. What dragon won\'t stick its nose into a cave? But as it turns out, caves are not only of interest to dragons. A huge cave bear took a fancy to this one. A dangerous opponent, but eating his tough meat will make you strong.'
     nvl clear
     menu:
         'Fight the dire bear':
@@ -114,14 +114,14 @@ label lb_enc_bear:
             $ game.foe = Enemy('bear', game_ref=game)
             call lb_fight from _call_lb_fight_56
             if game.dragon.hunger > 0:
-                'Мясо пещерного медведя богато полезными минералами и витаминами, хорошо влияющими на чешую. Может быть это и не очень вкусно, зато плезно. Благодаря такому обеду защита от вражеского оружия будет немного выше.'
+                'The meat of the cave bear is rich in vitamins and minerals, and good for the scales. Maybe it\'s not very tasty, but it\'s healthy. Thanks to this dinner, defense against enemy weapons is increased.'
                 python:
                     if game.dragon.bloodiness > 0:
                         game.dragon.bloodiness = 0
                     game.dragon.hunger -= 1
                     game.dragon.add_effect('bear_meat')
             else:
-                'Дракон торжествует победу, однако есть уже совсем не хочется. Живот и так раздут как барабан. А жаль, такое редкое мясо могло бы придать дракону много здоровья и сил.'
+                'The dragon celebrates his victory, but he has no appetite. His stomach is already swollen like a drum. A pity, such a rare meat would give the dragon health and strength. '
                 
         'Flee' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
@@ -129,19 +129,19 @@ label lb_enc_bear:
     return
     
 label lb_enc_smugglers:
-    'На горном перевале [game.dragon.name] натыкается на караван контрабандистов. Они вооружены но вероятно предпочтут откупиться чтобы не вступать в бой. Конечно если цена прохода будет разумной...'
+    'On the mountain pass [game.dragon.name] stumbles upon a caravan of smugglers. They are armed, but will probably prefer to pay for passage rather than fight. Of course, only if the price is reasonable...'
     $ game.foe = Enemy('band', game_ref=game)
     $ chances = show_chances(game.foe)
     menu:
-        'Wring money':
+        'Wring money from them':
             python:
                 game.dragon.drain_energy()
                 passing_tool = game.dragon.fear * 2 + 1 
                 gold_trs = treasures.Coin('taller', passing_tool)
                 game.lair.treasury.receive_treasures([gold_trs])
-            'Контрабандисты скидываются по таллеру и отдают [passing_tool] чтобы откупиться и пройти мирно. С паршивой овцы хоть шерсти клок...'
+            'The smugglers chip in taller and give [passing_tool] as a payoff to pass peacefully. It\'s good to shear even the black sheep...'
             
-        'Get all goods':
+        'Take everything':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_57
             python:
@@ -149,30 +149,30 @@ label lb_enc_smugglers:
                 alignment = 'human'
                 min_cost = 5
                 max_cost = 100
-                obtained = "Это часть груза контрабандистов, которых дракон ограбил на тайном перевале в северных горах."
+                obtained = "Taken from the cargo of smugglers who the dragon robbed in a secret northern mountain pass."
                 trs = treasures.gen_treas(count, data.loot['smuggler'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
                 
-            'Обыскав тюки контрабандистов [game.dragon.name] находит кое-какие ценные вещи:'
+            'After searching through the smugglers\' bundles, [game.dragon.name] found some valuables:'
             '[trs_descrptn]'
             
         'Let them pass' if game.dragon.bloodiness < 5:    
-            'Пусть налаживают торговлю, чем богаче станет страна тем больше можно будет нажиться ограбляя её!'
+            'Let them trade, the richer the country becomes, the more you can profit later!'
             $ game.dragon.gain_rage()
     
     return
     
 label lb_enc_slavers:
-    'На высокогорном перевале [game.dragon.name] подкарауливает караван разбойников-работорговцев. Они ведут несколько рабов на веревке, среди рабынь есть одна невинная девушка. Разбойнии вооружены не слишком то хорошо и скорее предпочтут отдать одного бесполезного раба чем сражаться.'
+    'On the high mountain passes, [game.dragon.name] spots a caravan of slave traders. They lead several slaves on a rope, among them there is one virgin maiden. The robbers are not heavily armed, and will likely hand over a useless slave rather than battle.'
     $ game.foe = Enemy('band', game_ref=game)
     $ chances = show_chances(game.foe)
     menu:
         'Claim worthless slave' if game.dragon.hunger > 0:
-            'Для работорговцев это не слишком большая потеря - они соглашаются отдать самого заморенного раба, чтобы [game.dragon.name] пропустил их без боя. Они даже жалеают дракону приятного аппетита.'
+            'For slave traders it is no great loss - they willingly give up their most emaciated slave, and pass [game.dragon.name] without a fight. They even wish the dragon bon appetit.'
             $ game.dragon.drain_energy()
-            'Дракон пожирает измождённого раба. Не самая лучшая закуска на свете, но голод не тётка...'
+            'The dragon devours the scrawny slave. Not the greatest snack in the world, but hunger is not picky...'
             python:
                 if game.dragon.bloodiness > 0:
                     game.dragon.bloodiness = 0
@@ -180,9 +180,9 @@ label lb_enc_slavers:
         
         'Claim virgin maiden' if game.dragon.lust > 0:
             $ game.dragon.drain_energy()
-            'Среди всех рабов, юная красавица самая ценная. Похоже чтобы получить её придётся разогнать охрану, так просто работорговцы её не отдадут...'
+            'Among the slaves, the young beauty is by far the most valuable. You will have to fight her captors, they will not simply give her up...'
             call lb_fight from _call_lb_fight_58
-            'Дракон получает девушку.'
+            'The dragon captures the girl.'
             $ description = game.girls_list.new_girl('citizen')
             nvl clear
             game.girl.third "[description]"
@@ -194,19 +194,19 @@ label lb_enc_slavers:
             call lb_fight from _call_lb_fight_59
         
         'Let them pass' if game.dragon.bloodiness < 5:
-            'Пусть налаживают торговлю, чем богаче станет страна тем больше можно будет нажиться ограбляя её!'        
+            'Let them go about their business. The richer the country becomes through trade, the more there is to steal later!'        
             $ game.dragon.gain_rage()
     
     return
 
 label lb_enc_mines_silver:
-    'Серебрянный рудник. Охраняется небольшим отрядом арабалетчиков.'
+    'Silver mine. Protected by a small detatchment of crossbowmen.'
     $ game.foe = Enemy('xbow', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Wring some silver' if game.dragon.fear > 3:
+        'Demand some silver' if game.dragon.fear > 3:
             $ game.dragon.drain_energy()
-            'Начальник рудника отдаёт большой серебряный слиток, чтобы избежать конфликта.'
+            'The head of the mine hands over a large silver ingot to avoid conflict.'
             python:
                 gold_trs = treasures.Ingot('silver')
                 gold_trs.weight = 16
@@ -214,7 +214,7 @@ label lb_enc_mines_silver:
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             
-        'Get all silver':
+        'Take all the silver':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_60
             python:
@@ -223,29 +223,29 @@ label lb_enc_mines_silver:
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['silver']
-                obtained = "Просто серебро."
+                obtained = "Simply silver."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
-            'На складе дракон находит драгоценный металл, выплавленный и готовый к отправке в казну:'
+            'In a warehouse the dragon finds stocks of precious metal, smelted and ready for shipment to a treasury:'
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
             
-        'Let them be' if game.dragon.bloodiness < 5:
-            'Человеческое серебро не стоит того чтобы получить в глаз их железо!'       
+        'Leave them be' if game.dragon.bloodiness < 5:
+            'Human silver is not worth a bolt in the eye!'       
             $ game.dragon.gain_rage()
     return
 
 label lb_enc_mines_gold:
-    'Золотой прииск. Охраняется небольшим отрядом тяжелой панцирной пехоты.'
+    'Gold mine. Protected by a small detatchement of heavy armor-clad infantry.'
     $ game.foe = Enemy('heavy_infantry', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Wring some gold' if game.dragon.fear > 5:
+        'Demand some gold' if game.dragon.fear > 5:
             $ game.dragon.drain_energy()
-            'Начальник прииска отдаёт золотой слиток, чтобы избежать конфликта.'
+            'The head of the mind hands over a gold nugget to avoid conflict.'
             python:
                 gold_trs = treasures.Ingot('gold')
                 gold_trs.weight = 8
@@ -253,7 +253,7 @@ label lb_enc_mines_gold:
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
             
-        'Get all gold':
+        'Take all the gold':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_61
             python:
@@ -262,29 +262,29 @@ label lb_enc_mines_gold:
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['gold']
-                obtained = "Просто металл."
+                obtained = "Simply pure gold."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
-            'На складе дракон находит драгоценный металл, выплавленный и готовый к отправке в казну:'
+            'Inside the dragon finds stocks of precious golden metal, smelted and ready for shipment to a treasury:'
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
             
         'Let them be' if game.dragon.bloodiness < 5:
-            'Человеческое золото не стоит того чтобы получить в глаз их железо!'       
+            'Human gold is not worth a sword in the throat!'       
             $ game.dragon.gain_rage()
     return
 
 label lb_enc_mines_mithril:
-    'Рудник цвергов, здесь они добывают драгоценный мифрил. Вход в шахту надёжно охраняется.'
+    'A dwarven mine, where they get their precious mithril. The entrance to the mine is well protected.'
     $ game.foe = Enemy('dwarf_guards', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Wring some mithrall' if game.dragon.fear > 7:
+        'Demand some mithril' if game.dragon.fear > 7:
             $ game.dragon.drain_energy()
-            'Главый цверг отдаёт небольшой слиток мифрила, чтобы избежать конфликта.'
+            'The head dwarf hands over a small bar of mithril to avoid conflict.'
             python:
                 gold_trs = treasures.Ingot('mithril')
                 gold_trs.weight = 4
@@ -292,7 +292,7 @@ label lb_enc_mines_mithril:
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             
-        'Get it all':
+        'Take it all':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_62
             python:
@@ -301,29 +301,29 @@ label lb_enc_mines_mithril:
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['mithril']
-                obtained = "Просто металл."
+                obtained = "Pure metal."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
-            'На складе дракон находит драгоценный металл, выплавленный и готовый к продаже альвам:'
+            'In a warehouse the Dragon finds precious mithril, smelted and ready to be sold to the elves:'
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
             
         'Let them be' if game.dragon.bloodiness < 5:
-            'Мифрил цвергов не стоит того чтобы получить в глаз их сталь!'       
+            'Dwarven mithril is not worth a steel bolt in the eye!'       
             $ game.dragon.gain_rage()
     return
 
 label lb_enc_mines_adamantine:
-    'Рудник цвергов, здесь они добывают и выплавляют драгоценный адамант. На страже стоит практически неуязвимый стальной голем.'
+    'A dwarven mine, where they extract precious adamantine. On guard is a virtually invulnerable steel golem.'
     $ game.foe = Enemy('golem', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Wring some adamanthine' if game.dragon.fear > 8:
+        'Demand some adamanthine' if game.dragon.fear > 8:
             $ game.dragon.drain_energy()
-            'Главый цверг отдаёт небольшой слиток адаманта, чтобы избежать конфликта.'
+            'The chief dwarf hands over a small bar of adamntine to avoid conflict.'
             python:
                 gold_trs = treasures.Ingot('adamantine')
                 gold_trs.weight = 4
@@ -331,7 +331,7 @@ label lb_enc_mines_adamantine:
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             
-        'Get it all':
+        'Take it all':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_63
             python:
@@ -340,37 +340,37 @@ label lb_enc_mines_adamantine:
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['adamantine']
-                obtained = "Просто металл."
+                obtained = "Pure metal."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
-            'На складе дракон находит драгоценный металл, выплавленный и готовый к продаже альвам:'
+            'Inside the dragon finds stocks of precious metal, melted and ready for sale to the elves:'
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
             
-        'Let them be' if game.dragon.bloodiness < 5:
-            'Адамант цвергов не стоит того чтобы получить в глаз их сталь!'       
+        'Leave them be' if game.dragon.bloodiness < 5:
+            'Dwarven adamantine is not worth dying by steel!'       
             $ game.dragon.gain_rage()
     return
 
 
 label lb_enc_mines_gem_low:
-    'На сколне гор виден вход в шахту. Судя по запаху тут добывают полудрагоценные камни. Прииск охраняется небольшим отрядом арабалетчиков.'
+    'On a mountain slope a mine entrance is visible. Judging from the smell, semi-precious stones are mined here. The entrance is guarded by a small detatchment of crossbowmen.'
     $ game.foe = Enemy('xbow', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Wring some gems' if game.dragon.fear > 2:
+        'Demand some gems' if game.dragon.fear > 2:
             $ game.dragon.drain_energy()
-            'Начальник рудника отдаёт кое-что чтобы задобрить дракона:'
+            'The head of the mine hands over something to appease the dragon:'
             python:
                 count = 1
                 alignment = 'human'
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['jasper', 'turquoise', 'jade', 'malachite', 'corall', 'agate', 'amber', 'crystall', 'beryll', 'tigereye', 'granate', 'turmaline', 'aqua']
-                obtained = "Просто самоцветы."
+                obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
@@ -379,7 +379,7 @@ label lb_enc_mines_gem_low:
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             
-        'Get it all':
+        'Take it all':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_64
             python:
@@ -388,12 +388,12 @@ label lb_enc_mines_gem_low:
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['jasper', 'turquoise', 'jade', 'malachite', 'corall', 'agate', 'amber', 'crystall', 'beryll', 'tigereye', 'granate', 'turmaline', 'aqua']
-                obtained = "Просто самоцветы."
+                obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
-            'На складе дракон полудрагоценные камни самых разных форм, цветов и размеров:'
+            'Inside the Dragon finds gems of many different colors, shapes and sizes:'
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
@@ -403,20 +403,20 @@ label lb_enc_mines_gem_low:
     return
 
 label lb_enc_mines_gem_high:
-    'На сколне гор виден вход в шахту. Судя по запаху тут добывают самоцветы, причём очень высокого качества. Аж слюнки текут. Но вход охраняет отряд тяжёлой панцирной пехоты.'
+    'On a mountain slope a mine entrance is visible. Judging from the smell, gems are mined here of very high quality. Already the dragon drools. But the entrance is guarded by a detatchment of heavy infantry.'
     $ game.foe = Enemy('heavy_infantry', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Wring some gems' if game.dragon.fear > 5:
+        'Demand some gems' if game.dragon.fear > 5:
             $ game.dragon.drain_energy()
-            'Начальник рудника отдаёт кое-что чтобы задобрить дракона:'
+            'The head of the mine hands over something to appease the dragon:'
             python:
                 count = 1
                 alignment = 'human'
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['elven_beryll', 'topaz', 'saphire', 'ruby', 'emerald', 'goodruby', 'goodemerald', 'star', 'diamond', 'black_diamond', 'rose_diamond']
-                obtained = "Просто самоцветы."
+                obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
@@ -425,7 +425,7 @@ label lb_enc_mines_gem_high:
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
             
-        'Get it all':
+        'Take it all':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_65
             python:
@@ -434,12 +434,12 @@ label lb_enc_mines_gem_high:
                 min_cost = 1
                 max_cost = 1000000
                 t_list = ['elven_beryll', 'topaz', 'saphire', 'ruby', 'emerald', 'goodruby', 'goodemerald', 'star', 'diamond', 'black_diamond', 'rose_diamond']
-                obtained = "Просто самоцветы."
+                obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
-            'На складе дракон полудрагоценные камни самых разных форм, цветов и размеров:'
+            'Inside the Dragon finds gems of many different colors, shapes and sizes:'
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
@@ -449,29 +449,29 @@ label lb_enc_mines_gem_high:
     return
         
 label lb_enc_frontgates_found:
-    'Блуждая среди горных круч, [game.dragon.fullname] наткнулся на...'
+    'Wandering through the mountain peaks, [game.dragon.fullname] came across...'
     show expression 'img/bg/special/gates_dwarf.jpg' as bg
-    'Врата в Подгорное Царство!'
+    'the gates to the dwarven kingdom!'
     $ game.dragon.add_special_place('frontgates', 'frontgates_guarded')
     call lb_frontgates from _call_lb_frontgates    
     return
     
 label lb_enc_cannontower:
-    'На склоне горы, словно вырастая прямо из каменной кручи угнездилось небольшой но мощный бастион. Судя по запаху внутри полно цвергов и их механизмов.'
+    'On the mountainside, as if growing directly from the rock, is a small but fortified tower. Judging by the smell, the inside is full of dwarves and their mechanisms.'
     menu:
-        'Sneak peek':
-            'В прорезь бойницы видны суетящиеся цверги. Они готовят ПУШКУ... зачем?'
+        'Sneak a peek':
+            'Through the firing slits dwarves are seen running around. They are preparing a steam cannon...why?'
             show expression 'img/scene/fight/steamgun.jpg' as bg
-            'А! Они будут стрелять!'
+            'Ah! They\'re going to shoot me!'
             $ game.dragon.drain_energy()
             $ game.foe = Enemy('steamgun', game_ref=game)
             call lb_fight from _call_lb_fight_66
-            'Внутри бастиона нет никаких сокровищ, только железо, провиант и бумаги. В глубине был проход в подгорное цраство, но едва поняв что проигрывают бой, цверги взорвали заряд пороха который обрушил тоннель завалив его сотянми тонн камней. Через завал никому не пробораться.'
+            'Inside the bastion there is no treasure, only armaments, supplies, and documents. There was a deep passage into the mountain kingdom, but after realizing the battle was lost, the dwarves set off a gunpowder charge, bringing down tons of stone. Nobody can get through that blockage.'
             menu:
-                'Расшифровать архивы':
-                    'Основная часть бумаг это разнообразные технические чертежи а так же накладные на боеприпасы и провиант. Но помимо прочего есть тут и весьма занимательные архитектурные планы. Согласно этим данным, помимо очень сильно укреплённых главных ворот и пушечных бастионов, в подгорное царство есть ещё один почти не охраняемый но замаскированный "задний проход". При случае можно будет его "раздраконить"...'
+                'Decipher the papers':
+                    'The bulk of the material is a variety of technical schematics, as well as invoices for ammunition and provisions. But in addition there are some very amusing architectural plans. According to this data, in addition to the fortified main gate and cannon bunkers, the dwarven kingdom has one more little disguised and guarded "backdoor". As needed it can be "spread open"... ' #trans: some sort of weird russian innuendo here. Originally read " в подгорное царство есть ещё один почти не охраняемый но замаскированный "задний проход". При случае можно будет его "раздраконить"..."
                     $ game.dragon.add_special_place('backdor', 'backdor_open')
-                'Уйти прочь':
+                'Leave':
                     $ game.dragon.gain_rage()
                             
         'Flee' if game.dragon.bloodiness < 5:
@@ -484,19 +484,19 @@ label lb_patrool_mountain:
         chance = random.randint(0, game.mobilization.level)
         if chance < 4:
             patrool = 'jagger'
-            dtxt = 'В заросшей низким кустарником седловине %s нарывается на засаду, устроенную горным егерем, патрулирующим эти места.' % game.dragon.name
+            dtxt = 'In a valley overgrown with low shrubs, %s runs into an ambush by patrolling mountain rangers.' % game.dragon.name
         elif chance < 7:
             patrool = 'footman'
-            dtxt = 'На перевале %s сталкивается с хорошо вооруженным отрядом пехоты. Они настроены весьма серьёзно.' % game.dragon.name
+            dtxt = 'On the pass %s is suddenly faced by a detatchment of well-armed infantry in an organized formation.' % game.dragon.name
         elif chance < 11:
             patrool = 'heavy_infantry'
-            dtxt = '%s попадает в хитроумную ловушку, накрывающую его огромной сетью из толстой веревки. Такая сеть не удержит дракона надолго, однако из-за поворота слышится оглушительный зов рога и тяжелые шаги отряда панцирной пехоты.' % game.dragon.name
+            dtxt = '%s gets caught in a cunning trap and covered in a vast net of thick rope. Such a net will not hold a dragon for long, but around the bend come the sound of loud horns and heavy infantry on the move.' % game.dragon.name
         elif chance < 16:
             patrool = 'griffin_rider'
-            dtxt = '%s Громкий клёкот эхом отражается от горных склонов. Сверху пикирует грифон, с вооруженным всадником на спине!' % game.dragon.name
+            dtxt = '%s hears a loud echo reflecting off the mountain slope. A griffon swoops down from the sky, an armed rider on its back!' % game.dragon.name
         else:
             patrool = 'angel'
-            dtxt = '%s вынужден зажмуриться от яркого света бьющего в глаза. Громогласный оклик возвещает: "Умри мерзкое порождение греха!!!". Это ангел-хранитель посланный людям Небесами для защиты.' % game.dragon.name
+            dtxt = '%s is forced to close his eyes against a bright glare. A loud voice announces: "Die, vile offspring of sin!" This guardian angel was sent from heaven to protect the people.' % game.dragon.name
     '[dtxt]'
     python:
         game.foe = Enemy(patrool, game_ref=game)

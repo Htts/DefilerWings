@@ -13,7 +13,7 @@ label lb_location_plains_main:
     nvl clear
     
     if game.dragon.energy() == 0:
-        '[game.dragon.name] need some sleep!!'
+        '[game.dragon.name] needs to sleep!!'
         return
         
     menu:
@@ -35,7 +35,7 @@ label lb_location_plains_main:
         'City':
             $ village_size = 5
             call lb_village from _call_lb_village_4
-        'Прочь отсюда':
+        'Go back':
             return
         
     return
@@ -65,33 +65,33 @@ label lb_enc_redhood:
     python: #делаем аватарку волка для диалогового окна
         wolf = Talker(game_ref=game)
         wolf.avatar = "img/avahuman/wolf.jpg"
-        wolf.name = 'Сергей "BBW" Волков'    
+        wolf.name = 'Sergei "BBW" Wolkov'    
     if "redhood_done" in persistent.easter_eggs: #проверяем не было ли уже этого энкаунтера за всё время игры
         jump lb_encounter_plains #если уже был хотя бы раз, игнорируем и переходим к обычным встречам
     $ persistent.easter_eggs.append("redhood_done") #отмечаем что энкаунтер с красной шапочкой произошел
-    "[game.dragon.fullname] замечает издалека маленькую фигурку в ярко-красной накидке уходящую по тропинке в лес. У неё в руке тяжелая корзинка с пирожками. Крестьяне обычно не носят красные накидки. [game.dragon.kind] решает проследить за девочкой, но она уже скрылась за деревьями и идти приходится на запах."
+    "[game.dragon.fullname] notices a small figure in a bright red cape in the distance, straying off the forest path. She holds in her hand a heavy basket of pastries. Farmers don\'t usually wear red capes...[game.dragon.kind] decides to follow the girl, but she has already disappeared behind some trees, so he follows her smell."
     show expression 'img/bg/forest/1.jpg' as bg    
-    "Судя по следам, красная шапочка встретилась на перекрёстке с необычным существом. От него остался сложный запах, напоминающий одновременно отродий Владычицы, человечину и мокрую псину. Существо не напало на шапочку, они немного потоптались на месте, а потом пошли разными дорогами но в одну и ту же сторону. Интересно…"
-    "Следы красной шапочки ведут к поляне на которой стоит небольшой домик, очень аккуратный для жилища расположенного в глухом лесу. Изнутри раздаётся шум - женские крики, утробный рык и шум переворачиваемой мебели."
+    "Judging from her trail, the red hooded girl met an unusual creature on the crossroads. The smell is strange, reminiscent of wet dog, human flesh, and the Mistress\'s spawn. The creature did not attack the girl, there is a spot with many footprints, and from there they went away seperately - but in the same direction. Interesting... "
+    "The tracks of the red hooded girl lead to a clearing with a small house, very tidy for a home in a remote forest. Inside noises are heard - a girl\'s screams, a hollow roar, and overturned furniture. "
     nvl clear
     show expression 'img/scene/wolf_sex.jpg' as bg
     pause (50.0)
-    "Заглянув в окошко [game.dragon.name] видит внутри картину разгрома. Огромный антропоморфный волк жестоко насилует девушку в красной накидке, прямо у трупа старой седой женщины. Девушка визжит и отбивается, но волчару это похоже только распаляет. С невероятно довольным выражением на морде, он выкручивает руки красной шапочки за спину и с утробным рычанием сношает её по собачьи. "
-    "Острые длинные когти чудовища оставляют на нежной коже девочки глубокие кровавые полосы, когда он сжимает лапы от удовольствия, наполняя семенем её истерзанную утробу. Удовлетворённый зверочеловек тяжело дыша ложится на пол чтобы перевести дух. Его окровавленная жертва пытается отползти к двери, но оборотень ещё не закончил."
-    "Привычным движением он хватает девочку за ляжку и легко подтягивает обратно к себе. Бедняжка визжит и умоляет его прекратить, но волк лишь улыбается вывалив язык на бок.  Покрепче ухватив аппетитную попку жертвы когтистыми лапами, он с видимым усилием втискивает свой внушительны собачий инструмент прямо в её аккуратненькую анальную дырочку. Судя по приложенным на вхождение усилиям, мохнатый просто разодрал её сфинктер, чтобы протиснуться внутрь."
+    "Peering through the window, [game.dragon.name] sees the aftermath of the fight. A huge anthropomorphic wolf brutally raping the girl in the red cape, next to the corpse of an old gray-haired woman. She squeals and struggles, but it only seems to inflame the wolf. With an incredibly happy expression on his face, he twists her hands behind her back and fucks her doggy style, growling. "
+    "The long, sharp claws of the monster leave bloody rips in her delicate skin, as the wolf squeezes his paws in pleasure, filling her tormented womb with seed. Satisfied, the monster lies panting on the floor. His bleeding victim tries to crawl to the door, but the werewof isn\'t finished."
+    "With an easy movement he grabs the girls thigh and pulls her back. The poor girl screams and begs him to stop, but the wolf just smiles with his tongue out. Roughly he grabs her delicious ass with his clawed feet, and with a visible effort, jams his impressive canine rod right in her anus. Judging from the force required, Fluffy just tore her sphincter to squeeze inside."
     nvl clear
-    "Красная шапочка визжит так что уши закладывает, но и это не может остановить жестокого зверочеловека. Напротив, распалившись от криков своей окровавленной жертвы он вгрызается в неё зубами и отрывает ей правую руку. [game.dragon.name] по собственному опыту знает как приятно совмещать секс и завтрак, а волчара с таким аппетитом хрустит косточкой что у дракона аж слюнки потекли."
-    "Через несколько минут кровавого пиршества девочка (точнее то что от неё осталось) затихает на полу. Сытый и довольный волк методично отгрызает её неповреждённую ногу, прямо с хоршим куском ягодицы. Затем оборотень принимает человеческий облик и закинув кровавый трофей на плечо выходит из дома чтобы нос к носу столкнуться с драконом."
-    show expression 'img/bg/forest/1.jpg' as bg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-    game.dragon "Привет. Ты из маминой своры? Что-то я тебя не припомню, братишка…"
-    wolf "(мне пиздец, это ж дракон) Ээээ… кхм... Нет. Я из Москвы. Сергей. Сергей Волков."
-    game.dragon "В первый раз слышу. У вас там в Москве всегда так развлекаются? Весёлое должно быть местечко."
-    wolf "Да, я там шороху навёл в своё время, но теперь уж никак не вернуться. Туманы не пускают. Слушай… может я пойду уже, у тебя свои дела у меня свои, что нам тут лясы точить?"
-    game.dragon "А ножкой не угостишь? Я что-то проголодался."
-    wolf "Не, мужик, мне же ребёнка надо кормить. Я только ради этого сюда и выполз. Там в доме ещё осталось кое что. И старуха почти целая."
-    game.dragon "Ну ладно. Дети это святое, у самого спиногрызов куча по всему свету бегает. Счастливого пути, Сергей Волков из Москвы."
+    "Little Red Rding Hood squeals so loudly that the werewolf\'s ears flatten, but it does not stop his abuse. On the contrary, incensed by her bloody screams he bites his teeth into her right hand and tears it off. [game.dragon.name] knows from is own experience how to combine sex and a good breakfas, and the wolf crunches bone with such gusto that the dragon starts to salivate."
+    "After a few minutes of this bloody feast the girl, or what is left of her, lays quiet on the floor. Satisfied and satiated, the wolf methodically bites off an undamaged leg, along with a large chunk of buttock. Then, taking human form and throwing the bloody trophy on his shoulder, he goes out and encounters the dragon."
+    show expression 'img/bg/forest/1.jpg' as bg
+    game.dragon "Hello. Are you one of my mother\'s flock? Somehow I don\'t recall you, brother..."
+    wolf "(oh fuck, a dragon) Uuuuh… ahem... nyet. I\'m from Moscow. Sergei. Sergei Wolkov."
+    game.dragon "That\'s the first time I\'ve heard of it. Do you always have such fun there in Moscow? It must be a cheerful place."
+    wolf "Da, I rustled up lot of pussy in my time, but there now I can not go back. The fogs will not allow it. Listen...can go already, you have your business and I have mine, no reason to make conversation?"
+    game.dragon "Won\'t you part with a leg? I\'m a little hungry..."
+    wolf "Nyet, I need to feed children. But in house is left something still, and old woman is almost whole."
+    game.dragon "Very well. Children are sacred, we need the little parasites to keep the world running. Godspeed, Sergei Wolkov from Moscow."
     nvl clear
-    "Сдержанно кивнув друг-другу чудовища разошлись в разные стороны и продолжили свои приключения."    
+    "Nodding slighty to each other, the monsters went their seperate ways and continued their adventures."    
 
     return
 
