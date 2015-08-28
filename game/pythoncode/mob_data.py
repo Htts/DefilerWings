@@ -2,177 +2,177 @@
 # Одноразовые противники
 mob = {
     'aircruiser': {
-        'name': u"Летучий крейсер",  # название моба применяемое в описании
+        'name': u"Flying cruiser",  # название моба применяемое в описании
         'power': {'base': (6, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (6, 2)},  # надежность защиты моба (обычная, верная)
         'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
         'image': 'aircruiser',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Летучий крейсер цвергов медлительно разворачивается бортом к угрозе. Паровая артилерия готовится дать первый залп."],
-            [['foe_fear'],  u"(you win [fear]) \n Вооруженный до зубов боевой кресейсер стремительно разворачивается и на всех парусах летит прочь. Есть противники с которыми не готовы связываться даже отважные цверги..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name_full)s в ярости крушит переборки и шпангоуты, разрывая цвергов пополам и выбрасывая тела за борт. Карлики просто не могут ничего противопоставить прорвашемуся в ближний бой дракону и вскоре горящие обломки летучего судна обрушиваются на землю."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Залп бортовой артилерии летучего крейсера попадает точно в цель. Чугунные ядра сминают чешую дракона и ломают кости, но %(dragon_name)s не останавливается. Боль от ран лишь разьярет его и придаёт сил. Пока цверги спешно пытаются перезарядить орудия, %(dragon_type)s врывается на палубу и начинает крушить конструкции корабля. Расчёты бесполезной артилерии прыгают за борт в тщетной попытке спастись. Менее чем через минуту главный котёл летательного аппарата взрывается и судно переламывается надвое."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Набрав огромную скорость %(dragon_type)s пытается прорваться на палубу крейсера, но меткий залп боровой артилерии отбрасывает его назад. %(dragon_name)s ревёт от боли."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Капитан воздушного крейсера выбирает оборонительную тактику, %(dragon_name)s тоже не спешит подставляться под залп паровой артилерии. Кто-то должен рискнуть и проиграть.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Бортовая артилерия крейсера даёт слаженный залп. Тяжёлое чугунное ядро с хрустом врезается в голову дракона и разбивает его череп. К счастью %(dragon_name_full)s способен пережить даже такие повреждения..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Не взирая на опасность, %(dragon_type)s таранит летучий крейсер в борт. Артилерия цвергов даёт залп в упор и отстреливает дракону голову, но тот по инерции летит дальше и разбивает обшивку корабля. %(dragon_name_full)s способен пережить потерю головы, а вот судно цвергов теряет боеспособность полностью."],
-            [['dragon_dead'], u"(you lose) \n Раз за разом %(dragon_name_full)s бросается на ощетинившийся паровыми оружиями корабль и раз за разом залпы разрывных ядер останавливают его на подлёте. Даже драконья чешуя и кости не способны выдерживать это вечно. Израненный и избитый %(dragon_type)s падает назем и издаёт последний вздох..."]
+            [['foe_intro'], u"A dwarven flying cruiser slowly turns its side to face the enemy. Steam artillery prepares to fire a salvo."],
+            [['foe_fear'],  u"The heavily armed battle cruiser rapidly unfurls all sails and flies away. There are opponents that not even the brave dwarves will face..."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s furiously smashes decks and bulkheads, breaking the ship in half and flinging dwarven bodies overboard. Dwarves simply cannot match a dragon in a close fight, and soon the burning fragments of the ship rain down on the ground."],
+            [['foe_dead', 'dragon_wounded'], u"Volleys of the flying cruiser\'s onboard artillery hit their mark. Cast iron projectiles crush the dragon\'s scales and break bones, but %(dragon_name)s does not stop. The paint of his wounds just enrages him and gives him strength. As the dwarves try to quickly reload their weapon, %(dragon_type)s rushes to the deck and begins to tear into the ship. Seeing their futile situation the artillery crew jumps overboard in a vain attempt to escape. Less than a minute later, the main boiler explodes and the ship is split in two."],
+            [['foe_alive', 'dragon_wounded'], u"Accelerating to great speed, %(dragon_type)s tries to break onto the deck of the cruiser, but a well aimed volley of artillery blasts it back. %(dragon_name)s roars with pain."],
+            [['foe_alive', 'dragon_undamaged'], u"The airship captain waits for the dragon to close. %(dragon_name)s also waits, in no hurry to take a volley from the steam artillery. Someone must take a chance.",],
+            [['foe_alive', 'lost_head'], u"The cruiser\'s onboard artillery fires a broadside. Heavy iron balls crash into the dragon\'s head, smashing his skull with a crunch. Luckily %(dragon_name_full)s is able to survive such damage..."],
+            [['foe_dead', 'lost_head'], u"Ignoring the danger, %(dragon_type)s rams the flying cruiser The dwarven artillery fires a salvo at point blank range into one of the dragon\'s heads, but his inertia carries him foward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
+            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the steam ship, and time after time, bursts of explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, %(dragon_type)s falls to the ground and breathes his last breath..."]
         ]
     },
 
     'airfleet': {
-        'name': u"Воздушный флот",  # название моба применяемое в описании
+        'name': u"Air fleet",  # название моба применяемое в описании
         'power': {'base': (5, 1)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (6, 3)},  # надежность защиты моба (обычная, верная)
         'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
         'image': 'airfleet',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Летучие корабли выстраиваются для атаки."],
-            [['foe_fear'],  u"(you win [fear]) \n Едва завидев дракона, летучие корабли спешно разворачиваются и разлетаются кто-куда."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Летчуие корабли цвергов слишком неповоротливы, чтобы противостоять натиску дракона. %(dragon_name_full)s уничтожает их один за другим, ни разу не попав в зону обстрела паровых пушек."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s врывается в боевое построение летучего флота и начинает уничтожать боевые корабли. Их беспорядочный огонь наносит больше вреда союзникам чем дракону, хотя несколько ядер и попадают в цель. %(dragon_name_full)s торжествует победу."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s пытается прорваться к летучим кораблям вплотную, но отсутпает отброшенный залпом с нескольких бортов."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_type_cap)s осторожничает, стараясь не попасть под перекрёстный огонь паровых пушек. Но чтобы уничтожит корабли, надо прораваться к ним вплотную...",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Бортовая артилерия крейсера даёт слаенный залп. Тяжёлое чугунное ядро с хрустом врезается в голову дракона и разбивает его череп. К счастью %(dragon_name_full)s способен пережить даже такие повреждения..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Летучие корабли не могут устоять под натиском разъярённого дракона, но цверги бьютмя насмерт. Хотя %(dragon_type)s побеждает, одна из его голов умирает от полученых ран."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s врывается на флагман флота, пробивая переборки и убивая команду. Капитан корабля, видя что судно уже не спасти успевает вывести паровой котёл на режим разноса. Чудовищный взрыв перегретого пара уносит с собой корабль, команду и дракона..."]
+            [['foe_intro'], u"A fleet of flying ships line up to attack."],
+            [['foe_fear'],  u"At first sight of the dragon, the flying ships quickly turn full steam in the other direction."],
+            [['foe_dead', 'dragon_undamaged'], u"The flying dwarven ships are too slow and clumsy to withstand the onslaught of the dragon. %(dragon_name_full) destroys them one by one, never once crossing the firing zones of the steam guns."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the battle formation of the flying fleet and begins destroying warships. Their panicked fire does more damage to themselves than the dragon, though a few projectiles hit their target. %(dragon_name_full)s triumphs."],
+            [['foe_alive', 'dragon_wounded'], u"%(dragon_type_cap)s tries to break into the ranks of the fighting ships, but is thrown back by salvos from multiple ships."],
+            [['foe_alive', 'dragon_undamaged'], u"%(dragon_type_cap)s is cautious, trying not to get into a crossfire from the steam guns. But there is no way to destroy the ships without getting closer.",],
+            [['foe_alive', 'lost_head'], u"The airbone cruisers\' artillery fires steady volleys. A heavy iron ball smashes into one of the dragon\'s heads with a crunch and shatters his skull. Luckily %(dragon_name_full)s is able to survive such an injury..."],
+            [['foe_dead', 'lost_head'], u"Flying ships cannot withstand the onslaught of a furious dragon, but the dwarves fight to the death. Although %(dragon_type)s wins, one of his heads does not survive its wounds."],
+            [['dragon_dead'], u"%(dragon_name_full) bursts into the flagship of the fleet, smashing through bulkheads and killing crewmen. The captain, seeing that his crew cannot be saved, closes the valves on the ship\'s boiler. A massive explosion of supherheated steam takes with it the ship, the crew, and the dragon..."]
         ]
     },
 
     'airship': {
-        'name': u"Воздушный корабль",  # название моба применяемое в описании
+        'name': u"Airship",  # название моба применяемое в описании
         'power': {'base': (4, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (4, 1)},  # надежность защиты моба (обычная, верная)
         'modifiers': ['poison_immunity'],  # особые модификаторы
         'image': 'airship',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Летучий корабль цвергов медлительно разворачивается бортом к угрозе. Паровая катапульта готовится дать первый залп."],
-            [['foe_fear'],  u"(you win [fear]) \n Воздушный корабль стремительно разворачивается и на всех парусах летит прочь. Есть противники с которыми не готовы связываться даже отважные цверги..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name_full)s в ярости крушит переборки и шпангоуты, разрывая цвергов пополам и выбрасывая тела за борт. Карлики просто не могут ничего противопоставить прорвашемуся в ближний бой дракону и вскоре горящие обломки летучего судна обрушиваются на землю."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Выстрел паровой катапульты цвергов попадает точно в цель. Чугунные ядра сминают чешую дракона и ломают кости, но %(dragon_name)s не останавливается. Боль от ран лишь разьярет его и придаёт сил. Пока цверги спешно пытаются перезарядить орудие, %(dragon_type)s врывается на палубу и начинает крушить конструкции корабля. Расчёт бесполезной артилерии прыгают за борт в тщетной попытке спастись. Менее чем через минуту главный котёл летательного аппарата взрывается и судно переламывается надвое."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Набрав огромную скорость %(dragon_type)s пытается прорваться на палубу судна, но меткий выстрел паровой катапульты отбрасывает его назад. %(dragon_name)s ревёт от боли."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Капитан летучего корабля выбирает оборонительную тактику, %(dragon_name)s тоже не спешит подставляться под залп паровой катапульты. Кто-то должен рискнуть и проиграть.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Тяжёлое чугунное ядро, выпущенное из паровой катапульты цвергов, с хрустом врезается в голову дракона и разбивает его череп. К счастью %(dragon_name_full)s способен пережить даже такие повреждения..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Не взирая на опасность, %(dragon_type)s таранит летучий корабль собственным телом. Катапульта цвергов стреляет в упор и ядро отрывает дракону голову, но тот по инерции летит дальше и разбивает обшивку корабля. %(dragon_name_full)s способен пережить потерю головы, а вот судно цвергов теряет боеспособность полностью."],
-            [['dragon_dead'], u"(you lose) \n Раз за разом %(dragon_name_full)s бросается на летучий корабль и раз за разом меткие выстрелы паровой катапульты останавливают его на подлёте. Даже драконья чешуя и кости не способны выдерживать это вечно. Израненный и избитый %(dragon_type)s падает назем и издаёт последний вздох..."]
+            [['foe_intro'], u"A flying dwarven ship slowly turns to face its enemy. A steam catapult prepares to fire."],
+            [['foe_fear'],  u"(Rapidly unfurling all sails, the airship turns and flies away. There are opponents not even the brave dwarves will face..."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s furiously smashes decks and bulkheads, breaking the ship in half and flinging dwarven bodies overboard. Dwarves simply cannot match a dragon in a close fight, and soon the burning fragments of the ship rain down on the ground."],
+            [['foe_dead', 'dragon_wounded'], u"Shots from the airship\'s steam catapult hit their mark. Cast iron projectiles crush the dragon\'s scales and break bones, but %(dragon_name)s does not stop. The paint of his wounds just enrages him and gives him strength. As the dwarves try to quickly reload their weapon, %(dragon_type)s rushes to the deck and begins to tear into the ship. Seeing their futile situation the catapult crew jumps overboard in a vain attempt to escape. Less than a minute later, the main boiler explodes and the ship is split in two."],
+            [['foe_alive', 'dragon_wounded'], u"Accelerating to great speed, %(dragon_type)s tries to break onto the deck of the airship, but a well aimed catapult shot knocks it back. %(dragon_name)s roars with pain."],
+            [['foe_alive', 'dragon_undamaged'], u"The airship captain waits for the dragon to close. %(dragon_name)s also waits, in no hurry to take a hit from the steam catapult. Someone must take a chance.",],
+            [['foe_alive', 'lost_head'], u"The airship\'s onboard catapult fires repeatedly. Heavy iron balls crash into the dragon\'s head, smashing his skull with a crunch. Luckily %(dragon_name_full)s is able to survive such damage..."],
+            [['foe_dead', 'lost_head'], u"Ignoring the danger, %(dragon_type)s rams the flying ship The dwarven catapult hurls a ball at point blank range into one of the dragon\'s heads, but his inertia carries him foward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
+            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the airship, and time after time, explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, %(dragon_type)s falls to the ground and breathes his last breath..."]
         ]
     },
 
     'angel': {
-        'name': u"Ангел",  # название моба применяемое в описании
+        'name': u"Angel",  # название моба применяемое в описании
         'power': {'base': (8, 3)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (6, 3)},  # надежность защиты моба (обычная, верная)
         'modifiers': ['sound_immunity'],  # особые модификаторы
         'image': 'angel',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Ангел сжимает в руке сияющий меч. Он полон решимости покарать дракона во имя Небес."],
-            [['foe_fear'],  u"(you win [fear]) \n Ангел бежит в страхе"],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name_full)s легко уклоняется от удара волшебного меча и впивается ангелу в горло. Его кровь похожа по вкусу на вино..."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Битва двух могучих созданий длится долго но в конце концов, израненный %(dragon_name)s выходит из неё победителем."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s бросается на врага, но получив болезненный удар волшебным мечем, вынужден отпрянуть назад."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх. Противники стоят друг друга.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Ангел могучим ударом сносит голову дракону. Но это ещё не конец, %(dragon_name_full)s способен пережить даже такой удар."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает ангела, но одна из его голов умирает от полученых ран"],
-            [['dragon_dead'], u"(you lose) \n Израненный %(dragon_type)s бросается в последнюю атаку, но наполненный священной яростью ангел непоколебим. Вложив все силы в один могучий удар, крылатый воин разрубает дракона пополам!"]
+            [['foe_intro'], u"An angel holds a shining sword. He is determined the punish the dragon in the name of heaven."],
+            [['foe_fear'],  u"The angel runs away in fear."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s easily evades a blow from a magic sword and bites the angel\'s throat. His blood tastes like wine..."],
+            [['foe_dead', 'dragon_wounded'], u"The battle of the two mighty creatures lasts a long time, but in the end the %(dragon_name)s emerges as the victor, covered in wounds."],
+            [['foe_alive', 'dragon_wounded'], u"%(dragon_type_cap)s charges the enemy but, receiving a painful blow from a magic sword, is forced to retreat."],
+            [['foe_alive', 'dragon_undamaged'], u"The fight continues for some time, but neither fighter gains the advantage. They are an equal match for each other.",],
+            [['foe_alive', 'lost_head'], u"With a mighty blow the angel takes off one of the dragon\'s heads. But this is not the end, %(dragon_name_full)s can survive such a wound."],
+            [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s defeats the angel, but one of his heads is dying from its wounds."],
+            [['dragon_dead'], u"Covered with wounds, the %(dragon_type)s charges for a final attack, but filled with holy fury the angel does not flinch. Putting all his force into one mighty blow, the winged warrior splits the dragon in half!"]
         ]
     },
 
     'archer': {
-        'name': u"Стрелок",  # название моба применяемое в описании
+        'name': u"Archer",  # название моба применяемое в описании
         'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (1, 0)},  # надежность защиты моба (обычная, верная)
         'modifiers': [],  # особые модификаторы
         'image': 'archer',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Королевский лучник накладывает стрелу на тетиву."],
-            [['foe_fear'],  u"(you win [fear]) \n Королевский лучник бежит в ужасе. Он не готов к такому бою."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Лучник успевает выстрелить трижды, прежде чем %(dragon_name)s добирается до него. Но стрелы просто отскакивают от чещуйчатой шкуры дракона. А вот у самого стрелка нет никакой защиты от зубов ящера."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s открывает пасть чтобы издать громогласный рык и тут же получаёт стрелу в мягкое нёбо. Лишённый возможности кусаться, %(dragon_type)s в ярости забивает стрелка ударами хвоста."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Меткий лучник ухитряется попасть дракону точно в глаз. Обезумевший от боли ящер мешкает."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Стрела выпущенная лучником отскакивает от прочной чешуи дракона.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Закалённая стрела с чёрным древком влетает в пасть дракону и проходит точно в мозг.  К счастью %(dragon_name_full)s способен пережить даже такую рану."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
-            [['dragon_dead'], u"(you lose) \n Закалённая стрела с чёрным древком влетает в пасть дракону и проходит точно в мозг. %(dragon_name_full)s падает замертво."]
+            [['foe_intro'], u"A royal archer nocks an arrow."],
+            [['foe_fear'],  u"The royal archer runs away in horror. He was not prepared for this fight."],
+            [['foe_dead', 'dragon_undamaged'], u"The archer manages to fire three times before %(dragon_name)s reaches him. But the arrows simply glance of the scaly skin of the dragon. At close range, the archer has no defense against the fanged lizard."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s opens his jaws to roar, and an arrow punctures his soft mouth. Unable to bite, %(dragon_type)s angrily beats the archer to death with his tail."],
+            [['foe_alive', 'dragon_wounded'], u"The sharpshooting archer manages to hit the lizard right in the eye. The lizard stops, going mad with pain."],
+            [['foe_alive', 'dragon_undamaged'], u"The archer\'s arrows glance off the natural armor of the dragon.",],
+            [['foe_alive', 'lost_head'], u"A tempered arrow with a fire hardened shaft piereces through one of the dragon\'s mouths and into a brain. Luckily, %(dragon_name_full)s can survive such a wound."],
+            [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s wins, but one of his heads is withering from its wounds."],
+            [['dragon_dead'], u"The archer looses a tempered arrow with a fire hardened shaft, and it piereces through one the dragon\'s mouth and into his brain. %(dragon_name_full) falls dead."]
         ]
     },
 
     'band': {
-        'name': u"Банда разбойников",  # название моба применяемое в описании
+        'name': u"Band of thieves",  # название моба применяемое в описании
         'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (5, 0)},  # надежность защиты моба (обычная, верная)
         'modifiers': [],  # особые модификаторы
         'image': 'xbow',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Бандиты выстраиваются полукольцом, покрепче сжимая оружие."],
-            [['foe_fear'],  u"(you win [fear]) \n При виде атакующего дракона бандиты в страхе разбегаются кто куда. Некотрым повезло, другим уйти не удалось..."],
-            [['foe_dead', 'dragon_undamaged'], u"(difficult victory) \n (flawless victory) \n %(dragon_name)s врывается в толпу разбойников и начинает рвать их на куски. Дезорганизованные бандиты нес пособны оказать достойного сопротивления."],
-            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s врывается в толпу разбойников и начинает рвать их на куски. Несколько ударов бандитов достигают цели, но %(dragon_type)s хоть и раненый выходит из битвы победителем."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Применяя грамотную тактику взаимодействия, бандиты ухитряются дать дракону серьёзный отпор и даже наносят ему ощутимые раны. Пара разбойников падает мертвыми, но остальные полны решимости."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Разбойники сражаются отчаянно и на некоторое время им удаётся сдержать яростный напор дракона.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n %(dragon_type_cap)s атакует без оглядки и пропускает нескольких бандитов заа спину. Один ловкий разбойник запрыгивает ему прямо на спину и разбивает череп одной из голов ударом окованной железом дубины."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s жестоко изранен и победа над бандитами даётся ему нелегко. Одна из голов получила смертельную рану."],
-            [['dragon_dead'], u"(you lose) \n Разбойники набрсываются все разом и отчаянно молотят дракона своим оружием. Израненный %(dragon_type)s в последнем порыве ярости ухитряется убить нескольких врагов, но их слишком много. %(dragon_name_full)s падает наземь и испускает последний дух."]
+            [['foe_intro'], u"Bandits are lined up in a semicircle, squeezing their weapons tightly."],
+            [['foe_fear'],  u"When the dragon attacks the bandits, they flee in fear in all directions. By blind luck, a few escape."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s bursts into the crowd of robbers and begins to tear them to peices. The disorganized bandits are unable to put up worthy resistance."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the crowd of robbers and begins to tear them to pieces. A few strokes of the bandits reach their mark, but the wounded %(dragon_type)s emerges victorious."],
+            [['foe_alive', 'dragon_wounded'], u"Using effectively cooridnated tactics, the bandits strongly rebuff to the dragon, inflicting injury. A few of the robbers are dead, but the rest are full of determination."],
+            [['foe_alive', 'dragon_undamaged'], u"The thieves fight desperatel, and manage to hold back the furious assault of the dragon.",],
+            [['foe_alive', 'lost_head'], u"%(dragon_type_cap)s attacks thoughtly, exposing his back to several bandits. One clever thief jumps onto his back, smashing one of his skulls in with an iron capped club."],
+            [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s is covered with serious wounds, and the victory over the bandits hurt him badly. One of his heads is mortally wounded."],
+            [['dragon_dead'], u"The robbers pounce on the dragon all at once, frantically thrashing him with their weapons. In a fit of rage the wounded %(dragon_type)s manages to kill a few enemies, but there are too many. %(dragon_name_full)s falls to the ground and breathes his last breath."]
         ]
     },
 
 
     'battleship': {
-        'name': u"Боевой корабль",  # название моба применяемое в описании
+        'name': u"Battleship",  # название моба применяемое в описании
         'power': {'base': (7, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (7, 2)},  # надежность защиты моба (обычная, верная)
         'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
         'image': 'ship',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"На палубе боевого корабля слышны отчаянные свистки боцманской дудки. Канониры спешно выкатывают пушки."],
-            [['foe_fear'],  u"(you win [fear]) \n Подняв все паруса какие только есть, грозный боевой корабль разворачивается по ветру и уходит на максимальной скорости прочь от дракона. Капитан не готов сразитьяс с таким чудовищем как %(dragon_name_full)s."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Скрывшись в толще вод %(dragon_name)s подплывает под днище боевого корабля и взяв макимальный разгон пробивает в нём дыру. Теперь можно отлавливать пытающихся спастись моряков по одному."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s уходит на глубину, но недостаточно быстро. Боевой корабль успевает дать один залп и чугунное ядро ломает дракону ребро. Разъярённый %(dragon_type)s вырывает кусок из обшивки корабля ниже ватерлинии. Вода стремительно заполняет трюмы - галеон обречён."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Слаженный залп бортовых орудий накрывает дракона и отбрасывает его прочь, вздымая столбы бурлящей воды."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_name)s ныряет под корабль и пытается пробить дыру в обшивке ниже ватерлинии, но безуспешно.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Начинённая дымным порохом чугунная бомба попадает одной из голов дракона прямо в лоб. От такой раны будет трудно опавиться..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s забирается на палубу корабля и устраивает матросам кровавую баню. Люди в панике разбегаются и увлеченный погоней %(dragon_name)s слишком поздно замечает забравшегося на рею капитана. Тот прыгает сверху и сносит палашом одну из голов дракона. К сожалению для него, этого недостаточно для победы. Команда галеона обречена."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s слишком слаб чтобы выдержать ещё один залп боевого корабля. Измочаленный чугунными ядрами %(dragon_type)s  безвольно уходит на глубину, не в силах больше цепляться за жизнь."]
+            [['foe_intro'], u"On the deck of a warship, a boatswain whistles frantically. Gunners quickly roll out their cannons."],
+            [['foe_fear'],  u"Unfurling its sails, the formidable warship turns into the wind and sails from the dragon at top speed. The captain is not ready to fight with such a monster as %(dragon_name_full)s."],
+            [['foe_dead', 'dragon_undamaged'], u"Hiding beneath the waves, %(dragon_name)s swims under the warship, and punches a hole in it at top speed. Now the sinking sailors can be caught one by one."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s dives into the depths, but not quickly enough. The warship has time for one volley, and cannonballs break the drago\'s ribs. The furious %(dragon_type)s rips off a section of the ship\'s hull under the waterline. The ocean quickly rushes in, and the battleship is doomed."],
+            [['foe_alive', 'dragon_wounded'], u"Coordinated volleys of cannonfire smash into the dragon and he is forced to retreat, throwing up swirling columns of water."],
+            [['foe_alive', 'dragon_undamaged'], u"%(dragon_name)s dives under the ship and tries to punch a hole below the waterline, but to no avail.",],
+            [['foe_alive', 'lost_head'], u"A cast-iron bomb stuffed with black powder detonates directly on the dragon\'s forhead. From such a wound few can recover..."],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type) climbs onto the deck of the ship and happily starts to make a bloodbath out of the crew. The sailors scattor in panic, and in his enthusiastic pursuit %(dragon_name)s fails to notice the captain climbing on a yardarm. Jumping from above, the captain slices off the dragon\'s head with a blow from his sord. Unfortunately for him, it isn\'t enough for victory. The warship is doomed."],
+            [['dragon_dead'], u"%(dragon_name_full) is too weak to withstand anothe volley from the warship. Pummeled by iron projectiles, the dragon sinks beneath the depths, no longer able to cling to life."]
         ]
     },
 
     'boar': {
-        'name': u"Огромный вепрь",  # название моба применяемое в описании
+        'name': u"Enormous boar",  # название моба применяемое в описании
         'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
         'modifiers': [],  # особые модификаторы
         'image': 'boar',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Огромный вепрь склоняет голову к земле, выставляя вперёд угрожающе загнутые клыки."],
-            [['foe_fear'],  u"(you win [fear]) \n Огромный вепрь взвизгивает от страха почувстовав чудовищного хищника и пытается убежать. Не тут то было..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Вепрь бросается в атаку по прямой, но %(dragon_type)s сбивает его с ног одним могучим встречным ударом."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s сцепляется с гигантским вепрем в рукопашную. Жуткие клыки лесного свина попарывают чещую даркона, нанося кровоточащую рану, но всё же силы не равны. Через минуту всё заканчивается и %(dragon_name_full)s может наконец спокойно поесть..."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Два огромных тела сшибаются с рёвом и визгом. Импульс гиантского вепря столь велик, что %(dragon_type)s отлетает в сторону."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Израненный %(dragon_type)s делает неловкое движение и загнутый клык вепря пробивает ему шею. Это может плохо кончиться..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Израненный %(dragon_type)s делает неловкое движение и загнутый клык вепря пробивает ему шею, но всё же кабан обречён на поражение."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s получает смертельный удар. Последней мыслью в его угасающем сознании бьётся - какой позор, принять смерть от свиньи, буд-то какой-нибудь пьяный человеческий королёк..."]
+            [['foe_intro'], u"A huge boar bows his head to the ground, exposing his menacing curved tusks."],
+            [['foe_fear'],  u"The huge boar shrieks in fear of the monstrous predator and tries to escape it. Not that it can..."],
+            [['foe_dead', 'dragon_undamaged'], u"The wild boar charges forward, but the %(dragon_type)s knocks him off his feet with one powerful blow."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s wrestles with the giant boar. The horrible fangs of the forest boar pierce the scales of the dragon, inflicting a bleeding wound, but nevertheless the dragon gains the advantage. Within a minute, everything is still and %(dragon_name_full)s can at last eat in peace..."],
+            [['foe_alive', 'dragon_wounded'], u"The two huge bodies collde with a roar and a squel. The impact from the boar is great that the %(dragon_type)s goes flying off to the side."],
+            [['foe_alive', 'dragon_undamaged'], u"The fight continues for some time, but no one gains the upper hand.",],
+            [['foe_alive', 'lost_head'], u"The wounded dragon makes a clumsy move, and the curved tusk of the boar gores one of his necks. This may end badly..."],
+            [['foe_dead', 'lost_head'], u"The wounded dragon makes a clumsy move, and the curved tusk of the boar gores one of his necks. But in the end, the boar is doomed to defeat."],
+            [['dragon_dead'], u"%(dragon_name_full)s receives a mortal blow. The last thought in his fading conciousness - how humilitating to die from a pig."] #trans: could not translate last part of last sentence.  "буд-то какой-нибудь пьяный человеческий королёк..."
         ]
     },
 
 
     'bear': {
-        'name': u"Пещерный медведь",  # название моба применяемое в описании
+        'name': u"Cave bear",  # название моба применяемое в описании
         'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
         'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
         'modifiers': [],  # особые модификаторы
         'image': 'bear',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
         # набор описаний сцены боя
         'descriptions': [
-            [['foe_intro'], u"Пещерный медведь встаёт на дыбы и скалит зубы."],
-            [['foe_fear'],  u"(you win [fear]) \n Огромный пещерный медведь бежит словно испуганный щенок. Он удивительно быстр, учитывая косолапую походку, но всё же недостаточно быстр..."],
+            [['foe_intro'], u"A cave bear stands on its hind legs and bares its teeth."],
+            [['foe_fear'],  u"The huge cave bear runs like a frightened puppy. He is surprisngly fast, considering his clumsy gate, but not fast enough..."],
             [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name)s опрокидывает медведя навзичь и впивается зубами в его горло. Косолапый пытается отбиться когтями но безуспешно и вскоре затихает."],
             [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n От рёва сошедшихся в схватке чудовищ по горам проносится эхо. Исполосованный когтями медведя %(dragon_type)s выходит из этой битвы победителем, но дорогой ценой."],
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s пытается атаковать огромного медведя, но получает в ответ болезненный удар тяжелой когтистой лапы. Этот зверь так просто не сдастся..."],
