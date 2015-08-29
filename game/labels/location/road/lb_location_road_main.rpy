@@ -14,7 +14,7 @@ label lb_location_road_main:
     nvl clear
     
     if game.dragon.energy() == 0:
-        '[game.dragon.name] need some sleep!'
+        '[game.dragon.name] needs to sleep!'
         return
         
     $ nochance = game.poverty.value * 3
@@ -42,9 +42,9 @@ label lb_location_road_main:
     
     
 label lb_enc_tornament:
-    'Шум вдалеке...'
+    'A noise in the distance...'
     show expression 'img/bg/special/tornament.jpg' as bg
-    '...это рыцарский турнир. Победитель готов возложить золотой венец на "королеву любви и красоты".'
+    '...it\'s a jousting tournament. The winner is preparing to put a golden crown on the \"queen of love and beauty\"".'
     $ game.foe = Enemy('champion', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear
@@ -52,7 +52,7 @@ label lb_enc_tornament:
         'Challenge the Champion':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_13
-            'Увидев что их чемпион повержен, гости турнира в панике разбегаются бросая вещи и вопя от ужаса. [game.dragon.name] не обращает на них внимания, он забирает свой приз - "королеву любви и красоты" и её золотой венец.'
+            'When they see their champion defeated, the guests of the tournament scatter in panic, dropping everything and screaming in horror. [game.dragon.name] does not pay attention to them, he takes the prize - the \"Queen of Love and Beauty\", and her golden crown.'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
             $ description = game.girls_list.new_girl('princess')
@@ -61,34 +61,34 @@ label lb_enc_tornament:
             call lb_nature_sex from _call_lb_nature_sex_10      
         'Go away' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
-            'Осторожность не повредит. Если этот рыцарь действительно лучше в округе, он может быть опасен. А девицу и кусок золота можно найти где-нибудь ещё...'
+            'Caution cannot hurt. If this knight is really the best in the region, he could be dangerous. A woman and a piece of gold can be found somewhere else.'
     return
     
 label lb_enc_inn:
     show expression 'img/bg/special/tabern.jpg' as bg    
-    'На оживлённом торговом перекрёстке стоит двухэтажный трактир. При виде дракона безоружные люди в ужасе забегают в здание и баррикадируют двери и окна.'
+    'A two-storey inn stands on a busy intersection of a trade route. Spotting the dragon, the unarmed humans run in horror into the building and barricade the doors and windows.'
     nvl clear
     python:
         doit = False
         if 'fire_breath' in game.dragon.modifiers(): 
             doit = True
     menu:
-        'Breath fire' if doit:
+        'Breathe fire' if doit:
             $ game.dragon.drain_energy()
-            "Испольщуя своё огненное дыхание, [game.dragon.name] пожигает здание с четырёх разных сторон. Деревянный трактир сгорает стремительно, погребая под пылающими обломками людей забаррикадировавшихся внутри."
+            "Unleashing his fiery breath, [game.dragon.name] torches the building on all four sides. The wooden inn burns rapidly, buring the people barricaded inside in flaming wreckage."
             $ game.poverty.value += 1
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
         'Conjure poisonous vapors' if game.dragon.magic > 0:
             $ game.dragon.drain_mana()
-            "[game.dragon.name] призывает тёмную магию, чтобы заполнить помещения где заперлись испуганные люди ядовитым туманом. Трактир остаётся невредимым, но внутри все мертвы."
+            "[game.dragon.name] calls on dark magic to fill the locked up rooms with poisonous fog. The inn stands as before, but inside are nothing but corpses."
             $ game.poverty.value += 1
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
         'Demand a barrel of ale':
             show expression 'img/bg/special/fear.jpg' as bg  
             $ game.dragon.drain_energy()
-            "[game.dragon.name] получает от испуганного хозяина трактира целую бочку лучшего эля. После такой выпивки так и тянет на женщин и хорошую закуску!"
+            "[game.dragon.name] receives from the frightened tavern owner a whole barrel of fine ale. After such a binge, he needs a woman and a good meal!"
             python:
                 if game.dragon.bloodiness < 5:
                     game.dragon.bloodiness += 1
@@ -102,16 +102,16 @@ label lb_enc_inn:
     return
     
 label lb_enc_peasant_cart:
-    'По дороге медленно едет крестьянская телега гружёная сеном. Такие повозки тут встречаются часто и все как одна совершенно бесполезны, даже лошать и на вид такая жилистая и заморенная что не вызываетни особого аппетита. Аж злость берёт.'
+    'On the road a peasant cart loaded with hay slowly travels. These carts are common around here, and every one of them is completely useless. Even the horse is skinny and unappetizing. Already the dragon\'s blood boils.'
     menu:
         'Kill the peasant' if game.dragon.bloodiness >= 5:
             $ game.dragon.drain_energy()
-            'Дав волю своему гневу, [game.dragon.kind] переворачивает повозку, убивает лошадь и разрывает крестьянина на куски. У жалкого смертного нет ничего ценного! Да как он посмел встретить дракона если с него и взять нечего?!'
+            'Giving free rein to his anger, [game.dragon.kind] turns over the cart, killing the horse farmer and tearing him to pieces. The miserable peasant had nothing of value! How dare he meet a dragon, and have nothing to take?!'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
-        'Vore the horse' if game.dragon.hunger > 0: 
+        'Swallow the horse whole' if game.dragon.hunger > 0: #old huntsman's original translation: "vore the horse". kek
             $ game.dragon.drain_energy()
-            'Пока [game.dragon.name] пожирает жилистую крестьянскую лошадку, хозяин повозки в ужасе убегает прочь. Ничего, пусть поведает жалким смертным о вашем величии.'
+            'While [game.dragon.name] devours the sinewy peasant horse, the owner of the wagon runs away in terror. Let him tell other miserable mortals of your greatness.'
             python:
                 if game.dragon.bloodiness > 0:
                     game.dragon.bloodiness = 0
@@ -122,14 +122,14 @@ label lb_enc_peasant_cart:
     return
     
 label lb_enc_carriage:
-    'На дороге пыль стоит столбом, это едет карета благородной дамы с тяжело-вооруженными конными арбалетчиками в качестве охраны. Добрая добыча, хотя и не самая простая...'
+    'On the road a pillar of dust rises. In a coach a noble lady travels, with heavily armed mounted crossbowmen as guards. Good spoils, but not the easiest to take...'
     $ game.foe = Enemy('mounted_guard', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear
     menu:
         'Attack the coach':
             call lb_fight from _call_lb_fight_14
-            'Теперь когда охрана не представляет угрозы, можно заглянуть внутрь кареты. Разодрав её кузов словно шуршащую подарочную упаковку, [game.dragon.name] обнаруживает внутри трёх женщин - очевидно мать, дочь и служанку. Старухи не представляют никаого интереса, а вот с девицей можно отлично развлечься!'
+            'Now that the bodyguards are not a threat, the dragon can inspect the carriage. Tearing off its body like gift wrap, [game.dragon.name] finds three women inside - a mother, a daughter, and a servant. Old women are of no interest to a fiend like you, but with a girl, you can have a perfectly good time!'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
             $ description = game.girls_list.new_girl('princess')
@@ -142,7 +142,7 @@ label lb_enc_carriage:
     return
     
 label lb_enc_questing_knight:
-    'По дороге едет облачённый в броню всадник, в сопровождении оседлавшего ослика слуги. Странствующему рыцарю просто грех не вызвать на поединок дракона, только вот сможет ли он пережить такой бой чтобы рассказать о нём?'
+    'On the road rides a knight, accompanied by a servant on an old donkey. It would be a sin for a knight errant not to challenge the dragon, but will he survive to gain fame from such a battle?'
     $ game.foe = Enemy('champion', game_ref=game)
     $ chances = show_chances(game.foe)
     menu:
@@ -150,14 +150,14 @@ label lb_enc_questing_knight:
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_15
             $ game.dragon.reputation.points += 5
-            'Рыцарь повержен. [game.dragon.reputation.gain_description]'
-            '[game.dragon.name] находит на трупе кое-что ценное:'
+            'The knight is defeated. [game.dragon.reputation.gain_description]'
+            '[game.dragon.name] found something valuable on the corpse:'
             python:
                 count = random.randint(1, 5)
                 alignment = 'knight'
                 min_cost = 10
                 max_cost = 250
-                obtained = "Это предмет принадлежал когда-то беззвестному странствующему рыцарю."
+                obtained = "This item belonged to an obscure knight errant."
                 trs = treasures.gen_treas(count, data.loot['knight'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 game.lair.treasury.receive_treasures(trs)                
@@ -169,23 +169,23 @@ label lb_enc_questing_knight:
     return
     
 label lb_enc_trader:
-    'На дороге показывается большой крытый фургон, расписанный красочными рекламными надписями. Это какой-то странствующий торговец, не слишком преуспевающий но судя по запаху кое-какое серебро у него в кармана водится. Надо бы облегчить его ношу.'
+    'On the road is a big colorful wagon covered in painted advertisements. It\'s some kind of traveling mechant, not very successful but judging by the smell there is some silver to be found in his pockets. Someone should ease his burden.'
     menu:
-        'Wring the money':
+        'Extort money':
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(10, 200)
                 slvr_trs = [treasures.Coin('taller', passing_tool)]
                 game.lair.treasury.receive_treasures(slvr_trs)
-            'Торговец с облегчением отдаёт дракону несколько серебрянных таллеров, чтобы тот его не трогал и пропустил фургон.'
+            'The relieved merchant gives the dragon some silver taller in exchange for being left alone and allowed to pass.'
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
-        'Rob merchant' if game.dragon.bloodiness >= 5:
+        'Rob the merchant' if game.dragon.bloodiness >= 5:
             python:
                 game.dragon.drain_energy()
                 gold_trs = [treasures.Coin('farting', 100), treasures.Coin('taller', 10)]
                 game.lair.treasury.receive_treasures(gold_trs)
-            'Дав волю своему гневу, [game.dragon.name] переворачивает фургон, убивает лошадь и разрывает торговца на куски. Его товары особого интереса не представляют, зато в кошельке находятся кое какие деньги:'
+            '[game.dragon.name] releases his anger and overturns the wagon, kills the horse, and tears the trader to pieces. His wares are of little interest, but there is some money in his wallet:'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
         'Let him go' if game.dragon.bloodiness < 5:
@@ -193,23 +193,23 @@ label lb_enc_trader:
     return
     
 label lb_enc_caravan:
-    '[game.dragon.name] натыкается на торговый караван, сулящий неплохую добычу. К сожалению торговцы не стали экономить на охране - их сопровождает взвод конных арбалетчиков.'
+    '[game.dragon.name] stumbles on a caravan that promises to be a good catch. Unfortunately, the traders did not skimp on protection - they are accompainied by a platoon of mounted crossbowmen.'
     $ game.foe = Enemy('xbow_rider', game_ref=game)
     $ chances = show_chances(game.foe)
     menu:
-        'Wring the money' if game.dragon.fear > 3:
+        'Extort money' if game.dragon.fear > 3:
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(1, 20)
                 gold_trs = treasures.Coin('dublon', passing_tool)
                 game.lair.treasury.receive_treasures([gold_trs])
-            'Караванщик с ворчанием отдаёт дракону несколько золотых дублонов, чтобы тот не трогал повозки и пропустил из дальше.'
+            'The caravan hands over some gold dubloons to the growling dragon in exchange for safe passage.'
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
-        'Rob a caravan':
+        'Rob the caravan':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_16
-            'Дав волю своему гневу, [game.dragon.name] переворачивает фургон, убивает лошадь и разрывает караванщика на куски. Его товары особого интереса не представляют, зато в кошельке находятся кое какие деньги:'
+            '[game.dragon.name] releases his anger and overturns the wagons, kills the horses, and tears the traders to pieces. Their wares are of little interest, but there are some bags full of money:'
             python:
                 count = random.randint(5, 15)
                 alignment = 'human'
@@ -228,23 +228,23 @@ label lb_enc_caravan:
     return
    
 label lb_enc_lcaravan:
-    '[game.dragon.name] решает подойти к вопросу обстоятельно и залегает в засаду в укрытой кустами придорожной канаве. Полдня ожидания наконецт-то приносят достойную награду - на дороге появляется богатый купеческий караван. Судя по качеству и количеству охраны, эти торговцы платят золотом.'
+    '[game.dragon.name] decides to be methodical and lies in wait in an overgrown roadside ditch. After half a day, at last a decent target comes by - on the road is a rich merchant caravan. Judging by the quality and quantity of protection, these merchants pay in gold.'
     $ game.foe = Enemy('mounted_guard', game_ref=game)
     $ chances = show_chances(game.foe)
     menu:
-        'Wring the money' if game.dragon.fear > 6:
+        'Extort money' if game.dragon.fear > 6:
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(20, 100)
                 gold_trs = treasures.Coin('dublon', passing_tool)
                 game.lair.treasury.receive_treasures([gold_trs])
-            'Караванщик с ворчанием отдаёт дракону увесистый кошель с золотыми дублонами, чтобы тот не трогал повозки и пропустил их дальше.'
+            'The caravan hands over a heavy bag of gold dubloons to the growling dragon in exchange for safe passage.'
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
         'Rob the rich caravan':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_17
-            'Перебив охрану и караванщиков, [game.dragon.name] отыскивает в разбитых телегах всё ценное. В основном тут разные не нужные уважающему себя дракону товары - ткани, специи, оливковое масло и тому подобное, но у купцов и наемников есть в кошельках звонкие монеты:'
+            'Smashing the guards and the caravan, [game.dragon.name] searches the broken carts for everything of value. Mostly there are products of no value to any self-respecting dragon - fabrics, spices, oils and the like. But in the purses of the merchants there is hard cash:'
             python:
                 count = random.randint(5, 15)
                 alignment = 'human'
@@ -263,15 +263,15 @@ label lb_enc_lcaravan:
     return
     
 label lb_enc_outpost:
-    'Для поддержания порядка и сбора пошлин на дорогах королевства устроено множество застав. Гарнизон составляют обычные пехотинцы, сержант, повар и писарь. Зато внутри хранится касса с дорожными сборами за день!'
+    'To maintain order and the collection of tariffs, the kingdom has established a series of outposts. The garrison is comprised of conventional infantry, and a sergeant, cook and clerk. But inside is a money chest where the day\'s tolls are kept!'
     $ game.foe = Enemy('footman', game_ref=game)
     nvl clear
     menu:
-        'Rase outpost':
+        'Attack outpost':
             $ game.dragon.drain_energy()
             $ chances = show_chances(game.foe)
             call lb_fight from _call_lb_fight_18
-            'Большинство стражников мертво, остальные бежали в ужасе, однако здание заставы всё ещё стоит у дороги и восстановить её работу будет не так уж сложно. Зато внутри находится сундук с собранными за последнее время торговыми пошлинами. Внутри приятно звенят монеты:'
+            'Most of the guards are dead, the rest flee in horror, but the outpost still stands and restoring its operation will not be difficult. But inside is a chest with the recently collected trade taxes, and a nice ring:'
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(10, 50)
@@ -283,7 +283,7 @@ label lb_enc_outpost:
   
         'Go away' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
-            'Там конечно можно было бы поживиться собранными с купцов пошлинами, но где деньги там и охрана. Связываться сейчас с королевскими латниками особого смысла нет, лучше поискать добычу попроще или хотя бы побогаче.'
+            'Certainly it would be profitable to take the trade duties, but there is too much protection. To fight with the royal soldiers is pointless, it is better to look for easier or richer prey.'
         
     return
     
@@ -292,19 +292,19 @@ label lb_patrool_road:
         chance = random.randint(0, game.mobilization.level)
         if chance < 4:
             patrool = 'archer'
-            dtxt = 'Вдоль просёлочной дороги прохаживается бородач с длинным луком, это стрелок местного шерифа отправленный в дозор чтобы проверять подозрительных людей на дороге. Хватит ли ему смелости сразиться?'
+            dtxt = 'Along the country road walks a bearded man with a longbow, sent by the local sheriff to patrol for suspicious people on the road. Will he be brave enough to fight?'
         elif chance < 7:
             patrool = 'xbow_rider'
-            dtxt = 'Торговый тракт патрулирует отряд лёгкой кавалерии. Они готовы быстро отреагировать на любую угрозу будь то разбойники, монстры или даже дракон.'
+            dtxt = 'A detachment of light cavalry patrol the trade route. They are ready to respond quickly to any threat, be it bandits, monsters, or even a dragon.'
         elif chance < 11:
             patrool = 'heavy_cavalry'
-            dtxt = 'Дракон нарывается на отряд тяжелой кавалерии. Раз уж в дорожные патрули стали посылать рыцарей, люди видимо запуганы в край.'
+            dtxt = 'The dragon runs into a detachment of heavy cavalry. The people appear to be so intimidated that they\'ve begun sending knights on highway patrol.'
         elif chance < 16:
             patrool = 'griffin_rider'
-            dtxt = 'Пронзительный кличь раздаётся с небес - это всадник на грифоне пикирует с высоты, завидев у дороги блеск драконьей чешуи.'
+            dtxt = 'A shrill cry is heard from heaven - a rider on a griffon swoops down from the sky, having spotted shining dragonscale on the road.'
         else:
             patrool = 'angel'
-            dtxt = '%s вынужден зажмуриться от яркого света бьющего в глаза. Громогласный оклик возвещает: "Умри мерзкое порождение греха!!!". Это ангел-хранитель посланный людям Небесами для защиты.' % game.dragon.name
+            dtxt = '%s is forced to shut his eyes by a bright glare. A voice loudly proclaims: "Die, vile offspring of sin!" This guardian angel was sent by heaven to protect the people.' % game.dragon.name
     '[dtxt]'
     python:
         game.foe = Enemy(patrool, game_ref=game)

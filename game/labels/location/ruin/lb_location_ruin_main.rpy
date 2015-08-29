@@ -75,7 +75,7 @@ label lb_witch_reward:
             $ game.dragon.spells.append('griffin_meat')
             # старый вариант "поколдуй для меня"
             # $ game.choose_spell(u"Отказаться от заклинания")   
-        'I did it for lulz':
+        'I did it for the lulz':
             witch 'Оооо... да уж не влюбился ли ты? Ха-ха. Шучу. Спасибо за семя - приходи в любой момент если нужно будет ещё... ммм... разрядиться. Мой ротик к всегда к твоим услугам, здоровяк.'
             return
             
