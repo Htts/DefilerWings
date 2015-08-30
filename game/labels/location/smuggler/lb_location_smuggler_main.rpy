@@ -19,13 +19,13 @@ label lb_location_smuggler_main:
     
     menu:
         'Hire mercenaries' if 'smuggler_guards' not in game.lair.upgrades and 'regular_guards' not in game.lair.upgrades:
-            "Наёмные головорезы не дадут наглым ворам растащить драконье достояние. Всего за [guards_cost] фартингов в год."
+            "Hired thugs will prevent arrogant thieves from pilfering the dragon\'s treasure. Just [guards_cost] farthings per year."
             menu:
-                "Заключить контракт" if guards_cost <= game.lair.treasury.wealth:
+                "Sin the contract" if guards_cost <= game.lair.treasury.wealth:
                     $ game.lair.upgrades.add('smuggler_guards', deepcopy(data.lair_upgrades['smuggler_guards']))
-                    "Наемные головорезы будут сторожить логово, пока дракон спит."
+                    "Hired thugs will guard the lair while the dragon sleeps."
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_2 
-                "Отказаться":
+                "Refuse":
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_3 
         'Sell trinkets' if len(game.lair.treasury.jewelry) > 0:
             nvl clear
@@ -42,62 +42,62 @@ label lb_location_smuggler_main:
                     jump lb_location_smuggler_main 
             python:
                 if (item_index is None):
-                    description = u"Продать все украшения за %s?" % (
-                        treasures.number_conjugation_rus(game.lair.treasury.all_jewelries * 75 // 100, u"фартинг"))
+                    description = u"Sell all for %s?" % (
+                        treasures.number_conjugation_rus(game.lair.treasury.all_jewelries * 75 // 100, u"farthings"))
                 else:
-                    description = u"%s.\nПродать украшение за %s?" % (
+                    description = u"%s.\n Sell for %s?" % (
                         game.lair.treasury.jewelry[item_index].description().capitalize(),
-                        treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost * 75 // 100, u"фартинг"))
+                        treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost * 75 // 100, u"farthings"))
             menu:
                 "[description]"
                 'Sell':
                     python:
                         if (item_index is None):
-                            description = u"Все украшения проданы за %s?" % (
-                                treasures.number_conjugation_rus(game.lair.treasury.all_jewelries  * 75 // 100, u"фартинг"))
+                            description = u"Sell all jewelry for %s?" % (
+                                treasures.number_conjugation_rus(game.lair.treasury.all_jewelries  * 75 // 100, u"farthing"))
                             game.lair.treasury.money += game.lair.treasury.all_jewelries  * 75 // 100
                             game.lair.treasury.jewelry = []
                         else:
-                            description = u"%s.\nПродано за %s" % (
+                            description = u"%s.\n Sold for %s" % (
                                 game.lair.treasury.jewelry[item_index].description().capitalize(),
-                                treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost * 75 // 100, u"фартинг"))
+                                treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost * 75 // 100, u"farthing"))
                             game.lair.treasury.money += game.lair.treasury.jewelry[item_index].cost * 75 // 100
                             game.lair.treasury.jewelry.pop(item_index)
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_5 
                 'Keep':
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_6 
-        'Finance the terrorists' if game.mobilization.level > 0:
+        'Finance terrorists' if game.mobilization.level > 0:
             show expression 'img/scene/thief.jpg' as bg
             $ terror_cost = game.mobilization.level * 100
-            'Войска королевства мобилизуются и безнаказанно творить зло становится всё сложнее. Но если обеспечить местных бандитов деньгами на оружие, снаряжение и снабжение они могут стать угрозой которая отвлечёт солдат от патрулирования. [terror_cost] фартингов будет достаточно, чтобы обстановка в тылах накалилась и армейские конвои снабжения начали пропадать в пути.'
+            'The troops of the kingdom are too organized and alert to do evil with impunity.  But if you can provide local bandits with money for weapons, equipments, and supplies, they can become a threat that will distract the patrolling soldiers. [terror_cost] farthings will be enough to increase internal strife and make supply convoys disappear.'
             menu:
                 'Pay [terror_cost] to terrorists' if terror_cost <= game.lair.treasury.money:
                     $ game.lair.treasury.money -= terror_cost
                     $ game.mobilization.level -= 1
                     'По приказанию дракона, разбойники будут поджигать продовольственные склады, отравлять колодцы и перехватывать армейские обозы. Мобилизационный потенциал королевства снижается.'
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main
-                'Do not worth it':
+                'It is not worth it':
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_1
         'Information on thief' if game.thief is not None:
-            "Тут много знающих людей и слухи ходят разные. Только наливай и языки сами развяжутся, никто не посмотрит что болтает с ящерицей."
+            "There are a lot of rumors and people in the know. Just pour drinks and tongues will loosen, and no one will remember that they are talking to a lizard."
             nvl clear
             menu:
-                "Beer for all (10 rf.)" if game.lair.treasury.money >= 10:
+                "Beer for all (10 f.)" if game.lair.treasury.money >= 10:
                     python:
                         game.lair.treasury.money -= 10
                         if game.thief is not None:
                             game.thief.third('[game.thief.name] \n\n' + game.thief.description())
                         else:
-                            narrator("Не появился пока вор на твое злато.")
+                            narrator("There is no thief plotting to take your gold.")
                 "Decline" if game.lair.treasury.money < 10:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_7 
                 "Go away." if game.lair.treasury.money >= 10:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_8 
-        'Thief info' if game.thief is not None:
+        'Sabotage thief' if game.thief is not None:
             $ price = game.dragon.reputation.level * 50
-            $ game.thief.third("За %d фартингов мы с ребятами объясним этому корешу что он не с той ящерицей связался, босс!" % price)
+            $ game.thief.third("For a bribe of %d farthings the thieves\' informants will not tell their boss the dragon\'s location." % price)
             menu:
-                "Pay [price] fr." if game.lair.treasury.money >= price:
+                "Pay [price] f." if game.lair.treasury.money >= price:
                     $ game.lair.treasury.money -= price
                     $ game.thief.retire()
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_9 
@@ -105,28 +105,28 @@ label lb_location_smuggler_main:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_10 
                 "Go away." if game.lair.treasury.money >= price:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_11 
-        'Knight info' if game.knight is not None:
-            "Тут много знающих людей и слухи ходят разные. Только наливай и языки сами развяжутся, никто не посмотрит что болтает с ящерицей."
+        'Information on knight' if game.knight is not None:
+            "There are a lot of rumors and people in the know. Just pour drinks and tongues will loosen, and no one will remember that they are talking to a lizard."
             nvl clear
             menu:
-                "Beer for all (10 rf.)" if game.lair.treasury.money >= 10:
+                "Beer for all (10 f.)" if game.lair.treasury.money >= 10:
                     python:
                         game.lair.treasury.money -= 10
                         if game.knight is not None:
                             game.knight.third('[game.knight.name] \n\n' + game.knight.description())
                         else:
-                            narrator("Не появился пока рыцарь желающий убить тебя.")
+                            narrator("It seems that no knights are trying to kill you.")
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_12 
                 "Decline" if game.lair.treasury.money < 10:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_13 
                 "go away." if game.lair.treasury.money >= 10:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_14 
-        'Hire robbers' if game.knight is not None:
+        'Pay to rob the knight' if game.knight is not None:
             $ price = game.knight.enchanted_equip_count * 100
-            $ narrator("Ограбить славного рыцаря дело не простое, даже опасное. А если ещё и спутников его надо порешить... Всё стит денег. %d фартингов на бочку и он будет гол как сокол!" % price)
+            $ narrator("Robbing a famous knight is a dangerous business, and a difficult one. But thieves will do anything for money. Put %d farthings on the table, and it will be a cinch!" % price)
             nvl clear
             menu:
-                "Pay [price] fr." if game.lair.treasury.money >= price:
+                "Pay [price] f." if game.lair.treasury.money >= price:
                     $ game.lair.treasury.money -= price
                     $ game.knight.equip_basic()
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_15 

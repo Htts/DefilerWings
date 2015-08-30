@@ -172,9 +172,9 @@ mob = {
         # набор описаний сцены боя
         'descriptions': [
             [['foe_intro'], u"A cave bear stands on its hind legs and bares its teeth."],
-            [['foe_fear'],  u"The huge cave bear runs like a frightened puppy. He is surprisngly fast, considering his clumsy gate, but not fast enough..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name)s опрокидывает медведя навзичь и впивается зубами в его горло. Косолапый пытается отбиться когтями но безуспешно и вскоре затихает."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n От рёва сошедшихся в схватке чудовищ по горам проносится эхо. Исполосованный когтями медведя %(dragon_type)s выходит из этой битвы победителем, но дорогой ценой."],
+            [['foe_fear'],  u"The huge cave bear runs like a frightened puppy. He is surprisngly fast, considering his clumsy gait, but not fast enough..."],
+            [['foe_dead', 'dragon_undamaged'], u"\n %(dragon_name)s knocks down the cave bear and bites into its throat. It clumsily attempts to fight back but to no avail, its struggles soon fade."],
+            [['foe_dead', 'dragon_wounded'], u"\n The roars of the battling monsters echo through the mountains. Punctured by bear claws, the %(dragon_type)s comes out of the battle victorious, but at great cost."],
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s пытается атаковать огромного медведя, но получает в ответ болезненный удар тяжелой когтистой лапы. Этот зверь так просто не сдастся..."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Пешерному медведю удаётся разкусить череп дракона. %(dragon_name)s всё ещё жив, но спасти голову вряд ли удастся. Эта битва обходится слишком дорого..."],

@@ -13,11 +13,11 @@ label lb_location_sky_main:
     nvl clear
     
     if game.dragon.energy() == 0:
-        '[game.dragon.name] need some sleep!'
+        '[game.dragon.name] needs to sleep!'
         return
         
     if not game.dragon.can_fly: 
-        '[game.dragon.name] с тоской смотрит в небо. Если бы только он умел летать...'
+        '[game.dragon.name] longingly gazes at the sky. If only he knew how to fly...'
     else:
         call lb_encounter_sky from _call_lb_encounter_sky
     return
@@ -44,60 +44,60 @@ label lb_encounter_sky:
     return
     
 label lb_enc_swan:
-    'Величественно паря в облаках [game.dragon.fullname] видит стаю белых лебедей. Впереди летит огромный откормленный вожак - он отлично сгодиться в качестве закуски!'
+    'Majestically soaring through, the clouds, [game.dragon.name] sees a flock of white swans. In front the huge fattened leader flies - it is the perfect size for a snack!'
     nvl clear
     menu:
         'Eat the geese' if game.dragon.hunger > 0:
             $ game.dragon.drain_energy()
-            '[game.dragon.name] ловит и пожирает гуся.'
+            '[game.dragon.name] catches and eats a goose.'
             python:
                 if game.dragon.bloodiness > 0:
                     game.dragon.bloodiness = 0
         'Shoo' if game.dragon.bloodiness >= 5 and game.dragon.hunger == 0:
             $ game.dragon.drain_energy()
-            '[game.dragon.name] жестоко задирает вожака и ещё несколько птиц, а остальная стая в панике разлетается кто куда.'    
+            '[game.dragon.name] violently attacks the leader and a few other birds, and the rest of the flock scatters in panic in all directions.'    
         'Fly away' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
     return
     
 label lb_enc_griffin:
-    'В вышине парит матёрый дикий грифон. Он облетает свои владения в поисках добычи и нарушителей, причём второе по его мнению относится и к драконам. Может быть стоит показать пернатому где его место?'
+    'In the sky soars an experienced wild griffon. He flies over his lands in search of prey and trespassers, and that second category includes dragons. Maybe it will be worth it to show Feathers his place?'
     $ game.dragon.drain_energy()
     $ game.foe = Enemy('griffin', game_ref=game)
     $ narrator(show_chances(game.foe))
     nvl clear
     menu:
-        'Fight the griffin':
+        'Fight the griffon':
             call lb_fight from _call_lb_fight_50
             if game.dragon.hunger > 0:
-                'Голодный [game.dragon.name] съедает грифона прямо в воздухе и бросает отсанки вниз на поживу шакалам.'
+                'The hungry [game.dragon.name] devours the griffon in the air, dropping scraps for the jackals.'
                 python:
                     if game.dragon.bloodiness > 0:
                         game.dragon.bloodiness = 0
                     game.dragon.hunger -= 1
                     game.dragon.add_effect('boar_meat')
             else:
-                '[game.dragon.fullname] сейчас не голоден, поэтому он даёт смертельно раненому грифону упасть вниз и разбиться о скалы.'
+                '[game.dragon.fullname] is not hungry now, so he lets the mortally wounded griffon fall down to the rocks with a crunch.'
         'Fly off' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
     return
     
 label lb_enc_skyboat:
-    'Над облаками вздымается парус! Это один из воздушных кораблей цвергов, судя по всему торговый. А значит там может быть добыча..'
+    'A sail rises over the clouds! This is one of the airships the dwarves use to trade. So there may be loot...'
     python:
         game.dragon.drain_energy()
         game.foe = Enemy('airship', game_ref=game)
         narrator(show_chances(game.foe))
     menu:
-        'Attack th skyboat':
+        'Attack the airship':
             call lb_fight from _call_lb_fight_51
-            '[game.dragon.name] стремительно обыскивает падающий вниз корабль и выгребает всё ценное:'
+            '[game.dragon.name] quickly scours the falling ship and takes everything of value:'
             python:
                 count = random.randint(5, 15)
                 alignment = 'dwarf'
                 min_cost = 1
                 max_cost = 10000
-                obtained = "Это предмет с разграбленного воздушного судна цвергов."
+                obtained = "Looted from the dwarven airship."
                 trs = treasures.gen_treas(count, data.loot['klad'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
@@ -105,22 +105,22 @@ label lb_enc_skyboat:
             '[trs_descrptn]'
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
-        'Let them fly' if game.dragon.bloodiness < 5:
+        'Let them fly away' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()    
     return
     
 label lb_enc_fair_sky:
-    'Паря в вышине [game.dragon.fullname] замечает внизу какие-то цветные пятна. Спустившись ниже становится понятно что это ярмарка, которую устроили люди.'
+    'Soaring high in the sky, [game.dragon.fullname] sees some colored patches on the ground. Descending it becomes clear that the people have staged a fair.'
     call lb_enc_fair
     return
     
 label lb_enc_militia_sky:
-    '[game.dragon.fullname] замечает какое-то шевеление на земле далеко внизу. Так и есть - это собрались на тренировку ополченцы наспех собранные из окрестных деревень.'
+    '[game.dragon.fullname] sees mass movement on the ground far below. Militia hastily assembled from the surrounding villages are training.'
     call lb_enc_militia_true
     return
     
 label lb_enc_caravan_sky:
-    'Пролетая вдоль змеящейся по земле дороги, [game.dragon.fullname] замечает на ней несколько точек. Это крупный торговый караван.'
+    'Flying along the dragon notices something moving snake-like on the road. It is a large caravan.'
     call lb_enc_lcaravan
     return
     
@@ -129,19 +129,19 @@ label lb_patrool_sky:
         chance = random.randint(0, game.mobilization.level)
         if chance < 4:
             patrool = 'archer'
-            dtxt = 'Казалось бы, летишь, никого не трогаешь и тут снизу в тебя начинают пускать стрелы! Это излишне ретивый стрелок решил показать свою удаль.'
+            dtxt = 'The dragon is flying along, not bothering anyone, and then sharp arrows come from below! An overly zealous archer decided to show their prowess.'
         elif chance < 7:
-            patrool = 'catapult'
-            dtxt = 'Пытаясь защитить свои владения от летающих монстров, люди установили на возвышенностях башни с катапультами, стреляющими массивными оперёнными копьями с наконечниками из закалённой стали.'
+            patrool = 'catapult' #ballista? check mob_data
+            dtxt = 'Trying to protect their posessions from flying monsters, the people have set up catapults on the top of hills, shooting massive feathered spears tipped with hardened steel.'
         elif chance < 11:
             patrool = 'griffin_rider'
-            dtxt = 'Небеса сейчас неспокойны, так что не удивительно что люди отправили в патруль одного из своих летучих рыцарей - всадник на грифоне представляет реальную угрозу для любого крылатого монстра.'
+            dtxt = 'The sky has been disturbed, so it is not surprising that the people have sent out one of their flying knights - a griffon rider is a real threat to any winged monster.'
         elif chance < 16:
             patrool = 'airship'
-            dtxt = 'Разрывая облака перед драконом вылетает огромный воздушный корабль. Это патрульный крейсер цвергов!'
+            dtxt = 'A huge airship breaks through the clouds in front of the dragon. It\'s a dwarven patrol cruiser'
         else:
             patrool = 'angel'
-            dtxt = '[game.dragon.fullname] вынужден зажмуриться от яркого света бьющего в глаза. Громогласный оклик возвещает: "Умри мерзкое порождение греха!!!". Это ангел-хранитель посланный людям Небесами для защиты.'
+            dtxt = '[game.dragon.fullname] is forced to close his eyes from bright glaring light. An angelic voice proclaims: "Die, vile offspring of sin!" This guardian angel was sent by heaven to protect the people.'
     '[dtxt]'
     python:
         game.foe = Enemy(patrool, game_ref=game)
