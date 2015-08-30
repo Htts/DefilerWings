@@ -2,12 +2,12 @@
 # Одноразовые противники
 mob = {
     'aircruiser': {
-        'name': u"Flying cruiser",  # название моба применяемое в описании
-        'power': {'base': (6, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
-        'image': 'aircruiser',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Flying cruiser",  # The name of the mob used ingame
+        'power': {'base': (6, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 2)},  # damage resistance (обычная, верная)
+        'modifiers': ['sfatk_up', 'poison_immunity'],  # special modifiers
+        'image': 'aircruiser',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A dwarven flying cruiser slowly turns its side to face the enemy. Steam artillery prepares to fire a salvo."],
             [['foe_fear'],  u"The heavily armed battle cruiser rapidly unfurls all sails and flies away. There are opponents that not even the brave dwarves will face..."],
@@ -22,12 +22,12 @@ mob = {
     },
 
     'airfleet': {
-        'name': u"Air fleet",  # название моба применяемое в описании
-        'power': {'base': (5, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 3)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
-        'image': 'airfleet',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Air fleet",  # The name of the mob used ingame
+        'power': {'base': (5, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 3)},  # damage resistance (обычная, верная)
+        'modifiers': ['sfatk_up', 'poison_immunity'],  # special modifiers
+        'image': 'airfleet',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A fleet of flying ships line up to attack."],
             [['foe_fear'],  u"At first sight of the dragon, the flying ships quickly turn full steam in the other direction."],
@@ -42,12 +42,12 @@ mob = {
     },
 
     'airship': {
-        'name': u"Airship",  # название моба применяемое в описании
-        'power': {'base': (4, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['poison_immunity'],  # особые модификаторы
-        'image': 'airship',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Airship",  # The name of the mob used ingame
+        'power': {'base': (4, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 1)},  # damage resistance (обычная, верная)
+        'modifiers': ['poison_immunity'],  # special modifiers
+        'image': 'airship',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A flying dwarven ship slowly turns to face its enemy. A steam catapult prepares to fire."],
             [['foe_fear'],  u"(Rapidly unfurling all sails, the airship turns and flies away. There are opponents not even the brave dwarves will face..."],
@@ -62,12 +62,12 @@ mob = {
     },
 
     'angel': {
-        'name': u"Angel",  # название моба применяемое в описании
-        'power': {'base': (8, 3)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 3)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['sound_immunity'],  # особые модификаторы
-        'image': 'angel',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Angel",  # The name of the mob used ingame
+        'power': {'base': (8, 3)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 3)},  # damage resistance (обычная, верная)
+        'modifiers': ['sound_immunity'],  # special modifiers
+        'image': 'angel',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"An angel holds a shining sword. He is determined the punish the dragon in the name of heaven."],
             [['foe_fear'],  u"The angel runs away in fear."],
@@ -82,12 +82,12 @@ mob = {
     },
 
     'archer': {
-        'name': u"Archer",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (1, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'archer',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Archer",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (1, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'archer',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A royal archer nocks an arrow."],
             [['foe_fear'],  u"The royal archer runs away in horror. He was not prepared for this fight."],
@@ -102,33 +102,33 @@ mob = {
     },
 
     'band': {
-        'name': u"Band of thieves",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'xbow',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Band of thieves",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'xbow',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Bandits are lined up in a semicircle, squeezing their weapons tightly."],
             [['foe_fear'],  u"When the dragon attacks the bandits, they flee in fear in all directions. By blind luck, a few escape."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s bursts into the crowd of robbers and begins to tear them to peices. The disorganized bandits are unable to put up worthy resistance."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the crowd of robbers and begins to tear them to pieces. A few strokes of the bandits reach their mark, but the wounded %(dragon_type)s emerges victorious."],
-            [['foe_alive', 'dragon_wounded'], u"Using effectively cooridnated tactics, the bandits strongly rebuff to the dragon, inflicting injury. A few of the robbers are dead, but the rest are full of determination."],
-            [['foe_alive', 'dragon_undamaged'], u"The thieves fight desperatel, and manage to hold back the furious assault of the dragon.",],
-            [['foe_alive', 'lost_head'], u"%(dragon_type_cap)s attacks thoughtly, exposing his back to several bandits. One clever thief jumps onto his back, smashing one of his skulls in with an iron capped club."],
-            [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s is covered with serious wounds, and the victory over the bandits hurt him badly. One of his heads is mortally wounded."],
+            [['foe_alive', 'dragon_wounded'], u"Using effectively cooridnated tactics, the bandits strongly rebuff the dragon, inflicting injury. A few of the robbers are dead, but the rest are full of determination."],
+            [['foe_alive', 'dragon_undamaged'], u"The thieves fight desperately, and manage to hold back the furious assault of the dragon.",],
+            [['foe_alive', 'lost_head'], u"The %(dragon_type)s attacks thoughtlessly, exposing his back to several bandits. One clever thief jumps onto his back, smashing one of his skulls in with an iron capped club."],
+            [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s is covered with serious injuries, the victory over the bandits hurt him badly. One of his heads is mortally wounded."],
             [['dragon_dead'], u"The robbers pounce on the dragon all at once, frantically thrashing him with their weapons. In a fit of rage the wounded %(dragon_type)s manages to kill a few enemies, but there are too many. %(dragon_name_full)s falls to the ground and breathes his last breath."]
         ]
     },
 
 
     'battleship': {
-        'name': u"Battleship",  # название моба применяемое в описании
-        'power': {'base': (7, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (7, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
-        'image': 'ship',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Battleship",  # The name of the mob used ingame
+        'power': {'base': (7, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (7, 2)},  # damage resistance (обычная, верная)
+        'modifiers': ['sfatk_up', 'poison_immunity'],  # special modifiers
+        'image': 'ship',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"On the deck of a warship, a boatswain whistles frantically. Gunners quickly roll out their cannons."],
             [['foe_fear'],  u"Unfurling its sails, the formidable warship turns into the wind and sails from the dragon at top speed. The captain is not ready to fight with such a monster as %(dragon_name_full)s."],
@@ -143,12 +143,12 @@ mob = {
     },
 
     'boar': {
-        'name': u"Enormous boar",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'boar',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Enormous boar",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'boar',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A huge boar bows his head to the ground, exposing his menacing curved tusks."],
             [['foe_fear'],  u"The huge boar shrieks in fear of the monstrous predator and tries to escape it. Not that it can..."],
@@ -164,237 +164,237 @@ mob = {
 
 
     'bear': {
-        'name': u"Cave bear",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'bear',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Cave bear",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'bear',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A cave bear stands on its hind legs and bares its teeth."],
             [['foe_fear'],  u"The huge cave bear runs like a frightened puppy. He is surprisngly fast, considering his clumsy gait, but not fast enough..."],
             [['foe_dead', 'dragon_undamaged'], u"\n %(dragon_name)s knocks down the cave bear and bites into its throat. It clumsily attempts to fight back but to no avail, its struggles soon fade."],
             [['foe_dead', 'dragon_wounded'], u"\n The roars of the battling monsters echo through the mountains. Punctured by bear claws, the %(dragon_type)s comes out of the battle victorious, but at great cost."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s пытается атаковать огромного медведя, но получает в ответ болезненный удар тяжелой когтистой лапы. Этот зверь так просто не сдастся..."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Пешерному медведю удаётся разкусить череп дракона. %(dragon_name)s всё ещё жив, но спасти голову вряд ли удастся. Эта битва обходится слишком дорого..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Израненный %(dragon_type)s одолевает медведя с огромным трудом. Под ударами тяжелых когтистых лап, одна из голов змея оказывается настолько измочаленной что её вряд-ли удастся спасти..."],
-            [['dragon_dead'], u"(you lose) \n Израненный дракон отчаянно атакует гигантского медведя, но тот оказывается сильнее. %(dragon_name_full)s падает наземь не выдержав веса горного исполина и задыхается в его мохнатых объятьях."]
+            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s tries to attack the huge bear, but receives a painful blow from heavy caws in response. This animal will not give up easily..."],
+            [['foe_alive', 'dragon_undamaged'], u"The battle continues for some time, but neither combatant gains the upper head.",],
+            [['foe_alive', 'lost_head'], u"The cave bear manages to crack the skull of the dragon. %(dragon_name)s is still alive, but his head likely cannot be saved. This battle is too expensive..."],
+            [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s overcomes the bear with great difficulty. Under the blows of its heavy clawed feet one head is so badly torn that it cannot be saved..."],
+            [['dragon_dead'], u"The wounded dragon fiercly attacks the giant bear, but he proves stronger. %(dragon_name_full)s falls to the ground unable to stand the weight of the bear, and is suffocated in its hairy arms."]
         ]
     },
 
     'bull': {
-        'name': u"Бык",  # название моба применяемое в описании
-        'power': {'base': (2, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (2, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'bull',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Bull",  # The name of the mob used ingame
+        'power': {'base': (2, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (2, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'bull',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Бык выставляет рога и роет копытом землю."],
-            [['foe_fear'],  u"(you win [fear]) \n Обезумевший от страха бык бросается наутёк, но %(dragon_type)s быстрее..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Одним могучим ударом %(dragon_name)s сбивает быка на землю и впивается в него клыками."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n В ходе короткой но ожесточенной схватки быку удаётся пробить чешую дракона рогом, но раненый %(dragon_name)s всё же выходит из битвы победителем."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Бык таранит дракона на полной скорости и отбрасывает его в сторону. %(dragon_name)s серьёзно ранен."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Израненный %(dragon_type)s движется слишком медленно, кривой и острый рог быка попадает ящеру прямо в глаз разрывая мозг одной из голов."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Израненный %(dragon_type)s движется слишком медленно, кривой и острый рог быка наносит смертельную рану одной из голов, однако дракон выходит из схватки победителем."],
-            [['dragon_dead'], u"(you lose) \n Израненный %(dragon_type)s движется слишком медленно, кривой и острый рог быка пробивает чешую на груди. %(dragon_name_full)s умирает от страшной раны."]
+            [['foe_intro'], u"The bull puts up its horns and digs its hooves into the ground."],
+            [['foe_fear'],  u"Distraught with fear the bull rushes away, but the %(dragon_type)s is faster..."],
+            [['foe_dead', 'dragon_undamaged'], u"With a mighty blow %(dragon_name)s knocks the bull to the ground and crushes it with his teeth."],
+            [['foe_dead', 'dragon_wounded'], u"During a short but fierce struggle, the bull manages to penetrade the dragon\'s scales with its horn, but the wounded %(dragon_name)s still comes out of the battle victorious."],
+            [['foe_alive', 'dragon_wounded'], u"The bull rams the dragon at full speed, knocking him aside. %(dragon_name)s is seriously wounded."],
+            [['foe_alive', 'dragon_undamaged'], u"The battle continues for some time, but neither side can gain the advantage."],
+            [['foe_alive', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp curved bull\'s horn hits the lizard directly in the eye, tearing through the brain of one of his heads."],
+            [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s one of his heads, but the dragon emerges victorious..."],
+            [['dragon_dead'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s horns pierce the scales on his chest. %(dragon_name_full) dies from terrible injuries."]
         ]
     },
 
     'bull_champion': {
-        'name': u"Призовой бык",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'bull',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Prize bull",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'bull',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Бык-чемпион выставляет рога и роет копытом землю."],
-            [['foe_fear'],  u"(you win [fear]) \n Обезумевший от страха призовой бык бросается наутёк, но %(dragon_type)s быстрее..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Одним могучим ударом %(dragon_name)s сбивает призового быка на землю и впивается в него клыками."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n В ходе короткой но ожесточенной схватки призовому быку удаётся пробить чешую дракона рогом, но раненый %(dragon_name)s всё же выходит из битвы победителем."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Бык-чемпион таранит дракона на полной скорости и отбрасывает его в сторону. %(dragon_name)s серьёзно ранен."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Израненный %(dragon_type)s движется слишком медленно, кривой и острый рог призового быка попадает ящеру прямо в глаз разрывая мозг одной из голов."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Израненный %(dragon_type)s движется слишком медленно, кривой и острый рог призового быка наносит смертельную рану одной из голов, однако дракон выходит из схватки победителем."],
-            [['dragon_dead'], u"(you lose) \n Израненный %(dragon_type)s движется слишком медленно, кривой и острый рог быка-чемпиона пробивает чешую на груди. %(dragon_name_full)s умирает от страшной раны."]
+            [['foe_intro'], u"The large bull puts up its horns and digs its hooves into the ground."],
+            [['foe_fear'],  u"Distraught with fear the bull rushes away, but the %(dragon_type)s is faster..."],
+            [['foe_dead', 'dragon_undamaged'], u"With a mighty blow %(dragon_name)s knocks the bull to the ground and crushes it with his teeth."],
+            [['foe_dead', 'dragon_wounded'], u"During a short but fierce struggle, the bull manages to penetrade the dragon\'s scales with its horn, but the wounded %(dragon_name)s still comes out of the battle victorious."],
+            [['foe_alive', 'dragon_wounded'], u"The bull rams the dragon at full speed, knocking him aside. %(dragon_name)s is seriously wounded."],
+            [['foe_alive', 'dragon_undamaged'], u"The battle continues for some time, but neither side can gain the advantage."],
+            [['foe_alive', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp curved bull\'s horn hits the lizard directly in the eye, tearing through the brain of one of his heads."],
+            [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s one of his heads, but the dragon emerges victorious..."],
+            [['dragon_dead'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s horns pierce the scales on his chest. %(dragon_name_full) dies from terrible injuries."]
         ]
     },
 
     'castle_guard': {
-        'name': u"Защитники замка",  # название моба применяемое в описании
-        'power': {'base': (7, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'town',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Castle guards",  # The name of the mob used ingame
+        'power': {'base': (7, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 2)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'town',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Защитники замка занимают места на стенах. Они готовят копья, тяжелые камни и котлы с кипящей смолой."],
-            [['foe_fear'],  u"(you win [fear]) \n Разглядев дракона получше защитники замка дрогнули. Они в панике бегут со стен и прячутся кто-куда, а битва выиграна даже не начавшись."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Под градом почти безполезных камней, стрел и копий %(dragon_name_full)s подбирается к воротам и вложив весь свой вес в несколько таранных ударов, высаживает их. Оставшиеся без прикрытия воины на стенах беззащитны перед яростью дракона."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Под градом камней, стрел и копий %(dragon_name_full)s подбирается к воротам и вложив весь свой вес в несколько таранных ударов, высаживает их. Оружие защитников оставилиона теле дракона раны, но теперь когда врата пали его уже ничто не остановит."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Поток копий, камней и стрел обруженный защитниками крепости со стен и башен так силён, что дракону приходится отступить от ворот. Взять эту крепость не так просто..."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_type_cap)s налегает на ворота всем весом, пытаясь выбить их в то вреям как защитники крепости поливают его со стне потокм камней, стрел и копий. Но и то и другое совершенно бесполезно. Копья отскакиваю от прочной чешуи дракона, но и окованные сталью врата не желают поддаваться.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Пятеро дюжих защитников сбрасывают со стены толстенный ствол дерева, который придавливает одну из голов дракона."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Пятеро дюжих защитников сбрасывают со стены толстенный ствол дерева, который придавливает одну из голов дракона, однако это им не помогает. Разъярённый %(dragon_type)s вышибает ворота и врывается в замок."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s слишком изранен и устал для такой битвы. Всего один метко сброшенный со стены камень прерывает его штурм. Отважные защитники города торжествуют победу, в то вреям как %(dragon_name_full)s издыхает у так и не поддавшихся напору врат."]
+            [['foe_intro'], u"The castle defenders take their places on the walls. They prepare spears, heavy stones, and cauldrons of boiling tar."],
+            [['foe_fear'],  u"Looking at the dragon the castle defenders waver. They flee in panic from the walls, looking for somewhere, anywhere to hide, and the battle is over before it even begins."],
+            [['foe_dead', 'dragon_undamaged'], u"Under a useless hail of stones, spears, and arrows, %(dragon_name_full)s approaches the gates and rams through them with all his weight. The remaining soldiers are exposed to the fury of the dragon."],
+            [['foe_dead', 'dragon_wounded'], u"Under a hail of stones, spears, and arrows, %(dragon_name_full)s approaches the gates and rams through them with all his weight. The missiles of the defenders covered the dragon\'s body with wounds, but with the gate fallen there is nothing left to stop him."],
+            [['foe_alive', 'dragon_wounded'], u"The hail of stones, arrows, and spears from the walls and towers is so heavy that the dragon is forced to pull back from the gate. Taking this fortress will not be so easy..."],
+            [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s leans all his weight on the gates, trying to break through them as the defenders pour stones, spears, and arrows on the dragon. But both are completely inefficetive. The projectiles glance off the dragon\'s scales, and the steel gates will not give in.",],
+            [['foe_alive', 'lost_head'], u"Five stalwart defenders throw a thick tree trunk from the wall, which crushes one of the dragon\'s heads."],
+            [['foe_dead', 'lost_head'], u"Five stalwart defenders throw a thick tree trunk from the wall, which crushes one of the dragon\'s heads. But it is useless, the furious %(dragon_type)s breaks the gates and rushes into the castle."],
+            [['dragon_dead'], u"%(dragon_name_full)s is too tired and wounded for such a battle. Just one well aimed stone from the walls stops his assault. The brave city defenders celebrate victory as %(dragon_name_full)s dies at the unyielding gates."]
         ]
     },
         
     'catapult': {
-        'name': u"Катапульты",  # название моба применяемое в описании
-        'power': {'base': (3, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (2, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['sfatk_up', 'poison_immunity'],  # особые модификаторы
-        'image': 'catapult',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Catapult",  # The name of the mob used ingame
+        'power': {'base': (3, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (2, 0)},  # damage resistance (обычная, верная)
+        'modifiers': ['sfatk_up', 'poison_immunity'],  # special modifiers
+        'image': 'catapult',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Рассчёт судорожно заряжает катапульту, готовясь открыть огонь на поражение."],
-            [['foe_fear'],  u"(you win [fear]) \n Рассчёт катапульты разбегается в страхе, оставляя грозную боевую машину без управления."],
-            [['foe_dead', 'dragon_undamaged'], u"flawless victory) \n %(dragon_name_full)s с лёгкостью разрушает катапульту и убивает рассчёт."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n (%(dragon_name)s бросается в лобовую атаку и получает попадание прямой наводкой, однако не останавливается. Рассчёт боевой машины обречён."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Меткий выстрел катапульты отбрасывает дракона назад, но это ещё не конец!"],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Рассчёт катапульты не торопится, они знают что успеют выстрелить лишь раз и боятся промахнуться. %(dragon_name)s маневрирует не давая им шанса прицелиться.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Снаряд катапульты попадает дракону точно в голову. Это очень серёзная рана!"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Снаряд катапульты попадает дракону точно в голову, однако дракона это не останавливает. Разъярённый от ран %(dragon_type)s уничтожает расчёт метательно машины с особой жестокостью."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s переоценил свои силы. Меткий выстрел из катапульты сносит ему единственную живую голову."]
+            [['foe_intro'], u"Aiming in front of their charging target, the catapult crew frantically prepares to fire."],
+            [['foe_fear'],  u"The catapult crew scatters in fear, leaving the formidable fighting machine without control."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s easily destroys the catapult and slaughters the crew."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s rushes into a frontal attack and is hit at point-blank range, but does not stop. The siege engine is doomed."],
+            [['foe_alive', 'dragon_wounded'], u"An accurate catapult shot throws the dragon back, but he is not finished!"],
+            [['foe_alive', 'dragon_undamaged'], u"The catapult engineers do not hurry, they know they only have time for one shot and are afraid to miss. %(dragon_name)s manuevers around, giving them no chance to aim.",],
+            [['foe_alive', 'lost_head'], u"A catapult projectile falls directly on the dragon\'s head. This is a very grave wound!"],
+            [['foe_dead', 'lost_head'], u"A catapult projectile falls directly on the dragon\'s head, but the dragon does not stop. Enjared by his injuries, the %(dragon_type)s brutally destroys the catapult!"],
+            [['dragon_dead'], u"%(dragon_name_full)s overestimated his strength. A well aimed shot from the catapult blows off his only head."]
         ]
     },
     
     'champion': {
-        'name': u"Рыцарь-чемпион",  # название моба применяемое в описании
-        'power': {'base': (5, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'champion',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Champion",  # The name of the mob used ingame
+        'power': {'base': (5, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 1)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'champion',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Победитель турнира подхватывает новое копье и разворачивает боевого коня для атаки."],
-            [['foe_fear'],  u"(you win [fear]) \n Победитель турнира рвётся в бой, но его конь слишком напуган - он встаёт на дыбы и сбрасывает наездника в грязь, оставляя его совершенно беззащитным."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name)s ловко уворачивается от острого наконечника копья и хлёстким ударом на противоходе вышибает чемпиона из седла."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_type_cap)s и чемпион со страшным грохотом сшибаются грудь на грудь. Рыцарь опрокидывается вместе с конём, но и %(dragon_name)s получает ранение."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Таранный удар копья помноженный на вес и скорость коня со всадником отбрасывает дракона в сторону."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Противники сталкиваются под скрежет металла и ржание боевого коня, но силы примерно равны.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Рыцарь метким ударом сносит голову дракону, однако это ещё не конец."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
-            [['dragon_dead'], u"(you lose) \n Рыцарь метким ударом сносит голову дракону. %(dragon_name_full)s умирает."]
+            [['foe_intro'], u"The tournament winner picks up a lance and readies his steed for an attack."],
+            [['foe_fear'],  u"The winner of the tournament is spoiling for a fight, but his horse is too scared - it gets up on his hind legs and throws the rider into the mud, leaving him defenseless."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s deftly dodges the sharp lance and with a vicious attack knocks the champion spinning out of his saddle."],
+            [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s and the champion collide together with a terrible roar. The knight topples from his horse, but %(dragon_names is also injured."],
+            [['foe_alive', 'dragon_wounded'], u"A lance blow with all the weight and speed of the horse behind it throws the dragon aside."],
+            [['foe_alive', 'dragon_undamaged'], u"The opponents battle, producing sounds of clashing metal and a neighing steed, but the foes are of equal strength.",],
+            [['foe_alive', 'lost_head'], u"An aimed blow from the knight pierces one of the dragon\'s heads, but the fight is not yet over."],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
+            [['dragon_dead'], u"The knight aims a blow at %(dragon_name_full)s\'s head, killing him."]
         ]
     },
 
     'city_guard': {
-        'name': u"Городская стража",  # название моба применяемое в описании
-        'power': {'base': (6, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'city_guard',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"City watch",  # The name of the mob used ingame
+        'power': {'base': (6, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'city_guard',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Стражники выстраиваются полукольцом, покрепче сжимая алебарды."],
-            [['foe_fear'],  u"(you win [fear]) \n При виде атакующего дракона городские стражнкии в страхе разбегаются кто куда. Некотрым повезло, другим уйти не удалось..."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name)s врывается в построение стражников и начинает рвать их на куски. Дезорганизованные бойцы нес пособны оказать достойного сопротивления."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s врывается в построение стражников и начинает рвать их на куски. Тяжело вооруженные бойцы держатся достойно, но %(dragon_type)s хоть и раненый выходит из битвы пбедителем."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Применяя грамотную тактику взаимодействия, стражники ухитряются дать дракону серьёзный отпор и даже наносят ему ощутимые раны. Пара бойцов падает мертвыми, но остальные полны решимости."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Стражники сражаются отчаянно и на некоторое время им удаётся сдержать яростный напор дракона.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n %(dragon_type_cap)s атакует без оглядки и пропускает нескольких алебардистов за спину. Эта ошибка стоит ему головы. Одной из..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s жестоко изранен и победа над стражниками даётся ему нелегко. Одна из голов получила смертельную рану."],
-            [['dragon_dead'], u"(you lose) \n Стражники набрсываются все разом и отчаянно молотят дракона своими алебардами. Израненный %(dragon_type)s в последнем порыве ярости ухитряется убить нескольких врагов, но их слишком много. %(dragon_name_full)s падает наземь и испускает последний дух."]
+            [['foe_intro'], u"The guards are arrayed in a semicircle, squeezing their halberds tightly."],
+            [['foe_fear'],  u"When the dragon attacks, the city guard scatter in all directions. Some escape by blind luck, and others are caught."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s bursts into the formation of guards and begins to tear them to pieces. The disorganized fighters lose the ability to put up resistance."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of guards and begins to tear them to pieces. The heavily armed soldiers put up a hard resistance, but the wounded %(dragon_type)s emerges from the battle victorious."],
+            [['foe_alive', 'dragon_wounded'], u"Using organized tactics the guards strongly rebuff the dragon, inflicting wounds. A few of the guards fall dead, but the rest are full of determination."],
+            [['foe_alive', 'dragon_undamaged'], u"The guards fight desperately, and manage to hold back the furious assault of the dragon.",],
+            [['foe_alive', 'lost_head'], u"The %(dragon_type)s attacks thoughtlessly, exposing his back to several guards. This mistake costs him his head. Well, one of them..."],
+            [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s is covered with serious injuries, the victory over the guards hurt him badly. One of his heads is mortally wounded."],
+            [['dragon_dead'], u"The guards pounce on the dragon all at once, frantically thrashing him with their halberds. In a fit of rage the wounded %(dragon_type)s manages to kill a few enemies, but there are too many. %(dragon_name_full)s falls to the ground and breathes his last breath.."]
         ]
     },
 
     'city': {
-        'name': u"Надвратная башня",  # название моба применяемое в описании
-        'power': {'base': (9, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 3)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'city_siege',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Gatehouse",  # The name of the mob used ingame
+        'power': {'base': (9, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 3)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'city_siege',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Стражи ворот хватают оружие и встают по местам."],
-            [['foe_fear'],  u"(you win [fear]) \n Защитники ворот в ужасе бегут от атакующего дракона. Лёгкая победа."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name_full)s проламывает ворота и разбрасывает пытающихся дать отпор защитников словно тряпичные куклы."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s бросается на ворота, под градом стрел и камней. Ранений избежать не удаётся, но в итоге ворота разбиты и стражники в ужасе бегут."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s бросается на ворота, под градом стрел и камней. Это плохая идея - ворота слишком прочны, а вот чешуя дракона оказывается пробита сразу в нескольких местах."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_type_cap)s бросается на ворота, под градом стрел и камней. Огонь защитников не причиняет ему особого вреда, но сделанные на совесть ворота и укрепленния тоже не поддаются.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Кто-то выливает на голову дракона целый чан кипящей смолы."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но победа стоила ему головы. Дорогая цена."],
-            [['dragon_dead'], u"(you lose) \n Израненый %(dragon_type)s остервенело бьётся в прочные ворота но те не поддаются. Не в силах прдолжать бой %(dragon_name_full)s падает у неодолимых укреплений и истекает кровью."]
+            [['foe_intro'], u"Guards grab their weapons and stand in their places."],
+            [['foe_fear'],  u"The defenders of the gate flee in terror from the attacking dragon. An easy victory."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s breaches the gate and scatters those who try to fight back like rag dolls."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s throws himself at the gate, under a rain of stones and arrows. It is impossible to avoid injury, but eventually the gate is broken and the guards flee in terror."],
+            [['foe_alive', 'dragon_wounded'], u"%(dragon_type)s throws himself at the gate, under a rain of stones and arrows. This is a bad idea - the gate is too strong, and the scales of the dragon are punctured in several places."],
+            [['foe_alive', 'dragon_undamaged'], u"%(dragon_type)s throws himself at the gate, under a rain of stones and arrows. The defender\'s fire does not cause him any harm, but the gate is well made and the fortifications do not give in.",],
+            [['foe_alive', 'lost_head'], u"Someone pours a vat of boiling tar on one of the dragon\'s heads."],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but the victory costs him a head. An expensive price."],
+            [['dragon_dead'], u"The wounded %(dragon_type)s frantically beats at the strong gates, but they do not give in. Unable to continue fighting, %(dragon_name_full) falls bleeding in front of the insurmountable fortification."]
         ]
     },
     
     'dog': {
-        'name': u"Овчарка",  # название моба применяемое в описании
-        'power': {'base': (1, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (1, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'dog',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Sheepdog",  # The name of the mob used ingame
+        'power': {'base': (1, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (1, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'dog',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Цепной пёс рычит и скалит зубы."],
-            [['foe_fear'],  u"(you win [fear]) \n Цепной пёс скулит и прячется в страхе."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name)s разрывает собаку в клочки."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_type_cap)s и цепной пёс сплетаются в глубок клацающих зубов и скребущих когтей. %(dragon_name)s выходит из схватки победителем, но не без ранений."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Злобный пёс ухитряется прижать дракона к земле и вцепиться ему в глотку. Положение становится неприятным."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Дракон и собака кружат друг вокруг друга, скаля клыки и рыча. Никто не решается сделать выпад.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Злобный пёс ухитряется прижать дракона к земле и вцепиться ему в глотку. Ранение очень серьёзное."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает загрызенный деревенской шавкой. Какой позор для всего его рода!"]
+            [['foe_intro'], u"The dog growls and bares its teeth."],
+            [['foe_fear'],  u"The dog whimpers and hides in fear."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s tears the dog into pieces."],
+            [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s and the dog tangle together in a whirl of teeth and scraping claws. %(dragon_name)s emerges victorious, but not without injury."],
+            [['foe_alive', 'dragon_wounded'], u"The angry dog manages to wrestle the dragon to the ground and clutch at his throat. This position is not pleasant."],
+            [['foe_alive', 'dragon_undamaged'], u"The dragon and the dog circle around each other, baring teeth and growling. Neither dares to lunge.",],
+            [['foe_alive', 'lost_head'], u"The angry dog manages to wrestle the dragon to the ground and tear through one of his throats. The wound is very serious."],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds.."],
+            [['dragon_dead'], u"%(dragon_name_full)s is torn apart by a country mutt. What a dishonor for his whole family!"]
         ]
     },
 
     'domik': {
-        'name': u"Деревянный домик",  # название моба применяемое в описании
-        'power': {'base': (7, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 4)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['poison_immunity', 'magic_immunity'],  # особые модификаторы
-        'image': 'domik',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Wooden house",  # The name of the mob used ingame
+        'power': {'base': (7, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 4)},  # damage resistance (обычная, верная)
+        'modifiers': ['poison_immunity', 'magic_immunity'],  # special modifiers
+        'image': 'domik',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Ветхая избушка на шарнирных ногах чем то напоминает циплёнка. Огромного, агрессивного циплёнка, вооруженного пушками 50го калибра..."],
-            [['foe_fear'],  u"(you win [fear]) \n Аура ужаса которую испускает %(dragon_name_full)s столь велика, что от него отбигает даже деревянный домик."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name)s наносит по домику удары такой силы, что бревенчатый сруб лопается и трескается, гвозди вылетают словно пули и битая черепица сыпется на землю. Древний ужас лесов столетиями набигающий эльфов..."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_type_cap)s и домик сжимают друг друга в смертельных стальных объятьях. Ребра дракона трещат, но всё же дерево оказывается слабее и домик сминается словно огромный коробок спичек."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Залп из автоматических пушек отбрасывает дракона назад."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_type_cap)s и голем бьют друг друга изо всех сил, но оба столь хорошо защищены что отделываются лишь незначительными царапинамми. Старые пихты трясутся от этой схватки исполинов.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Залп из автоматических пушек отбрасывает дракона назад. Разрывными стреляет, подумал %(dragon_name)s, пораскинув мозгами."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Израненный %(dragon_type)s с треском раскатывает деревянное тело голема по брёвнышку, оставляя в цепких стальных пальцах ног домика одну из своих оторванных голов."],
-            [['dragon_dead'], u"(you lose) \n Залп из автоматических пушек разносит дракону череп. Разрывными стреляет, подумал %(dragon_name)s, пораскинув мозгами. Это была его последняя мысль."]
+            [['foe_intro'], u"A ramshackle hut on hinged legs like a chicken. A huge, aggressive chicken armed with 50 caliber guns..."],
+            [['foe_fear'],  u"%(dragon_name_full)s gives off such an aura of fear that even the wooden house runs away from him."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s strikes the log house with sudden force that it breaks and cracks, nails flying like bullets and tiles smashing on the ground."], #translator: cant translate last sentence. "Древний ужас лесов столетиями набигающий эльфов..."
+            [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s and the house squeeze each other in a deadly embrace of steel. The dragon\'s ribs crack, but the wood is weaker, and the house collapses like a big box of matches."],
+            [['foe_alive', 'dragon_wounded'], u"A volley of automatic gunfire throws the dragon aside."],
+            [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s and the golem hit each other hard, but both are so well protected that they take only minor scrapes. The old firs shake from this battle of giants.",],
+            [['foe_alive', 'lost_head'], u"A volley of automatic gunfire throws the dragon back. Shots burst through one of %(dragon_name)s\'s brains."],
+            [['foe_dead', 'lost_head'], u"The wounded %(dragon_type) rips apart the wooden body of the house, but leaves a torn-off head in the tenacious steel toes of the golem."],
+            [['dragon_dead'], u"Bursts of automatic gunfire impact %(dragon_name)s\' skull, bursting his brains."]
         ]
     },
 
     'druid': {
-        'name': u"Друид",  # название моба применяемое в описании
-        'power': {'base': (5, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'druid',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Druid",  # The name of the mob used ingame
+        'power': {'base': (5, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'druid',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Трава вокруг другида наливается изумрудной зеленью - он собирает к себе силы дикой природы."],
-            [['foe_fear'],  u"(you win [fear]) \n Друид оборачивается быстроногим оленем и бросется на утёк. Он не готов к битва с таким противником как %(dragon_name_full)s."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Друид призывает целую тучу пчёл убийц, но это его роковая ошибка - насекмые наспособны пробить чешую дракона своими жалами. %(dragon_type)s разрывает друида в клочки."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Друид окружает себЯ стеной из ядовитых шипов, но %(dragon_type)s проламывается сквозь них и убивает эльфа. По жилам дракона растекается ял... ничего это не смертельно."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Друид призывает себе на помощь множество сверепых лесных зверей. В жестокой схватке с ними %(dragon_name_full)s одерживает нелегкую победу, но друид всё ещё не вредим а вот %(dragon_type)s весь в крови."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Друиду удаётся задержать дракона призвав ядовитые лианы. Но это лишь временная мера, рано или поздно %(dragon_name)s вырвется.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Подчинясь силе друида земля порождает каменные пасти полные острых сталактитов. Одна из них намертво зажимает голову дракона."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Друид встречает атаку дракона ударом сияющего зелёным огнём посоха. Удар настолько силён, что %(dragon_name_full)s теряет одну из своих голов, однако не оставливается и одним мощным ударом убивает ненавистное дитя Дану."],
-            [['dragon_dead'], u"(you lose) \n Израненый %(dragon_type)s не может спротивляться заклятьям друида. %(dragon_name)s падает от удара толстой дубовой ветви в затылок и тогда на него набрасываются разъярённые лесные звери."]
+            [['foe_intro'], u"The grass around the dragon shimmers emerald green - the druid gathers strength from wildlife."],
+            [['foe_fear'],  u"The druid transforms into a fleet-footed deer and runs away. He is not ready to fight with such an enemy as %(dragon_name_full)s."],
+            [['foe_dead', 'dragon_undamaged'], u"The druid calls a cloud of killer bees, but this is a fatal mistake - they cannot pierce the scales of the dragon with their stings. The %(dragon_type) breaks the druid\'s body into pieces."],
+            [['foe_dead', 'dragon_wounded'], u"The druid surrounds himself with a wall of poisonous thorns, but %(dragon_type)s cuts through them and kills him. The dragon\'s blood is already poisonous."],
+            [['foe_alive', 'dragon_wounded'], u"The druid calls a variety of wild animals to his aid. In a fierce battle %(dragon_name_full)s wins a hard victory. The druid is unharmed, but the %(dragon_type)s is covered with blood."],
+            [['foe_alive', 'dragon_undamaged'], u"The druid manages to hold the dragon with poisonous vines. But this is only a temporary solution, sooner or later %(dragon_name)s will break out.",],
+            [['foe_alive', 'lost_head'], u"The druid uses the strength of the earth to conjure stone mouths full of sharp stalactites. One of them rips off the dragon\'s head."],
+            [['foe_dead', 'lost_head'], u"The druid meets the attack of the dragon with a blow from a rod of shining green fire. The blow is so strong that %(dragon_name_full)s loses one of his heads, but he is not defeated and in one blow kills the hated child of Danu."],
+            [['dragon_dead'], u"The wounded %(dragon_type)s cannot overcome the druid\'s spells. %(dragon_name)s falls from a blow to the head from a thick oak branch, and then the furious beasts of the forest pounce on him."]
         ]
     },
 
     'dwarf_champion': {
-        'name': u"Король цвергов",  # название моба применяемое в описании
-        'power': {'base': (7, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'dwarf_champion',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Dwarven champion",  # The name of the mob used ingame
+        'power': {'base': (7, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 2)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'dwarf_champion',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Король цвергов одевает огнеупорную маску и покрепче перехватывает усиленный колдовскими рунами боевой топор."],
-            [['foe_fear'],  u"(you win [fear]) \n Едва заметив приближение дракона, король цвергов и вся его свита бегут в рассыпную, в надежде найти укрытие в ремесленных цехах или скрыться потайными ходами."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Король цвергов сражается с отчаянием обречённого, но даже он не в силах выдержать напор дракона. Израненный воитель падает бездыханным."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s сходится с королём цвергов в рукопашной схватке и побеждает, но дорогой ценой - удар зачарованного топора пробивший чешцую, навсегда оствит памятный шрам."],
+            [['foe_intro'], u"The dwarven king puts on a fireproof mask and tightly grips a battle axe inscribed with magic runes."],
+            [['foe_fear'],  u"As soon as they notice the approaching dragon, the king of the dwarves and all his entourage scatter, hoping to find refuge in workshops or hide in secret passages."],
+            [['foe_dead', 'dragon_undamaged'], u"The king of the dwarves fights a desperate, doomed battle, but he cannot withstand the onslaught of the dragon. The injured warrior falls lifeless."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s meets the king in close combat and defeats him, but at a price - the enchanted axe has cut a gash into his chest."],
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s самонадеянно атакует заковонного в адамант карлика, но вынужден отступить получив блезненный удар руническим потопорм."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой с королём цвергов продолжается некоторое время но никто не может взять верх. Оба соперника очень выносливы и отменно защищены.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Могучим ударом рунического топора король цвергов отсекает одну из голов дракона. Однако  %(dragon_name_full)s способен пережить это."],
@@ -404,12 +404,12 @@ mob = {
     },
 
     'dwarf_citizen': {
-        'name': u"Цверг",  # название моба применяемое в описании
-        'power': {'base': (2, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'dwarf_citizen',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Цверг",  # The name of the mob used ingame
+        'power': {'base': (2, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'dwarf_citizen',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Загнанный в угол карлик готовится к отчаянной схватке."],
             [['foe_fear'],  u"(you win [fear]) \n Даже будучи загнанным в угол карлик настолько испуган жутким видом дракона, что не способен защищаться. Легкая добыча."],
@@ -424,12 +424,12 @@ mob = {
     },
 
     'dwarf_guards': {
-        'name': u"Стражи тоннелей",  # название моба применяемое в описании
-        'power': {'base': (6, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'dwarf_guards',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Стражи тоннелей",  # The name of the mob used ingame
+        'power': {'base': (6, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 1)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'dwarf_guards',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Закованные в стальные панцири цверги выстраиваются плотной группой, перекрывая тоннель почти несокрушимой стеной щитов."],
             [['foe_fear'],  u"(you win [fear]) \n %(dragon_name_full)s вселяет в серца цвергов ужас одним лишь своим видомю. Стражи тоннелей не готовы принять бой с таким могучим противником."],
@@ -444,12 +444,12 @@ mob = {
     },
 
     'elf_ranger': {
-        'name': u"Страж границ",  # название моба применяемое в описании
-        'power': {'base': (6, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (2, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'elf_ranger',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Страж границ",  # The name of the mob used ingame
+        'power': {'base': (6, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (2, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'elf_ranger',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Страж границ натягивает свой лук и берёт прицел."],
             [['foe_fear'],  u"(you win [fear]) \n Решив что дракон ему не по зубам, страж границ растворяется в густой листве. Наверняка он предупредит своих..."],
@@ -464,12 +464,12 @@ mob = {
     },
 
     'elf_witch': {
-        'name': u"Лесная чародейка",  # название моба применяемое в описании
-        'power': {'base': (6, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'elf_witch',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Лесная чародейка",  # The name of the mob used ingame
+        'power': {'base': (6, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'elf_witch',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"%(dragon_type)s крадётся так тихо как только может, но острый эльфийский слух улавливает даже малейшее движение. Во взрыве зелёно-золотого пламени лесная чародейка взмывает к аронам деревев и начинает ткать смертоносные чары."],
             [['foe_fear'],  u"(you win [fear]) \n Аура ужаса и тьмы что принёс собой дракон так сильна, что цветы и листья вянут кругом. Не в силах взглянуть в глаза чудовища, лесная чародейка закрывает лицо руками ожидая своей усасти и не помышляя о сопротивлении."],
@@ -484,12 +484,12 @@ mob = {
     },
     
     'footman': {
-        'name': u"Пехотинцы",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'footman',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Пехотинцы",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'footman',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Пехотинцы выстраиваются полукольцом, покрепче сжимая мечи и копья."],
             [['foe_fear'],  u"(you win [fear]) \n При виде атакующего дракона пехотинцы в страхе разбегаются кто куда. Некотрым повезло, другим уйти не удалось..."],
@@ -504,12 +504,12 @@ mob = {
     },
 
     'golem': {
-        'name': u"Железный голем",  # название моба применяемое в описании
-        'power': {'base': (7, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 4)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['poison_immunity', 'fire_immunity', 'magic_immunity'],  # особые модификаторы
-        'image': 'golem',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Железный голем",  # The name of the mob used ingame
+        'power': {'base': (7, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 4)},  # damage resistance (обычная, верная)
+        'modifiers': ['poison_immunity', 'fire_immunity', 'magic_immunity'],  # special modifiers
+        'image': 'golem',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Приземистый стальной гигант, похожий на ожившие доспехи загораживает собой весь проход."],
             [['foe_fear'],  u"(you win [fear]) \n Аура ужаса которую испускает %(dragon_name_full)s столь велика, что перед ним отступает даже стальной страж."],
@@ -524,12 +524,12 @@ mob = {
     },
 
     'griffin': {
-        'name': u"Дикий грифон",  # название моба применяемое в описании
-        'power': {'base': (5, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'griffin',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Дикий грифон",  # The name of the mob used ingame
+        'power': {'base': (5, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'griffin',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Дикий грифон расправляет свои огромные орлиные крылья и вытягивает острые когти. В его глазах ярость."],
             [['foe_fear'],  u"(you win [fear]) \n С жалобным клёкотом дикий грифон переворачивается прямо в воздухе и пытается скрыться, но %(dragon_type)s настигает его и убивает одним ударом."],
@@ -544,12 +544,12 @@ mob = {
     },
 
     'griffin_rider': {
-        'name': u"Всадник на грифоне",  # название моба применяемое в описании
-        'power': {'base': (9, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (7, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'griffin_rider',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Всадник на грифоне",  # The name of the mob used ingame
+        'power': {'base': (9, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (7, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'griffin_rider',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Небесный рыцарь поднимает своего летучего скакуна к облакам, параллельно проверяя свою пику и арбалет."],
             [['foe_fear'],  u"(you win [fear]) \n Небесный рыцарь разворачивает грифона и стелясь вдоль земли улетает прочь."],
@@ -564,12 +564,12 @@ mob = {
     },
 
     'heavy_cavalry': {
-        'name': u"Тяжелая кавалерия",  # название моба применяемое в описании
-        'power': {'base': (8, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'heavy_cavalry',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Тяжелая кавалерия",  # The name of the mob used ingame
+        'power': {'base': (8, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'heavy_cavalry',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Закованные в стальные доспехи кавалеристы разворачиваются цепью и опускают пики параллельно земле."],
             [['foe_fear'],  u"(you win [fear]) \n %(dragon_name_full)s издаёт ужасающий рёв и кони бросаются в рассыпную, сбрасывая и топча собственных всадников."],
@@ -584,12 +584,12 @@ mob = {
     },
 
     'heavy_infantry': {
-        'name': u"Латники",  # название моба применяемое в описании
-        'power': {'base': (5, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (7, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'heavy_infantry',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Латники",  # The name of the mob used ingame
+        'power': {'base': (5, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (7, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'heavy_infantry',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Латники выстраиваются полукольцом, покрепче сжимая двуручные мечи."],
             [['foe_fear'],  u"(you win [fear]) \n При виде атакующего дракона латники в страхе разбегаются кто куда. Некотрым повезло, другим уйти не удалось..."],
@@ -604,12 +604,12 @@ mob = {
     },
 
     'ifrit': {
-        'name': u"Ифрит",  # название моба применяемое в описании
-        'power': {'base': (6, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['fire_immunity', 'sfatk_2up'],  # особые модификаторы
-        'image': 'ifrit',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Ифрит",  # The name of the mob used ingame
+        'power': {'base': (6, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 2)},  # damage resistance (обычная, верная)
+        'modifiers': ['fire_immunity', 'sfatk_2up'],  # special modifiers
+        'image': 'ifrit',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Глаза ифрита пылают словно угли. Он крепче сжимает свой огненный молот и покрывается с ног до головы сполохами дымного алого пламени."],
             [['foe_fear'],  u"(you win [fear]) \n Завороженный ифрит стоит некоторое время неподвижно, устрашенный обликом дракона. Затем он исчезает во вспышке дымного поламени словно вылетевший в трубу дым."],
@@ -618,18 +618,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Огненный молот великана бьёт с такой ошеломительной силой, что %(dragon_type)s отлетает в дальний угол словно шавка."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Сталь и пламя против чешуи и клыков. Битва равная, некоторое время кажется что ни одна сторона не сможет одержать победу в этом сражении.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Мощныйм ударом объятого пламенем молота ифрит разбивает голову дракона, словно спелый арбуз. %(dragon_name_full)s чудом выживает после такого."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n Израненный %(dragon_type)s переоценил свои силы. Огненный великан с лёгкостью сокрушает его своим заклаённым в вулканическом огне молотом."]
         ]
     },
 
     'jotun': {
-        'name': u"Йотун",  # название моба применяемое в описании
-        'power': {'base': (6, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['siatk_2up', 'ice_immunity'],  # особые модификаторы
-        'image': 'jotun',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Йотун",  # The name of the mob used ingame
+        'power': {'base': (6, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 2)},  # damage resistance (обычная, верная)
+        'modifiers': ['siatk_2up', 'ice_immunity'],  # special modifiers
+        'image': 'jotun',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Синеволосый гигант в рогатом шлеме крепко сжимает покрытый инеем топор."],
             [['foe_fear'],  u"(you win [fear]) \n %(dragon_name_full)s окутывает йотуна аурой страха и тот в панике бежит прочь."],
@@ -644,12 +644,12 @@ mob = {
     },
 
     'jagger': {
-        'name': u"Егерь",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (1, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'jagger',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Егерь",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (1, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'jagger',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Егерь накладывает стрелу на тетиву."],
             [['foe_fear'],  u"(you win [fear]) \n Егерь бежит в ужасе. Он не готов к такому бою."],
@@ -658,13 +658,13 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Меткий лучник ухитряется попасть дракону точно в глаз. Обезумевший от боли ящер мешкает."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Стрела выпущенная лучником отскакивает от прочной чешуи дракона.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Закалённая стрела с чёрным древком влетает в пасть дракону и проходит точно в мозг.  К счастью %(dragon_name_full)s способен пережить даже такую рану."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n Закалённая стрела с чёрным древком влетает в пасть дракону и проходит точно в мозг. %(dragon_name_full)s падает замертво."]
         ]
     },
 
     'knight': {
-        'name': u"Рыцарь",  # название моба применяемое в описании
+        'name': u"Рыцарь",  # The name of the mob used ingame
         'descriptions': [
             [['foe_intro'], u"%(foe_name)s готовится к бою."],
             [['foe_fear'], u"(you win [fear]) \n %(foe_name)s бежит в страхе."],
@@ -673,18 +673,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(foe_name)s наносит дракону серьёзную рану"],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх",],
             [['foe_alive', 'lost_head'], u"(head lost) \n %(foe_name)s метким ударом сносит голову дракону"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран"]
         ],
     },
     
     'king': {
-        'name': u"Рыцарь-чемпион",  # название моба применяемое в описании
-        'power': {'base': (5, 2)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'king',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Рыцарь-чемпион",  # The name of the mob used ingame
+        'power': {'base': (5, 2)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 1)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'king',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"%(dragon_name_full)s прорывается сквозь ряды телохранителей чтобы разить короля людей."],
             [['foe_fear'],  u"(you win [fear]) \n Храбрый король рвётся в бой, но его конь слишком напуган - он встаёт на дыбы и сбрасывает наездника в грязь, оставляя его совершенно беззащитным."],
@@ -693,18 +693,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Таранный удар копья помноженный на вес и скорость коня со всадником отбрасывает дракона в сторону."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Противники сталкиваются под скрежет металла и ржание боевого коня, но силы примерно равны.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Король людей метким ударом сносит голову дракону, однако это ещё не конец."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n Король людей метким ударом сносит голову дракону. %(dragon_name_full)s умирает."]
         ]
     },
     
-    'kraken': {
-        'name': u"Кракен",  # название моба применяемое в описании
-        'power': {'base': (6, 3)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 3)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'kraken',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+    'kraken': { #Translator: I don't think this fight is implemented
+        'name': u"Кракен",  # The name of the mob used ingame
+        'power': {'base': (6, 3)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 3)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'kraken',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Враг готовится к бою"],
             [['foe_fear'],  u"(you win [fear]) \n Враг бежит в страхе"],
@@ -713,18 +713,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Враг наносит дракону серьёзную рану"],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Враг метким ударом сносит голову дракону"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран"]
         ]
     },
 
     'merman': {
-        'name': u"Страж мелководья",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (1, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'merman',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Страж мелководья",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (1, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'merman',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Рыбо-человек готовит к бою сеть и трезубец. Он не сдастся просто так..."],
             [['foe_fear'],  u"(you win [fear]) \n Рыбохвостый в страхе уплывает на глубину, выронив трезубец."],
@@ -733,18 +733,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Используя свою необычайную гибкость и маневренность рыбохвостый ухитряется ударить дракона своим трезубцем и уйти от ответного выпада."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Некоторое время оба противника маневрируют в толще воды, но никто не может знаять позиции выгодной для сближения и точного удара.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Разогнавшись несколькими ударами своего мощного хвоста подводный житель вонзает свой зазубренный трезубец глубоко в пасть дракона."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран."],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds.."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран."]
         ]
     },
 
     'militia': {
-        'name': u"Отряд ополчения",  # название моба применяемое в описании
-        'power': {'base': (2, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'militia',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Отряд ополчения",  # The name of the mob used ingame
+        'power': {'base': (2, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'militia',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Вооруженные копьями, топорами и факелами ополченцы сбиваются в плотную толпу, подбадривая друг-друга агрессивными выкриками."],
             [['foe_fear'],  u"(you win [fear]) \n Толпа собравшихся было дать отопор чудовищу ополченцев разбегается в страхе, едва только %(dragon_name_full)s приближается к ним на расстояние удара."],
@@ -753,18 +753,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n При достаточном количестве и боевом духе даже слабо обученные новобранцы становятся серьёзной боевой силой. Им удаётся ранить и отбросить дракона градом ударов своего немудрёного оружия."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_type_cap)s врывается в жидкое построение ополченцев, но те тут же бросаются в рассыпную. Пока он занимается одним врагом, другой заходит сзади. Крики и дым чадащих факелов сбивают с толку. Этот бой грозит затянуться.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Джий детина с топором лесоруба улучив момент запрыгивает израненому дракону на спину и мощным ударом отсекает одну из его голов!"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран. Крестьяне воспоют этот день в веках!"]
         ]
     },
 
     'mob': {
-        'name': u"Крестьяне",  # название моба применяемое в описании
-        'power': {'base': (1, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (5, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'mob',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Крестьяне",  # The name of the mob used ingame
+        'power': {'base': (1, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (5, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'mob',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Вооруженные вилами, дрынами и факелами крестьяне сбиваются в плотную толпу, подбадривая друг-друга агрессивными выкриками."],
             [['foe_fear'],  u"(you win [fear]) \n Толпа собравшихся было дать отопор чудовищу крестьян разбегается в страхе, едва только %(dragon_name_full)s приближается к ним на расстояние удара."],
@@ -773,18 +773,18 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n При достаточном количестве и боевом духе даже необученные крестьяне становятся серьёзной боевой силой. Им удаётся ранить и отбросить дракона градом ударов своего немудрёного оружия."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_type_cap)s врывается в толпу крестьян, но те тут же бросаются в рассыпную. Пока он занимается одним врагом, другой заходит сзади. Крики и дым чадащих факелов сбивают с толку. Этот бой грозит затянуться.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Джий детина с топором лесоруба улучив момент запрыгивает израненому дракону на спину и мощным ударом отсекает одну из его голов!"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран. Крестьяне воспоют этот день в веках!"]
         ]
     },
 
     'mounted_guard': {
-        'name': u"Конные телохранители",  # название моба применяемое в описании
-        'power': {'base': (5, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (7, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'mounted_guard',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Конные телохранители",  # The name of the mob used ingame
+        'power': {'base': (5, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (7, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'mounted_guard',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Закованные в стальные доспехи кавалеристы разворачиваются цепью и опускают пики параллельно земле."],
             [['foe_fear'],  u"(you win [fear]) \n %(dragon_name_full)s издаёт ужасающий рёв и кони бросаются в рассыпную, сбрасывая и топча собственных всадников."],
@@ -800,12 +800,12 @@ mob = {
 
 
     'ogre': {
-        'name': u"Людоед",  # название моба применяемое в описании
-        'power': {'base': (7, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (7, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['poison_immunity'],  # особые модификаторы
-        'image': 'ogre',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Людоед",  # The name of the mob used ingame
+        'power': {'base': (7, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (7, 0)},  # damage resistance (обычная, верная)
+        'modifiers': ['poison_immunity'],  # special modifiers
+        'image': 'ogre',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Великан-людоед сжимает в руках огромную дубину, больше похожую на вырванное с корнем дерево."],
             [['foe_fear'],  u"(you win [fear]) \n Разглядев врага людоед тушуется и отступает."],
@@ -820,12 +820,12 @@ mob = {
     },
 
     'old_knight': {
-        'name': u"Старый рыцарь",  # название моба применяемое в описании
-        'power': {'base': (4, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (2, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'knight/knight1',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Старый рыцарь",  # The name of the mob used ingame
+        'power': {'base': (4, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (2, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'knight/knight1',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Старый рыцарь водружает на голову похожий на ведро шлем и берёт в руки двуручный меч с потёртой рукоятью. Он полон решимости защитить свой дом."],
             [['foe_fear'],  u"(you win [fear]) \n Увидев с каким врагом ему предстоит сразиться, старый рыцарь бежит с поля боя побросав оружие."],
@@ -834,19 +834,19 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Большой боевой опыт позволяет старому рыцарю очень точно рассчитать момент атаки. Едва %(dragon_type)s бросается вперёд, как его встречает точный взмах двуручного меча."],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх.",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Большой боевой опыт позволяет старому рыцарю очень точно рассчитать момент атаки. Едва %(dragon_type)s бросается вперёд, как его встречает точный взмах двуручного меча. %(dragon_name_full)s теряет одну из голов."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран."]
         ]
     },
 
 
     'palace_guards': {
-        'name': u"Гвардейцы",  # название моба применяемое в описании
-        'power': {'base': (5, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'castle_guard',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Гвардейцы",  # The name of the mob used ingame
+        'power': {'base': (5, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 2)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'castle_guard',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Дворец охраняют элитные королевские гвардейцы. Они отважно выходят на сраждение с драконом, не желая отсиживаться за стенами."],
             [['foe_fear'],  u"(you win [fear]) \n При виде атакующего дракона элитные королевские гвардецы в страхе разбегаются кто куда. Ворота крепости остались открытыми нараспашку..."],
@@ -861,12 +861,12 @@ mob = {
     },
     
     'shark': {
-        'name': u"Акула",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (3, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'shark',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Акула",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (3, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'shark',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Акула плавает кругами и скалит зубы."],
             [['foe_fear'],  u"(you win [fear]) \n Акула пытается уплыть, но %(dragon_type)s плавает быстрее и настигает хищницу ставшую в одночасье его добычей."],
@@ -875,19 +875,19 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Используя свою скорость и манеёвренность, акула скрывается в мутной толщи воды, а затем внезапно проплывает мимо на ходу выдирая у дракона кусок плоти!"],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Два жутких морских хищника кружат в толще воды, пытаясь зайти друг-другу со спины, но пока что они равны...",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Акула откусывает одну из голов дракона!"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран."],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds.."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран."]
         ]
     },
 
 
     'ship': {
-        'name': u"Корабль",  # название моба применяемое в описании
-        'power': {'base': (3, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'ship',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Корабль",  # The name of the mob used ingame
+        'power': {'base': (3, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 1)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'ship',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"На палубе торгового корабля слышны отчаянные свистки боцманской дудки. Канониры спешно выкатывают пушки."],
             [['foe_fear'],  u"(you win [fear]) \n Подняв все паруса какие только есть, торговый корабль разворачивается по ветру и уходит на максимальной скорости прочь от дракона. Но он слишком тяжело гружен, так что это ошибка. После недолгой погони %(dragon_name_full)s. настигает и топит судно."],
@@ -903,12 +903,12 @@ mob = {
 
 
     'steamgun': {
-        'name': u"Паровая пушка",  # название моба применяемое в описании
-        'power': {'base': (5, 5)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'steamgun',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Паровая пушка",  # The name of the mob used ingame
+        'power': {'base': (5, 5)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'steamgun',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Цверги возятся у паровой пушки подготавливая её к стрельбе."],
             [['foe_fear'],  u"(you win [fear]) \n Услышав громогласный рёв дракона рассчёт паровой пушки в ужасе разбегается и мощная боевая машина остаётся стоять бесполезной грудой хлама."],
@@ -923,12 +923,12 @@ mob = {
     },
 
     'templars': {
-        'name': u"Крестоносцы",  # название моба применяемое в описании
-        'power': {'base': (8, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'templars',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Крестоносцы",  # The name of the mob used ingame
+        'power': {'base': (8, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'templars',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Закованные в стальные доспехи крестоносцы разворачиваются цепью и опускают пики параллельно земле."],
             [['foe_fear'],  u"(you win [fear]) \n %(dragon_name_full)s издаёт ужасающий рёв и кони крестоносцев бросаются в рассыпную, сбрасывая и топча собственных всадников."],
@@ -943,12 +943,12 @@ mob = {
     },
 
     'titan': {
-        'name': u"Титан",  # название моба применяемое в описании
-        'power': {'base': (8, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (8, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['lightning_immunity', 'slatk_2up'],  # особые модификаторы
-        'image': 'titan',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Титан",  # The name of the mob used ingame
+        'power': {'base': (8, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (8, 2)},  # damage resistance (обычная, верная)
+        'modifiers': ['lightning_immunity', 'slatk_2up'],  # special modifiers
+        'image': 'titan',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Закованный в золотистый доспех титан призывает силы бури и грома. Он способен биться с равной силой магией и оружием!"],
             [['foe_fear'],  u"(you win [fear]) \n Даже богоподобный титан бежит в страхе когда его атакует %(dragon_name_full)s!"],
@@ -963,12 +963,12 @@ mob = {
     },
 
     'town': {
-        'name': u"Защитники города",  # название моба применяемое в описании
-        'power': {'base': (4, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (6, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'town',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Защитники города",  # The name of the mob used ingame
+        'power': {'base': (4, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (6, 1)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'town',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Защитники города занимают места на стенах. Они готовят копья, тяжелые камни и котлы с кипящей смолой."],
             [['foe_fear'],  u"(you win [fear]) \n Разглядев дракона получше защитники города дрогнули. Они в панике бегут со стен и прячутся кто-куда, а битва выиграна даже не начавшись."],
@@ -982,103 +982,103 @@ mob = {
         ]
     },
 
-    'treant': {
-        'name': u"Чащобный страж",  # название моба применяемое в описании
-        'power': {'base': (12, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (8, 2)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'treant',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+    'treant': { #Translator: I don't think this fight is implemented
+        'name': u"Tree ent",  # The name of the mob used ingame
+        'power': {'base': (12, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (8, 2)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'treant',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Напоминающее по форме человеческое тело дерево выглядит устрашающе. Его узловатые руки-ветви тянутся к шее дракона."],
-            [['foe_fear'],  u"(you win [fear]) \n Выворачивая из земли ноги-корни, человекоподобное дерево бросается наутёк, пытаясь скрыться в лесной чащие. За ним остаётся широкий след вспаханной земли."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n %(dragon_name_full)s побеждает"],
+            [['foe_intro'], u"The human shaped tree looks frightening. His gnarled hand-branches stretch out for the neck of the dragon."],
+            [['foe_fear'],  u"Twisting his rooted feet out of the ground, the humanoid tree runs away, trying to disguise himself among the trees in the forest. He leaves behind a path of plowed earth."],
+            [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s wins the fight."],
             [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Враг наностит дракону ранение, но %(dragon_name)s побеждает"],
             [['foe_alive', 'dragon_wounded'], u"(wounded) \n Враг наносит дракону серьёзную рану"],
             [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Бой продолжается некоторое время но никто не может взять верх",],
             [['foe_alive', 'lost_head'], u"(head lost) \n Враг метким ударом сносит голову дракону"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает от полученных ран"]
         ]
     },
 
     'triton': {
-        'name': u"Тритон",  # название моба применяемое в описании
-        'power': {'base': (7, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (7, 1)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'triton',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Triton",  # The name of the mob used ingame
+        'power': {'base': (7, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (7, 1)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'triton',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Морской гигант поводит своим исполинским трезубцем и вода подчиняется его движению, завихряясь водоворотами и вскипая брулящей пеной. Тритон повелевает пучиной!"],
-            [['foe_fear'],  u"(you win [fear]) \n Тритон вздымает свой волшебный трезубец и призывает огромный косяк тунца. Тела рыб скрывают его на минуту, а когда они уплывают прочь, его уже нигда не видно. Сбежал трус!"],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Тритон создаёт бурлящий водоворот пытаясь утянуть дракона на дно, но %(dragon_name)s преодолевает силу потока и впивается в ошарашенного тритона зубами."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Прорвавшись сквозь стремительный водоворот, %(dragon_name)s бросается на тритона. Тот ударяет трезубцем и удачно, однако разъярённого дракона это не останавивлает. %(dragon_name)s разрывает морского великана в клочья."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_name)s не в силах справиться с колдовским водоворотом тритона и бурлящая вода бросает его боком на острые рифы."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n %(dragon_name)s тщетно пытается пробиться к тритону, но бурлящий водоворот воды раз за разом относит его прочь и затягивает на глубину.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Тритон метко бьёт дракона своим трезубцем в шею, насаживая его на острия словно рыбу."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Два морских исполина стоят друг друга в схватке. С огромным трудом %(dragon_type)s побеждает, но одна из его голов умирает, пробитая насквозь огромным трезубцем тритона."],
-            [['dragon_dead'], u"(you lose) \n Израненный %(dragon_name)s больше не в силах сопротивляться магическому водовороту. Неумолимый поток воды уносит его в холодную и тёмную глубину."]
+            [['foe_intro'], u"The sea giant moves his enormous trident and the water responds, swirling in whirpools and boiling towers of foam. The triton commands the abyss!"],
+            [['foe_fear'],  u"The triton lifts his magic trident and calls forth a huge school of tuna. The bodies of the fish block it from view, and when they swim away, it is nowhere to be seen. The coward escaped!"],
+            [['foe_dead', 'dragon_undamaged'], u"The triton creates a seething maelstrom, trying to pull the dragon to the bottom, but %(dragon_name) overcomes the force of the water and bites his teeth into the startled triton."],
+            [['foe_dead', 'dragon_wounded'], u"Swimming through a whirlpool, %(dragon_name)s rushes towards the triton. He is struck hard by its trident, but it doesn\'t stop the furious dragon. %(dragon_name)s tears the sea giant into pieces."],
+            [['foe_alive', 'dragon_wounded'], u"%(dragon_name)s cannot cope with the magic whirpool of the triton, and the churning water dashes him onto the jagged reefs."],
+            [['foe_alive', 'dragon_undamaged'], u"%(dragon_name)s tries in vain to reach the triton, but over and over the whirlpools pull him back towards the depths.",],
+            [['foe_alive', 'lost_head'], u"The triton strikes accurately with his trident, spitting the dragon\'s neck like a fish on its tip."],
+            [['foe_dead', 'lost_head'], u"The two sea giants face each other in battle. With great difficulty the %(dragon_type)s wins, but one of his heads is dying, punctured by the huge trident of the triton."],
+            [['dragon_dead'], u"The wounded %(dragon_name)s is no longer able to resist the magic whirlpool. Relentless currents of water carry him down into the cold and dark depths."]
         ]
     },
 
     'wizard': {
-        'name': u"Чародей",  # название моба применяемое в описании
-        'power': {'base': (5, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (1, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': ['sfatk_up', 'siatk_up', 'slatk_up'],  # особые модификаторы
-        'image': 'wizard',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Wizard",  # The name of the mob used ingame
+        'power': {'base': (5, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (1, 0)},  # damage resistance (обычная, верная)
+        'modifiers': ['sfatk_up', 'siatk_up', 'slatk_up'],  # special modifiers
+        'image': 'wizard',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Волшебник делает странные пассы руками, накладывая на себя защитные заклинания."],
-            [['foe_fear'],  u"(you win [fear]) \n Волшебник оценивает ситуацию и решает использовать экстренную телепортацию, чтобы убежать подальше от разъярённого дракона."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Колдун использует заклинание огненного шара, но колдовское пламя бессильно. Прорвавшись прямо сквозь огонь, %(dragon_type)s давит тщедушного старикашку как клопа!"],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Колдун стреляет стрелами чистой магической силы, с лёгкостью пробивающими чешую дракона. Но даже раненый %(dragon_name)s способен разорвать тщедушного старикашку на кровавые лоскуты."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Колдун призывает призрачный кулак огромных размеров, который припечатывает дракона ударом сверху тяжклым словно гружёная рудой вагонетка."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Колдун призывает каменного элементаля себе на защиту. %(dragon_name_full)s справляется с духом земли за считанные минуты, но волшебник всё ещё цел и невредим.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Волшебник призывает меч сотканный из чистой колдовской энергии. Клинок летает и рубит сам по себе, а его лезвие настолько остро что начисто отсекает одну из голов дракона."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n Волшебник призывает меч сотканный из чистой колдовской энергии. Клинок летает и рубит сам по себе, а его лезвие настолько остро что начисто отсекает одну из голов дракона. Однако колдуну это не помогает, выживший после сьтрашной раны %(dragon_name)s давит его как таракана."],
-            [['dragon_dead'], u"(you lose) \n Израненный и ослабленный %(dragon_type)s представляет собой отличную мишень. Колдун вызывает сферу тотальной анигилляции 9-го уровня, которая пожирает тело ящера подобно миниатюрной чёрной дыре."]
+            [['foe_intro'], u"The wizard makes strange gestures with his hands, applying protective spells."],
+            [['foe_fear'],  u"The wizzard assesses the situation and decides to use emergency teleportation to escape the furious dragon."],
+            [['foe_dead', 'dragon_undamaged'], u"The sorcerer uses a fireball spell, but the magical flames do nothing. Cutting through the fire, the %(dragon_type)s squashes the frail old man like a bug!"],
+            [['foe_dead', 'dragon_wounded'], u"The warlock shoots arrows of pure magical power, easily puncturing the dragon\'s scales. But even wounded, %(dragon_name)s is able to tear the frail old man to bloody shreds."],
+            [['foe_alive', 'dragon_wounded'], u"The sorcerer conjures a huge ghostly fist that falls on the dragon with the weight of an ore-laden minecart."],
+            [['foe_alive', 'dragon_undamaged'], u"The sorcerer calls a stone elemental to protect him. %(dragon_name_full) deals with the spirit of the earth for a few minutes, as the wizard stands safe and sound on the sidelines.",],
+            [['foe_alive', 'lost_head'], u"The wizard summons a sword of pure magic energy. The blade flies and cuts by itself, and it is so sharp that it cleanly slices through one of the dragon\'s heads."],
+            [['foe_dead', 'lost_head'], u"The wizard summons a sword of pure magic energy. The blade flies and cuts by itself, and it is so sharp that it cleanly slices through one of the dragon\'s heads. However, this is of no help to the wizard, the %(dragon_name)s survives the wound and crushes him like a cockroach."],
+            [['dragon_dead'], u"Weakened and wounded, the %(dragon_type)s is an easy target. The wizard calls a 9th level sphere of total annihilation, which consumes the lizard\'s body like a miniature black hole."]
         ]
     },
 
     'xbow': {
-        'name': u"Арбалетчики",  # название моба применяемое в описании
-        'power': {'base': (4, 0)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'xbow',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Арбалетчики",  # The name of the mob used ingame
+        'power': {'base': (4, 0)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'xbow',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Арбалетчики спешно заряжают оружие, готовясь стрелять."],
-            [['foe_fear'],  u"(you win [fear]) \n Арбалетчики даже не пытаются вступить в бой, а прсото разбегаются в ужасе."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Стремительно сократив дистанцию %(dragon_type)s врывается в жидкое построение арбалетчиков и раскидывает их словно тряпичные куклы."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n Проравшись сквозь слаженный залп арбалетчиков, %(dragon_type)s врывается в их построение и раскидывает людей словно тряпичные куклы. Тем не менее несколько арбалетных болтов пробили его шкуру и теперь придётся зализывать раны."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n Слаженный залп арабалетчиков оказывается настолько эффективен, что %(dragon_type)s вынужден умерить свой пыл."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Арбалетчики прячутся за естественными преградами ведя огонь из укрытия, достать их по одному можно но это займёт очень много времени.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n Тяжелая железная стрелка влетает точно в глаз дракону. Это ранение будет стоить ему одной головы!"],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n %(dragon_type_cap)s побеждает, но одна из его голов умирает от полученых ран."],
-            [['dragon_dead'], u"(you lose) \n %(dragon_name_full)s умирает расстрелянный из тяжёлых арбалетов в упор."]
+            [['foe_intro'], u"Crossbowmen hastily load their weapons, preparing to fire."],
+            [['foe_fear'],  u"The crossbowmen do not even try to fight, simply fleeing in terror."],
+            [['foe_dead', 'dragon_undamaged'], u"Rapidly closing the distance, the %(dragon_type)s bursts into the formation of crossbowmen and scatters them like rag dolls."],
+            [['foe_dead', 'dragon_wounded'], u"Cutting through a coordinated volley of crossbow bolts, the %(dragon_type)s bursts into their formation and throws the crossbowmen like rag dolls. Nevertheless, some bolts punctured the dragon\'s skin, and now he must lick his wounds."],
+            [['foe_alive', 'dragon_wounded'], u"The well coordinated volley of crossbow bolts is so effective that the dragon is wounded and forced to restrain his enthusiastic charge."],
+            [['foe_alive', 'dragon_undamaged'], u"The crossbowmen take cover and fire from sheltered positions. The dragon could get them one by one, but it would take a very long time.",],
+            [['foe_alive', 'lost_head'], u"A heavy iron arrow flies right into the eye of the dragon. This injury will cost him a head!"],
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds.."],
+            [['dragon_dead'], u"%(dragon_name_full)s dies from a heavy crossbow bolt shot at point blank range."]
         ]
     },
 
     'xbow_rider': {
-        'name': u"Конные арбалетчики",  # название моба применяемое в описании
-        'power': {'base': (4, 1)},  # сила атаки моба (обычная, верная)
-        'defence': {'base': (4, 0)},  # надежность защиты моба (обычная, верная)
-        'modifiers': [],  # особые модификаторы
-        'image': 'xbow_rider',  # фоновое изображение для драки в "img/scene/fight/%s.jpg"
-        # набор описаний сцены боя
+        'name': u"Mounted crossbowmen",  # The name of the mob used ingame
+        'power': {'base': (4, 1)},  # attack force (обычная, верная)
+        'defence': {'base': (4, 0)},  # damage resistance (обычная, верная)
+        'modifiers': [],  # special modifiers
+        'image': 'xbow_rider',  # background image for the fight "img/scene/fight/%s.jpg"
+        # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"Конные арбалетчики рассыпаются цепью, готовые к бою"],
-            [['foe_fear'],  u"(you win [fear]) \n %(dragon_name_full)s издаёт ужасающий рёв и кони бросаются в рассыпную, сбрасывая и топча собственных всадников."],
-            [['foe_dead', 'dragon_undamaged'], u"(flawless victory) \n Один за другим всадники разряжают свои арбалеты, но %(dragon_name)s даже не замечает летящих в него стрел. Одного за другим %(dragon_type)s сбивает всадников с ног и терзает их зубами."],
-            [['foe_dead', 'dragon_wounded'], u"(difficult victory) \n %(dragon_name)s способен опрокинуть всадника вместе с лошадью одним ударом, но их много, поэтому невредимым из битвы ему выйти не удаётся."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s отвлекается на одного из всадников и не замечает как второй проезжает совсем рядом, на всём скаку всаживая арбалетный болт в уязвимый бок ящера."],
-            [['foe_alive', 'dragon_undamaged'], u"(stallmate) \n Всадники ловко маневрируют, избегая клыков дракона и пытаясь достать его выстрелами из арбалетов с изрядного расстояния. Такая тактика вряд ли принесёт им победу, зато сохраняет жизнь.",],
-            [['foe_alive', 'lost_head'], u"(head lost) \n %(dragon_type_cap)s сбивает скакуна с ног и бросается к всаднику чтобы растерзать его, но тот резво вскакивает на ноги и наносит точный удар остро отточенным мечём. Голова дракона падает на землю. Как хорошо что в запасе есть ещё головы..."],
-            [['foe_dead', 'lost_head'], u"(difficult victory) \n В жаркой схватке %(dragon_type)s побеждает, но одна из его голов остаётся валяться на поле, отрубленная тяжелым кавалерийским палашом."],
-            [['dragon_dead'], u"(you lose) \n Израненный %(dragon_type)s сражается очаянно, но всадников слишком много. Убив много людей и коней, %(dragon_name_full)s в конце концов падает наземь, истекая кровью."]
+            [['foe_intro'], u"Mounted crossbowmen gather loosely at range, ready for battle."],
+            [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses throw their own riders loose, trampling them."],
+            [['foe_dead', 'dragon_undamaged'], u"One by one, the riders discharge their crossbows, but %(dragon_name)s does not even notice the flying arrows. One by one, the %(dragon_type) knocks the riders down and rips them to shreds with his teeth."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to knock over a rider and his horse with a single blow, but there are so many of them that the dragon does not make it out of the battle uninjured."],
+            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s is distracted by one of the riders and does notice anohter passing by at full gallop, shooting a bolt into the vulnerable side of the dragon."],
+            [['foe_alive', 'dragon_undamaged'], u"The riders deftly maneuver, avoiding the fangs of the dragon, and try to shoot him with their crossbows from long range. Such tactics are unlikely to bring them victory, but it preserves their lives.",],
+            [['foe_alive', 'lost_head'], u"The %(dragon_type)s knocks down a rdier and rushes to tear him to pieces, but the rider jumps to his feet and swings his sharp sword. The dragon\'s head falls to the ground. It\'s good that he has more left..."],
+            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type)s wins, but one of its heads remains lying on the field, severed by a heavy sabre."],
+            [['dragon_dead'], u"The wounded %(dragon_type)s tries to fight, but there are too many riders. After killing many men and horses, %(dragon_name_full)s finally falls to the ground, bleeding."]
         ]
     },
 
