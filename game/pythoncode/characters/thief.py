@@ -72,21 +72,21 @@ class Thief(Talker, Mortal):
         """
         d = []
         if self.is_dead:
-            d.append(u"Вор мёртв")
+            d.append(u"The thief is dead.")
             return u"\n".join(d)
-        d.append(u"Мастерство: %s (%d)" % (self.title, self.skill))
+        d.append(u"Skill: %s (%d)" % (self.title, self.skill))
         if self.abilities:
-            d.append(u"Способности: ")
+            d.append(u"Abilities: ")
             for ability in self.abilities:
                 d.append(u"    %s: %s" % (self.abilities[ability].name, self.abilities[ability].description))
         else:
-            d.append(u"Способности отсутствуют")
+            d.append(u"Has no skills.")
         if self.items:
-            d.append(u"Вещи:")
+            d.append(u"Items:")
             for item in self.items:
                 d.append(u"    %s: %s" % (self.items[item].name, self.items[item].description))
         else:
-            d.append(u"Вещи отсутствуют")
+            d.append(u"Has no items.")
         return u"\n".join(d)
 
     def steal(self, lair=None, dragon=None):

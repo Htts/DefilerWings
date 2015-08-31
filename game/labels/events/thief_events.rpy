@@ -28,7 +28,7 @@ label lb_event_thief_prepare(thief):
 
 label lb_event_thief_prepare_usefull(thief):
     nvl clear    
-    thief "Hehe...just as I planned" #Alternate translation: just according to keikaku 
+    thief "Hehe...just as I planned." #Alternate translation: just according to keikaku 
     return
 
 label lb_event_thief_receive_item(thief, item):
@@ -75,11 +75,11 @@ label lb_event_thief_pass_trap(thief, trap):
 label lb_event_thief_receive_no_item(thief):
     nvl clear    
     show expression "img/scene/thief_in_lair.jpg" as bg    
-    "The theif gets nothing"
+    "The thief finds nothing."
     return
     
 # @Review: Alex: Added a bunch of new events to fill in the gaps:
-label lb_event_thief_checking_accessibility(thief):
+label lb_event_thief_checking_accessability(thief):
     # Checking if thief can get past layer defences:
     # Debug message: thief(u"checking accessibility")
     return
