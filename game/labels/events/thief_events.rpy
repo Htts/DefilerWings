@@ -42,14 +42,14 @@ label lb_event_thief_receive_item(thief, item):
 label lb_event_thief_prepare_useless(thief):
     nvl clear
     show expression "img/scene/quest_thief.jpg" as bg
-    '[game.thief.name] searches for the dragon\'s lair without succes'
+    '[game.thief.name] searches for the dragon\'s lair without success'
     thief "Where is this bastard hiding... shit!"
     return
 
 label lb_event_thief_lair_enter(thief):
     nvl clear
     show expression "img/scene/thief_in_lair.jpg" as bg
-    thief "There it is, the dragon's lair. I'll go in like a shadow and slip out the back with a bag of treasure as heavy as my sins." 
+    thief "There it is, the dragon's lair. I'll go in like a shadow, and slip out the back with a bag of treasure as heavy as my sins." 
     return
 
 label lb_event_thief_die_inaccessability(thief):
@@ -97,14 +97,14 @@ label lb_event_thief_trying_to_avoid_traps_and_guards(thief):
 label lb_event_thief_retreat_and_try_next_year(thief):
     # Could not get past traps and guards but did not die either:
     # Debug message: thief(u"Ниосилить, попробую в следущем году")
-    thief "That's as far as I can go...I have to plan this better. I won\'t give up!" #Translator: a word doesn't translate. "it's necessary to prepare крутовато better".  
+    thief "That's as far as I can go...I have to plan this better. I won\'t give up!" #Translator: a word didn't translate. "it's necessary to prepare крутовато better".  
     return
     
 label lb_event_thief_starting_to_rob_the_lair(thief):
     # Got past all traps and guards, thief is starting to rob the lair:
     # Debug message: thief(u"Начинаю вычищать логово")
     show expression "img/scene/loot.jpg" as bg    
-    thief "Ooh! What a treasure trove." #Translator: can't translate the rest. #And [game.dragon.kind], зараза прямо на золоте лежит... Ничего, я аккуратненько... надо только выбрать вещи поценнее."
+    thief "Ooh! What a treasure trove. I have to choose the most valuable items..." #Translator: can't translate stuff. #And [game.dragon.kind], зараза прямо на золоте лежит... Ничего, я аккуратненько... надо только выбрать вещи поценнее."
     return
 
 label lb_event_thief_took_an_item(thief, item):
@@ -126,9 +126,9 @@ label lb_event_thief_awakened_dragon(thief, stolen_items):
     # Thief awakens the dragon and gets killed... stolen_items: items that dragon takes back from the thief.
     # Debug message: thief(u"Разбудил дракона")
     show expression "img/scene/wokeup.jpg" as bg    
-    "The thief disturbes a pile of coins, which roll down clattering on the floor"
+    "The thief disturbs a pile of coins, which roll down clattering on the floor"
     thief "Oops..."
-    game.dragon "Well, well...what a meeting." #Translator: Can't translate 2nd senetence. "А я то думал кто тут шебуршится."
+    game.dragon "Well, well...what a meeting. I think I know what you\'re here for." 
     nvl clear
-    "[game.dragon.fullname] tears the unlucky robber to ribbons and, having had a bite to eat, goes back to bed."
+    "[game.dragon.fullname] tears the unlucky robber to ribbons, and having had a bite to eat, goes back to bed."
     return

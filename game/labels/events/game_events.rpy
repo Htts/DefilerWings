@@ -5,7 +5,7 @@ init python:
 label lb_event_mobilization_increase:
     show expression get_random_image("img/scene/mobilization") as bg
     nvl clear
-    "Rulers of the Free Kingdoms are concerned with dragon mischief. The level of mobilization rises."
+    "Rulers of the Free Kingdoms are concerned with dragon raids. The level of mobilization rises."
     return
 
 label lb_event_poverty_increase:

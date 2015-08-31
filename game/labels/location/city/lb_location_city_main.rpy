@@ -24,10 +24,10 @@ label lb_location_city_main:
             nvl clear
             call lb_city_walk from _call_lb_city_walk
         'Storm the gates' if not game.dragon.can_fly:
-            'Seeing the approach of danger the watchful guards close the gate, preventing a battle.'
+            'Seeing the approach of danger, the watchful guards close the gate, preventing a battle.'
             call lb_city_gates from _call_lb_city_gates
         'Fly in' if game.dragon.can_fly:
-            'Easily passing over the wall, the [game.dragon.kind] is in the heart of the city. Fortifications will not save them from a flying enemy.'
+            'Easily passing over the wall, the [game.dragon.kind] reaches the heart of the city. Fortifications will not save them from a flying enemy.'
             call lb_city_raze from _call_lb_city_raze
         'Get away':
             return
@@ -42,7 +42,7 @@ label lb_city_gates:
     return
 
 label lb_city_raze:
-    'The defenseless city is ready to learn the rage of the Mistress\'s offspring'
+    'The defenseless city is ready to feel the rage of the Mistress\'s offspring.'
     nvl clear
     menu:
         'Royal palace':
@@ -64,7 +64,7 @@ label lb_city_raze:
 
 label lb_city_walk:
     show expression 'img/bg/city/inside.jpg' as bg
-    'The mysterious stranger walks past the watching guards and enters the bustling city'
+    'The mysterious stranger walks past the watching guards and enters the bustling city.'
     nvl clear
 
     menu:
@@ -86,7 +86,7 @@ label lb_city_walk:
     return
 
 label lb_city_palace:
-    'A proud citadel on a hill in the city center. Here is the winter residence of the king. Inside are noble maidens and seductive aromas. Vigilant guards stand at the gate.'
+    'A proud citadel on a hill in the city center. The king\'s winter residence is here. From inside come the seductive aromas of noble maidens. Vigilant guards stand at the gate.'
     $ game.foe = Enemy('palace_guards', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear
@@ -110,7 +110,7 @@ label lb_city_palace_atk:
         'Defile a noble lady':
             $ game.dragon.drain_energy()
             $ description = game.girls_list.new_girl('princess')
-            '[game.dragon.fullname] preys upon noble maidens'
+            '[game.dragon.fullname] preys upon noble maidens.'
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             nvl clear
@@ -127,7 +127,7 @@ label lb_city_palace_atk:
                 trs = treasures.gen_treas(count, data.loot['palace'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
-            'With a bloodthirsty roar [game.dragon.fullname] sweeps through the corridors of the palace killing all in its path, and looting objects:' #translator: Don't know how to translate "пути и присваивая каждую понравившуся ему вещь:'"
+            'With a bloodthirsty roar [game.dragon.fullname] sweeps through the corridors of the palace killing all in his path, and looting everything he takes a fancy to:' 
             '[trs_descrptn]'
             $ game.lair.treasury.receive_treasures(trs)
             $ game.dragon.reputation.points += 5
@@ -138,7 +138,7 @@ label lb_city_palace_atk:
 
 label lb_city_market:
     show expression 'img/bg/city/market.jpg' as bg
-    'The market square is full of people. They buy and sell all sorts of unnecessary things like potatos and clothing. The foolish mortals have no idea that right here is their most terrifying nightmare. They are vulnerable to a surprise attack.'
+    'The market square is full of humans. They buy and sell all sorts of unnecessary things like potatos and clothing. The foolish mortals have no idea that their most terrifying nightmare is here. They are vulnerable to a surprise attack.'
     nvl clear
     menu:
         'Drop the disguise':
@@ -174,14 +174,14 @@ label lb_city_market_atk:
     return
 
 label lb_city_cathedral:
-    'A huge gothic cathedral, towering over the city. No other building here can match the heights of the cathedral bell tower and its spire.'
+    'A huge gothic cathedral, towering over the city. No other building can match the heights of the cathedral bell tower and its spire.'
     nvl clear
     menu:
         'Pillage the Cathedral':
-            'The mysterious stranger comes through the archway and in front of the congregation transforms into a monster.'
+            'The mysterious stranger comes through the archway and transforms into a monster in front of the congregation.'
             call lb_city_cathedral_atk from _call_lb_city_cathedral_atk_1
 
-        'Get away':
+        'Go back':
             call lb_city_walk from _call_lb_city_walk_4
     return
 
@@ -196,7 +196,7 @@ label lb_city_cathedral_atk:
         trs = treasures.gen_treas(count, data.loot['church'], alignment, min_cost, max_cost, obtained)
         trs_list = game.lair.treasury.treasures_description(trs)
         trs_descrptn = '\n'.join(trs_list)
-    'With demonic laughter [game.dragon.fullname] bursts into the sanctuary, killing all in its path, and taking loot:' #Translator: not sure about this
+    'With demonic laughter [game.dragon.fullname] bursts into the sanctuary, killing all in his path, and taking loot:'
     '[trs_descrptn]'
     $ game.lair.treasury.receive_treasures(trs)
     $ game.dragon.reputation.points += 5
@@ -241,7 +241,7 @@ label lb_city_jewler:
                 'Sell':
                     python:
                         if (item_index is None):
-                            description = u"All jewelery sold for %s?" % (
+                            description = u"All jewelery sold for %s" % (
                                 treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"farthings"))
                             game.lair.treasury.money += game.lair.treasury.all_jewelries
                             game.lair.treasury.jewelry = []
@@ -264,7 +264,7 @@ label lb_city_jewler:
             call lb_city_jewler from _call_lb_city_jewler_5
         'Drop the disguise':
             call lb_city_jew_atk from _call_lb_city_jew_atk_1
-        'Go to main street':
+        'Go to the main street':
             call lb_city_walk from _call_lb_city_walk_5
     return
 
@@ -273,7 +273,7 @@ label lb_city_jew_atk:
     $ game.dragon.drain_energy()
     $ game.foe = Enemy('city_guard', game_ref=game)
     call lb_fight from _call_lb_fight_1
-    'Not a living guard is left in the quarter. People flee from the dragon in a panic and try to save their valuables. [game.dragon.name] looks at the scene of destruction and chaos. A fat jeweler drags a heavy wooden box. A noble girl runs away squealing. A burning shop filled with precious bars and jewels is about to collapse.' 
+    'There is not a living guard left in the quarter. People flee from the dragon in a panic and try to save their valuables. [game.dragon.name] examines the scene of destruction and chaos. A fat jeweler drags a heavy wooden box. A noble girl runs away squealing. A burning shop filled with precious bars and jewels is about to collapse.' 
     $ game.dragon.reputation.points += 3
     '[game.dragon.reputation.gain_description]'
     menu:
@@ -296,7 +296,7 @@ label lb_city_jew_atk:
         'Rape the noble virgin':
             $ game.dragon.drain_energy()
             $ description = game.girls_list.new_girl('princess')
-            'The dragon catches the noble maiden'
+            'The dragon catches the noble maiden.'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
             nvl clear
@@ -314,7 +314,7 @@ label lb_city_jew_atk:
                 trs = treasures.gen_treas(count, data.loot['raw_material'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
-            'Acting quickly, valuables are snatched before they are buried under the rubble:'
+            'Acting quickly, the dragon snatches valuables before they are buried under the rubble:'
             '[trs_descrptn]'
             $ game.lair.treasury.receive_treasures(trs)
             $ game.dragon.reputation.points += 3

@@ -11,8 +11,8 @@ label lb_event_knight_receive_item(knight, item):
     scene
     show expression "img/scene/quest_knight.jpg" as bg
     nvl clear
-    "Knight performs his quest and receives [item.name]" #Translator:should this be "receives a"? I haven't tested in game
-    knight "Now the dragon has no escape from my vengeance!"
+    "Knight performs his quest and receives [item.name]"
+    knight "Now the dragon will have no escape from my vengeance!"
     return
 
 label lb_event_knight_challenge_start(knight):

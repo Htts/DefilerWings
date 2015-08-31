@@ -17,14 +17,14 @@ label lb_location_gremlin_main:
         
     menu:
         'Hire the servants' if 'servant' not in game.lair.upgrades and 'gremlin_servant' not in game.lair.upgrades:
-            "Gremlins will serve in the den, keeping an eye on the captives for just [servant_cost] f. per year."
+            "Gremlins will serve in the den, keeping an eye on the captives for just [servant_cost] farthings per year."
             menu:
                 "Promise to pay" if servant_cost <= game.lair.treasury.wealth:
                     $ game.lair.upgrades.add('gremlin_servant', deepcopy(data.lair_upgrades['gremlin_servant']))
                     "Gremlins heed the call of {s}treasure.{/s} They will take care of the captives, and won\'t sleep on the job."
-                "Go away":
+                "Go back":
                     call lb_location_gremlin_main from _call_lb_location_gremlin_main
-        'Instal lair traps' if (not game.lair.type.provide or 'mechanic_traps' not in game.lair.type.provide) and 'mechanic_traps' not in game.lair.upgrades:
+        'Install lair traps' if (not game.lair.type.provide or 'mechanic_traps' not in game.lair.type.provide) and 'mechanic_traps' not in game.lair.upgrades:
             menu:
                 "Cost of traps: [mechanic_traps_cost] f."
                 "Install traps" if mechanic_traps_cost <= game.lair.treasury.money:
