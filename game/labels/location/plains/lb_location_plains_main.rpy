@@ -594,7 +594,7 @@ label lb_village:
                     alignment = 'human'
                     min_cost = 100
                     max_cost = 500
-                    t_list = ['farting']
+                    t_list = ['farthing']
                     obtained = "Tribute from a village.."
                     trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                     trs_list = game.lair.treasury.treasures_description(trs)

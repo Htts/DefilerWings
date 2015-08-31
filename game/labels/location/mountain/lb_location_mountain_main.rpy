@@ -369,7 +369,7 @@ label lb_enc_mines_gem_low:
                 alignment = 'human'
                 min_cost = 1
                 max_cost = 1000000
-                t_list = ['jasper', 'turquoise', 'jade', 'malachite', 'corall', 'agate', 'amber', 'crystall', 'beryll', 'tigereye', 'granate', 'turmaline', 'aqua']
+                t_list = ['jasper', 'turquoise', 'jade', 'malachite', 'coral', 'agate', 'amber', 'crystal', 'beryll', 'tigereye', 'granite', 'tourmaline', 'aqua']
                 obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
@@ -387,7 +387,7 @@ label lb_enc_mines_gem_low:
                 alignment = 'human'
                 min_cost = 1
                 max_cost = 1000000
-                t_list = ['jasper', 'turquoise', 'jade', 'malachite', 'corall', 'agate', 'amber', 'crystall', 'beryll', 'tigereye', 'granate', 'turmaline', 'aqua']
+                t_list = ['jasper', 'turquoise', 'jade', 'malachite', 'coral', 'agate', 'amber', 'crystal', 'beryll', 'tigereye', 'granite', 'tourmaline', 'aqua']
                 obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
@@ -415,7 +415,7 @@ label lb_enc_mines_gem_high:
                 alignment = 'human'
                 min_cost = 1
                 max_cost = 1000000
-                t_list = ['elven_beryll', 'topaz', 'saphire', 'ruby', 'emerald', 'goodruby', 'goodemerald', 'star', 'diamond', 'black_diamond', 'rose_diamond']
+                t_list = ['elven_beryll', 'topaz', 'sapphire', 'ruby', 'emerald', 'goodruby', 'goodemerald', 'star', 'diamond', 'black_diamond', 'rose_diamond']
                 obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
@@ -433,7 +433,7 @@ label lb_enc_mines_gem_high:
                 alignment = 'human'
                 min_cost = 1
                 max_cost = 1000000
-                t_list = ['elven_beryll', 'topaz', 'saphire', 'ruby', 'emerald', 'goodruby', 'goodemerald', 'star', 'diamond', 'black_diamond', 'rose_diamond']
+                t_list = ['elven_beryll', 'topaz', 'sapphire', 'ruby', 'emerald', 'goodruby', 'goodemerald', 'star', 'diamond', 'black_diamond', 'rose_diamond']
                 obtained = "Simply gems."
                 trs = treasures.gen_treas(count, t_list, alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)

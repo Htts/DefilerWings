@@ -1,4 +1,19 @@
+#Translator: There is some very sick shit going on in this file. 
+#It seems like a system for making randomly generated treasures read properly in russian,
+#which has noun declension and gender. 
+#So if you randomly generate a treasure it might be a female "tiara" or a male "scepter" or something
+#And then if you randomly say that the tiara is a "polished" tiara you have to choose the female form of polished. 
+#And then if you use the noun in different sentences like "The tiara lies on the floor" or "The girl holds her tiara" you have to use different version of "tiara". 
+#The only part of this code that serves english is the part that differentiates between singular (it) and they (plural)
 
+#The plan:
+#Step 1: 
+#replace every "he" "she" with an "it" or "they" (for plural)
+#replace all the russian variations with a simple repeated english noun
+#Step 2:
+#By playing the game, see if we need to add some extra words. Like putting an "of" in front of every word where it says "prepositional".
+#Step 3: rip out all of the code that becomes unnecessary due to steps 1 and 2.  
+#step 4: may god have mercy on our souls
 
 # coding=utf-8
 
@@ -14,17 +29,17 @@ from data import achieve_target, get_description_by_count
 """Dictionary for gems. Keys- the names of the stones. Values- tuples of form (chance of, value of)"""
 gem_types = {
     "amber": (5, 3),
-    "crystall": (5, 5),
+    "crystal": (5, 5),
     "beryll": (4, 10),
     "tigereye": (4, 10),
-    "granate": (3, 20),
-    "turmaline": (3, 20),
+    "granite": (3, 20),
+    "tourmaline": (3, 20),
     "aqua": (3, 20),
     "pearl": (3, 10),
     "black_pearl": (3, 15),
     "elven_beryll": (2, 50),
     "topaz": (2, 50),
-    "saphire": (2, 50),
+    "sapphire": (2, 50),
     "ruby": (2, 50),
     "emerald": (2, 25),
     "goodruby": (1, 100),
@@ -41,7 +56,7 @@ material_types = {
     "turquoise": (5, 1),
     "jade": (5, 1),
     "malachite": (5, 1),
-    "corall": (4, 5),
+    "coral": (4, 5),
     "ivory": (4, 10),
     "agate": (3, 5),
     "shell": (3, 5),
@@ -53,40 +68,40 @@ material_types = {
 значения - словарь для различных падежей русского названия материала"""
 material_description_rus = {
     "jasper": {
-        'nominative': u'яшма',
-        'genitive': u'яшмы'
+        'nominative': u'jasper',
+        'genitive': u'jasper'
     },
     "turquoise": {
-        'nominative': u'бирюза',
-        'genitive': u'бирюзы'
+        'nominative': u'turquoise',
+        'genitive': u'turquoise'
     },
     "jade": {
-        'nominative': u'нефрит',
-        'genitive': u'нефрита'
+        'nominative': u'jade',
+        'genitive': u'jade'
     },
     "malachite": {
-        'nominative': u'малахит',
-        'genitive': u'малахита'
+        'nominative': u'malachite',
+        'genitive': u'malachite'
     },
-    "corall": {
-        'nominative': u'коралл',
-        'genitive': u'коралла'
+    "coral": {
+        'nominative': u'coral',
+        'genitive': u'coral'
     },
     "ivory": {
-        'nominative': u'слоновая кость',
-        'genitive': u'слоновой кости'
+        'nominative': u'ivory',
+        'genitive': u'ivory'
     },
     "agate": {
-        'nominative': u'агат',
-        'genitive': u'агата'
+        'nominative': u'agate',
+        'genitive': u'agate'
     },
     "shell": {
-        'nominative': u'перламутр',
-        'genitive': u'перламутра'
+        'nominative': u'shell',
+        'genitive': u'shell'
     },
     "horn": {
-        'nominative': u'драконий рог',
-        'genitive': u'драконьего рога'
+        'nominative': u'horn',
+        'genitive': u'horn'
     },
 }
 
@@ -96,17 +111,17 @@ material_description_rus = {
 material_size_description_rus = {
     'small': {
         'he': {
-            'nominative': u"мелкий ",
-            'ablative': u"мелким "
+            'nominative': u"small ",
+            'ablative': u"small "
         },
         'she': {
-            'nominative': u"мелкая ",
-            'ablative': u"мелкой "
+            'nominative': u"small ",
+            'ablative': u"small "
         },
         'they': {
-            'nominative': u"мелкие ",
-            'genitive': u"мелких ",
-            'ablative': u"мелкими "
+            'nominative': u"small ",
+            'genitive': u"small ",
+            'ablative': u"small "
         }
     },
     'common': {  # этот размер не отображается
@@ -126,32 +141,32 @@ material_size_description_rus = {
     },
     'large': {
         'he': {
-            'nominative': u"крупный ",
-            'ablative': u"крупным "
+            'nominative': u"large ",
+            'ablative': u"large "
         },
         'she': {
-            'nominative': u"крупная ",
-            'ablative': u"крупной "
+            'nominative': u"large ",
+            'ablative': u"large "
         },
         'they': {
-            'nominative': u"крупные ",
-            'genitive': u"крупных ",
-            'ablative': u"крупными "
+            'nominative': u"large ",
+            'genitive': u"large ",
+            'ablative': u"large "
         }
     },
     'exceptional': {
         'he': {
-            'nominative': u"огромный ",
-            'ablative': u"огромным "
+            'nominative': u"exceptional ",
+            'ablative': u"exceptional "
         },
         'she': {
-            'nominative': u"огромная ",
-            'ablative': u"огромной "
+            'nominative': u"exceptional ",
+            'ablative': u"exceptional "
         },
         'they': {
-            'nominative': u"огромные ",
-            'genitive': u"огромных ",
-            'ablative': u"огромными "
+            'nominative': u"exceptional ",
+            'genitive': u"exceptional ",
+            'ablative': u"exceptional "
         }
     }
 }
@@ -176,35 +191,35 @@ gem_cut_description_rus = {
     },
     'rough': {
         'he': {
-            'nominative': u'необработанный ',
+            'nominative': u'rough ',
             'ablative': u''  # 'ablative' не отображается, чтобы не портить описание вещи
         },
         'they': {
-            'nominative': u'необработанные ',
-            'genitive': u"необработанных ",
+            'nominative': u'rough ',
+            'genitive': u"rough ",
             'ablative': u''
         }
     },
     'polished': {
         'he': {
-            'nominative': u'полированный ',
-            'ablative': u'полированным '
+            'nominative': u'polished ',
+            'ablative': u'polished '
         },
         'they': {
-            'nominative': u'полированные ',
-            'genitive': u'полированных ',
-            'ablative': u'полированными '
+            'nominative': u'polished ',
+            'genitive': u'polished ',
+            'ablative': u'polished '
         }
     },
     'faceted': {
         'he': {
-            'nominative': u'ограненный ',
-            'ablative': u'ограненным '
+            'nominative': u'faceted ',
+            'ablative': u'faceted '
         },
         'they': {
-            'nominative': u'ограненные ',
-            'genitive': u'ограненных ',
-            'ablative': u'ограненными '
+            'nominative': u'faceted ',
+            'genitive': u'faceted ',
+            'ablative': u'faceted '
         }
     }
 }
@@ -215,232 +230,232 @@ gem_cut_description_rus = {
 gem_description_rus = {
     "amber": {
         'he': {
-            'nominative': u"янтарь",
-            'genitive': u"янтаря",
-            'ablative': u"янтарём"
+            'nominative': u"amber",
+            'genitive': u"amber",
+            'ablative': u"amber"
         },
         'they': {
-            'genitive': u"янтарей",
-            'ablative': u"янтарями"
+            'genitive': u"amber",
+            'ablative': u"amber"
         }
     },
-    "crystall": {
+    "crystal": {
         'he': {
-            'nominative': u'горный хрусталь',
-            'genitive': u"горных хрусталя",
-            'ablative': u'горным хрусталём'
+            'nominative': u'crystal',
+            'genitive': u"crystal",
+            'ablative': u'crystal'
         },
         'they': {
-            'genitive': u"горных хрусталей",
-            'ablative': u'горными хрусталями'
+            'genitive': u"crystal",
+            'ablative': u'crystal'
         }
     },
     "beryll": {
         'he': {
-            'nominative': u'берилл',
-            'genitive': u"берилла",
-            'ablative': u'бериллом'
+            'nominative': u'beryll',
+            'genitive': u"beryll",
+            'ablative': u'beryll'
         },
         'they': {
-            'genitive': u"бериллов",
-            'ablative': u'бериллами'
+            'genitive': u"beryll",
+            'ablative': u'beryll'
         }
     },
     "tigereye": {
         'he': {
-            'nominative': u'тигровый глаз',
-            'genitive': u"тигровых глаза",
-            'ablative': u'тигровым глазом'
+            'nominative': u'tigereye',
+            'genitive': u"tigereye",
+            'ablative': u'tigereye'
         },
         'they': {
-            'genitive': u"тигровых глазов",
-            'ablative': u'тигровыми глазами'
+            'genitive': u"tigereye",
+            'ablative': u'tigereye'
         }
     },
-    "granate": {
+    "granite": {
         'he': {
-            'nominative': u'гранат',
-            'genitive': u"граната",
-            'ablative': u'гранатом'
+            'nominative': u'granite',
+            'genitive': u"granite",
+            'ablative': u'granite'
         },
         'they': {
-            'genitive': u"гранатов",
-            'ablative': u'гранатами'
+            'genitive': u"granite",
+            'ablative': u'granite'
         }
     },
-    "turmaline": {
+    "tourmaline": {
         'he': {
-            'nominative': u'турмалин',
-            'genitive': u"турмалина",
-            'ablative': u'турмалином'
+            'nominative': u'tourmaline',
+            'genitive': u"tourmaline",
+            'ablative': u'tourmaline'
         },
         'they': {
-            'genitive': u"турмалинов",
-            'ablative': u'турмалинами'
+            'genitive': u"tourmaline",
+            'ablative': u'tourmaline'
         }
     },
     "aqua": {
         'he': {
-            'nominative': u'аквамарин',
-            'genitive': u"аквамарина",
-            'ablative': u'аквамарином'
+            'nominative': u'aqua',
+            'genitive': u"aqua",
+            'ablative': u'aqua'
         },
         'they': {
-            'genitive': u"аквамаринов",
-            'ablative': u'аквамаринами'
+            'genitive': u"aqua",
+            'ablative': u'aqua'
         }
     },
     "pearl": {
         'he': {
-            'nominative': u'жемчуг',
-            'genitive': u"жемчуга",
-            'ablative': u'жемчугом'
+            'nominative': u'pearl',
+            'genitive': u"pearl",
+            'ablative': u'pearl'
         },
         'she': {
-            'nominative': u'жемчужина',
-            'genitive': u"жемчужины",
-            'ablative': u'жемчужиной'
+            'nominative': u'pearl',
+            'genitive': u"pearl",
+            'ablative': u'pearl'
         },
         'they': {
-            'genitive': u"жемчужин",
-            'ablative': u'жемчугами'
+            'genitive': u"pearl",
+            'ablative': u'pearl'
         }
     },
     "black_pearl": {
         'he': {
-            'nominative': u'чёрный жемчуг',
-            'genitive': u'чёрных жемчуга',
-            'ablative': u'чёрным жемчугом'
+            'nominative': u'black pearl',
+            'genitive': u'black pearl',
+            'ablative': u'black pearl'
         },
         'she': {
-            'nominative': u'чёрная жемчужина',
-            'genitive': u'чёрных жемчужины',
-            'ablative': u'чёрной жемчужиной'
+            'nominative': u'black pearl',
+            'genitive': u'black pearl',
+            'ablative': u'black pearl'
         },
         'they': {
-            'genitive': u"чёрных жемчужин",
-            'ablative': u'чёрными жемчугами'
+            'genitive': u"black pearl",
+            'ablative': u'black pearl'
         }
     },
     "elven_beryll": {
         'he': {
-            'nominative': u'эльфийский берилл',
-            'genitive': u"эльфийских берилла",
-            'ablative': u'эльфийским бериллом'
+            'nominative': u'elven beryll',
+            'genitive': u"elven beryll",
+            'ablative': u'elven beryll'
         },
         'they': {
-            'genitive': u"эльфийских бериллов",
-            'ablative': u'эльфийскими бериллами'
+            'genitive': u"elven beryll",
+            'ablative': u'elven beryll'
         }
     },
     "topaz": {
         'he': {
-            'nominative': u'топаз',
-            'genitive': u"топаза",
-            'ablative': u'топазом'
+            'nominative': u'topaz',
+            'genitive': u"topaz",
+            'ablative': u'topaz'
         },
         'they': {
-            'genitive': u"топазов",
-            'ablative': u'топазами'
+            'genitive': u"topaz",
+            'ablative': u'topaz'
         }
     },
-    "saphire": {
+    "sapphire": {
         'he': {
-            'nominative': u'сапфир',
-            'genitive': u"сапфира",
-            'ablative': u'сапфиром'
+            'nominative': u'sapphire',
+            'genitive': u"sapphire",
+            'ablative': u'sapphire'
         },
         'they': {
-            'genitive': u"сапфиров",
-            'ablative': u'сапфирами'
+            'genitive': u"sapphire",
+            'ablative': u'sapphire'
         }
     },
     "ruby": {
         'he': {
-            'nominative': u'рубин',
-            'genitive': u"рубина",
-            'ablative': u'рубином'
+            'nominative': u'ruby',
+            'genitive': u"ruby",
+            'ablative': u'ruby'
         },
         'they': {
-            'genitive': u"рубинов",
-            'ablative': u'рубинами'
+            'genitive': u"ruby",
+            'ablative': u'ruby'
         }
     },
     "emerald": {
         'he': {
-            'nominative': u'изумруд',
-            'genitive': u"изумруда",
-            'ablative': u'изумрудом'
+            'nominative': u'emerald',
+            'genitive': u"emerald",
+            'ablative': u'emerald'
         },
         'they': {
-            'genitive': u"изумрудов",
-            'ablative': u'изумрудами'
+            'genitive': u"emerald",
+            'ablative': u'emerald'
         }
     },
     "goodruby": {
         'he': {
-            'nominative': u'яхонт',
-            'genitive': u"яхонта",
-            'ablative': u'яхонтом'
+            'nominative': u'fine ruby',
+            'genitive': u"fine ruby",
+            'ablative': u'fine ruby'
         },
         'they': {
-            'genitive': u"яхонтов",
-            'ablative': u'яхонтами'
+            'genitive': u"fine ruby",
+            'ablative': u'fine ruby'
         }
     },
     "goodemerald": {
         'he': {
-            'nominative': u'смарагд',
-            'genitive': u"смарагда",
-            'ablative': u'смарагдом'
+            'nominative': u'fine emerald',
+            'genitive': u"fine emerald",
+            'ablative': u'fine emerald'
         },
         'they': {
-            'genitive': u"смарагдов",
-            'ablative': u'смарагдами'
+            'genitive': u"fine emerald",
+            'ablative': u'fine emerald'
         }
     },
     "star": {
         'he': {
-            'nominative': u'звёздный сапфир',
-            'genitive': u"звёздных сапфира",
-            'ablative': u'звёздным сапфиром'
+            'nominative': u'star sapphire',
+            'genitive': u"star sapphire",
+            'ablative': u'star sapphire'
         },
         'they': {
-            'genitive': u"звёздных сапфиров",
-            'ablative': u'звёздными сапфирами'
+            'genitive': u"star sapphire",
+            'ablative': u'star sapphire'
         }
     },
     "diamond": {
         'he': {
-            'nominative': u'алмаз',
-            'genitive': u"алмаза",
-            'ablative': u'алмазом'
+            'nominative': u'diamond',
+            'genitive': u"diamond",
+            'ablative': u'diamond'
         },
         'they': {
-            'genitive': u"алмазов",
-            'ablative': u'алмазами'
+            'genitive': u"diamond",
+            'ablative': u'diamond'
         }
     },
     "black_diamond": {
         'he': {
-            'nominative': u'чёрный алмаз',
-            'genitive': u"чёрных алмаза",
-            'ablative': u'чёрным алмазом'
+            'nominative': u'black diamond',
+            'genitive': u"black diamond",
+            'ablative': u'black diamond'
         },
         'they': {
-            'genitive': u"чёрных алмазов",
-            'ablative': u'чёрными алмазами'
+            'genitive': u"black diamond",
+            'ablative': u'black diamond'
         }
     },
     "rose_diamond": {
         'he': {
-            'nominative': u'розовый алмаз',
-            'genitive': u"розовых алмаза",
-            'ablative': u'розовым алмазом'
+            'nominative': u'rose diamond',
+            'genitive': u"rose diamond",
+            'ablative': u'rose diamond'
         },
         'they': {
-            'genitive': u"розовых алмазов",
-            'ablative': u'розовыми алмазами'
+            'genitive': u"rose diamond",
+            'ablative': u'rose diamond'
         }
     },
 }
@@ -451,117 +466,115 @@ metal_types = {
     "mithril": 25,
     "adamantine": 30,
 }
-"""словарь для типов сокровищ, ключ - тип сокровища,
-значение - (базовая цена, пол, можно ли сделать из метала(булевое), можно ли
-            сделать из поделочных материалов(булевое), является ли изображением(булевое),
-            можно ли инкрустировать(булевое), возможность украшения(булевое))"""
+"""key- type of treasure,
+value - (base price, gender, can make out of metal(bool), can make out of semi-precious material (bool), can forge an image on(bool), can decorate (bool))"""
 treasure_types = {  # допилить типы сокровищ
     "dish": (5, "it", True, False, False, False, True),
-    "goblet": (4, "he", True, False, False, True, True),
-    "cup": (3, "she", False, True, False, False, True),
-    "casket": (5, "she", True, True, False, True, True),
-    "statue": (10, "she", True, True, True, False, False),
-    "tabernacle": (5, "she", True, True, False, True, True),
-    "icon": (10, "she", True, False, True, False, False),
-    "tome": (10, "he", True, False, False, True, True),
-    "comb": (2, "he", True, True, False, False, True),
-    "phallos": (3, "he", True, True, False, False, True),
+    "goblet": (4, "it", True, False, False, True, True),
+    "cup": (3, "it", False, True, False, False, True),
+    "casket": (5, "it", True, True, False, True, True),
+    "statue": (10, "it", True, True, True, False, False),
+    "tabernacle": (5, "it", True, True, False, True, True),
+    "icon": (10, "it", True, False, True, False, False),
+    "tome": (10, "it", True, False, False, True, True),
+    "comb": (2, "it", True, True, False, False, True),
+    "phallus": (3, "it", True, True, False, False, True),
     "mirror": (4, "it", True, True, False, True, True),
-    "band": (3, "he", True, False, False, False, False),
-    "diadem": (10, "she", True, False, False, True, False),
-    "tiara": (15, "she", True, False, False, True, False),
-    "earring": (1, "she", True, False, False, True, False),
+    "band": (3, "it", True, False, False, False, False),
+    "diadem": (10, "it", True, False, False, True, False),
+    "tiara": (15, "it", True, False, False, True, False),
+    "earring": (1, "it", True, False, False, True, False),
     "necklace": (5, "it", True, False, False, True, False),
-    "pendant": (3, "he", True, False, False, False, True),
+    "pendant": (3, "it", True, False, False, False, True),
     "ring": (2, "it", True, True, False, False, False),
-    "broch": (3, "she", True, False, False, True, False),
-    "gemring": (5, "he", True, True, False, True, False),
-    "seal": (3, "he", True, True, False, False, True),
-    "armbrace": (3, "he", True, True, False, True, True),
-    "legbrace": (4, "he", True, True, False, True, True),
-    "crown": (15, "she", True, False, False, True, False),
-    "scepter": (15, "he", True, False, False, True, False),
-    "chain": (3, "she", True, False, False, False, False),
-    "fibula": (2, "she", True, False, False, False, True),
+    "broch": (3, "it", True, False, False, True, False),
+    "gemring": (5, "it", True, True, False, True, False),
+    "seal": (3, "it", True, True, False, False, True),
+    "armbrace": (3, "it", True, True, False, True, True),
+    "legbrace": (4, "it", True, True, False, True, True),
+    "crown": (15, "it", True, False, False, True, False),
+    "scepter": (15, "it", True, False, False, True, False),
+    "chain": (3, "it", True, False, False, False, False),
+    "brooch": (2, "it", True, False, False, False, True),
 }
 """словарь для описания типов драгоценностей,
 ключ - тип драгоценностей,
 значение - словарь с русским названием драгоценности в разных падежах"""
 treasure_description_rus = {  # допилить типы сокровищ
-    "dish": {'nominative': u'блюдо', 'ablative': u'блюде'},
-    "goblet": {'nominative': u'кубок', 'ablative': u'кубке'},
-    "cup": {'nominative': u'чаша', 'ablative': u'чаше'},
-    "casket": {'nominative': u'шкатулка', 'ablative': u'шкатулке'},
-    "statue": {'nominative': u'статуэтка', 'ablative': u'статуэтке'},
-    "tabernacle": {'nominative': u'дарохранительница', 'ablative': u'дарохранительнице'},
-    "icon": {'nominative': u'икона', 'ablative': u'иконе'},
-    "tome": {'nominative': u'фолиант', 'ablative': u'фолианте'},
-    "comb": {'nominative': u'гребень', 'ablative': u'гребене'},
-    "phallos": {'nominative': u'фаллос', 'ablative': u'фаллосе'},
-    "mirror": {'nominative': u'зеркальце', 'ablative': u'зеркальце'},
-    "band": {'nominative': u'обруч', 'ablative': u'обруче'},
-    "diadem": {'nominative': u'диадема', 'ablative': u'диадеме'},
-    "tiara": {'nominative': u'тиара', 'ablative': u'тиаре'},
-    "earring": {'nominative': u'серьга', 'ablative': u'серьге'},
-    "necklace": {'nominative': u'ожерелье', 'ablative': u'ожерелье'},
-    "pendant": {'nominative': u'кулон', 'ablative': u'кулоне'},
-    "ring": {'nominative': u'колечко', 'ablative': u'колечке'},
-    "broch": {'nominative': u'брошь', 'ablative': u'броше'},
-    "gemring": {'nominative': u'перстень', 'ablative': u'перстне'},
-    "seal": {'nominative': u'перстень-печатка', 'ablative': u'перстне-печатке'},
-    "armbrace": {'nominative': u'браслет', 'ablative': u'браслете'},
-    "legbrace": {'nominative': u'ножной браслет', 'ablative': u'браслете'},
-    "crown": {'nominative': u'корона', 'ablative': u'короне'},
-    "scepter": {'nominative': u'скипетр', 'ablative': u'скипетре'},
-    "chain": {'nominative': u'цепь', 'ablative': u'цепи'},
-    "fibula": {'nominative': u'фибула', 'ablative': u'фибуле'},
+    "dish": {'nominative': u'dish', 'ablative': u'dish'},
+    "goblet": {'nominative': u'goblet', 'ablative': u'goblet'},
+    "cup": {'nominative': u'cup', 'ablative': u'cup'},
+    "casket": {'nominative': u'casket', 'ablative': u'casket'},
+    "statue": {'nominative': u'statue', 'ablative': u'statue'},
+    "tabernacle": {'nominative': u'tabernacle', 'ablative': u'tabernacle'},
+    "icon": {'nominative': u'icon', 'ablative': u'icon'},
+    "tome": {'nominative': u'tome', 'ablative': u'tome'},
+    "comb": {'nominative': u'comb', 'ablative': u'comb'},
+    "phallus": {'nominative': u'phallus', 'ablative': u'phallus'},
+    "mirror": {'nominative': u'mirror', 'ablative': u'mirror'},
+    "band": {'nominative': u'band', 'ablative': u'band'},
+    "diadem": {'nominative': u'diadem', 'ablative': u'diadem'},
+    "tiara": {'nominative': u'tiara', 'ablative': u'tiara'},
+    "earring": {'nominative': u'earring', 'ablative': u'earring'},
+    "necklace": {'nominative': u'necklace', 'ablative': u'necklace'},
+    "pendant": {'nominative': u'pendant', 'ablative': u'pendant'},
+    "ring": {'nominative': u'ring', 'ablative': u'ring'},
+    "broch": {'nominative': u'broch', 'ablative': u'broch'},
+    "gemring": {'nominative': u'gemring', 'ablative': u'gemring'},
+    "seal": {'nominative': u'seal', 'ablative': u'seal'},
+    "armbrace": {'nominative': u'armbrace', 'ablative': u'armbrace'},
+    "legbrace": {'nominative': u'legbrace', 'ablative': u'legbrace'},
+    "crown": {'nominative': u'crown', 'ablative': u'crown'},
+    "scepter": {'nominative': u'scepter', 'ablative': u'scepter'},
+    "chain": {'nominative': u'chain', 'ablative': u'chain'},
+    "brooch": {'nominative': u'brooch', 'ablative': u'brooch'},
 }
 """словарь для описания типов металлов, ключ - тип металла, значение - русское названия драгоценности в разных родах"""
 metal_description_rus = {
     'silver': {
-        'he': u"серебряный",
-        'she': u"серебряная",
-        'it': u"серебряное",
-        'they': u"серебряных",
-        'prepositional': u"серебряном",
-        'genitive' : u"серебра",
+        'he': u"silver",
+        'she': u"silver",
+        'it': u"silver",
+        'they': u"silver",
+        'prepositional': u"silver",
+        'genitive' : u"silver",
     },
     'gold': {
-        'he': u"золотой",
-        'she': u"золотая",
-        'it': u"золотое",
-        'they': u"золотых",
-        'prepositional': u"золотом",
-        'genitive' : u"золота",
+        'he': u"gold",
+        'she': u"gold",
+        'it': u"gold",
+        'they': u"gold",
+        'prepositional': u"gold",
+        'genitive' : u"gold",
     },
     'mithril': {
-        'he': u"мифрильный",
-        'she': u"мифрильная",
-        'it': u"мифрильное",
-        'they': u"мифрильных",
-        'prepositional': u"мифрильном",
-        'genitive' : u"мифрила",
+        'he': u"mithril",
+        'she': u"mithril",
+        'it': u"mithril",
+        'they': u"mithril",
+        'prepositional': u"mithril",
+        'genitive' : u"mithril",
     },
     'adamantine': {
-        'he': u"адамантовый",
-        'she': u"адамантовая",
-        'it': u"адамантовое",
-        'they': u"адамантовых",
-        'prepositional': u"адамантовом",
-        'genitive' : u"адаманта",
+        'he': u"adamantine",
+        'she': u"adamantine",
+        'it': u"adamantine",
+        'they': u"adamantine",
+        'prepositional': u"adamantine",
+        'genitive' : u"adamantine",
     },
 }
 """словарь для изображений, ключ - тип культуры, значение - кортеж из вариантов изображений"""
 image_types = { 
     'human': (
         'abstract_ornament', 'concentric_circles', 'round_dance', 'fire-breathing_dragon', 'flying_dragon',
-        'wingless_dragon', 'snake_with_a_crown', 'winged_serpent', 'kokatriks', 'basilisk',
+        'wingless_dragon', 'snake_with_a_crown', 'winged_serpent', 'cocatrice', 'basilisk',
         'dragon_entwine_naked_girl', 'battle_dragon_with_knight', 'dancing_girls', 'bathing_girl',
         'children_playing', 'rider_with_bow', 'horseman_with_spear_and_shield', 'dead_knight_with_sword'),
     'knight': (
         'proud_motto', 'battle_scene', 'coat_of_arms_with_rearing_unicorn', 'coat_of_arms_with_head_of_boar',
         'coat_of_arms_with_three_lilies', 'coat_of_arms_with_roaring_lion', 'coat_of_arms_with_proud_eagle',
-        'coat_of_arms_with_procession_kamelopardom', 'coat_of_arms_with_crossed_swords',
+        'coat_of_arms_with_procession_giraffe', 'coat_of_arms_with_crossed_swords',
         'coat_of_arms_with_shield_and_sword'),
     'cleric': (
         'saying_of_holy_scriptures', 'scene_of_holy_scriptures', 'saint_with_halo', 'angel_with_flaming_sword',
@@ -586,420 +599,420 @@ image_types = {
 значение - словарь из рода изображения и описания изображения в различных падежах"""
 image_description_rus = {
     'abstract_ornament': {
-        'gender': 'he',
-        'nominative': u'абстрактный орнамент',
-        'accusative': u'абстрактный орнамент',
+        'gender': 'it',
+        'nominative': u'abstract decoration',
+        'accusative': u'abstract decoration',
     },
     'concentric_circles': {
-        'gender': 'they',
-        'nominative': u'концентрические круги',
-        'accusative': u'концентрические круги',
+        'gender': 'it',
+        'nominative': u'concentric circles',
+        'accusative': u'concentric circles',
     },
     'round_dance': {
-        'gender': 'he',
-        'nominative': u'хоровод',
-        'accusative': u'хоровод',
+        'gender': 'it',
+        'nominative': u'ring dance',
+        'accusative': u'ring dance',
     },
     'fire-breathing_dragon': {
-        'gender': 'he',
-        'nominative': u'огнедышащий дракон',
-        'accusative': u'огнедышащего дракона',
+        'gender': 'it',
+        'nominative': u'fire-breathing dragon',
+        'accusative': u'fire-breathing dragon',
     },
     'flying_dragon': {
-        'gender': 'he',
-        'nominative': u'летящий дракон',
-        'accusative': u'летящего дракона',
+        'gender': 'it',
+        'nominative': u'flying dragon',
+        'accusative': u'flying dragon',
     },
     'wingless_dragon': {
-        'gender': 'he',
-        'nominative': u'бескрылый дракон',
-        'accusative': u'бескрылого дракона',
+        'gender': 'it',
+        'nominative': u'wingless dragon',
+        'accusative': u'wingless dragon',
     },
     'snake_with_a_crown': {
-        'gender': 'she',
-        'nominative': u'змея с короной на голове',
-        'accusative': u'змею с короной на голове',
+        'gender': 'it',
+        'nominative': u'crowned snake',
+        'accusative': u'crowned snake',
     },
     'winged_serpent': {
-        'gender': 'she',
-        'nominative': u'крылатая змея',
-        'accusative': u'крылатую змею',
+        'gender': 'it',
+        'nominative': u'winged serpent',
+        'accusative': u'winged serpent',
     },
-    'kokatriks': {
-        'gender': 'he',
-        'nominative': u'кокатрикс',
-        'accusative': u'кокатрикса',
+    'cocatrice': {
+        'gender': 'it',
+        'nominative': u'cocatrice',
+        'accusative': u'cocatrice',
     },
     'basilisk': {
-        'gender': 'he',
-        'nominative': u'василиск',
-        'accusative': u'василиска',
+        'gender': 'it',
+        'nominative': u'basilisk',
+        'accusative': u'basilisk',
     },
     'dragon_entwine_naked_girl': {
-        'gender': 'he',
-        'nominative': u'дракон, обвивающий обнаженную девушку',
-        'accusative': u'дракона, обвивающий обнаженную девушку',
+        'gender': 'it',
+        'nominative': u'dragon, entwined with a naked girl',
+        'accusative': u'dragon, entwined with a naked girl',
     },
     'battle_dragon_with_knight': {
-        'gender': 'he',
-        'nominative': u'сражение дракона с рыцарем',
-        'accusative': u'сражение дракона с рыцарем',
+        'gender': 'it',
+        'nominative': u'dragon battling a knight',
+        'accusative': u'dragon battling a knight',
     },
     'dancing_girls': {
-        'gender': 'they',
-        'nominative': u'танцующие девушки',
-        'accusative': u'танцующих девушек',
+        'gender': 'it',
+        'nominative': u'dancing girls',
+        'accusative': u'dancing girls',
     },
     'bathing_girl': {
-        'gender': 'she',
-        'nominative': u'купающаяся девушка',
-        'accusative': u'купающуюся девушку',
+        'gender': 'it',
+        'nominative': u'bathing girls',
+        'accusative': u'bathing girls',
     },
     'children_playing': {
-        'gender': 'they',
-        'nominative': u'играющие дети',
-        'accusative': u'играющих детей',
+        'gender': 'it',
+        'nominative': u'children playing',
+        'accusative': u'children playing',
     },
     'rider_with_bow': {
-        'gender': 'he',
-        'nominative': u'всадник с луком',
-        'accusative': u'всадника с луком',
+        'gender': 'it',
+        'nominative': u'rider with a bow',
+        'accusative': u'rider with a bow',
     },
     'horseman_with_spear_and_shield': {
-        'gender': 'he',
-        'nominative': u'всадник с копьём и щитом',
-        'accusative': u'всадника с копьём и щитом',
+        'gender': 'it',
+        'nominative': u'horseman with a shield and spear',
+        'accusative': u'horseman with a shield and spear',
     },
     'dead_knight_with_sword': {
-        'gender': 'he',
-        'nominative': u'мертвый рыцарь с мечом, покоящимся на груди',
-        'accusative': u'мертвого рыцаря с мечом, покоящимся на груди',
+        'gender': 'it',
+        'nominative': u'dead knight with a sword',
+        'accusative': u'dead knight with a sword',
     },
     'proud_motto': {
-        'gender': 'he',
-        'nominative': u'гордый девиз',
-        'accusative': u'гордый девиз',
+        'gender': 'it',
+        'nominative': u'proud motto',
+        'accusative': u'proud motto',
     },
     'battle_scene': {
-        'gender': 'she',
-        'nominative': u'сцена сражения',
-        'accusative': u'сцену сражения',
+        'gender': 'it',
+        'nominative': u'battle scene',
+        'accusative': u'battle scene',
     },
     'coat_of_arms_with_rearing_unicorn': {
-        'gender': 'he',
-        'nominative': u'герб с единорогом, вставшим на дыбы',
-        'accusative': u'герб с единорогом, вставшим на дыбы',
+        'gender': 'it',
+        'nominative': u'coat of arms with a rearing unicorn',
+        'accusative': u'coat of arms with a rearing unicorn',
     },
     'coat_of_arms_with_head_of_boar': {
-        'gender': 'he',
-        'nominative': u'герб с головой вепря',
-        'accusative': u'герб с головой вепря',
+        'gender': 'it',
+        'nominative': u'coat of arms with a boar\'s head',
+        'accusative': u'coat of arms with a boar\'s head',
     },
     'coat_of_arms_with_three_lilies': {
-        'gender': 'he',
-        'nominative': u'герб с тремя лилиями',
-        'accusative': u'герб с тремя лилиями',
+        'gender': 'it',
+        'nominative': u'coat of arms with three lilies',
+        'accusative': u'coat of arms with three lilies',
     },
     'coat_of_arms_with_roaring_lion': {
-        'gender': 'he',
-        'nominative': u'герб с рыкающим львом',
-        'accusative': u'герб с рыкающим львом',
+        'gender': 'it',
+        'nominative': u'coat of arms with a rearing lion',
+        'accusative': u'coat of arms with a rearing lion',
     },
     'coat_of_arms_with_proud_eagle': {
-        'gender': 'he',
-        'nominative': u'герб с гордым орлом',
-        'accusative': u'герб с гордым орлом',
+        'gender': 'it',
+        'nominative': u'coat of arms with a proud eagle',
+        'accusative': u'coat of arms with a proud eagle',
     },
-    'coat_of_arms_with_procession_kamelopardom': {
-        'gender': 'he',
-        'nominative': u'герб с шествующим камелопардом',
-        'accusative': u'герб с шествующим камелопардом',
+    'coat_of_arms_with_procession_giraffe': {
+        'gender': 'it',
+        'nominative': u'coat of arms with a processing giraffe',
+        'accusative': u'coat of arms with a processing giraffe',
     },
     'coat_of_arms_with_crossed_swords': {
-        'gender': 'he',
-        'nominative': u'герб со скрещёнными мечами',
-        'accusative': u'герб со скрещёнными мечами',
+        'gender': 'it',
+        'nominative': u'coat of arms with a crossed swords',
+        'accusative': u'coat of arms with a crossed swords',
     },
     'coat_of_arms_with_shield_and_sword': {
-        'gender': 'he',
-        'nominative': u'герб со щитом и мечом',
-        'accusative': u'герб со щитом и мечом',
+        'gender': 'it',
+        'nominative': u'coat of arms with a sword and shield',
+        'accusative': u'coat of arms with a sword and shield',
     },
     'saying_of_holy_scriptures': {
         'gender': 'it',
-        'nominative': u'изречение из святого писания',
-        'accusative': u'изречение из святого писания',
+        'nominative': u'verse from holy scripture',
+        'accusative': u'verse from holy scripture',
     },
     'scene_of_holy_scriptures': {
-        'gender': 'she',
-        'nominative': u'сцена из святого писания',
-        'accusative': u'сцену из святого писания',
+        'gender': 'it',
+        'nominative': u'scene from holy scripture',
+        'accusative': u'scene from holy scripture',
     },
     'saint_with_halo': {
-        'gender': 'he',
-        'nominative': u'святой с нимбом',
-        'accusative': u'святого с нимбом',
+        'gender': 'it',
+        'nominative': u'saint with a halo',
+        'accusative': u'saint with a halo',
     },
     'angel_with_flaming_sword': {
-        'gender': 'he',
-        'nominative': u'ангел с огненным мечом',
-        'accusative': u'ангела с огненным мечом',
+        'gender': 'it',
+        'nominative': u'angel with a flaming sword',
+        'accusative': u'angel with a flaming sword',
     },
     'angel_winning_serpent': {
-        'gender': 'he',
-        'nominative': u'ангел, побеждающий змия',
-        'accusative': u'ангела, побеждающего змия',
+        'gender': 'it',
+        'nominative': u'angel defeating a serpent',
+        'accusative': u'angel defeating a serpent',
     },
     'raising_hands_angel': {
-        'gender': 'he',
-        'nominative': u'воздевший руки ангел',
-        'accusative': u'воздевшего руки ангела',
+        'gender': 'it',
+        'nominative': u'angel raising his hands',
+        'accusative': u'angel raising his hands',
     },
     'six-winged_seraph': {
-        'gender': 'he',
-        'nominative': u'шестикрылый серафим',
-        'accusative': u'шестикрылого серафима',
+        'gender': 'it',
+        'nominative': u'six-winged seraph',
+        'accusative': u'six-winged seraph',
     },
     'holy_maiden_and_child': {
-        'gender': 'she',
-        'nominative': u'святая дева с младенцем',
-        'accusative': u'святую деву с младенцем',
+        'gender': 'it',
+        'nominative': u'holy maiden and child',
+        'accusative': u'holy maiden and child',
     },
     'holy_maiden_stretches_hands': {
-        'gender': 'she',
-        'nominative': u'святая дева, простирающая руки',
-        'accusative': u'святую деву, простирающую руки',
+        'gender': 'it',
+        'nominative': u'holy maiden with outstretched hands',
+        'accusative': u'holy maiden with outstretched hands',
     },
     'weeping_maiden': {
-        'gender': 'she',
-        'nominative': u'плачущая дева',
-        'accusative': u'плачущую деву',
+        'gender': 'it',
+        'nominative': u'weeping maiden',
+        'accusative': u'weeping maiden',
     },
     'floral_ornament': {
-        'gender': 'he',
-        'nominative': u'растительный орнамент',
-        'accusative': u'растительный орнамент',
+        'gender': 'it',
+        'nominative': u'floral pattern',
+        'accusative': u'floral pattern',
     },
     'elegant_runes': {
-        'gender': 'they',
-        'nominative': u'изящные руны',
-        'accusative': u'изящные руны',
+        'gender': 'it',
+        'nominative': u'elegant runes',
+        'accusative': u'elegant runes',
     },
     'running_deer': {
-        'gender': 'he',
-        'nominative': u'бегущий олень',
-        'accusative': u'бегущего оленя',
+        'gender': 'it',
+        'nominative': u'running deer',
+        'accusative': u'running deer',
     },
     'bear_with_raised_legs': {
-        'gender': 'he',
-        'nominative': u'медведь с поднятыми вверх лапами',
-        'accusative': u'медведя с поднятыми вверх лапами',
+        'gender': 'it',
+        'nominative': u'bear with raised legs',
+        'accusative': u'bear with raised legs',
     },
     'wolf_hunting': {
-        'gender': 'he',
-        'nominative': u'охотящийся волк',
-        'accusative': u'охотящегося волка',
+        'gender': 'it',
+        'nominative': u'wolf hunting',
+        'accusative': u'wolf hunting',
     },
     'sneaking_manul': {
-        'gender': 'he',
-        'nominative': u'крадущийся манул',
-        'accusative': u'крадущегося манула',
+        'gender': 'it',
+        'nominative': u'crouching cat',
+        'accusative': u'crouching cat',
     },
     'two_songbirds': {
-        'gender': 'they',
-        'nominative': u'две певчие птички',
-        'accusative': u'двух певчих птичек',
+        'gender': 'it',
+        'nominative': u'two songbirds',
+        'accusative': u'two songbirds',
     },
     'moon_and_stars': {
-        'gender': 'they',
-        'nominative': u'луна и звёзды',
-        'accusative': u'луну и звёзды',
+        'gender': 'it',
+        'nominative': u'moon and stars',
+        'accusative': u'moon and stars',
     },
     'branched_oak': {
-        'gender': 'he',
-        'nominative': u'ветвистый дуб',
-        'accusative': u'ветвистый дуб',
+        'gender': 'it',
+        'nominative': u'branched oak',
+        'accusative': u'branched oak',
     },
     'blooming_vine': {
-        'gender': 'she',
-        'nominative': u'цветущая лоза',
-        'accusative': u'цветущую лозу',
+        'gender': 'it',
+        'nominative': u'blooming vine',
+        'accusative': u'blooming vine',
     },
     'spreading_maple': {
-        'gender': 'he',
-        'nominative': u'раскидистый клён',
-        'accusative': u'раскидистый клён',
+        'gender': 'it',
+        'nominative': u'spreading maple',
+        'accusative': u'spreading maple',
     },
     'weeping_willow': {
-        'gender': 'she',
-        'nominative': u'плакучая ива',
-        'accusative': u'плакучую иву',
+        'gender': 'it',
+        'nominative': u'weeping willow',
+        'accusative': u'weeping willow',
     },
     'dancing_nymphs': {
-        'gender': 'they',
-        'nominative': u'танцующие нимфы',
-        'accusative': u'танцующих нимф',
+        'gender': 'it',
+        'nominative': u'dancing nymphs',
+        'accusative': u'dancing nymphs',
     },
     'nymph_with_cup': {
-        'gender': 'she',
-        'nominative': u'нимфа с кубком',
-        'accusative': u'нимфу с кубком',
+        'gender': 'it',
+        'nominative': u'nymph with a cup',
+        'accusative': u'nymph with a cup',
     },
     'nymph_collecting_fruits': {
-        'gender': 'she',
-        'nominative': u'нимфа, собирающая плоды',
-        'accusative': u'нимфу, собирающую плоды',
+        'gender': 'it',
+        'nominative': u'nymph collecting fruits',
+        'accusative': u'nymph collecting fruits',
     },
     'nymph_playing_harp': {
-        'gender': 'she',
-        'nominative': u'нимфа, играющая на арфе',
-        'accusative': u'нимфу, играющую на арфе',
+        'gender': 'it',
+        'nominative': u'nymph playing a harp',
+        'accusative': u'nymph playing a harp',
     },
     'winged_maiden': {
-        'gender': 'she',
-        'nominative': u'крылатая дева',
-        'accusative': u'крылатую деву',
+        'gender': 'it',
+        'nominative': u'winged maiden',
+        'accusative': u'winged maiden',
     },
     'satyr_playing_flute': {
-        'gender': 'he',
-        'nominative': u'сатир, играющий на дудочке',
-        'accusative': u'сатира, играющего на дудочке',
+        'gender': 'it',
+        'nominative': u'satyr playing a flute',
+        'accusative': u'satyr playing a flute',
     },
     'forest_guard_bow': {
-        'gender': 'he',
-        'nominative': u'лесной страж, стреляющий из лука',
-        'accusative': u'лесного стража, стреляющего из лука',
+        'gender': 'it',
+        'nominative': u'forest guard with a bow',
+        'accusative': u'forest guard with a bow',
     },
     'geometric_pattern': {
-        'gender': 'he',
-        'nominative': u'геометрический орнамент',
-        'accusative': u'геометрический орнамент',
+        'gender': 'it',
+        'nominative': u'geometric pattern',
+        'accusative': u'geometric pattern',
     },
     'runic_ligature': {
-        'gender': 'she',
-        'nominative': u'руническая вязь',
-        'accusative': u'руническую вязь',
+        'gender': 'it',
+        'nominative': u'runic patterns',
+        'accusative': u'runic patterns',
     },
     'hammer_and_crown': {
-        'gender': 'they',
-        'nominative': u'молот и корона',
-        'accusative': u'молот и корону',
+        'gender': 'it',
+        'nominative': u'hammer and crown',
+        'accusative': u'hammer and crown',
     },
     'dwarfs_holding_over_his_head_anvil': {
-        'gender': 'he',
-        'nominative': u'цверг, держащий над головой наковальню',
-        'accusative': u'цверга, держащего над головой наковальню',
+        'gender': 'it',
+        'nominative': u'dwarf holding an anvil over his head',
+        'accusative': u'dwarf holding an anvil over his head',
     },
     'armed_dwarfs_tramples_goblin': {
-        'gender': 'he',
-        'nominative': u'вооруженный цверг попирающий ногами гоблина',
-        'accusative': u'вооруженного цверга, попирающего ногами гоблина',
+        'gender': 'it',
+        'nominative': u'armed dwaves trampling a goblin',
+        'accusative': u'armed dwaves trampling a goblin',
     },
     'crossed_axes': {
-        'gender': 'they',
-        'nominative': u'скрещённые топоры',
-        'accusative': u'скрещённые топоры',
+        'gender': 'it',
+        'nominative': u'crossed axes',
+        'accusative': u'crossed axes',
     },
     'entwined_rings': {
-        'gender': 'they',
-        'nominative': u'переплетённые кольца',
-        'accusative': u'переплетённые кольца',
+        'gender': 'it',
+        'nominative': u'entwined rings',
+        'accusative': u'entwined rings',
     },
     'helmet_with_horns': {
-        'gender': 'he',
-        'nominative': u'шлем с рогами',
-        'accusative': u'шлем с рогами',
+        'gender': 'it',
+        'nominative': u'horned helmet',
+        'accusative': u'horned helmet',
     },
     'krotocherv': {
-        'gender': 'he',
-        'nominative': u'кроточервь',
-        'accusative': u'кроточервя',
+        'gender': 'it',
+        'nominative': u'moleworm',
+        'accusative': u'moleworm',
     },
     'dwarfs': {
-        'gender': 'they',
-        'nominative': u'цверги. Цверги работают.',
-        'accusative': u'цвергов. Цверги работают.',
+        'gender': 'it',
+        'nominative': u'dwarves. The dwarves are working.',
+        'accusative': u'dwarves. The dwarves are working.',
     },
     'urist_makdvarf': {
-        'gender': 'he',
-        'nominative': u'Урист МакДварф. Урист МакДварф ест мастерски сделанный ячий сыр. '
-                      u'Изображение посвящено поеданию мастерски сделанного ячьего сыра цвергом Уристом МакДварфом '
-                      u'ранней весной 1076 года.',
-        'accusative': u'Уриста МакДварфа. Урист МакДварф ест мастерски сделанный ячий сыр. '
-                      u'Изображение посвящено поеданию мастерски сделанного ячьего сыра цвергом '
-                      u'Уристом МакДварфом ранней весной 1076 года.',
+        'gender': 'it',
+        'nominative': u'Urist McDwarf. Urist McDwarf is eating a masterwork yak cheese. '
+                      u'The artwork relates to the eating of yak cheese by the dwarf Urist McDwarf '
+                      u'in the early spring of 1076.',
+        'accusative': u'Urist McDwarf. Urist McDwarf is eating a masterwork yak cheese. '
+                      u'The artwork relates to the eating of yak cheese by the dwarf Urist McDwarf '
+                      u'in the early spring of 1076.',
     },
     'dragon_smaug': {
-        'gender': 'they',
-        'nominative': u'Дракон Смауг и цверг Торин. Торин закрывается руками. Смауг стоит в угрожающей позе. '
-                      u'Изображение посвящено убийству короля-под-горой в Эреборе поздним летом 2770 года.',
-        'accusative': u'Дракона Смауга и цверга Торина. Торин закрывается руками. Смауг стоит в угрожающей позе. '
-                      u'Изображение посвящено убийству короля-под-горой в Эреборе поздним летом 2770 года.',
+        'gender': 'it',
+        'nominative': u'the dragon Smaug and the dwarf Thorin. Thorin clasps his hands. Smaug is in a threatening posture.'
+                      u'This artwork relates to the murder of the King Under the Mountain in Erebor in the late summer of 2770.',
+        'accusative': u'the dragon Smaug and the dwarf Thorin. Thorin clasps his hands. Smaug is in a threatening posture.'
+                      u'This artwork relates to the murder of the King Under the Mountain in Erebor in the late summer of 2770.',
     },
     'wavy_pattern': {
-        'gender': 'he',
-        'nominative': u'волнистый орнамент',
-        'accusative': u'волнистый орнамент',
+        'gender': 'it',
+        'nominative': u'wavy pattern',
+        'accusative': u'wavy pattern',
     },
     'frolicking_fish': {
-        'gender': 'they',
-        'nominative': u'резвящиеся рыбки',
-        'accusative': u'резвящихся рыбок',
+        'gender': 'it',
+        'nominative': u'frolicking fish',
+        'accusative': u'frolicking fish',
     },
     'seahorse': {
-        'gender': 'he',
-        'nominative': u'морской конёк',
-        'accusative': u'морского конька',
+        'gender': 'it',
+        'nominative': u'seahorse',
+        'accusative': u'seahorse',
     },
     'newt_lifting_trident': {
-        'gender': 'he',
-        'nominative': u'тритон, поднимающий трезубец',
-        'accusative': u'тритона, поднимающего трезубец',
+        'gender': 'it',
+        'nominative': u'newt lifting a trident',
+        'accusative': u'newt lifting a trident',
     },
     'triton_and_siren_holding_hands': {
-        'gender': 'they',
-        'nominative': u'тритон и сирена, держащиеся за руки',
-        'accusative': u'тритона и сирену, держащихся за руки',
+        'gender': 'it',
+        'nominative': u'triton and siren holding hands',
+        'accusative': u'triton and siren holding hands',
     },
     'mermaid_brushing_hair': {
-        'gender': 'she',
-        'nominative': u'русалка, расчёсывающая волосы',
-        'accusative': u'русалку, расчёсывающую волосы',
+        'gender': 'it',
+        'nominative': u'mermaid brushing her hair',
+        'accusative': u'mermaid brushing her hair',
     },
     'playing_mermaid': {
-        'gender': 'they',
-        'nominative': u'играющие русалки',
-        'accusative': u'играющих русалок',
+        'gender': 'it',
+        'nominative': u'playing mermaid',
+        'accusative': u'playing mermaid',
     },
     'mermaid_playing_with_pearl': {
-        'gender': 'she',
-        'nominative': u'русалка, играющая с жемчужиной',
-        'accusative': u'русалку, играющую с жемчужиной',
+        'gender': 'it',
+        'nominative': u'mermaid playing with a pearl',
+        'accusative': u'mermaid playing with a pearl',
     },
     'awesome_sea_serpent': {
-        'gender': 'he',
-        'nominative': u'устрашающий морской змей',
-        'accusative': u'устрашающего морского змея',
+        'gender': 'it',
+        'nominative': u'mighty sea serpent',
+        'accusative': u'mighty sea serpent',
     },
     'flying_seagull': {
-        'gender': 'they',
-        'nominative': u'летящие чайки',
-        'accusative': u'летящих чаек',
+        'gender': 'it',
+        'nominative': u'flying seagull',
+        'accusative': u'flying seagull',
     },
     'wriggling_octopus': {
-        'gender': 'he',
-        'nominative': u'извивающийся осьминог',
-        'accusative': u'извивающегося осьминога',
+        'gender': 'it',
+        'nominative': u'wriggling octopus',
+        'accusative': u'wriggling octopus',
     },
     'kraken_drowning_sea_vessel': {
-        'gender': 'he',
-        'nominative': u'кракен, топящий морское судно',
-        'accusative': u'кракена, топящего морское судно',
+        'gender': 'it',
+        'nominative': u'kraken drowning a sea vessel',
+        'accusative': u'kraken drowning a sea vessel',
     },
     'sailing_ship': {
-        'gender': 'he',
-        'nominative': u'плывущий по волнам корабль',
-        'accusative': u'плывущий по волнам корабль',
+        'gender': 'it',
+        'nominative': u'sailing ship and waves',
+        'accusative': u'sailing ship and waves',
     },
 }
 """словарь для описания качества драгоценности,
@@ -1007,9 +1020,9 @@ image_description_rus = {
  значение - словарь с русским названием качества в разных родах"""
 quality_description_rus = { 
     'rough': {
-        'he': u"грубый ",
-        'she': u"грубая ",
-        'it': u"грубое ",
+        'he': u"rough ",
+        'she': u"rough ",
+        'it': u"rough ",
     },
     'common': {  # у обычного описание опускается
         'he': u"",
@@ -1017,90 +1030,90 @@ quality_description_rus = {
         'it': u"",
     },
     'skillfully': {
-        'he': u"искусно сделанный ",
-        'she': u"искусно сделанная ",
-        'it': u"искусно сделанное ",
+        'he': u"skillfully made ",
+        'she': u"skillfully made ",
+        'it': u"skillfully made ",
     },
     'mastery': {
-        'he': u"мастерски изготовленный ",
-        'she': u"мастерски изготовленная ",
-        'it': u"мастерски изготовленное ",
+        'he': u"masterfully made ",
+        'she': u"masterfully made ",
+        'it': u"masterfully made ",
     },
 }
 """словарь для описания украшения, ключ - тип украшения, значение - словарь с русским словом в разных родах"""
 decoration_description_rus = {
     'decoration': {
-        'he': u"украшенный",
-        'she': u"украшенная",
-        'it': u"украшенное",
+        'he': u"decorated",
+        'she': u"decorated",
+        'it': u"decorated",
     },
     'spangled': {
-        'he': u"усыпанный",
-        'she': u"усыпанная",
-        'it': u"усыпанное",
+        'he': u"spangled",
+        'she': u"spangled",
+        'it': u"spangled",
     },
     'inlaid': {
-        'he': u"инкрустированный",
-        'she': u"инкрустированная",
-        'it': u"инкрустированное",
+        'he': u"inlaid",
+        'she': u"inlaid",
+        'it': u"inlaid",
     },
     'image': {
-        'he': u"изображен",
-        'she': u"изображена",
-        'it': u"изображено",
-        'they': u"изображены",
+        'he': u"depicting",
+        'she': u"depicting",
+        'it': u"depicting",
+        'they': u"depicting",
     },
 }
 """словарь для описания типа украшения на русском"""
 decorate_types_description_rus = {
-    'incuse': u"чеканкой",
-    'engrave': u"гравировкой",
-    'etching': u"травлением",
-    'carving': u"резьбой"
+    'incuse': u"incuse",
+    'engrave': u"engraving",
+    'etching': u"etching",
+    'carving': u"carving"
 }
 """словарь для вывода описаний массы сокровищ на русском"""
 treasures_mass_description_rus = {
     'coin': {
-        0: u"Монеты",
-        100: u"Кучка монет",
-        1000: u"Куча монет",
-        10000: u"Гора монет",
-        100000: u"Горы монет",
+        0: u"coins",
+        100: u"handful of coins",
+        1000: u"pile of coins",
+        10000: u"mountain of coins",
+        100000: u"mountains of coins",
     },
     'material': {
-        0: u"Материалы",
-        100: u"Кучка материалов",
-        1000: u"Куча материалов",
-        10000: u"Гора материалов",
-        100000: u"Горы материалов",
+        0: u"materials",
+        100: u"handful of materials",
+        1000: u"pile of materials",
+        10000: u"mountain of materials",
+        100000: u"mountains of materials",
     },
     'gem': {
-        0: u"Драгоценные камни",
-        100: u"Кучка драгоценных камней",
-        1000: u"Куча драгоценных камней",
-        10000: u"Гора драгоценных камней",
-        100000: u"Горы драгоценных камней",
+        0: u"gemstones",
+        100: u"handful of gems",
+        1000: u"pile of gems",
+        10000: u"mountain of gems",
+        100000: u"mountains of gems",
     },
     'jewelry': {
-        0: u"Безделушки",
-        100: u"Кучка безделушек",
-        1000: u"Куча безделушек",
-        10000: u"Гора безделушек",
-        100000: u"Горы безделушек",
+        0: u"trinkets",
+        100: u"handful of trinkets",
+        1000: u"pile of trinkets",
+        10000: u"mountain of trinkets",
+        100000: u"mountains of trinkets",
     },
     'wealth': {
-        0: u"Сокровищница практически пуста. ",
-        100: u"В сокровищнице жалкие гроши, которые добропорядочному дракону иметь стыдно. ",
-        1000: u"В сокровищнице смотреть не на что. ",
-        10000: u"В сокровищнице вполне достойная куча сокровищ, уже не стыдно её кому-нибудь показать. ",
-        100000: u"Собрать такую гору сокровищ удаётся только лучшим драконам. Есть повод для гордости. ",
-        1000000: u"Горы сокровищ - гордость самого богатого дракона в мире. ",
+        0: u"The treasury is virtually empty. ",
+        100: u"In the treasury is a pittance that any respectable dragon would be ashamed of. ",
+        1000: u"In the treasure there is not much to look at. ",
+        10000: u"In the treasury is quite a decent pile of treasure, no longer something to be ashamed of. ",
+        100000: u"There is reason to be proud of the treasury. Only the best dragons manage to collect such a mountain of wealth.",
+        1000000: u"Mountains of treasure - the pride of the richest dragon in the world. ",
     },
 }
 
 number_conjugation_end = {
-    1: {'nominative': (u"", u"а", u"ов")},
-    2: {'nominative': (u"ок", u"ка", u"ков")},
+    1: {'nominative': (u"", u"", u"")},
+    2: {'nominative': (u"", u"", u"")},
 }
 
 
@@ -1133,7 +1146,7 @@ def weighted_select(d):
 
 class Ingot(object):  # класс для генерации слитков
     weights = (1, 4, 8, 16)
-    weights_description_rus = {1: u"крохотный", 4: u"небольшой", 8: u"полновесный", 16: u"массивный"}
+    weights_description_rus = {1: u"tiny", 4: u"small", 8: u"heavy", 16: u"massive"}
 
     def __init__(self, metal_type):
         self.metal_type = metal_type
@@ -1150,11 +1163,11 @@ class Ingot(object):  # класс для генерации слитков
     def description(self, language='rus'):
         if language == 'rus':
             if self.weight in self.weights:
-                return u"%s %s слиток" % (
+                return u"%s %s ingot" % (
                     self.weights_description_rus[self.weight], metal_description_rus[self.metal_type]['he'])
             else:
-                return u"Несколько %s слитков общим весом %s" % (
-                    metal_description_rus[self.metal_type]['they'], number_conjugation_rus(self.weight, u"фунт"))
+                return u"Gross weight of the %s ingots %s" % (
+                    metal_description_rus[self.metal_type]['they'], number_conjugation_rus(self.weight, u"pounds"))
         else:
             return self.__repr__()
 
@@ -1164,16 +1177,16 @@ class Ingot(object):  # класс для генерации слитков
         Функция для вывода описания слитков металла по типу металла и его количеству
         """
         if metal_weight in Ingot.weights:
-            return u"%s %s слиток" % (
+            return u"%s %s ingot" % (
                 Ingot.weights_description_rus[metal_weight], metal_description_rus[metal_type]['he'])
         else:
-            return u"несколько %s слитков общим весом %s" % (
+            return u"Gross weight of the %s bars %s" % (
                 metal_description_rus[metal_type]['they'], number_conjugation_rus(metal_weight, u"фунт"))
 
 
 class Coin(object):
-    coin_types = {"farting": (1, 1), "taller": (1, 10), "dublon": (1, 100)}
-    coin_description_rus = {"farting": u"фартинг", "taller": u"таллер", "dublon": u"дублон"}
+    coin_types = {"farthing": (1, 1), "taller": (1, 10), "dubloon": (1, 100)}
+    coin_description_rus = {"farthing": u"farthing", "taller": u"taller", "dubloon": u"dubloon"}
     """
     Монеты.
     """
@@ -1256,7 +1269,7 @@ class Gem(object):  # класс для генерации драг.камней
         else:
             return
 
-    def description(self, custom=False, case='nominative', gender='he', language='rus'):
+    def description(self, custom=False, case='nominative', gender='it', language='rus'):
         """
         Создает описание для драгоценного камня
         :custom: - если False - добавляет в описание "горсть"/"несколько" для мелких/обычных камней и
@@ -1269,16 +1282,13 @@ class Gem(object):  # класс для генерации драг.камней
                 case = 'genitive'
                 gender = 'they'
                 if self.size == 'small':
-                    return u"Горсть мелких %s%s" % (
+                    return u"a handful of small %s%s" % (
                         gem_cut_description_rus[self.cut][gender][case], gem_description_rus[self.g_type][gender][case])
                 else:
-                    return u"Несколько %s%s" % (
+                    return u"several %s%s" % (
                         gem_cut_description_rus[self.cut][gender][case], gem_description_rus[self.g_type][gender][case])
             else:
-                if self.g_type == 'pearl' or self.g_type == 'black_pearl':
-                    gender = 'she'
-                elif gender != 'they':
-                    gender = 'he'
+                gender = 'it'
                 return u"%s%s%s" % (
                     material_size_description_rus[self.size][gender][case],
                     gem_cut_description_rus[self.cut][gender][case],
@@ -1300,10 +1310,7 @@ class Gem(object):  # класс для генерации драг.камней
                 gem_count *= 5
         conjugation_type = number_conjugation_type(gem_count)  # определяем тип сопряжения
         # определяем род, некрасивый вариант - лучше использовать словарь:
-        if gem_param[0] == 'pearl' or gem_param[0] == 'black_pearl':
-            gender = 'she'
-        else:
-            gender = 'he'
+        gender = 'it'
         # выводим результат для каждого типа сопряжения
         # единственное число - именительный падеж, род копируется
         if conjugation_type == 0:
@@ -1401,7 +1408,7 @@ class Material(object):  # класс для генерации материал
 
     def description(self, language='rus'):
         if language == 'rus':
-            return u"%sкусок %s" % (material_size_description_rus[self.size]['he']['nominative'],
+            return u"%piece %s" % (material_size_description_rus[self.size]['it']['nominative'],
                                     material_description_rus[self.m_type]['genitive'])
         else:
             return self.__repr__()
@@ -1416,18 +1423,18 @@ class Material(object):  # класс для генерации материал
         # выводим результат для каждого типа сопряжения
         if conjugation_type == 0:  # единственное число - именительный падеж, род копируется
             if material_count != 1:  # если материал один - не ставим число
-                return u"%s %sкусок %s" % (
+                return u"%s %piece %s" % (
                     material_count, material_size_description_rus[material_param[1]]['he']['nominative'],
                     material_description_rus[material_param[0]]['genitive'])
             else:
-                return u"%sкусок %s" % (material_size_description_rus[material_param[1]]['he']['nominative'],
+                return u"%piece %s" % (material_size_description_rus[material_param[1]]['he']['nominative'],
                                         material_description_rus[material_param[0]]['genitive'])
         elif conjugation_type == 1:
-            return u"%s %sкуска %s" % (
+            return u"%s %piece %s" % (
                 material_count, material_size_description_rus[material_param[1]]['they']['genitive'],
                 material_description_rus[material_param[0]]['genitive'])
         elif conjugation_type == 2:
-            return u"%s %sкусков %s" % (
+            return u"%s %piece %s" % (
                 material_count, material_size_description_rus[material_param[1]]['they']['genitive'],
                 material_description_rus[material_param[0]]['genitive'])
 
@@ -1645,7 +1652,7 @@ class Treasure(object):  # класс для сокровищ
             # совмещаем мастерство исполнения, тип и материал, из которого изготовлено
             if self.material in metal_types.keys():
                 if self.treasure_type == 'icon' or self.treasure_type == 'tome':
-                    desc_str = u"%s%s в %s окладе" % (
+                    desc_str = u"%s%s %s of" % (
                         quality_str, treasure_str, metal_description_rus[self.material]['prepositional'])
                 else:
                     desc_str = u"%s%s %s" % (
@@ -1655,7 +1662,7 @@ class Treasure(object):  # класс для сокровищ
                     quality_str, treasure_str, material_description_rus[self.material]['genitive'])
 
             if self.image:
-                desc_str += u", изображающая %s" % image_description_rus[self.decoration_image]['accusative']  
+                desc_str += u", showing %s" % image_description_rus[self.decoration_image]['accusative']  
                 # только изображение
             else:
                 # добавляем различные украшения
@@ -1716,7 +1723,7 @@ def gen_treas(count, t_list, alignment, min_cost, max_cost, obtained):
             t.obtained = obtained
             treasures_list.append(t)
         else:
-            raise Exception("Таких сокровищ не бывает")
+            raise Exception("No treasure")
         if not min_cost < treasures_list[-1].cost < max_cost:
             treasures_list.pop()
             count += 1
@@ -1726,9 +1733,9 @@ def gen_treas(count, t_list, alignment, min_cost, max_cost, obtained):
 
 class Treasury(store.object):
     def __init__(self):
-        self.farting = 0  # медная монетка
+        self.farthing = 0  # медная монетка
         self.taller = 0  # серебряная монетка
-        self.dublon = 0  # золотая монетка
+        self.dubloon = 0  # золотая монетка
         # списки строк
         self.materials = {}  # словарь с количеством материала
         self.metals = {}  # словарь с количеством металла
@@ -1740,7 +1747,7 @@ class Treasury(store.object):
 
     @property
     def money(self):
-        return self.farting + 10 * self.taller + 100 * self.dublon
+        return self.farthing + 10 * self.taller + 100 * self.dubloon
 
     @money.setter
     def money(self, value):
@@ -1750,36 +1757,36 @@ class Treasury(store.object):
         if money_diff < 0:
             # разница отрицательна или ноль - производим вычитание
             money_diff = -money_diff  # для удобства получаем число, которое необходимо вычесть
-            if self.farting < money_diff % 10:
+            if self.farthing < money_diff % 10:
                 # медных монет недостаточно для выплаты, меняем серебряную
                 self.taller -= 1
-                self.farting += 10
-            self.farting -= money_diff % 10
+                self.farthing += 10
+            self.farthing -= money_diff % 10
             money_diff //= 10
             if self.taller < money_diff % 10:
-                if (self.farting // 10 + self.taller) < money_diff % 10:
+                if (self.farthing // 10 + self.taller) < money_diff % 10:
                     # серебряных монет даже с учетом медных недостаточно для выплаты, меняем золотую
-                    self.dublon -= 1
+                    self.dubloon -= 1
                     self.taller += 10
                 else:
                     # серебряных монет с учетом медных достаточно для выплаты, меняем по максимуму медные на серебряные
-                    self.taller += self.farting // 10
-                    self.farting %= 10
+                    self.taller += self.farthing // 10
+                    self.farthing %= 10
             self.taller -= money_diff % 10
             money_diff //= 10
-            if self.dublon < money_diff % 10:
+            if self.dubloon < money_diff % 10:
                 # золотых монет недостаточно для выплаты
-                self.taller += self.farting // 10  # меняем по максимуму медные на серебряные
-                self.farting %= 10
-                self.dublon += self.taller // 10  # меняем по максимуму серебряные на золотые
+                self.taller += self.farthing // 10  # меняем по максимуму медные на серебряные
+                self.farthing %= 10
+                self.dubloon += self.taller // 10  # меняем по максимуму серебряные на золотые
                 self.taller %= 10
-            self.dublon -= money_diff
+            self.dubloon -= money_diff
         else:
             # разница положительна - производим добавление монет по разрядам
-            self.dublon += money_diff // 100
+            self.dubloon += money_diff // 100
             money_diff %= 100
             self.taller += money_diff // 10
-            self.farting += money_diff % 10
+            self.farthing += money_diff % 10
 
     @property
     def wealth(self):
@@ -1809,12 +1816,12 @@ class Treasury(store.object):
             achieve_target(treas.cost, "treasure")#Событие для ачивок
             if isinstance(treas, Coin):
                 # сохраняется число медных, серебряных и золотых монет в соответствующих переменных
-                if treas.name == 'farting':
-                    self.farting += treas.amount
+                if treas.name == 'farthing':
+                    self.farthing += treas.amount
                 elif treas.name == 'taller':
                     self.taller += treas.amount
                 else:
-                    self.dublon += treas.amount
+                    self.dubloon += treas.amount
             elif isinstance(treas, Ingot):
                 # сохраняется в словаре metals, где ключ - название металла, а значение - его вес в фунтах
                 if treas.metal_type in self.metals:
@@ -1914,7 +1921,7 @@ class Treasury(store.object):
             если такого металла в сокровищнице нет
         """
         if ingot_type in self.metals and self.metals[ingot_type] > 0:  # проверяем есть ли такой металл в сокровищнице
-            ingot = Ingot(ingot_type)  # создаем слиток
+            ingot = Ingot(ingot_type)  # создаем ingot
             # делаем вес слитка равным указанному весу или максимуму в сокровищнице:
             if weight < self.metals[ingot_type]:
                 ingot.weight = weight
@@ -1966,18 +1973,18 @@ class Treasury(store.object):
         :return: Возвращает тип Coin с указанным числом монет или максимально возможным, либо None,
             если таких монет в сокровищнице нет
         """
-        if coin_name == 'farting' and self.farting > 0:
-            if coin_count > self.farting:
-                coin_count = self.farting
-            self.farting -= coin_count
+        if coin_name == 'farthing' and self.farthing > 0:
+            if coin_count > self.farthing:
+                coin_count = self.farthing
+            self.farthing -= coin_count
         elif coin_name == 'taller' and self.taller > 0:
             if coin_count > self.taller:
                 coin_count = self.taller
             self.taller -= coin_count
-        elif coin_name == 'dublon' and self.dublon > 0:
-            if coin_count > self.dublon:
-                coin_count = self.dublon
-            self.dublon -= coin_count
+        elif coin_name == 'dubloon' and self.dubloon > 0:
+            if coin_count > self.dubloon:
+                coin_count = self.dubloon
+            self.dubloon -= coin_count
         else:
             return None
         return Coin(coin_name, coin_count)
@@ -2067,7 +2074,7 @@ class Treasury(store.object):
         """
         :return: строка с описанием количества материалов в сокровищнице
         """
-        material_str = u"В сокровищнице находится:\n"
+        material_str = u"In the treasury is:\n"
         metal_list = sorted(self.metals.keys())
         for metal_name in metal_list:
             metal_weight = self.metals[metal_name]
@@ -2129,12 +2136,12 @@ class Treasury(store.object):
         """
         if len(self.jewelry):
             most_expensive_i = self.most_expensive_jewelry_index
-            return u"%s.\nСтоимость украшения: %s.\n%s" % (
+            return u"%s.\nValue of ornament: %s.\n%s" % (
                 capitalize_first(self.jewelry[most_expensive_i].description()),
                 number_conjugation_rus(self.jewelry[most_expensive_i].cost, u"фартинг"),
                 self.jewelry[most_expensive_i].obtained)
         else:
-            return u"Украшений в сокровищнице нет"
+            return u"No ornaments in the treasury"
 
     @property
     def cheapest_jewelry(self):
@@ -2143,22 +2150,22 @@ class Treasury(store.object):
         """
         if len(self.jewelry):
             cheapest_i = self.cheapest_jewelry_index
-            return u"%s.\nСтоимость украшения: %s.\n%s" % (
+            return u"%s.\Value of ornament: %s.\n%s" % (
                 capitalize_first(self.jewelry[cheapest_i].description()),
                 number_conjugation_rus(self.jewelry[cheapest_i].cost, u"фартинг"),
                 self.jewelry[cheapest_i].obtained)
         else:
-            return u"Украшений в сокровищнице нет"
+            return u"No ornaments in the treasury."
 
     @property
     def random_jewelry(self):
         if len(self.jewelry):
             random_jewelry = random.choice(self.jewelry)
-            return u"%s.\nСтоимость украшения: %s.\n%s" % (capitalize_first(random_jewelry.description()),
+            return u"%s.\Value of ornament: %s.\n%s" % (capitalize_first(random_jewelry.description()),
                                                            number_conjugation_rus(random_jewelry.cost, u"фартинг"),
                                                            random_jewelry.obtained)
         else:
-            return u"Украшений в сокровищнице нет"
+            return u"No ornaments in the treasury."
 
     @property
     def all_jewelries(self):
@@ -2187,7 +2194,7 @@ class Treasury(store.object):
         """
         :return: масса монет в сокровищнице
         """
-        return self.farting + self.taller + self.dublon
+        return self.farthing + self.taller + self.dubloon
 
     @property
     def coin_mass_description(self):
@@ -2276,10 +2283,10 @@ class Treasury(store.object):
         wealth = self.wealth
         if wealth > 0:
             wealth_str = Treasury.get_mass_description('wealth', wealth)
-            wealth_str += u"Общая стоимость сокровищ: " + number_conjugation_rus(wealth, u"фартинг") + u"."
+            wealth_str += u"Total value of treasure: " + number_conjugation_rus(wealth, u"farthings") + u"."
             return wealth_str 
         else:
-            return u"Сокровищница пуста."
+            return u"Treasury is empty."
 
     def get_salary(self, amount):
         """
@@ -2328,7 +2335,7 @@ class Treasury(store.object):
         if self.wealth >= amount:
             if self.money >= amount:
                 self.money -= amount
-                self.salary_list.append(Coin('farting', amount))
+                self.salary_list.append(Coin('farthing', amount))
                 return self.salary_list  # взяли деньгами сколько нужно
             else:
                 for coin_type in Coin.coin_types.keys():  # просматриваем список типов монет
@@ -2437,7 +2444,7 @@ class Treasury(store.object):
         while menu_choice not in treasure_list:
             # цикл для выбора типа сокровища для создания/покупки
             if row_count < len(treasure_list):
-                menu_options = [(u"На предыдущую страницу", 'dec', True, position > 0)]
+                menu_options = [(u"Back to previous page", 'dec', True, position > 0)]
             else:
                 menu_options = [(u"", 'blank', True, False)]
             for i in xrange(position, min(position + row_count, len(treasure_list))):
@@ -2451,10 +2458,10 @@ class Treasury(store.object):
                 # заполняем пустыми вариантами для выравнивания меню
                 menu_options += [(u"", 'blank', True, False)]
             if row_count < len(treasure_list):
-                menu_options += [(u"На следующую страницу", 'inc', True, position + row_count < len(treasure_list))]
+                menu_options += [(u"Go to next page", 'inc', True, position + row_count < len(treasure_list))]
             else:
                 menu_options += [(u"", 'blank', True, False)]
-            menu_options += [(u"Отмена", 'return', True, True)]
+            menu_options += [(u"cancel", 'return', True, True)]
             menu_choice = call_screen("dw_choice", menu_options)
             if menu_choice == 'dec':
                 position -= row_count
@@ -2476,7 +2483,7 @@ class Treasury(store.object):
         while menu_choice not in materials:
             # цикл для выбора типа материала
             if row_count < len(materials):
-                menu_options = [(u"На предыдущую страницу", 'dec', True, position > 0)]
+                menu_options = [(u"Back to previous page", 'dec', True, position > 0)]
             else:
                 menu_options = [(u"", 'blank', True, False)]
             for i in xrange(position, min(position + row_count, len(materials))):
@@ -2491,7 +2498,7 @@ class Treasury(store.object):
                 # заполняем пустыми вариантами для выравнивания меню
                 menu_options += [(u"", 'blank', True, False)]
             if row_count < len(materials):
-                menu_options += [(u"На следующую страницу", 'inc', True, position + row_count < len(materials))]
+                menu_options += [(u"Go to next page", 'inc', True, position + row_count < len(materials))]
             else:
                 menu_options += [(u"", 'blank', True, False)]
             menu_options += [(u"", 'blank', True, False)]
@@ -2543,7 +2550,7 @@ class Treasury(store.object):
         while menu_choice is None or (menu_choice == 'inc') or (menu_choice == 'dec'):
             # цикл для выбора типа камня
             if row_count < len(gem_list):
-                menu_options = [(u"На предыдущую страницу", 'dec', True, position > 0)]
+                menu_options = [(u"Back to previous page", 'dec', True, position > 0)]
             else:
                 menu_options = [(u"", 'blank', True, False)]
             for i in xrange(position, min(position + row_count, len(gem_list))):
@@ -2552,10 +2559,10 @@ class Treasury(store.object):
                 # заполняем пустыми вариантами для выравнивания меню
                 menu_options += [(u"", 'blank', True, False)]
             if row_count < len(gem_list):
-                menu_options += [(u"На следующую страницу", 'inc', True, position + row_count < len(gem_list))]
+                menu_options += [(u"Go to next page", 'inc', True, position + row_count < len(gem_list))]
             else:
                 menu_options += [(u"", 'blank', True, False)]
-            menu_options += [(u"Без камня", 'clear', True, True)]
+            menu_options += [(u"No stone", 'clear', True, True)]
             menu_choice = call_screen("dw_choice", menu_options)
             if menu_choice == 'dec':
                 position -= row_count
@@ -2590,11 +2597,11 @@ class Treasury(store.object):
         # случайный выбор стиля вещи из списка
         item = Treasure(treasure_type, alignment)
         quality_options = {
-            'rough': u"с грубым исполнением",
-            'common': u"с обычным исполнением",
-            'skillfully': u"с искусным исполнением",
-            'mastery': u"с мастерским исполнением",
-            'random': u"со случайным исполнением"
+            'rough': u"с rough crafting",
+            'common': u"с normal crafting",
+            'skillfully': u"с skillful crafting",
+            'mastery': u"с masterful crafting",
+            'random': u"со random crafting"
         }
         item.quality = quality[0]
         # первоначальный выбор качества - первый в списке
@@ -2607,7 +2614,7 @@ class Treasury(store.object):
         item.decoration_image = None
         menu_choice = None
         while menu_choice is not 'create':
-            menu_options = [(u"Отменить", 'return', True, True)]
+            menu_options = [(u"cancel", 'return', True, True)]
             treasure_name = treasure_description_rus[treasure_type]['nominative'].capitalize()
             menu_options += [(treasure_name, treasure_type, True, False)]
             # тип вещи - не может быть изменен
@@ -2626,34 +2633,34 @@ class Treasury(store.object):
                     spangled_description += u" " + item.spangled.description(True, 'ablative', 'they')
                     menu_options += [(spangled_description, 'spangled', True, True)]
                 else:
-                    menu_options += [(u"без блёсток", 'spangled', True, not is_crafting or self.check_gem_size('small'))]
+                    menu_options += [(u"no spangles", 'spangled', True, not is_crafting or self.check_gem_size('small'))]
                 if item.inlaid:
                     inlaid_description = decoration_description_rus['inlaid'][treasure_types[treasure_type][1]]
                     inlaid_description += u" " + item.inlaid.description(True, 'ablative', 'they')
                     menu_options += [(inlaid_description, 'inlaid', True, True)]
                 else:
-                    menu_options += [(u"без инкрустации", 'inlaid', True, not is_crafting or self.check_gem_size('common'))]
+                    menu_options += [(u"no inlay", 'inlaid', True, not is_crafting or self.check_gem_size('common'))]
                 if item.huge:
                     huge_description = u"c " + item.huge.description(True, 'ablative')
                     menu_options += [(huge_description, 'huge', True, True)]
                 else:
-                    menu_options += [(u"без крупного камня", 'huge', True, not is_crafting or self.check_gem_size('large'))]
+                    menu_options += [(u"no large gem", 'huge', True, not is_crafting or self.check_gem_size('large'))]
             if alignment and item.decorable:
                 if item.decoration:
                     decor_image = decoration_description_rus['image'][image_description_rus[item.decoration_image]['gender']]
                     decor_image += u" " + image_description_rus[item.decoration_image]['nominative']
                 else:
-                    decor_image = u"без изображения"
+                    decor_image = u"no image"
                 menu_options += [(decor_image, 'decoration', True, True)]
             if is_crafting:
                 if item.craft_cost(base_cost, price_multiplier) > 0:
-                    price_msg = number_conjugation_rus(item.craft_cost(base_cost, price_multiplier), u"фартинг")
-                    craft_msg = u"Смастерить за %s (есть %s)" % (price_msg, self.money)
+                    price_msg = number_conjugation_rus(item.craft_cost(base_cost, price_multiplier), u"farthings")
+                    craft_msg = u"Craft for %s (you have %s)" % (price_msg, self.money)
                 else:
-                    craft_msg = u"Смастерить"
+                    craft_msg = u"Craft"
             else:
                 price_msg = number_conjugation_rus(item.craft_cost(base_cost, price_multiplier), u"фартинг")
-                craft_msg = u"Купить за %s (есть %s)" % (price_msg, self.money)
+                craft_msg = u"Craft for %s (you have %s)" % (price_msg, self.money)
             menu_options += [(craft_msg, 'create', True, item.craft_cost(base_cost, price_multiplier) <= self.money)]
             menu_choice = call_screen("dw_choice", menu_options)
             # показ меню
@@ -2673,8 +2680,8 @@ class Treasury(store.object):
             elif menu_choice == 'huge':
                 item.huge = self.craft_select_gem(is_crafting, 'large')
             elif menu_choice == 'decoration':
-                menu_options = [(u"Украсить изображением", 'yes', True, True)]
-                menu_options += [(u"Без изображения", 'no', True, True)]
+                menu_options = [(u"Decorate with image", 'yes', True, True)]
+                menu_options += [(u"No image", 'no', True, True)]
                 menu_choice = call_screen("dw_choice", menu_options)
                 if menu_choice == 'yes':
                     item.decoration_image = random.choice(image_types[item.alignment])

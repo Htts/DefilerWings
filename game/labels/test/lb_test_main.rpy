@@ -223,7 +223,7 @@ label lb_test_debug_treasury:
         menu:
             "Добавление денег":
                 "Стоимость сокровищ до добавления: [game.lair.treasury.wealth]"
-                $ treasure_list = treasures.gen_treas(10, ['farting', 'farting', 'dublon'], 'elf', 1, 1000, "")
+                $ treasure_list = treasures.gen_treas(10, ['farthing', 'farthing', 'dublon'], 'elf', 1, 1000, "")
                 $ game.lair.treasury.receive_treasures(treasure_list)
                 $ treasure_list = game.lair.treasury.treasures_description(treasure_list)
                 $ treasure_list = '\n'.join(treasure_list)

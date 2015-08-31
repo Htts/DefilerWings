@@ -183,7 +183,7 @@ label lb_enc_trader:
         'Rob the merchant' if game.dragon.bloodiness >= 5:
             python:
                 game.dragon.drain_energy()
-                gold_trs = [treasures.Coin('farting', 100), treasures.Coin('taller', 10)]
+                gold_trs = [treasures.Coin('farthing', 100), treasures.Coin('taller', 10)]
                 game.lair.treasury.receive_treasures(gold_trs)
             '[game.dragon.name] releases his anger and overturns the wagon, kills the horse, and tears the trader to pieces. His wares are of little interest, but there is some money in his wallet:'
             $ game.dragon.reputation.points += 3

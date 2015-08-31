@@ -100,8 +100,8 @@ girls_info = {
         't_price_max': 25,  # максимальная цена предмета
         't_alignment': 'human',  # тип украшений
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'earring', 'necklace',
-            'pendant', 'ring', 'broch', 'armbrace', 'legbrace', 'fibula', 'farting'],
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'earring', 'necklace',
+            'pendant', 'ring', 'broch', 'armbrace', 'legbrace', 'brooch', 'farthing'],
         # список возможных предметов в сокровищах
     },
     'citizen': {
@@ -117,9 +117,9 @@ girls_info = {
         't_price_max': 100,
         't_alignment': 'human',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'fibula', 'taller'],
+            'brooch', 'taller'],
     },
     'thief': {
         'magic_rating': 0,
@@ -134,9 +134,9 @@ girls_info = {
         't_price_max': 250,
         't_alignment': 'human',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'fibula', 'taller', 'dublon'],
+            'brooch', 'taller', 'dublon'],
     },
     'knight': {
         'magic_rating': 1,
@@ -151,9 +151,9 @@ girls_info = {
         't_price_max': 250,
         't_alignment': 'knight',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'fibula', 'taller', 'dublon'],
+            'brooch', 'taller', 'dublon'],
     },
     'princess': {
         'magic_rating': 0,
@@ -168,9 +168,9 @@ girls_info = {
         't_price_max': 1000,
         't_alignment': 'knight',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'fibula'],
+            'brooch'],
     },
     'elf': {
         'magic_rating': 1,
@@ -185,7 +185,7 @@ girls_info = {
         't_price_max': 2000,
         't_alignment': 'elf',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain'],
     },
     'mermaid': {
@@ -201,7 +201,7 @@ girls_info = {
         't_price_max': 200,
         't_alignment': 'merman',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain'],
     },
     'ogre': {
@@ -217,9 +217,9 @@ girls_info = {
         't_price_max': 1500,
         't_alignment': 'knight',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'fibula', 'farting', 'taller', 'dublon'],
+            'brooch', 'farthing', 'taller', 'dublon'],
     },
     'siren': {
         'magic_rating': 2,
@@ -234,7 +234,7 @@ girls_info = {
         't_price_max': 2000,
         't_alignment': 'merman',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
             'taller', 'dublon'],
     },
@@ -251,7 +251,7 @@ girls_info = {
         't_price_max': 2500,
         't_alignment': 'human',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
             'taller', 'dublon'],
     },
@@ -268,7 +268,7 @@ girls_info = {
         't_price_max': 2500,
         't_alignment': 'dwarf',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
             'taller', 'dublon'],
     },
@@ -285,7 +285,7 @@ girls_info = {
         't_price_max': 5000,
         't_alignment': 'elf',
         't_list': [
-            'casket', 'statue', 'mirror', 'comb', 'phallos', 'band', 'diadem', 'tiara', 'earring',
+            'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
             'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
             'taller', 'dublon'],
     },
