@@ -58,7 +58,7 @@ label lb_location_lair_main:
                     $ description = u"The treasure:\n"
                     $ description += u"%s\n" % treasures.number_conjugation_rus(game.lair.treasury.farthing, u"farthings")
                     $ description += u"%s\n" % treasures.number_conjugation_rus(game.lair.treasury.taller, u"taller")
-                    $ description += u"%s" % treasures.number_conjugation_rus(game.lair.treasury.dublon, u"dubloons")
+                    $ description += u"%s" % treasures.number_conjugation_rus(game.lair.treasury.dubloon, u"dubloons")
                     "[description]"
                     nvl clear
                 '[game.lair.treasury.jewelry_mass_description]' if len(game.lair.treasury.jewelry) > 0:

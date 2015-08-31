@@ -201,7 +201,7 @@ label lb_enc_caravan:
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(1, 20)
-                gold_trs = treasures.Coin('dublon', passing_tool)
+                gold_trs = treasures.Coin('dubloon', passing_tool)
                 game.lair.treasury.receive_treasures([gold_trs])
             'The caravan hands over some gold dubloons to the growling dragon in exchange for safe passage.'
             $ game.dragon.reputation.points += 1
@@ -216,7 +216,7 @@ label lb_enc_caravan:
                 min_cost = 1
                 max_cost = 1000
                 obtained = "Просто монеты."
-                trs = treasures.gen_treas(count, ['taller', 'dublon'], alignment, min_cost, max_cost, obtained)
+                trs = treasures.gen_treas(count, ['taller', 'dubloon'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)
@@ -236,7 +236,7 @@ label lb_enc_lcaravan:
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(20, 100)
-                gold_trs = treasures.Coin('dublon', passing_tool)
+                gold_trs = treasures.Coin('dubloon', passing_tool)
                 game.lair.treasury.receive_treasures([gold_trs])
             'The caravan hands over a heavy bag of gold dubloons to the growling dragon in exchange for safe passage.'
             $ game.dragon.reputation.points += 1
@@ -251,7 +251,7 @@ label lb_enc_lcaravan:
                 min_cost = 1
                 max_cost = 1000
                 obtained = "Просто монеты."
-                trs = treasures.gen_treas(count, ['taller', 'dublon'], alignment, min_cost, max_cost, obtained)
+                trs = treasures.gen_treas(count, ['taller', 'dubloon'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)

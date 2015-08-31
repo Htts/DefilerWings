@@ -126,7 +126,7 @@ label lb_enc_bark:
             python:
                 game.dragon.drain_energy()
                 passing_tool = random.randint(1, 20)
-                gold_trs = treasures.Coin('dublon', passing_tool)
+                gold_trs = treasures.Coin('dubloon', passing_tool)
                 game.lair.treasury.receive_treasures([gold_trs])
             'Deciding not to tempt fate, the captain gives the dragon some gold dubloons, so that the ship can past unharmed.'
             $ game.dragon.reputation.points += 1
@@ -142,7 +142,7 @@ label lb_enc_bark:
                 min_cost = 1
                 max_cost = 1000
                 obtained = "Simple coins."
-                trs = treasures.gen_treas(count, ['taller', 'dublon'], alignment, min_cost, max_cost, obtained)
+                trs = treasures.gen_treas(count, ['taller', 'dubloon'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
                 game.lair.treasury.receive_treasures(trs)

@@ -68,7 +68,7 @@ label lb_witch_reward:
         'Give me money':
             python:
                 gain = game.dragon.level + 1
-                game.lair.treasury.dublon += gain
+                game.lair.treasury.dubloon += gain
             witch 'A dragon begging for gold? Who have have guessed? Okay, here is all I have: [gain]. It was worth it.'
         'Give me power':
             witch 'I will give you some of my power, but it won\'t last forever. You will be able to cast one spell when you need it...'

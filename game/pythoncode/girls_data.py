@@ -101,7 +101,7 @@ girls_info = {
         't_alignment': 'human',  # тип украшений
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'earring', 'necklace',
-            'pendant', 'ring', 'broch', 'armbrace', 'legbrace', 'brooch', 'farthing'],
+            'pendant', 'ring', 'broach', 'armbrace', 'legbrace', 'brooch', 'farthing'],
         # список возможных предметов в сокровищах
     },
     'citizen': {
@@ -118,7 +118,7 @@ girls_info = {
         't_alignment': 'human',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
             'brooch', 'taller'],
     },
     'thief': {
@@ -135,8 +135,8 @@ girls_info = {
         't_alignment': 'human',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'brooch', 'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'brooch', 'taller', 'dubloon'],
     },
     'knight': {
         'magic_rating': 1,
@@ -152,8 +152,8 @@ girls_info = {
         't_alignment': 'knight',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'brooch', 'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'brooch', 'taller', 'dubloon'],
     },
     'princess': {
         'magic_rating': 0,
@@ -169,7 +169,7 @@ girls_info = {
         't_alignment': 'knight',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
             'brooch'],
     },
     'elf': {
@@ -186,7 +186,7 @@ girls_info = {
         't_alignment': 'elf',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain'],
     },
     'mermaid': {
         'magic_rating': 1,
@@ -202,7 +202,7 @@ girls_info = {
         't_alignment': 'merman',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain'],
     },
     'ogre': {
         'magic_rating': 2,
@@ -218,8 +218,8 @@ girls_info = {
         't_alignment': 'knight',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'brooch', 'farthing', 'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'brooch', 'farthing', 'taller', 'dubloon'],
     },
     'siren': {
         'magic_rating': 2,
@@ -235,8 +235,8 @@ girls_info = {
         't_alignment': 'merman',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'taller', 'dubloon'],
     },
     'ice': {
         'magic_rating': 2,
@@ -252,8 +252,8 @@ girls_info = {
         't_alignment': 'human',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'taller', 'dubloon'],
     },
     'fire': {
         'magic_rating': 2,
@@ -269,8 +269,8 @@ girls_info = {
         't_alignment': 'dwarf',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'taller', 'dubloon'],
     },
     'titan': {
         'magic_rating': 2,
@@ -286,8 +286,8 @@ girls_info = {
         't_alignment': 'elf',
         't_list': [
             'casket', 'statue', 'mirror', 'comb', 'phallus', 'band', 'diadem', 'tiara', 'earring',
-            'necklace', 'pendant', 'ring', 'broch', 'gemring', 'armbrace', 'legbrace', 'chain',
-            'taller', 'dublon'],
+            'necklace', 'pendant', 'ring', 'broach', 'gemring', 'armbrace', 'legbrace', 'chain',
+            'taller', 'dubloon'],
     },
 }
 
