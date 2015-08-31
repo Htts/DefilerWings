@@ -614,13 +614,13 @@ label lb_village:
         'Rob them' if village_size > 0:
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_10
-            'Поселение успешно разграблено. Добыча:'
+            'The settlement was successfully plundered, yielding:'
             python:
                 count = random.randint(5, 10)
                 alignment = 'human'
                 min_cost = 5 * village_size
                 max_cost = 25 * village_size
-                obtained = "Это предмет из разграбленного людского поселения."
+                obtained = "Looted from a human settlement."
                 trs = treasures.gen_treas(count, data.loot['klad'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)
@@ -629,17 +629,17 @@ label lb_village:
             $ game.dragon.reputation.points += 3
             '[game.dragon.reputation.gain_description]'
         
-        'Raise' if village_size > 0:
+        'Raze' if village_size > 0:
             $ game.dragon.drain_energy()
             $ game.foe = Enemy(village['deffence'][village_size], game_ref=game)
             call lb_fight from _call_lb_fight_11
-            'Поселение разорено. Разруха в стране растёт. В разрушенных домах и на телах убитых нашлись кое-какие ценности:'
+            'The settlement is ruined. Devastation in the country is growing. In the destroyed houses and on the bodies of those killed there are some valuables:'
             python:
                 count = random.randint(5, 10)
                 alignment = 'human'
                 min_cost = 5 * village_size
                 max_cost = 25 * village_size
-                obtained = "Это предмет из разграбленного людского поселения."
+                obtained = "Looted from a human settlement."
                 trs = treasures.gen_treas(count, data.loot['klad'], alignment, min_cost, max_cost, obtained)
                 trs_list = game.lair.treasury.treasures_description(trs)
                 trs_descrptn = '\n'.join(trs_list)

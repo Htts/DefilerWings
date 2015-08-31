@@ -207,7 +207,7 @@ screen main_menu:
                 xalign .966
                 yalign .465
         if not persistent.allow_freeplay and not config.developer:
-            textbutton _("Achivements") action Show("sc_achievements_list"):
+            textbutton _("Achievements") action Show("sc_achievements_list"):
                 xalign .966
                 yalign .580
         elif not renpy.can_load("1-3"):
@@ -215,7 +215,7 @@ screen main_menu:
                     xalign .966
                     yalign .580
         else:
-            textbutton _("Cntinue free")action FileLoad("3", confirm=False, page="1"):
+            textbutton _("Continue free")action FileLoad("3", confirm=False, page="1"):
                 xalign .966
                 yalign .580
         textbutton _("Options") action ShowMenu("preferences"):
@@ -418,10 +418,10 @@ screen preferences:
         has vbox
         textbutton _("Story") xpos 120 ypos 540 action SensitiveIf(renpy.can_load("1-1")), Show("yesno_prompt",
                                                                                       yes_action=FileDelete("1", confirm=False, page="1"), no_action=NullAction(),
-                                                                                      message="Вы уверены что хотите удалить Сюжетную Игру?")
+                                                                                      message="Are you sure you want to delete the story game?")
         textbutton _("Free") xpos 280 ypos 480 action SensitiveIf(renpy.can_load("1-3")), Show("yesno_prompt",
                                                                                       yes_action=FileDelete("3", confirm=False, page="1"), no_action=NullAction(),
-                                                                                      message="Вы уверены что хотите удалить Свободную Игру?")
+                                                                                      message="Are you sure you want to delete the free play game?")
     
     frame xpos 858 ypos 132:
         style_group "pref"
@@ -508,10 +508,10 @@ screen yesno_prompt:
                 else:
                     textbutton _("Yes") action FileSave("3", confirm=False, page="1"), yes_action
                     textbutton _("No") action no_action, Hide("yesno_prompt"), ShowMenu("navigation")
-            elif message == "Вы уверены что хотите удалить Сюжетную Игру?":
+            elif message == "Are you sure you want to delete the story mode game?":
                 textbutton _("Yes") action yes_action, Hide("yesno_prompt"), ShowMenu("preferences")
                 textbutton _("No") action no_action, Hide("yesno_prompt"), ShowMenu("preferences")
-            elif message == "Вы уверены что хотите удалить Свободную Игру?":
+            elif message == "Are you sure you want to delete the free play game?":
                 textbutton _("Yes") action yes_action, Hide("yesno_prompt"), ShowMenu("preferences")
                 textbutton _("No") action no_action, Hide("yesno_prompt"), ShowMenu("preferences")
             else:
