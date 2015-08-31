@@ -273,7 +273,7 @@ label lb_city_jew_atk:
     $ game.dragon.drain_energy()
     $ game.foe = Enemy('city_guard', game_ref=game)
     call lb_fight from _call_lb_fight_1
-    'Not a living guard is left in the quarter. People flee from the dragon in a panic and try to save their valuables. [game.dragon.name] looks at the scene of destruction and chaos. A fat jeweler drags a heavy wooden box. A noble girl runs away squealing. A burning shop filled with precious bars and jewels is about to collapse." 
+    'Not a living guard is left in the quarter. People flee from the dragon in a panic and try to save their valuables. [game.dragon.name] looks at the scene of destruction and chaos. A fat jeweler drags a heavy wooden box. A noble girl runs away squealing. A burning shop filled with precious bars and jewels is about to collapse.' 
     $ game.dragon.reputation.points += 3
     '[game.dragon.reputation.gain_description]'
     menu:

@@ -1,12 +1,15 @@
 ﻿+++++DEFILER WINGS++++++
 -----Version 1.0.0 en-----
+Translation version 1.0
 
 ----------------DISCLAIMER---------------------
 This game contains multiple scenes of the extreme violence and strong sexual content, and thus cannot be recommended to anyone. PG99.
 By clicking “proceed” you confirm that you are an adult and choose to play at your own risk. This game is NOT meant to be commercially distributed. All graphical, audio, and text elements used in the game are either freely aviable on the internet or created by authors of the game, and used for the sake of parody.
 The code created by our team is licensed under BSD license. See LICENCE.txt for details
 
-Translation is currently partial. 
+Translation by hongstts and Salking from hongfire.com forums. Thread at:
+http://www.hongfire.com/forum/showthread.php/444716-OldHunterGames-Defiler-Wings-%28eng%29
+
 ----------------TECHNICAL INFO-----------------
 
 Game created with RenPy visual novel engine (http://www.renpy.org/)

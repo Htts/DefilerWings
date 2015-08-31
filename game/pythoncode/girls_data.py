@@ -529,9 +529,9 @@ girls_texts = {
             u"The rural girl is named %(girl_name)s.",
         ),
         'shout': (  # Реакция девушки, прямой речью 
-			#translator: some of these lines I had to make a vague guess at and others I commented out.
+               #translator: some of these lines I had to make a vague guess at and others I commented out.
             #u"Ой, божечки!..", 
-			u"Oh, mama..", 
+               u"Oh, mama..", 
             u"Where are you poking that vile dripping tongue?!",
             u"Oh,oh,oh, just don\'t eat me, please...", 
             u"Ah...no, no, not there...oh...",
@@ -623,7 +623,7 @@ girls_texts = {
             #u"Ой нет, убеерите эту... это... от меня. Стыд то какой!",
             u"Ah, what are you doing!? It hurts, I beg you, it\'s too big, uuuy!!!",
             u"What are you doing, you vermin? Let go...ah, wait!",
-			u"I have heard what dragons do with girls...please don\'t growl...don\'t tear it, I\'ll take it off, I\'ll take it off...", 
+               u"I have heard what dragons do with girls...please don\'t growl...don\'t tear it, I\'ll take it off, I\'ll take it off...", 
             #u"Ох, Господи, я такого срама даже у коня в деревне не видала! Жуть то какая...",
             u"Oh Blessed Virgin, save me, protect me...",
             u"(quietly cries and hides her face in her hands)",

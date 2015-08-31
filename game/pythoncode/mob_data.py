@@ -726,7 +726,7 @@ mob = {
         'image': 'merman',  # background image for the fight "img/scene/fight/%s.jpg"
         # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"The merman prepares to fight with a net and triden. He will not give up so easily."
+            [['foe_intro'], u"The merman prepares to fight with a net and triden. He will not give up so easily."],
             [['foe_fear'],  u"Turning pale with fear the merman swims into the depths, dropping his trident."],
             [['foe_dead', 'dragon_undamaged'], u"Easily dodging a blow from the trident, the %(dragon_type)s bites down with a death grip. The water turns red with blood."],
             [['foe_dead', 'dragon_wounded'], u"The underwater warrior intercepts the charging dragon with his trident, but even wounded %(dragon_name)s is able to tear him to pieces in seconds."],
