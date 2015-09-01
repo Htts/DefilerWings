@@ -15,13 +15,13 @@ label lb_dragon_creator:
         game.dragon.heads = ['green']
         game.dragon.anatomy = ['size']
         special_features_rus = {
-            "tough_scale": "Крепкая чешуя",
-            "poisoned_sting": "Ядовитое жало",
-            "clutches": "Когти",
-            "horns": "Рога",
-            "fangs": "Клыки",
-            "ugly": "Уродство",
-            "cunning": "Коварство"
+            "tough_scale": "Tough scales",
+            "poisoned_sting": "poisoned sting",
+            "clutches": "claws",
+            "horns": "horns",
+            "fangs": "fangs",
+            "ugly": "uglieness",
+            "cunning": "cunning"
         }
         colored_heads = ["red", "white", "blue", "black", "iron", "bronze", "silver", "gold", "shadow"]
     init python:

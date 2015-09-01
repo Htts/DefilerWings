@@ -1107,7 +1107,7 @@ class Ingot(object):  # класс для генерации слитков
                 return u"%s %s ingot" % (
                     self.weights_description_rus[self.weight], metal_description_rus[self.metal_type]['it'])
             else:
-                return u"Gross weight of the %s ingots %s" % (
+                return u"Gross weight of the %s ingots is %s" % (
                     metal_description_rus[self.metal_type]['they'], number_conjugation_rus(self.weight, u"pounds"))
         else:
             return self.__repr__()
@@ -1121,8 +1121,8 @@ class Ingot(object):  # класс для генерации слитков
             return u"%s %s ingot" % (
                 Ingot.weights_description_rus[metal_weight], metal_description_rus[metal_type]['it'])
         else:
-            return u"Gross weight of the %s bars %s" % (
-                metal_description_rus[metal_type]['they'], number_conjugation_rus(metal_weight, u"фунт"))
+            return u"Gross weight of the %s bars is %s" % (
+                metal_description_rus[metal_type]['they'], number_conjugation_rus(metal_weight, u"pounds"))
 
 
 class Coin(object):
@@ -1364,18 +1364,19 @@ class Material(object):  # класс для генерации материал
         # выводим результат для каждого типа сопряжения
         if conjugation_type == 0:  # единственное число - именительный падеж, род копируется
             if material_count != 1:  # если материал один - не ставим число
-                return u"%s %piece %s" % (
+                return u"%s %spiece of %s" % (
                     material_count, material_size_description_rus[material_param[1]]['it']['nominative'],
                     material_description_rus[material_param[0]]['genitive'])
             else:
-                return u"%piece %s" % (material_size_description_rus[material_param[1]]['it']['nominative'],
-                                        material_description_rus[material_param[0]]['genitive'])
+                return u"%spiece of %s" % (
+				material_size_description_rus[material_param[1]]['it']['nominative'],
+				material_description_rus[material_param[0]]['genitive'])
         elif conjugation_type == 1:
-            return u"%s %piece %s" % (
+            return u"%s %spiece of %s" % (
                 material_count, material_size_description_rus[material_param[1]]['they']['genitive'],
                 material_description_rus[material_param[0]]['genitive'])
         elif conjugation_type == 2:
-            return u"%s %piece %s" % (
+            return u"%s %spiece of %s" % (
                 material_count, material_size_description_rus[material_param[1]]['they']['genitive'],
                 material_description_rus[material_param[0]]['genitive'])
 
