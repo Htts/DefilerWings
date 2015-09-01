@@ -12,12 +12,12 @@ mob = {
             [['foe_intro'], u"A dwarven flying cruiser slowly turns its side to face the enemy. Steam artillery prepares to fire a salvo."],
             [['foe_fear'],  u"The heavily armed battle cruiser rapidly unfurls all sails and flies away. There are opponents that not even the brave dwarves will face..."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s furiously smashes decks and bulkheads, breaking the ship in half and flinging dwarven bodies overboard. Dwarves simply cannot match a dragon in a close fight, and soon the burning fragments of the ship rain down on the ground."],
-            [['foe_dead', 'dragon_wounded'], u"Volleys of the flying cruiser\'s onboard artillery hit their mark. Cast iron projectiles crush the dragon\'s scales and break bones, but %(dragon_name)s does not stop. The paint of his wounds just enrages him and gives him strength. As the dwarves try to quickly reload their weapon, %(dragon_type)s rushes to the deck and begins to tear into the ship. Seeing their futile situation the artillery crew jumps overboard in a vain attempt to escape. Less than a minute later, the main boiler explodes and the ship is split in two."],
-            [['foe_alive', 'dragon_wounded'], u"Accelerating to great speed, %(dragon_type)s tries to break onto the deck of the cruiser, but a well aimed volley of artillery blasts it back. %(dragon_name)s roars with pain."],
+            [['foe_dead', 'dragon_wounded'], u"Volleys of the flying cruiser\'s onboard artillery hit their mark. Cast iron projectiles crush the dragon\'s scales and break bones, but %(dragon_name)s does not stop. The paint of his wounds just enrages him and gives him strength. As the dwarves try to quickly reload their weapon, the %(dragon_type)s rushes to the deck and begins to tear into the ship. Seeing their futile situation the artillery crew jumps overboard in a vain attempt to escape. Less than a minute later, the main boiler explodes and the ship is split in two."],
+            [['foe_alive', 'dragon_wounded'], u"Accelerating to great speed, the %(dragon_type)s tries to break onto the deck of the cruiser, but a well aimed volley of artillery blasts it back. %(dragon_name)s roars with pain."],
             [['foe_alive', 'dragon_undamaged'], u"The airship captain waits for the dragon to close. %(dragon_name)s also waits, in no hurry to take a volley from the steam artillery. Someone must take a chance.",],
             [['foe_alive', 'lost_head'], u"The cruiser\'s onboard artillery fires a broadside. Heavy iron balls crash into the dragon\'s head, smashing his skull with a crunch. Luckily %(dragon_name_full)s is able to survive such damage..."],
-            [['foe_dead', 'lost_head'], u"Ignoring the danger, %(dragon_type)s rams the flying cruiser The dwarven artillery fires a salvo at point blank range into one of the dragon\'s heads, but his inertia carries him foward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
-            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the steam ship, and time after time, bursts of explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, %(dragon_type)s falls to the ground and breathes his last breath..."]
+            [['foe_dead', 'lost_head'], u"Ignoring the danger, the %(dragon_type)s rams the flying cruiser The dwarven artillery fires a salvo at point blank range into one of the dragon\'s heads, but his inertia carries him foward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
+            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the steam ship, and time after time, bursts of explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, the %(dragon_type)s falls to the ground and breathes his last breath..."]
         ]
     },
 
@@ -36,7 +36,7 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"%(dragon_type_cap)s tries to break into the ranks of the fighting ships, but is thrown back by salvos from multiple ships."],
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_type_cap)s is cautious, trying not to get into a crossfire from the steam guns. But there is no way to destroy the ships without getting closer.",],
             [['foe_alive', 'lost_head'], u"The airbone cruisers\' artillery fires steady volleys. A heavy iron ball smashes into one of the dragon\'s heads with a crunch and shatters his skull. Luckily %(dragon_name_full)s is able to survive such an injury..."],
-            [['foe_dead', 'lost_head'], u"Flying ships cannot withstand the onslaught of a furious dragon, but the dwarves fight to the death. Although %(dragon_type)s wins, one of his heads does not survive its wounds."],
+            [['foe_dead', 'lost_head'], u"Flying ships cannot withstand the onslaught of a furious dragon, but the dwarves fight to the death. Although the %(dragon_type)s wins, one of his heads does not survive its wounds."],
             [['dragon_dead'], u"%(dragon_name_full) bursts into the flagship of the fleet, smashing through bulkheads and killing crewmen. The captain, seeing that his crew cannot be saved, closes the valves on the ship\'s boiler. A massive explosion of supherheated steam takes with it the ship, the crew, and the dragon..."]
         ]
     },
@@ -52,12 +52,12 @@ mob = {
             [['foe_intro'], u"A flying dwarven ship slowly turns to face its enemy. A steam catapult prepares to fire."],
             [['foe_fear'],  u"(Rapidly unfurling all sails, the airship turns and flies away. There are opponents not even the brave dwarves will face..."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s furiously smashes decks and bulkheads, breaking the ship in half and flinging dwarven bodies overboard. Dwarves simply cannot match a dragon in a close fight, and soon the burning fragments of the ship rain down on the ground."],
-            [['foe_dead', 'dragon_wounded'], u"Shots from the airship\'s steam catapult hit their mark. Cast iron projectiles crush the dragon\'s scales and break bones, but %(dragon_name)s does not stop. The paint of his wounds just enrages him and gives him strength. As the dwarves try to quickly reload their weapon, %(dragon_type)s rushes to the deck and begins to tear into the ship. Seeing their futile situation the catapult crew jumps overboard in a vain attempt to escape. Less than a minute later, the main boiler explodes and the ship is split in two."],
-            [['foe_alive', 'dragon_wounded'], u"Accelerating to great speed, %(dragon_type)s tries to break onto the deck of the airship, but a well aimed catapult shot knocks it back. %(dragon_name)s roars with pain."],
+            [['foe_dead', 'dragon_wounded'], u"Shots from the airship\'s steam catapult hit their mark. Cast iron projectiles crush the dragon\'s scales and break bones, but %(dragon_name)s does not stop. The paint of his wounds just enrages him and gives him strength. As the dwarves try to quickly reload their weapon, the %(dragon_type)s rushes to the deck and begins to tear into the ship. Seeing their futile situation the catapult crew jumps overboard in a vain attempt to escape. Less than a minute later, the main boiler explodes and the ship is split in two."],
+            [['foe_alive', 'dragon_wounded'], u"Accelerating to great speed, the %(dragon_type)s tries to break onto the deck of the airship, but a well aimed catapult shot knocks it back. %(dragon_name)s roars with pain."],
             [['foe_alive', 'dragon_undamaged'], u"The airship captain waits for the dragon to close. %(dragon_name)s also waits, in no hurry to take a hit from the steam catapult. Someone must take a chance.",],
             [['foe_alive', 'lost_head'], u"The airship\'s onboard catapult fires repeatedly. Heavy iron balls crash into the dragon\'s head, smashing his skull with a crunch. Luckily %(dragon_name_full)s is able to survive such damage..."],
-            [['foe_dead', 'lost_head'], u"Ignoring the danger, %(dragon_type)s rams the flying ship The dwarven catapult hurls a ball at point blank range into one of the dragon\'s heads, but his inertia carries him foward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
-            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the airship, and time after time, explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, %(dragon_type)s falls to the ground and breathes his last breath..."]
+            [['foe_dead', 'lost_head'], u"Ignoring the danger, the %(dragon_type)s rams the flying ship The dwarven catapult hurls a ball at point blank range into one of the dragon\'s heads, but his inertia carries him foward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
+            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the airship, and time after time, explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, the %(dragon_type)s falls to the ground and breathes his last breath..."]
         ]
     },
 
@@ -92,7 +92,7 @@ mob = {
             [['foe_intro'], u"A royal archer nocks an arrow."],
             [['foe_fear'],  u"The royal archer runs away in horror. He was not prepared for this fight."],
             [['foe_dead', 'dragon_undamaged'], u"The archer manages to fire three times before %(dragon_name)s reaches him. But the arrows simply glance of the scaly skin of the dragon. At close range, the archer has no defense against the fanged lizard."],
-            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s opens his jaws to roar, and an arrow punctures his soft mouth. Unable to bite, %(dragon_type)s angrily beats the archer to death with his tail."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s opens his jaws to roar, and an arrow punctures his soft mouth. Unable to bite, the %(dragon_type)s angrily beats the archer to death with his tail."],
             [['foe_alive', 'dragon_wounded'], u"The sharpshooting archer manages to hit the lizard right in the eye. The lizard stops, going mad with pain."],
             [['foe_alive', 'dragon_undamaged'], u"The archer\'s arrows glance off the natural armor of the dragon.",],
             [['foe_alive', 'lost_head'], u"A tempered arrow with a fire hardened shaft piereces through one of the dragon\'s mouths and into a brain. Luckily, %(dragon_name_full)s can survive such a wound."],
@@ -315,8 +315,8 @@ mob = {
             [['foe_fear'],  u"The defenders of the gate flee in terror from the attacking dragon. An easy victory."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name_full)s breaches the gate and scatters those who try to fight back like rag dolls."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s throws himself at the gate, under a rain of stones and arrows. It is impossible to avoid injury, but eventually the gate is broken and the guards flee in terror."],
-            [['foe_alive', 'dragon_wounded'], u"%(dragon_type)s throws himself at the gate, under a rain of stones and arrows. This is a bad idea - the gate is too strong, and the scales of the dragon are punctured in several places."],
-            [['foe_alive', 'dragon_undamaged'], u"%(dragon_type)s throws himself at the gate, under a rain of stones and arrows. The defender\'s fire does not cause him any harm, but the gate is well made and the fortifications do not give in.",],
+            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s throws himself at the gate, under a rain of stones and arrows. This is a bad idea - the gate is too strong, and the scales of the dragon are punctured in several places."],
+            [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s throws himself at the gate, under a rain of stones and arrows. The defender\'s fire does not cause him any harm, but the gate is well made and the fortifications do not give in.",],
             [['foe_alive', 'lost_head'], u"Someone pours a vat of boiling tar on one of the dragon\'s heads."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but the victory costs him a head. An expensive price."],
             [['dragon_dead'], u"The wounded %(dragon_type)s frantically beats at the strong gates, but they do not give in. Unable to continue fighting, %(dragon_name_full) falls bleeding in front of the insurmountable fortification."]
@@ -374,7 +374,7 @@ mob = {
             [['foe_intro'], u"The grass around the dragon shimmers emerald green - the druid gathers strength from wildlife."],
             [['foe_fear'],  u"The druid transforms into a fleet-footed deer and runs away. He is not ready to fight with such an enemy as %(dragon_name_full)s."],
             [['foe_dead', 'dragon_undamaged'], u"The druid calls a cloud of killer bees, but this is a fatal mistake - they cannot pierce the scales of the dragon with their stings. The %(dragon_type) breaks the druid\'s body into pieces."],
-            [['foe_dead', 'dragon_wounded'], u"The druid surrounds himself with a wall of poisonous thorns, but %(dragon_type)s cuts through them and kills him. The dragon\'s blood is already poisonous."],
+            [['foe_dead', 'dragon_wounded'], u"The druid surrounds himself with a wall of poisonous thorns, but the %(dragon_type)s cuts through them and kills him. The dragon\'s blood is already poisonous."],
             [['foe_alive', 'dragon_wounded'], u"The druid calls a variety of wild animals to his aid. In a fierce battle %(dragon_name_full)s wins a hard victory. The druid is unharmed, but the %(dragon_type)s is covered with blood."],
             [['foe_alive', 'dragon_undamaged'], u"The druid manages to hold the dragon with poisonous vines. But this is only a temporary solution, sooner or later %(dragon_name)s will break out.",],
             [['foe_alive', 'lost_head'], u"The druid uses the strength of the earth to conjure stone mouths full of sharp stalactites. One of them rips off the dragon\'s head."],
@@ -471,7 +471,7 @@ mob = {
         'image': 'elf_witch',  # background image for the fight "img/scene/fight/%s.jpg"
         # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"%(dragon_type)s sneaks as softly as he can, but sharp elven ears pick up even the slightest movement. With an explosion of gold-green flame, the forest sorceress soars into the trees and begins to weave a deadly spell."],
+            [['foe_intro'], u"The %(dragon_type)s sneaks as softly as he can, but sharp elven ears pick up even the slightest movement. With an explosion of gold-green flame, the forest sorceress soars into the trees and begins to weave a deadly spell."],
             [['foe_fear'],  u"The dragon gives off an aura of terror and darkness so strong that even the flowers and leaves wither around him. Unable to look into the eyes of the monster, the forest sorceress covers her face waiting to be taken and not thinking of resistance."],
             [['foe_dead', 'dragon_undamaged'], u"The enchantress encases herself in a thick shell of living tree bark, and knotted roots stretch out towards the dragon\'s claws. Against a person this might work, but the %(dragon_type)s easily breaks the wooden shell and pulls out the soft stuffing. The threat of the dragon\'s teeth is enough to stop the sorceress\'s tricks."],
             [['foe_dead', 'dragon_wounded'], u"The forest maiden beats the dragon with her shining staff hard enough to leave imprints, but %(dragon_name)s lashes his tail in response. The %(dragon_type) remains standing while the sorceress falls writhing in pain and with ringing ears."],
@@ -573,7 +573,7 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"Clad in steel armor, the cavalry deploy into formation and level their spears."],
             [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses of the cavalry scatter, throwing off and trampling their own riders."],
-            [['foe_dead', 'dragon_undamaged'], u"One by one the crusaders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip %(dragon_type)s kicks the cavalry out of their saddles."],
+            [['foe_dead', 'dragon_undamaged'], u"One by one the crusaders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip the %(dragon_type)s kicks the cavalry out of their saddles."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to overturn a horse and rider with a single blow, but there are so many of them that he does not leave the battle uninjured."],
             [['foe_alive', 'dragon_wounded'], u"The %(dragon_type) is distracted by one of the armored riders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
             [['foe_alive', 'dragon_undamaged'], u"The heavy cavalry deftly manuevers, avoiding the fangs of the dragon, and trying to get him with their lances. Such tactics are unlikely to bring them victory, but they save lives.",],
@@ -654,7 +654,7 @@ mob = {
             [['foe_intro'], u"The hunstman nocks an arrow."],
             [['foe_fear'],  u"The huntsman runs away in terror. He\'s not ready for this fight."],
             [['foe_dead', 'dragon_undamaged'], u"The huntsman manages to fire three tmes before %(dragon_name)s reaches him. But the missiles simply bounce of the scaly skin of the dragon. At close range, he has no protection against the lizard\'s teeth."],
-            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s opens his jaws to roar, and an arrow punctures his soft mouth. Unable to bite, %(dragon_type)s angrily beats the archer to death with his tail."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s opens his jaws to roar, and an arrow punctures his soft mouth. Unable to bite, the %(dragon_type)s angrily beats the archer to death with his tail."],
             [['foe_alive', 'dragon_wounded'], u"The sharpshooting archer manages to hit the lizard right in the eye. The lizard stops, going mad with pain."],
             [['foe_alive', 'dragon_undamaged'], u"The archer\'s arrows glance off the natural armor of the dragon.",],
             [['foe_alive', 'lost_head'], u"A tempered arrow with a fire hardened shaft piereces through one of the dragon\'s mouths and into a brain. Luckily, %(dragon_name_full)s can survive such a wound."],
@@ -932,7 +932,7 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"Clad in steel armor, the templars deploy into formation and level their spears."],
             [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses of the crusaders scatter, throwing off and trampling their own riders."],
-            [['foe_dead', 'dragon_undamaged'], u"One by one the crusaders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip %(dragon_type)s kicks the cavalry out of their saddles."],
+            [['foe_dead', 'dragon_undamaged'], u"One by one the crusaders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip the %(dragon_type)s kicks the cavalry out of their saddles."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to overturn a horse and rider with a single blow, but there are so many of them that he does not leave the battle uninjured."],
             [['foe_alive', 'dragon_wounded'], u"The %(dragon_type) is distracted by one of the crusaders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
             [['foe_alive', 'dragon_undamaged'], u"The crusaders deftly manuever, avoiding the fangs of the dragon, and trying to get him with their long lances. Such tactics are unlikely to bring them victory, but they save lives.",],

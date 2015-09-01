@@ -6,61 +6,61 @@ label lb_test_main:
     nvl clear
     while True:
         menu:
-            "Краткая сводка":
+            "Summary":
                 python hide:
-                    tmp = "Уровень мобилизации: [game.mobilization.level]"
-                    tmp += "\nУровень разрухи: [game.poverty.value]"
-                    tmp += "\nОчки/уровень дурной славы: [game.dragon.reputation.points]/[game.dragon.reputation.level]"
-                    tmp += "\nУровень дракона: [game.dragon.level]"
-                    tmp += "\nМощь дракона:"
+                    tmp = "mobilization level: [game.mobilization.level]"
+                    tmp += "\npoverty value: [game.poverty.value]"
+                    tmp += "\rep points/level: [game.dragon.reputation.points]/[game.dragon.reputation.level]"
+                    tmp += "\ndragon level: [game.dragon.level]"
+                    tmp += "\dragon attack power:"
                     for type in data.attack_types:
                         tmp += "\n  %s: %s" % (str(type), str(game.dragon.attack()[type]))
-                    tmp += "\nЗащита дракона:"
+                    tmp += "\ndragn defense power:"
                     for type in data.protection_types:
                         tmp += "\n  %s: %s" % (str(type), str(game.dragon.protection()[type]))
-                    tmp += "\nАрмия Тьмы:"
-                    tmp += "\n  Рядовые войска: [game.army.grunts]. [game.army.grunts_list]"
-                    tmp += "\n  Элитные войска: [game.army.elites]. [game.army.elites_list]"
-                    tmp += "\n  Разнообразие войск: [game.army.diversity]. "
-                    tmp += "\n  Денег в казне: [game.army.money]. Уровень экипировки: [game.army.equipment]"
-                    tmp += "\n  Сила армии Тьмы: [game.army.force] (армия сильна на [game.army.power_percentage] %)."
+                    tmp += "\n Army of darkness:"
+                    tmp += "\n  grunts: [game.army.grunts]. [game.army.grunts_list]"
+                    tmp += "\n  elites: [game.army.elites]. [game.army.elites_list]"
+                    tmp += "\n  diversity: [game.army.diversity]. "
+                    tmp += "\n  money: [game.army.money]. Уровень экипировки: [game.army.equipment]"
+                    tmp += "\n  power percentage: [game.army.force] (армия сильна на [game.army.power_percentage] %)."
                     narrator(tmp)
                 return
-            "Отладка":
+            "debugging":
                 call lb_test_debug from _call_lb_test_debug
-            "Ачивки":
+            "Аchievements":
                 call lb_achievements_list from _call_lb_achievements_list
-            "Сбросить ачивки":
+            "Resetting achievements":
                 python:
                     for a in persistent.achievements.keys():
                         persistent.achievements.__delitem__(a)
-                "Список достижений очищен"
-            "Назад":
+                "Achievement list cleared"
+            "back":
                 return
     return
     
 label lb_test_debug:
     nvl clear
     menu:
-        "Отладка"
-        "Включить дебаговывод":
+        "debugging"
+        "Enabling debug output":
             $ config.debug = True
-        "Королевство":
+        "kingdom":
             menu:
-                "Повысить мобилизацию":
+                "increase mobilization":
                     $ game.mobilization.level += 1
-                "Понизить мобилизацию":
+                "decrease mobilization":
                     $ game.mobilization.level -= 1
-                "Повысить разруху":
+                "increase poverty":
                     $ game.poverty.value += 1
-                "Понизить разруху":
+                "decrease poverty":
                     $ game.poverty.value -= 1
-                "Ослабить армию Тьмы":
+                "weaken army of darkness":
                     $ game.army.power_percentage -= 10
-        "Дракон":
+        "dragon":
             while True:
                 menu:
-                    "Потратить одно очко здоровья":
+                    "lose a point of health":
                         $ game.dragon.struck()
                     "Добавить одно очко здоровья" if game.dragon.health < 2:
                         $ game.dragon.health += 1

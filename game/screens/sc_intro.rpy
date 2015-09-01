@@ -4,25 +4,25 @@
     
 transform bottom_to_top:  # Трансформ прокручивающий текст
         ypos 720 xalign 0.5  # Начальное положение текста - по вертикали убран занижний край и выровнен посередине
-        linear 200.0 ypos 0 yanchor 1.0  # За 200 секунд поднимаем текст до верхней кромки и смещаем якорь (по которому высчитывается положение текста)
+        linear 150.0 ypos 0 yanchor 1.0  # За 200 секунд поднимаем текст до верхней кромки и смещаем якорь (по которому высчитывается положение текста)
 
 transform intro_bg:
     "intro 1" with dissolve  # Начальная картинка (нужна чтобы показать ее если пошел повтор
-    pause 35  # Задержка перед следущей картинкой
+    pause 26  # Задержка перед следущей картинкой
     "intro 2" with dissolve  # Показываем следущую картинку
-    pause 20
+    pause 15
     "intro 3" with dissolve
-    pause 15
+    pause 12
     "intro 4" with dissolve
-    pause 15
+    pause 11
     "intro 5" with dissolve
-    pause 25
+    pause 19
     "intro 6" with dissolve
-    pause 15
+    pause 11
     "intro 7" with dissolve
-    pause 37
+    pause 28
     "intro 8" with dissolve
-    pause 50
+    pause 37.5
     repeat  # Повторяем по кругу
     
 screen sc_intro:

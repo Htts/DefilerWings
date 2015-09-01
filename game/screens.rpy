@@ -248,13 +248,12 @@ screen main_menu:
         # size 60
         # bold False
         # color "#607080"
-    text "{font=fonts/PFMonumentaPro-Regular.ttf}Версия: %s" % config.version:
-        xalign 0.96
-        yalign 0.29
-        text_align 0.5
-        size 14
-        bold False
-        color "#241511"
+    #text "{font=fonts/PFMonumentaPro-Regular.ttf}Version: %s" % config.version:
+    #    xalign 0.96
+     #   yalign 0.29
+      #  text_align 0.5
+       #bold False
+        #color "#241511"
 
 init -2 python:
     style.mm_button.size_group = "mm"

@@ -21,7 +21,7 @@ label lb_location_smuggler_main:
         'Hire mercenaries' if 'smuggler_guards' not in game.lair.upgrades and 'regular_guards' not in game.lair.upgrades:
             "Hired thugs will prevent arrogant thieves from pilfering the dragon\'s treasure. Just [guards_cost] farthings per year."
             menu:
-                "Sin the contract" if guards_cost <= game.lair.treasury.wealth:
+                "Sign the contract" if guards_cost <= game.lair.treasury.wealth:
                     $ game.lair.upgrades.add('smuggler_guards', deepcopy(data.lair_upgrades['smuggler_guards']))
                     "Hired thugs will guard the lair while the dragon sleeps."
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_2 
@@ -69,12 +69,12 @@ label lb_location_smuggler_main:
         'Finance terrorists' if game.mobilization.level > 0:
             show expression 'img/scene/thief.jpg' as bg
             $ terror_cost = game.mobilization.level * 100
-            'The troops of the kingdom are too organized and alert to do evil with impunity.  But if you can provide local bandits with money for weapons, equipments, and supplies, they can become a threat that will distract the patrolling soldiers. [terror_cost] farthings will be enough to increase internal strife and make supply convoys disappear.'
+            'The troops of the kingdom are too organized and alert for you to do evil with impunity.  But if you can provide local bandits with money for weapons, equipment, and supplies, they can become a threat that will distract the patrolling soldiers. [terror_cost] farthings will be enough to increase internal strife and make supply convoys disappear.'
             menu:
                 'Pay [terror_cost] to terrorists' if terror_cost <= game.lair.treasury.money:
                     $ game.lair.treasury.money -= terror_cost
                     $ game.mobilization.level -= 1
-                    'По приказанию дракона, разбойники будут поджигать продовольственные склады, отравлять колодцы и перехватывать армейские обозы. Мобилизационный потенциал королевства снижается.'
+                    'Following the dragon\'s orders, the bandits will set fire to food warehouses, poison wells, and capture supply convoys. The ability of the kingdom to mobilize will be reduced.'
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main
                 'It is not worth it':
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_1

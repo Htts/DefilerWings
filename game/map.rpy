@@ -33,11 +33,11 @@ screen main_map:
             ("mordor", "Lands of Darkness"),
             ("sky", "Sky"),
             ("forest", "Forest"),
-            ("smuggler", "Smugglers den"),
+            ("smuggler", "Smugglers\' den"),
             ("mountain", "Mountains"),
             ("road", "Trade route"),
             ("ruin", "Old ruins"),
-            ("gremlin", "Gremlin villgae"),
+            ("gremlin", "Gremlin village"),
             ("city", "Capital"),
             ("plains", "Rural area")
         ]
@@ -67,10 +67,10 @@ screen main_map:
                     xalign 0.5
         
         if game.dragon is not None:
-            text u"{font=fonts/AnticvarShadow.ttf} Year %d d.a. (Time passed %d) {/font}" % (game.year, game.dragon.age)
+            text u"{font=fonts/AnticvarShadow.ttf} Year %d d.a. (Time passed: %d) {/font}" % (game.year, game.dragon.age)
     
     if game.dragon is not None:
-        text "{font=fonts/AnticvarShadow.ttf} %d farthing {/font}" % game.lair.treasury.money:
+        text "{font=fonts/AnticvarShadow.ttf} %d farthings {/font}" % game.lair.treasury.money:
             xalign 0.7
             yalign 1
             size 25

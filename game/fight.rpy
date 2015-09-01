@@ -38,7 +38,7 @@ label lb_fight(foe=game.foe, skip_fear=False):
                         "[game.dragon.name] retreats in disgrace and cowers in a makeshift lair"
                         $ game.create_lair()
                     else:
-                        "[game.dragon.name] retreats to his lair, to recuperate and make up a new strategy."
+                        "[game.dragon.name] retreats to his lair, to recuperate and come up with a new strategy."
                     hide foeimg
                     nvl clear
                     if foe.kind != 'knight':

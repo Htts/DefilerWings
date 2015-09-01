@@ -24,7 +24,7 @@ label lb_nature_sex:
             $ description = game.girls_list.jail_girl()
             game.girl.third "[description]"
             return
-        'Flitch to the lair' if not game.girl.jailed:
+        'Take back to the lair' if not game.girl.jailed:
             $ description = game.girls_list.steal_girl()
             game.girl.third "[description]"
             $ place = game.lair.type_name
@@ -37,7 +37,7 @@ label lb_nature_sex:
             $ description = game.girls_list.free_girl()
             game.girl.third "[description]"
             return
-        'Vore lustfully' if game.dragon.hunger > 0:
+        'Eat her lustfully' if game.dragon.hunger > 0:
             $ description =  game.girls_list.eat_girl()
             game.girl "[description]"
             play sound "sound/eat.ogg"
@@ -97,7 +97,7 @@ label lb_gigant_sex:
             $ description = game.girls_list.free_girl()
             game.girl.third "[description]"
             return
-        'Vore lustfully' if game.dragon.hunger > 0:
+        'Eat her lustfully' if game.dragon.hunger > 0:
             $ description = game.girls_list.eat_girl()
             game.girl.third "[description]"
             show expression sex_imgs.get_eat_image() as eat_image
