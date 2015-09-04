@@ -1826,18 +1826,18 @@ class Treasury(store.object):
                     menu_options += [(u"no large gem", 'huge', True, not is_crafting or self.check_gem_size('large'))]
             if alignment and item.decorable:
                 if item.decoration:
-                    decor_image = decoration_description_rus['image'][image_description_rus[item.decoration_image]]
+                    decor_image = decoration_description_rus['image']
                     decor_image += u" " + image_description_rus[item.decoration_image]
                 else:
                     decor_image = u"no image"
                 menu_options += [(decor_image, 'decoration', True, True)]
             if is_crafting:
                 if item.craft_cost(base_cost, price_multiplier) > 0:
-                    craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), number_pluralizer((item.craft_cost(base_cost, price_multiplier)), self.money))
+                    craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), number_pluralizer((item.craft_cost(base_cost, price_multiplier))), self.money)
                 else:
                     craft_msg = u"Craft"
             else:
-                craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), number_pluralizer((item.craft_cost(base_cost, price_multiplier)), self.money))
+                craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), number_pluralizer((item.craft_cost(base_cost, price_multiplier))), self.money)
             menu_options += [(craft_msg, 'create', True, item.craft_cost(base_cost, price_multiplier) <= self.money)]
             menu_choice = call_screen("dw_choice", menu_options)
             # показ меню
