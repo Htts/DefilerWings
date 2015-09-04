@@ -59,9 +59,9 @@ label lb_location_lair_main:
                     if game.lair.treasury.farthing > 0:
                         $ description += u"%d farthing%s\n" % (game.lair.treasury.farthing,treasures.number_pluralizer(game.lair.treasury.farthing))
                     if game.lair.treasury.taller > 0:
-                        $ description += u"%d taller%s\n" % (game.lair.treasury.farthing, treasures.number_pluralizer(game.lair.treasury.taller))
+                        $ description += u"%d taller%s\n" % (game.lair.treasury.taller, treasures.number_pluralizer(game.lair.treasury.taller))
                     if game.lair.treasury.dubloon > 0:
-                        $ description += u"%d dubloon%s" % (game.lair.treasury.farthing, treasures.number_pluralizer(game.lair.treasury.dubloon))
+                        $ description += u"%d dubloon%s" % (game.lair.treasury.dubloon, treasures.number_pluralizer(game.lair.treasury.dubloon))
                     "[description]"
                     nvl clear
                 '[game.lair.treasury.jewelry_mass_description]' if len(game.lair.treasury.jewelry) > 0:
