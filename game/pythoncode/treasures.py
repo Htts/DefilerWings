@@ -1242,7 +1242,7 @@ class Treasury(store.object):
         gem_list = sorted(self.gems.keys())  # список драгоценных камней, отсортированных по типу/размеру/огранке
         for gem_name in gem_list:
             if self.gems[gem_name]:  # проверка наличия камней такого типа в сокровищнице
-                gem_str += u"%s %s.\n" % capitalize_first(self.gems[gem_name], gem_name)
+                gem_str += u"%s %s.\n" % (self.gems[gem_name], capitalize_first(gem_name))
         return gem_str
 
     @property
@@ -1255,11 +1255,11 @@ class Treasury(store.object):
         for metal_name in metal_list:
             metal_weight = self.metals[metal_name]
             if metal_weight:
-                material_str += u"%s %s.\n" % capitalize_first(self.metals[metal_name], metal_name)
+                material_str += u"%s %s.\n" % (self.metals[metal_name], capitalize_first(metal_name))
         mat_list = sorted(self.materials.keys())
         for mat_name in mat_list:
             if self.materials[mat_name]:
-                material_str += u"%s %s.\n" % capitalize_first(self.materials[mat_name], mat_name)
+                material_str += u"%s %s.\n" % (self.materials[mat_name], capitalize_first(mat_name))
         return material_str
 
     @property
@@ -1833,11 +1833,11 @@ class Treasury(store.object):
                 menu_options += [(decor_image, 'decoration', True, True)]
             if is_crafting:
                 if item.craft_cost(base_cost, price_multiplier) > 0:
-                    craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), pluralizer((item.craft_cost(base_cost, price_multiplier)), self.money))
+                    craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), number_pluralizer((item.craft_cost(base_cost, price_multiplier)), self.money))
                 else:
                     craft_msg = u"Craft"
             else:
-                craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), pluralizer((item.craft_cost(base_cost, price_multiplier)), self.money))
+                craft_msg = u"Craft for %d farthing%s (you have %s)" % (item.craft_cost(base_cost, price_multiplier), number_pluralizer((item.craft_cost(base_cost, price_multiplier)), self.money))
             menu_options += [(craft_msg, 'create', True, item.craft_cost(base_cost, price_multiplier) <= self.money)]
             menu_choice = call_screen("dw_choice", menu_options)
             # показ меню
