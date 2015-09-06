@@ -1,4 +1,7 @@
-# coding=utf-8
+﻿# coding=utf-8
+
+
+
 screen sc_treasury_gems:
     python:
         class del_gem(object):
@@ -11,10 +14,11 @@ screen sc_treasury_gems:
                 renpy.restart_interaction()
     vbox:
         
-        for i in range(0, len(game.lair.treasury.gems)):
+        
+        for key,val in game.lair.treasury.gems.iteritems():
             hbox:
-                text "Type:%s Price:%d" % (game.lair.treasury.gems[i].g_type, game.lair.treasury.gems[i].cost)
-                textbutton "Throw away" action del_gem(game.lair.treasury.gems, i)
+                text "Type:%s Amount:%s" % (key, val)
+                #textbutton "Remove" action del_gem(game.lair.treasury.gems, i)
     
     use sc_gem_creator
 
