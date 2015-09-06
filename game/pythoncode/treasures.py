@@ -415,11 +415,11 @@ def number_pluralizer(num):
     else:
         return ""
 
-def number_conjugation_rus(num, word): #Input 5, "ingot", output "ingots"
+def number_conjugation_rus(num, word): #Input 5, "ingot", output "5 ingots"
     if num > 1:
-        return u"%ss" % word
+        return u"%d %ss" % (num,word)
     else:
-        return word
+        return u"%d %s"% (num,word)
         
 
 def capitalize_first(string):
@@ -901,8 +901,8 @@ class Treasure(object):  # класс для сокровищ
                 desc_str = u"%s%s %s" % (
                     quality_str, metal_description_rus[self.material], treasure_str)
         else:
-            desc_str = u"%s%s of %s" % (
-                quality_str, treasure_str, material_description_rus[self.material])
+            desc_str = u"%s%s %s" % (
+                quality_str, material_description_rus[self.material], treasure_str)
 
         if self.image:
             desc_str += u", depicting %s" % image_description_rus[self.decoration_image]  

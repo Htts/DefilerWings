@@ -395,8 +395,7 @@ thief_items = Container(
         }
     })
 
-# Одинаковые айдишники вещей спасут от того, что у вора может оказаться норамльная.
-# As I remember, we planned to use cursed items, but after all we didn't implemented them
+# We planned to use cursed items, but ultimately we didn't implement them
 thief_items_cursed = Container(
     "thief_items_cursed",
     {
@@ -453,7 +452,7 @@ thief_titles = [
     u"Rogue",
     u"Burglar",
     u"Tomb Raider",
-    u"Master-thief",
+    u"Master thief",
     u"Prince of Thieves"
 ]
 
@@ -628,7 +627,7 @@ knight_last_names = [
     u"the Handsome",
     u"the Great",
     u"the Radiant",
-    u"the Whiteshield",
+    u"Whiteshield",
     u"the Strong",
     u"the Kin Eye",
     u"the Lionhart",
@@ -972,11 +971,11 @@ lair_types = Container(
     "lair_types",
     {
         "impassable_coomb": {
-            "name": u"impassable combe",
+            "name": u"Impassable combe",
             "inaccessability": 0
         },
         "impregnable_peak": {
-            "name": u"impregnable peak",
+            "name": u"Impregnable peak",
             "inaccessability": 0,
             "require": ["alpinism"],
             'prerequisite': ['wings']
@@ -1672,7 +1671,7 @@ quest_list = (
         'min_lvl': 1,  # минимальный уровень дракона для получения квеста
         'max_lvl': 1,  # максимальный уровень дракона для получения квеста
         # текст квеста, {0} будет заменён на требуемый уровень
-        'text': u"My son, you're all grown up, and it\'s time to get down to real business. Beyond my possession are the Free Peoples of the earth, they humiliated me and drove me into the barren wasteland. You will be start of a bloodline that will bring them destruction. \n Let\'s see what you are capable of. Travel to the land of the Free Peoples and make a name for yourself - let them speak of you and fear you. But do not go on a thoughtless rampage, we don\'t want you to die without leaving a son, right? If you see that the enemy is strong - run away. Fight stealthily. Scour the woods and fields, kill lone women and ruin herds. When the people begin to whisper, come back to me and I\'ll give you a son, who will become stronger and achieve more than you. \n My advice - do not sleep in the Free Lands. When you sleep, you will slumber for a year, or more if you must heal wounds, and in the meantime men will hunt for you and your treasure. The more infamous you are, the more attention you attract, though that is not a concern just yet. If you have time before you are exhausted, return here. If unable, stay in a flood gulley as a last resort. \n If you are unable to accomplish this within five years, I will find another successor. ",
+        'text': u"My son, you're all grown up, and it\'s time to get down to real business. Beyond my possession are the Free Peoples of the earth, they humiliated me and drove me into the barren wasteland. You will be start of a bloodline that will bring them destruction. \n Let\'s see what you are capable of. Travel to the land of the Free Peoples and make a name for yourself - let them speak of you and fear you. But do not go on a thoughtless rampage, we don\'t want you to die without leaving a son, right? If you see that the enemy is strong - run away. Fight stealthily. Scour the woods and fields, kill lone women and ruin herds. When the people begin to whisper, come back to me and I\'ll give you a son, who will become stronger and achieve more than you. \n My advice - do not sleep in the Free Lands. When you sleep, you will slumber for a year, or more if you must heal wounds, and in the meantime men will hunt for you and your treasure. The more infamous you are the more attention you attract, though that is not a concern just yet. If you have time before you are exhausted, return here. If unable, stay in a flood gulley as a last resort. \n If you are unable to accomplish this within five years, I will find another successor. ",
         'fixed_time': 5,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         # ключевое слово для описания задачи, 'reputation' - проверяется уровень дурной славы
         'task': 'reputation',

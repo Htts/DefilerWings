@@ -18,7 +18,7 @@ label lb_location_mordor_main:
     python:
         mistress = Talker(game_ref=game)
         mistress.avatar = "img/avahuman/mistress.jpg"
-        mistress.name = "Владычица"
+        mistress.name = "Mistress"
     
     menu:
         'To the Free Kingdoms':

@@ -290,7 +290,7 @@ screen navigation:
         # textbutton _("Сохранить игру") action ShowMenu("save")
         # textbutton _("Загрузить игру") action ShowMenu("load")
         textbutton _("Main menu") ypos 305 action MainMenu()
-        textbutton _("Autors note") ypos 315 action Help()
+        textbutton _("Authors note") ypos 315 action Help()
         textbutton _("Save & Quit") ypos 325 action Quit()
 
 init -2 python:
@@ -411,7 +411,7 @@ screen preferences:
         style_group "pref"
         has vbox
         textbutton _("Contnue skip") xpos 490 ypos 400 action Preference('after choices', 'skip')
-        textbutton _("Stop skiping") xpos 650 ypos 340 action Preference('after choices', 'stop')
+        textbutton _("Stop skipping") xpos 650 ypos 340 action Preference('after choices', 'stop')
     frame:
         style_group "pref"
         has vbox

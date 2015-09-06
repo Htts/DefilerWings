@@ -21,8 +21,8 @@ class Knight(Fighter):
         """
         super(Knight, self).__init__(*args, **kwargs)
         self._alive = True
-        self.name = u"Сер Ланселот Озёрный"
-        self.name = u"Сэр %s %s" % (random.choice(data.knight_first_names), random.choice(data.knight_last_names))
+        self.name = u"Sir Lancelot of the Lake"
+        self.name = u"Sir %s %s" % (random.choice(data.knight_first_names), random.choice(data.knight_last_names))
         # Проверка что мы можем создать рыцаря указанного уровня
         if level < 1:
             level = 1
@@ -57,21 +57,21 @@ class Knight(Fighter):
         """
         d = []
         if self.is_dead:
-            d.append(u"Рыцарь мёртв")
+            d.append(u"The knight is dead.")
             return u"\n".join(d)
-        d.append(u"Сила: %s (%d)" % (self.title, self.power))
+        d.append(u"Strength: %s (%d)" % (self.title, self.power))
         if self.abilities:
-            d.append(u"Способности: ")
+            d.append(u"Abilities: ")
             for ability in self.abilities:
                 d.append(u"    %s: %s" % (self.abilities[ability].name, self.abilities[ability].description))
         else:
-            d.append(u"Способности отсутствуют")
+            d.append(u"No abilities.")
         if self.items:
-            d.append(u"Вещи:")
+            d.append(u"Items:")
             for item in self.items:
                 d.append(u"    %s: %s" % (self.items[item].name, self.items[item].description))
         else:
-            d.append(u"Вещи отсутствуют")
+            d.append(u"No items.")
 
         return u"\n".join(d)
 

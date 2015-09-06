@@ -170,7 +170,7 @@ screen status_bar:
                     xalign 0.5
         
         if config.developer:
-            textbutton "{font=fonts/Tchekhonin2.ttf}О{/font}{font=fonts/times.ttf}тладка{/font}":
+            textbutton "{font=fonts/times.ttf}Debug{/font}":
                 pos(72, 549)
                 xysize(174, 36)
                 text_xalign 0.5
@@ -183,7 +183,7 @@ screen special_places:
     fixed:
         xalign 1.0
         xmaximum 320
-        textbutton "{font=fonts/Tchekhonin2.ttf}P{/font}{font=fonts/times.ttf}laces{/font}":
+        textbutton "{font=fonts/times.ttf}Places{/font}":
             pos(72, 599)
             xysize(174, 36)
             text_xalign 0.5
@@ -196,7 +196,7 @@ screen to_lair_button:
     fixed:
         xalign 1.0
         xmaximum 320
-        textbutton "{font=fonts/Tchekhonin2.ttf}L{/font}{font=fonts/times.ttf}air{/font}":
+        textbutton "{font=fonts/times.ttf}Lair{/font}":
             pos(72, 649)
             xysize(174, 36)
             text_xalign 0.5

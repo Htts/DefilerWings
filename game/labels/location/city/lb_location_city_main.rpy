@@ -77,7 +77,7 @@ label lb_city_walk:
         'Cathedral':
             call lb_city_cathedral from _call_lb_city_cathedral
             
-        'Jewelers shop':
+        'Jeweler\'s shop':
             call lb_city_jewler from _call_lb_city_jewler
             
         'Go back':
@@ -231,24 +231,24 @@ label lb_city_jewler:
             python:
                 if (item_index is None):
                     description = u"Sell all jewels for %s?" % (
-                        treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"farthings"))
+                        treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"farthing"))
                 else:
                     description = u"%s.\nSell jewel for %s?" % (
                         game.lair.treasury.jewelry[item_index].description().capitalize(),
-                        treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost, u"farthings"))
+                        treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost, u"farthing"))
             menu:
                 "[description]"
                 'Sell':
                     python:
                         if (item_index is None):
                             description = u"All jewelery sold for %s" % (
-                                treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"farthings"))
+                                treasures.number_conjugation_rus(game.lair.treasury.all_jewelries, u"farthing"))
                             game.lair.treasury.money += game.lair.treasury.all_jewelries
                             game.lair.treasury.jewelry = []
                         else:
                             description = u"%s.\nSold for %s" % (
                                 game.lair.treasury.jewelry[item_index].description().capitalize(),
-                                treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost, u"farthings"))
+                                treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost, u"farthing"))
                             game.lair.treasury.money += game.lair.treasury.jewelry[item_index].cost
                             game.lair.treasury.jewelry.pop(item_index)
 
