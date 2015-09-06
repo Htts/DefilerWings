@@ -372,32 +372,32 @@ decorate_types_description_rus = {
 """словарь для вывода описаний массы сокровищ на русском"""
 treasures_mass_description_rus = {
     'coin': {
-        0: u"coins",
-        100: u"handful of coins",
-        1000: u"pile of coins",
-        10000: u"mountain of coins",
-        100000: u"mountains of coins",
+        0: u"Coins",
+        100: u"Handful of coins",
+        1000: u"Pile of coins",
+        10000: u"Mountain of coins",
+        100000: u"Mountains of coins",
     },
     'material': {
-        0: u"materials",
-        100: u"handful of materials",
-        1000: u"pile of materials",
-        10000: u"mountain of materials",
-        100000: u"mountains of materials",
+        0: u"Materials",
+        100: u"Handful of materials",
+        1000: u"Pile of materials",
+        10000: u"Mountain of materials",
+        100000: u"Mountains of materials",
     },
     'gem': {
-        0: u"gemstones",
-        100: u"handful of gems",
-        1000: u"pile of gems",
-        10000: u"mountain of gems",
-        100000: u"mountains of gems",
+        0: u"Gemstones",
+        100: u"Handful of gems",
+        1000: u"Pile of gems",
+        10000: u"Mountain of gems",
+        100000: u"Mountains of gems",
     },
     'jewelry': {
-        0: u"trinkets",
-        100: u"handful of trinkets",
-        1000: u"pile of trinkets",
-        10000: u"mountain of trinkets",
-        100000: u"mountains of trinkets",
+        0: u"Trinkets",
+        100: u"Handful of trinkets",
+        1000: u"Pile of trinkets",
+        10000: u"Mountain of treasure",
+        100000: u"Mountains of treasure",
     },
     'wealth': {
         0: u"The treasury is virtually empty. ",
@@ -415,6 +415,12 @@ def number_pluralizer(num):
     else:
         return ""
 
+def number_conjugation_rus(num, word): #Input 5, "ingot", output "ingots"
+    if num > 1:
+        return u"%ss" % word
+    else:
+        return word
+        
 
 def capitalize_first(string):
     return string.capitalize()
@@ -452,7 +458,21 @@ class Ingot(object):  # Class for generating ingots
         else:
             return u"The gross weight of the %s ingots is %d pounds" % (
                     metal_description_rus[self.metal_type], self.weight)
+                    
+    @staticmethod
+    def number_conjugation(metal_type, metal_weight):
+        """
+        Функция для вывода описания слитков металла по типу металла и его количеству
+        """
+        if metal_weight in Ingot.weights:
+            return u"%s %s bar" % (
+                Ingot.weights_description_rus[metal_weight], metal_description_rus[metal_type])
+        else:
+            return u"Some %s bars weighing %d pound%s" % (
+                metal_description_rus[metal_type], metal_weight, number_pluralizer(metal_weight))
 
+                
+    
 
 
 class Coin(object):
@@ -477,6 +497,12 @@ class Coin(object):
     def description(self):
         return "%d %s%s" % (self.amount, Coin.coin_description_rus[self.name], number_pluralizer(self.amount))
 
+    
+        
+        
+        
+        
+        
 class Gem(object):   
     cut_dict = {
         " ": (0, 1),
@@ -547,6 +573,29 @@ class Gem(object):
                 material_size_description_rus[self.size],
                 gem_cut_description_rus[self.cut],
                 gem_description_rus[self.g_type][case])
+                
+                
+    @staticmethod
+    def number_conjugation(gem_type, gem_count):
+        """
+        Функция для вывода описания камней по типу (в формате тип/размер/огранка)
+        и количеству (без учета умножения мелких/обычных камней)
+        """
+        gem_param = gem_type.split(';')
+        if gem_param[1] == 'small' or gem_param[1] == 'common':  # умножаем мелкие/обычные камни
+            if gem_param[1] == 'small':
+                gem_count *= 25
+            else:
+                gem_count *= 5
+                
+        if gem_count != 1:  
+            return u"%s %s%s%s" % (gem_count, material_size_description_rus[gem_param[1]],
+                                   gem_cut_description_rus[gem_param[2]],
+                                   gem_description_rus[gem_param[0]]['plural'])
+        else:
+            return u"%s%s%s" % (material_size_description_rus[gem_param[1]],
+                                gem_cut_description_rus[gem_param[2]],
+                                gem_description_rus[gem_param[0]]['singular'])
   
 
 def generate_gem(count, *args):
@@ -620,7 +669,18 @@ class Material(object):  # класс для генерации материал
     def description(self):
         return u"%spieces of %s" % (material_size_description_rus[self.size],material_description_rus[self.m_type])
 
-    
+    @staticmethod
+    def number_conjugation(material_type, material_count):
+        """
+        Функция для вывода описания камней по типу (в формате тип/размер) и количеству
+        """
+        material_param = material_type.split(';')
+        # выводим результат для каждого типа сопряжения
+        if material_count != 1:  # если материал один - не ставим число
+            return u"%s %spieces of %s" % (
+                material_count, material_size_description_rus[material_param[1]], material_description_rus[material_param[0]])
+        else:
+            return u"%spiece of %s" % (material_size_description_rus[material_param[1]], material_description_rus[material_param[0]])
 
 
 def generate_mat(count, *args):
@@ -842,7 +902,7 @@ class Treasure(object):  # класс для сокровищ
                     quality_str, metal_description_rus[self.material], treasure_str)
         else:
             desc_str = u"%s%s of %s" % (
-                quality_str, material_description_rus[self.material], treasure_str)
+                quality_str, treasure_str, material_description_rus[self.material])
 
         if self.image:
             desc_str += u", depicting %s" % image_description_rus[self.decoration_image]  
@@ -1071,15 +1131,15 @@ class Treasury(store.object):
         for treas in coin_list.iterkeys():
             description_list.append("%d %s%s." % ((coin_list[treas]), treas, number_pluralizer((coin_list[treas]))))
         for treas in ingot_list.iterkeys():
-            description_list.append("%d %s%s." % ((ingot_list[treas]), treas, number_pluralizer((ingot_list[treas]))))
+            description_list.append(capitalize_first(Ingot.number_conjugation(treas, ingot_list[treas])) + '.')
         for treas in gem_list.iterkeys():
             if gem_list[treas] > 1:
-                description_list.append("%d %s%s." % ((gem_list[treas]), treas, number_pluralizer((gem_list[treas]))))
+                description_list.append(capitalize_first(Gem.number_conjugation(treas, gem_list[treas])) + '.')
             else:
                 description_list.append(capitalize_first(Gem(*treas.split(';')).description()) + '.')
         for treas in material_list.iterkeys():
             if material_list[treas] > 1:
-                description_list.append("%d %s%s." % ((material_list[treas]), treas, number_pluralizer((material_list[treas]))))
+                description_list.append(capitalize_first(Material.number_conjugation(treas, material_list[treas])) + '.')
             else:
                 description_list.append(capitalize_first(Material(*treas.split(';')).description()) + '.')
             # Выводим остальное
@@ -1242,7 +1302,7 @@ class Treasury(store.object):
         gem_list = sorted(self.gems.keys())  # список драгоценных камней, отсортированных по типу/размеру/огранке
         for gem_name in gem_list:
             if self.gems[gem_name]:  # проверка наличия камней такого типа в сокровищнице
-                gem_str += u"%s %s.\n" % (self.gems[gem_name], capitalize_first(gem_name))
+                gem_str += u"%s.\n" % capitalize_first(Gem.number_conjugation(gem_name, self.gems[gem_name]))
         return gem_str
 
     @property
@@ -1255,11 +1315,12 @@ class Treasury(store.object):
         for metal_name in metal_list:
             metal_weight = self.metals[metal_name]
             if metal_weight:
-                material_str += u"%s %s.\n" % (self.metals[metal_name], capitalize_first(metal_name))
+                material_str += u"%s.\n" % capitalize_first(Ingot.number_conjugation(metal_name, metal_weight))
         mat_list = sorted(self.materials.keys())
         for mat_name in mat_list:
             if self.materials[mat_name]:
-                material_str += u"%s %s.\n" % (self.materials[mat_name], capitalize_first(mat_name))
+                material_str += u"%s.\n" % capitalize_first(
+                    Material.number_conjugation(mat_name, self.materials[mat_name]))
         return material_str
 
     @property
@@ -1776,11 +1837,11 @@ class Treasury(store.object):
         # случайный выбор стиля вещи из списка
         item = Treasure(treasure_type, alignment)
         quality_options = {
-            'rough': u"с rough crafting",
-            'common': u"с normal crafting",
-            'skillfully': u"с skillful crafting",
-            'mastery': u"с masterful crafting",
-            'random': u"со random crafting"
+            'rough': u"Rough crafting",
+            'common': u"Normal crafting",
+            'skillfully': u"Skillful crafting",
+            'mastery': u"с Masterful crafting",
+            'random': u"Random quality"
         }
         item.quality = quality[0]
         # первоначальный выбор качества - первый в списке
