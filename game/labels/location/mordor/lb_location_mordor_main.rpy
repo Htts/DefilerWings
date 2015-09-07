@@ -98,7 +98,7 @@ label lb_location_mordor_questtime:
     show place as bg
     show screen status_bar
     if game.is_quest_complete:
-        mistress '[game.dragon.name] You spend too much time playing with the people, I tire of waiting. Have you forgotten your task?'
+        mistress '[game.dragon.name] , you spend too much time playing with the people, I tire of waiting. Have you forgotten your task?'
         game.dragon 'Not at all, Mistress, I did all that you asked. Here, look.'
         mistress 'Perfect. In that case, you are due for a well-deserved reward. Come to me, darling.'
         call lb_mistress_fuck from _call_lb_mistress_fuck_1

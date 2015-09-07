@@ -1,14 +1,13 @@
 """There was some very sick shit going on in this file. 
 #russian has noun declension and gender.
-#There were data structures listing the he,she,they,it, nominative, genitive, ablative, versions of everything and elaborate code for combining them. I simplified the data structures and tried to simplify the code.
+#There were data structures listing the he,she,they,it, nominative, genitive, ablative, versions of everything and elaborate code for combining them. I simplified the data structures and tried (badly) to simplify the code.
 
 #Each category of loot has its own class: gems, coins, ingots, treasures, and materials, and there's a main Treasury class that handles all of them.
 
 Every class of loot has a description() function that describes a single loot object, like "Rough common agate". This is always used for treasures, because they're so unique that you only ever deal with single treasure objects.
 
-The treasury class also has functions that take all the gems and materials (and ingots?) and put them in a dictionary like ["agate;common;rough"] : [5], to add up all the duplicates.
-And then there will be a function like gem.number_conjugation that takes that key and value and outputs "5 rough common agates".
-There are also extra functions like number_pluralizer and number_conjugation_rus that do similar things, it's pretty much redundant code that I wrote when I was confused. 
+The treasury class also has functions that take all the gems and stuff and put them in a dictionary like ["agate;common;rough"] : [5], to add up all the duplicates.
+And then there will be a function like gem.number_conjugation that takes that key and value and outputs "5 rough common agates". There are also extra functions like number_pluralizer and number_conjugation_rus that do similar things, it's pretty much redundant code that I wrote when I was confused. 
 
 
 
