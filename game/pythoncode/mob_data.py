@@ -18,7 +18,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The airship captain waits for the dragon to close. %(dragon_name)s also waits, in no hurry to take a volley from the steam artillery. Someone must take a chance."],
             [['foe_alive', 'lost_head'], u"The cruiser\'s onboard artillery fires a broadside. Heavy iron balls crash into the dragon\'s head, smashing his skull with a crunch. Luckily %(dragon_name_full)s is able to survive such damage..."],
             [['foe_dead', 'lost_head'], u"Ignoring the danger, the %(dragon_type)s rams the flying cruiser The dwarven artillery fires a salvo at point blank range into one of the dragon\'s heads, but his inertia carries him forward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
-            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the steam ship, and time after time, bursts of explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, the %(dragon_type)s falls to the ground and breathes his last breath..."]
+            [['dragon_dead'], u"Time after time, %(dragon_name_full)s rushes at the steam ship, and time after time, bursts of explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, the %(dragon_type)s falls to the ground and breathes his last breath..."]
         ]
     },
 
@@ -32,13 +32,13 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"A fleet of flying ships line up to attack."],
             [['foe_fear'],  u"At first sight of the dragon, the flying ships quickly turn full steam in the other direction."],
-            [['foe_dead', 'dragon_undamaged'], u"The flying dwarven ships are too slow and clumsy to withstand the onslaught of the dragon. %(dragon_name_full) destroys them one by one, never once crossing the firing zones of the steam guns."],
+            [['foe_dead', 'dragon_undamaged'], u"The flying dwarven ships are too slow and clumsy to withstand the onslaught of the dragon. %(dragon_name_full)s destroys them one by one, never once crossing the firing zones of the steam guns."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the battle formation of the flying fleet and begins destroying warships. Their panicked fire does more damage to themselves than the dragon, though a few projectiles hit their target. %(dragon_name_full)s triumphs."],
             [['foe_alive', 'dragon_wounded'], u"%(dragon_type_cap)s tries to break into the ranks of the fighting ships, but is thrown back by salvos from multiple ships."],
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_type_cap)s is cautious, trying not to get into a crossfire from the steam guns. But there is no way to destroy the ships without getting closer."],
             [['foe_alive', 'lost_head'], u"The airborne cruisers\' artillery fires steady volleys. A heavy iron ball smashes into one of the dragon\'s heads with a crunch and shatters his skull. Luckily %(dragon_name_full)s is able to survive such an injury..."],
             [['foe_dead', 'lost_head'], u"Flying ships cannot withstand the onslaught of a furious dragon, but the dwarves fight to the death. Although the %(dragon_type)s wins, one of his heads does not survive its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) bursts into the flagship of the fleet, smashing through bulkheads and killing crewmen. The captain, seeing that his crew cannot be saved, closes the valves on the ship\'s boiler. A massive explosion of superheated steam takes with it the ship, the crew, and the dragon..."]
+            [['dragon_dead'], u"%(dragon_name_full)s bursts into the flagship of the fleet, smashing through bulkheads and killing crewmen. The captain, seeing that his crew cannot be saved, closes the valves on the ship\'s boiler. A massive explosion of superheated steam takes with it the ship, the crew, and the dragon..."]
         ]
     },
 
@@ -58,7 +58,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The airship captain waits for the dragon to close. %(dragon_name)s also waits, in no hurry to take a hit from the steam catapult. Someone must take a chance."],
             [['foe_alive', 'lost_head'], u"The airship\'s onboard catapult fires repeatedly. Heavy iron balls crash into the dragon\'s head, smashing his skull with a crunch. Luckily %(dragon_name_full)s is able to survive such damage..."],
             [['foe_dead', 'lost_head'], u"Ignoring the danger, the %(dragon_type)s rams the flying ship The dwarven catapult hurls a ball at point blank range into one of the dragon\'s heads, but his inertia carries him forward to smash through the hull of the ship. %(dragon_name_full)s is able to survive the loss of his head, but the dwarven ship is ruined."],
-            [['dragon_dead'], u"Time after time, %(dragon_name_full) rushes at the airship, and time after time, explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, the %(dragon_type)s falls to the ground and breathes his last breath..."]
+            [['dragon_dead'], u"Time after time, %(dragon_name_full)s rushes at the airship, and time after time, explosive bombs force it back. Even the scales and bones of a dragon cannot withstand this forever. Beaten and mortally wounded, the %(dragon_type)s falls to the ground and breathes his last breath..."]
         ]
     },
 
@@ -98,7 +98,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The archer\'s arrows glance off the natural armor of the dragon."],
             [['foe_alive', 'lost_head'], u"A tempered arrow with a fire hardened shaft pierces through one of the dragon\'s mouths and into a brain. Luckily, %(dragon_name_full)s can survive such a wound."],
             [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s wins, but one of his heads is withering from its wounds."],
-            [['dragon_dead'], u"The archer looses a tempered arrow with a fire hardened shaft, and it pierces through one the dragon\'s mouth and into his brain. %(dragon_name_full) falls dead."]
+            [['dragon_dead'], u"The archer looses a tempered arrow with a fire hardened shaft, and it pierces through one the dragon\'s mouth and into his brain. %(dragon_name_full)s falls dead."]
         ]
     },
 
@@ -138,8 +138,8 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"Coordinated volleys of cannonfire smash into the dragon and he is forced to retreat, throwing up swirling columns of water."],
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_name)s dives under the ship and tries to punch a hole below the waterline, but to no avail."],
             [['foe_alive', 'lost_head'], u"A cast-iron bomb stuffed with black powder detonates directly on the dragon\'s forehead. From such a wound few can recover..."],
-            [['foe_dead', 'lost_head'], u"The %(dragon_type) climbs onto the deck of the ship and happily starts to make a bloodbath out of the crew. The sailors scatter in panic, and in his enthusiastic pursuit %(dragon_name)s fails to notice the captain climbing on a yardarm. Jumping from above, the captain slices off the dragon\'s head with a blow from his sword. Unfortunately for him, it isn\'t enough for victory. The warship is doomed."],
-            [['dragon_dead'], u"%(dragon_name_full) is too weak to withstand another volley from the warship. Pummeled by iron projectiles, the dragon sinks beneath the depths, no longer able to cling to life."]
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s climbs onto the deck of the ship and happily starts to make a bloodbath out of the crew. The sailors scatter in panic, and in his enthusiastic pursuit %(dragon_name)s fails to notice the captain climbing on a yardarm. Jumping from above, the captain slices off the dragon\'s head with a blow from his sword. Unfortunately for him, it isn\'t enough for victory. The warship is doomed."],
+            [['dragon_dead'], u"%(dragon_name_full)s is too weak to withstand another volley from the warship. Pummeled by iron projectiles, the dragon sinks beneath the depths, no longer able to cling to life."]
         ]
     },
 
@@ -200,7 +200,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The battle continues for some time, but neither side can gain the advantage."],
             [['foe_alive', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp curved bull\'s horn hits the lizard directly in the eye, tearing through the brain of one of his heads."],
             [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s one of his heads, but the dragon emerges victorious..."],
-            [['dragon_dead'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s horns pierce the scales on his chest. %(dragon_name_full) dies from terrible injuries."]
+            [['dragon_dead'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s horns pierce the scales on his chest. %(dragon_name_full)s dies from terrible injuries."]
         ]
     },
 
@@ -220,7 +220,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The battle continues for some time, but neither side can gain the advantage."],
             [['foe_alive', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp curved bull\'s horn hits the lizard directly in the eye, tearing through the brain of one of his heads."],
             [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s one of his heads, but the dragon emerges victorious..."],
-            [['dragon_dead'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s horns pierce the scales on his chest. %(dragon_name_full) dies from terrible injuries."]
+            [['dragon_dead'], u"The wounded %(dragon_type)s moves too slowly and the sharp bull\'s horns pierce the scales on his chest. %(dragon_name_full)s dies from terrible injuries."]
         ]
     },
 
@@ -320,7 +320,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s throws himself at the gate, under a rain of stones and arrows. The defender\'s fire does not cause him any harm, but the gate is well made and the fortifications do not give in."],
             [['foe_alive', 'lost_head'], u"Someone pours a vat of boiling tar on one of the dragon\'s heads."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but the victory costs him a head. An expensive price."],
-            [['dragon_dead'], u"The wounded %(dragon_type)s frantically beats at the strong gates, but they do not give in. Unable to continue fighting, %(dragon_name_full) falls bleeding in front of the insurmountable fortification."]
+            [['dragon_dead'], u"The wounded %(dragon_type)s frantically beats at the strong gates, but they do not give in. Unable to continue fighting, %(dragon_name_full)s falls bleeding in front of the insurmountable fortification."]
         ]
     },
     
@@ -359,7 +359,7 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"A volley of automatic gunfire throws the dragon aside."],
             [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s and the golem hit each other hard, but both are so well protected that they take only minor scrapes. The old firs shake from this battle of giants."],
             [['foe_alive', 'lost_head'], u"A volley of automatic gunfire throws the dragon back. Shots burst through one of %(dragon_name)s\'s brains."],
-            [['foe_dead', 'lost_head'], u"The wounded %(dragon_type) rips apart the wooden body of the house, but leaves a torn-off head in the tenacious steel toes of the golem."],
+            [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s rips apart the wooden body of the house, but leaves a torn-off head in the tenacious steel toes of the golem."],
             [['dragon_dead'], u"Bursts of automatic gunfire impact %(dragon_name)s\' skull, bursting his brains."]
         ]
     },
@@ -374,7 +374,7 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"The grass around the dragon shimmers emerald green - the druid gathers strength from wildlife."],
             [['foe_fear'],  u"The druid transforms into a fleet-footed deer and runs away. He is not ready to fight with such an enemy as %(dragon_name_full)s."],
-            [['foe_dead', 'dragon_undamaged'], u"The druid calls a cloud of killer bees, but this is a fatal mistake - they cannot pierce the scales of the dragon with their stings. The %(dragon_type) breaks the druid\'s body into pieces."],
+            [['foe_dead', 'dragon_undamaged'], u"The druid calls a cloud of killer bees, but this is a fatal mistake - they cannot pierce the scales of the dragon with their stings. The %(dragon_type)s breaks the druid\'s body into pieces."],
             [['foe_dead', 'dragon_wounded'], u"The druid surrounds himself with a wall of poisonous thorns, but the %(dragon_type)s cuts through them and kills him. The dragon\'s blood is already poisonous."],
             [['foe_alive', 'dragon_wounded'], u"The druid calls a variety of wild animals to his aid. In a fierce battle %(dragon_name_full)s wins a hard victory. The druid is unharmed, but the %(dragon_type)s is covered with blood."],
             [['foe_alive', 'dragon_undamaged'], u"The druid manages to hold the dragon with poisonous vines. But this is only a temporary solution, sooner or later %(dragon_name)s will break out."],
@@ -398,9 +398,9 @@ mob = {
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s meets the king in close combat and defeats him, but at a price - the enchanted axe has cut a gash into his chest."],
             [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s confidently attacks the adamant clad dwarf, but is forced to retreat under a flood of sharp blows."],
             [['foe_alive', 'dragon_undamaged'], u"The bout with the dwarven king lasts for some time, but neither side gains the advantage. Both fighters are stout and perfectly armored."],
-            [['foe_alive', 'lost_head'], u"With a mighty blow the dwarf king\'s runic axe cuts off one of the dragon\'s heads. However, %(dragon_name_full) is able to survive it."],
+            [['foe_alive', 'lost_head'], u"With a mighty blow the dwarf king\'s runic axe cuts off one of the dragon\'s heads. However, %(dragon_name_full)s is able to survive it."],
             [['foe_dead', 'lost_head'], u"%(dragon_name_full)s is able to overcome the king dwarf, but at great cost. A blow from the runic axe cuts off one of his heads."],
-            [['dragon_dead'], u"Gathering his last strength the wounded %(dragon_type)s rushes into a desperate attack, but the king of the dwarves stands firmly on his feet and delivers a skilled slash. %(dragon_name_full) falls headless at this feet!"]
+            [['dragon_dead'], u"Gathering his last strength the wounded %(dragon_type)s rushes into a desperate attack, but the king of the dwarves stands firmly on his feet and delivers a skilled slash. %(dragon_name_full)s falls headless at this feet!"]
         ]
     },
 
@@ -439,7 +439,7 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"%(dragon_name)s decides to charge the shield wall. but the dwarves are ready. Planting their spears on the ground they stop the monster and even get in a few well aimed blows with two-handed axes."],
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_name)s does not dare to attack the shield wall in the front, it is too dangerous. The dwarves hold their positions and try to engage the dragon with crossbows, but to no avail."],
             [['foe_alive', 'lost_head'], u"A frontal attack on the shield wall is a very bad idea. One of the dwarves in the second row strikes the dragon\'s head with a two-handed axe! This not fatal, but a very serious blow."],
-            [['foe_dead', 'lost_head'], u"Using all his considerable weight, the %(dragon_type)s breaches through the close held shields of the dwarves and scatters their ranks. Even deprived of protection the dwarves fight desperately, and before they are defeated %(dragon_name_full) loses one of his heads."],
+            [['foe_dead', 'lost_head'], u"Using all his considerable weight, the %(dragon_type)s breaches through the close held shields of the dwarves and scatters their ranks. Even deprived of protection the dwarves fight desperately, and before they are defeated %(dragon_name_full)s loses one of his heads."],
             [['dragon_dead'], u"%(dragon_name)s suffers from wounds received in the bloody battle. Seeing this the tunnel guards attack and triumph, beating the dragon. This victory cost them dearly, a victory that will be sung of in legends!"]
         ]
     },
@@ -454,13 +454,13 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"The border guard draws his bow and takes aim."],
             [['foe_fear'],  u"Deciding that the dragon is too tough for him, the guardian of the border dissolves in the dense foliage. He will go raise the alarm..."],
-            [['foe_dead', 'dragon_undamaged'], u"The %(dragon_type) powerfully beats his tail on a tree trunk, knocking the border guard out of it. In melee he has no chance."],
+            [['foe_dead', 'dragon_undamaged'], u"The %(dragon_type)s powerfully beats his tail on a tree trunk, knocking the border guard out of it. In melee he has no chance."],
             [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s shakes the tree to throw the elf from the branch, but in the process gets an arrow in the mouth. The archer is also unlucky, falling directly after his arrow on the angry dragon..."],
             [['foe_alive', 'dragon_wounded'], u"The border guard deftly jumps through trees, hiding in the leaves and making sudden shots. The magic arrows inflict painful wounds..."],
             [['foe_alive', 'dragon_undamaged'], u"The border guard deftly jumps through trees, hiding in the leaves. He is waiting for the right moment for a single precise shot. Probably conserving his arrows..."],
             [['foe_alive', 'lost_head'], u"The wounded %(dragon_type)s rams a tree trunk with the full weight of his body, and the border guard falls squarely on his head. Unfazed, the elf grabs an arrow and plunges it into the dragon\'s eye, then immediately jumps into the bushes."],
             [['foe_dead', 'lost_head'], u"The wounded %(dragon_type)s rams a tree trunk with the full weight of his body, and the border guard falls squarely on his head. Unfazed, the elf grabs an arrow and plunges it into the dragon\'s eye, but it does not save him from his grisly fate"],
-            [['dragon_dead'], u"The boarder guard readies an enchanted arrow with a green tip. He waits until the dragon rears up, and then aims a shot right into the heart of the beast. %(dragon_name_full) dies in terrible convulsions."]
+            [['dragon_dead'], u"The boarder guard readies an enchanted arrow with a green tip. He waits until the dragon rears up, and then aims a shot right into the heart of the beast. %(dragon_name_full)s dies in terrible convulsions."]
         ]
     },
 
@@ -475,7 +475,7 @@ mob = {
             [['foe_intro'], u"The %(dragon_type)s sneaks as softly as he can, but sharp elven ears pick up even the slightest movement. With an explosion of gold-green flame, the forest sorceress soars into the trees and begins to weave a deadly spell."],
             [['foe_fear'],  u"The dragon gives off an aura of terror and darkness so strong that even the flowers and leaves wither around him. Unable to look into the eyes of the monster, the forest sorceress covers her face waiting to be taken and not thinking of resistance."],
             [['foe_dead', 'dragon_undamaged'], u"The enchantress encases herself in a thick shell of living tree bark, and knotted roots stretch out towards the dragon\'s claws. Against a person this might work, but the %(dragon_type)s easily breaks the wooden shell and pulls out the soft stuffing. The threat of the dragon\'s teeth is enough to stop the sorceress\'s tricks."],
-            [['foe_dead', 'dragon_wounded'], u"The forest maiden beats the dragon with her shining staff hard enough to leave imprints, but %(dragon_name)s lashes his tail in response. The %(dragon_type) remains standing while the sorceress falls writhing in pain and with ringing ears."],
+            [['foe_dead', 'dragon_wounded'], u"The forest maiden beats the dragon with her shining staff hard enough to leave imprints, but %(dragon_name)s lashes his tail in response. The %(dragon_type)s remains standing while the sorceress falls writhing in pain and with ringing ears."],
             [['foe_alive', 'dragon_wounded'], u"The forest witch calls a variety of wild animals to her aid. In a fierce battle %(dragon_name_full)s wins a hard victory. The woman is unharmed, but the %(dragon_type)s is covered with blood."],
             [['foe_alive', 'dragon_undamaged'], u"The beautiful sorceress throws one spell after another at the dragon, but to no avail. %(dragon_name)s maneuvers around, wondering how to grab the girl without hurting her, because she needs to bear his children..."],
             [['foe_alive', 'lost_head'], u"Using the power of the earth the sorceress produces stone mouths full of sharp stalactites. One of them rips off the head of the dragon."],
@@ -495,7 +495,7 @@ mob = {
             [['foe_intro'], u"Infantry line up in a semicircle, clutching strong swords and spears."],
             [['foe_fear'],  u"When the dragon attacks the men at arms escape in all directions. By dumb luck, a few escape..."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The disorganized fighters are unable to put up effective resistance."],
-            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The disorganized fighters put up resistance, but the %(dragon_type) emerges from the battle victorious, though wounded."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The disorganized fighters put up resistance, but the %(dragon_type)s emerges from the battle victorious, though wounded."],
             [['foe_alive', 'dragon_wounded'], u"Using organized tactics, the infantry manage to repulse the dragon, even inflicting serious injury. A few men are killed, but the rest are determined."],
             [['foe_alive', 'dragon_undamaged'], u"The infantry fight fiercely, and for a while they manage to keep the dragon at bay."],
             [['foe_alive', 'lost_head'], u"The %(dragon_type)s attacks thoughtlessly, exposing his back to several soldiers. This mistake costs him his head. Well, one of his heads..."],
@@ -513,11 +513,11 @@ mob = {
         # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"A squat steel giant, resembling a living suit of armor, blocks the entire passage."],
-            [['foe_fear'],  u"%(dragon_name_full) gives off an aura of horror so great that even the steel guardian retreats before it."],
+            [['foe_fear'],  u"%(dragon_name_full)s gives off an aura of horror so great that even the steel guardian retreats before it."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s strikes the golem with such force that the steel breaks and cracks, rivets fly like bullets, and pieces of armor spill onto the ground with a crash. The nearly invincible guardian is defeated..."],
             [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s and golem compress each other in a deadly embrace of steel. The dragon\'s ribs crack, but the golem is weaker and caves in like a huge tin can."],
             [['foe_alive', 'dragon_wounded'], u"The nearly invulnerable ancient giant hammers the lizard with his iron fist."],
-            [['foe_alive', 'dragon_undamaged'], u"%(dragon_type) and the golem hit each other hard, but both are so well protected that they escape with only minor wounds. The walls of the tunnel shake from this clash of giants."],
+            [['foe_alive', 'dragon_undamaged'], u"%(dragon_type)s and the golem hit each other hard, but both are so well protected that they escape with only minor wounds. The walls of the tunnel shake from this clash of giants."],
             [['foe_alive', 'lost_head'], u"The iron giant lifts his arms above his head, and dropping them like hammers on the dragon\'s head smashes it into paste."],
             [['foe_dead', 'lost_head'], u"In a hard struggle the %(dragon_type)s rips the shrieking steel body of the golem to pieces, leaving the guards fingers on the ground still grasping the dragon\'s head."],
             [['dragon_dead'], u"The iron giant lifts his arms above his head, and dropping them like hammers on the dragon\'s head smashes it into paste. %(dragon_name_full_ dies from his wounds."]
@@ -576,10 +576,10 @@ mob = {
             [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses of the cavalry scatter, throwing off and trampling their own riders."],
             [['foe_dead', 'dragon_undamaged'], u"One by one the crusaders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip the %(dragon_type)s kicks the cavalry out of their saddles."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to overturn a horse and rider with a single blow, but there are so many of them that he does not leave the battle uninjured."],
-            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type) is distracted by one of the armored riders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
+            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s is distracted by one of the armored riders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
             [['foe_alive', 'dragon_undamaged'], u"The heavy cavalry deftly maneuvers, avoiding the fangs of the dragon, and trying to get him with their lances. Such tactics are unlikely to bring them victory, but they save lives."],
-            [['foe_alive', 'lost_head'], u"The %(dragon_type) knocks down an armored horse and rushes to the rider, but he quickly jumps on his feed and lands a perfect swing with a sharp sword. The head of the dragon falls to the ground. It\'s good that there are more heads in stock..."],
-            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type) wins, but one of his heads lies on the field, severed by a heavy cavalry sword."],
+            [['foe_alive', 'lost_head'], u"The %(dragon_type)s knocks down an armored horse and rushes to the rider, but he quickly jumps on his feed and lands a perfect swing with a sharp sword. The head of the dragon falls to the ground. It\'s good that there are more heads in stock..."],
+            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type)s wins, but one of his heads lies on the field, severed by a heavy cavalry sword."],
             [['dragon_dead'], u"The wounded %(dragon_type)s tries to fight, but there are too many riders. After killing many men and horses, %(dragon_name_full)s finally falls to the ground, bleeding."]
         ]
     },
@@ -595,7 +595,7 @@ mob = {
             [['foe_intro'], u"Iron armored troops are arrayed in a semicircle, strongly gripping two-handed swords."],
             [['foe_fear'],  u"When the dragon attacks the men at arms escape in all directions. By dumb luck, a few escape..."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The disorganized fighters are unable to put up effective resistance."],
-            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The scattered fighters put up resistance, but the %(dragon_type) emerges from the battle victorious, though wounded."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The scattered fighters put up resistance, but the %(dragon_type)s emerges from the battle victorious, though wounded."],
             [['foe_alive', 'dragon_wounded'], u"Using organized tactics, the heavy infantry manage to repulse the dragon, even inflicting serious injury. A few men are killed, but the rest are determined."],
             [['foe_alive', 'dragon_undamaged'], u"The heavy infantry fight fiercely, and for a while they manage to keep the dragon at bay."],
             [['foe_alive', 'lost_head'], u"The %(dragon_type)s attacks thoughtlessly, exposing his back to several soldiers. This mistake costs him his head. Well, one of his heads..."],
@@ -614,11 +614,11 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"The fire giants eyes glow like coals. He tightens his grip on his fiery hammer, and flashes of smoky red flame cover him from head to toe."],
             [['foe_fear'],  u"The fire giant is for a while motionless, frightened by the appearance of the dragon. Then he disappears in a flash of flame, leaving a trail of black smoke like a puff from a pipe."],
-            [['foe_dead', 'dragon_undamaged'], u"The fire giant is powerless - %(dragon_name_full) is the victor."],
+            [['foe_dead', 'dragon_undamaged'], u"The fire giant is powerless - %(dragon_name_full)s is the victor."],
             [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s engages the fire giant in melee. Fierce flames envelop both fighters and although %(dragon_name)s is terribly burnt, he emerges from the fight victorious."],
-            [['foe_alive', 'dragon_wounded'], u"The fire giant\'s hammer strikes with such overwhelming force that the %(dragon_type) flies into the corner like a kicked dog."],
+            [['foe_alive', 'dragon_wounded'], u"The fire giant\'s hammer strikes with such overwhelming force that the %(dragon_type)s flies into the corner like a kicked dog."],
             [['foe_alive', 'dragon_undamaged'], u"Steel and flame against scales and fangs. For a while the fighting is equal, and it seems like neither side can win this battle."],
-            [['foe_alive', 'lost_head'], u"With a powerful hammer blow the fire giant smashes one of the dragon\'s heads like a ripe watermelon. The %(dragon_name_full) miraculously survives."],
+            [['foe_alive', 'lost_head'], u"With a powerful hammer blow the fire giant smashes one of the dragon\'s heads like a ripe watermelon. The %(dragon_name_full)s miraculously survives."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
             [['dragon_dead'], u"The wounded %(dragon_type)s overestimated his strength. The fire giant easily overwhelms him, easily breaking him on the volcanic ground with his fiery hammer."]
         ]
@@ -633,12 +633,12 @@ mob = {
         # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"The blue haired giant with a horned helmet tightly grips an axe covered with frost."],
-            [['foe_fear'],  u"%(dragon_name_full) gives off such an aura of fear and panic that the frost giant runs away."],
+            [['foe_fear'],  u"%(dragon_name_full)s gives off such an aura of fear and panic that the frost giant runs away."],
             [['foe_dead', 'dragon_undamaged'], u"The giant is too slow. As he swings his huge axe, the %(dragon_type)s unleashes an onslaught. With several deadly snakelike strikes, the outcome of the battle is decided."],
-            [['foe_dead', 'dragon_wounded'], u"The giant\'s huge axe crashes into a wall, getting stuck in a crack. %(dragon_name)s immediately rushes forward, trying to use the opportunity to engage in melee. The unarmed frost giant still manages to break some of the dragon\'s bones, but he is not as strong, and %(dragon_name_full) wins."],
+            [['foe_dead', 'dragon_wounded'], u"The giant\'s huge axe crashes into a wall, getting stuck in a crack. %(dragon_name)s immediately rushes forward, trying to use the opportunity to engage in melee. The unarmed frost giant still manages to break some of the dragon\'s bones, but he is not as strong, and %(dragon_name_full)s wins."],
             [['foe_alive', 'dragon_wounded'], u"The frost giant breaks a giant icicle from the ceiling and throws it like a dart. The blow is not fatal, but very painful."],
             [['foe_alive', 'dragon_undamaged'], u"The giant swings his frosty axe in a frenzy, preventing the dragon from coming closer."],
-            [['foe_alive', 'lost_head'], u"With one mighty blow of his frost covered axe the frost giant severs one of the dragon\'s heads. But %(dragon_name_full) is able to survive even such a wound!"],
+            [['foe_alive', 'lost_head'], u"With one mighty blow of his frost covered axe the frost giant severs one of the dragon\'s heads. But %(dragon_name_full)s is able to survive even such a wound!"],
             [['foe_dead', 'lost_head'], u"During the heaviest fighting %(dragon_name_full)s overcomes the giant, but one of his heads is dying from wounds received in the battle."],
             [['dragon_dead'], u"The wounded %(dragon_type)s fights to his last, but the frost giant gets the better of him. With a mighty blow of his ice axe, he cuts the dragon in half!"]
         ]
@@ -660,7 +660,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The archer\'s arrows glance off the natural armor of the dragon."],
             [['foe_alive', 'lost_head'], u"A tempered arrow with a fire hardened shaft pierces through one of the dragon\'s mouths and into a brain. Luckily, %(dragon_name_full)s can survive such a wound."],
             [['foe_dead', 'lost_head'], u"%(dragon_type_cap)s wins, but one of his heads is withering from its wounds."],
-            [['dragon_dead'], u"The archer looses a tempered arrow with a fire hardened shaft, and it pierces through one the dragon\'s mouth and into his brain. %(dragon_name_full) falls dead."]
+            [['dragon_dead'], u"The archer looses a tempered arrow with a fire hardened shaft, and it pierces through one the dragon\'s mouth and into his brain. %(dragon_name_full)s falls dead."]
         ]
     },
 
@@ -675,7 +675,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The fight continues for some time, but neither side gains the advantage."],
             [['foe_alive', 'lost_head'], u"%(foe_name)s hits the dragon\'s head with a well aimed blow."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds."]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds."]
         ],
     },
     
@@ -695,7 +695,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"Metal grinds and the horse whinnies as the opponents battle, but the match is roughly equal."],
             [['foe_alive', 'lost_head'], u"The king of the people cripples the dragon\'s head with a well-aimed blow, but the fight is not yet over."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"The king of the people smashes the dragon\'s head with a well-aimed blow. %(dragon_name_full) lies dying."]
+            [['dragon_dead'], u"The king of the people smashes the dragon\'s head with a well-aimed blow. %(dragon_name_full)s lies dying."]
         ]
     },
     
@@ -715,7 +715,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The fight continues for some time, but neither side gains the advantage."],
             [['foe_alive', 'lost_head'], u"The enemy aims a blow at the dragon\'s head."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds."]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds."]
         ]
     },
 
@@ -735,7 +735,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"For a while both opponents maneuver in the water, but neither finds a good position to attack from."],
             [['foe_alive', 'lost_head'], u"Avoiding several blows from the dragon\'s powerful tail, the sea dweller plunges his trident deep into the dragon\'s mouth."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds.."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds.."]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds.."]
         ]
     },
 
@@ -748,14 +748,14 @@ mob = {
         # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Armed with spears, axes, and torches, the militia gathers in a dense crowd, encouraging each other with aggressive shouts."],
-            [['foe_fear'],  u"The militia gathered to repel the monster scatter in fear as soon as %(dragon_name_full) approaches within striking distance."],
+            [['foe_fear'],  u"The militia gathered to repel the monster scatter in fear as soon as %(dragon_name_full)s approaches within striking distance."],
             [['foe_dead', 'dragon_undamaged'], u"The disorganized militiamen are unable to resist the onslaught of the dragon for long. A few manage to escape, but the majority lie lifeless."],
             [['foe_dead', 'dragon_wounded'], u"Breaking into the crowd of peasants the %(dragon_type)s begins a real massacre. However, the people fight back surprisingly bravely, and after such a victory %(dragon_name)s must go lick his wounds."],
             [['foe_alive', 'dragon_wounded'], u"With enough fighting spirit even a hastily trained militia becomes a serious fighting force. They easily throw back and injure the dragon with their weapons."],
             [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s bursts into a crowd of peasants, but they immediately scatter around him. While fighting one enemy, another comes from behind. The fire, smoke, and shouts confuse him. This battle threatens to drag."],
             [['foe_alive', 'lost_head'], u"A big lumberjack with an axe seizes the moment and jumps on the back of the wounded dragon, and with a powerful blow cuts off one of his heads!"],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds... the farmers will sing of this day for centuries!"]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds... the farmers will sing of this day for centuries!"]
         ]
     },
 
@@ -768,14 +768,14 @@ mob = {
         # descriptions of battle events
         'descriptions': [
             [['foe_intro'], u"Armed with pitchforks and torches peasants crowd closely together, encouraging each other with aggressive shouts."],
-            [['foe_fear'],  u"The mob of farmers gathered to repel the monster scatter in fear as soon as %(dragon_name_full) approaches within striking distance."],
+            [['foe_fear'],  u"The mob of farmers gathered to repel the monster scatter in fear as soon as %(dragon_name_full)s approaches within striking distance."],
             [['foe_dead', 'dragon_undamaged'], u"The disorganized farmers are unable to resist the onslaught of the dragon for long. A few manage to escape, but the majority lie lifeless."],
             [['foe_dead', 'dragon_wounded'], u"Breaking into the crowd of peasants the %(dragon_type)s begins a real massacre. However, the people fight back surprisingly bravely, and after such a victory %(dragon_name)s must go lick his wounds."],
             [['foe_alive', 'dragon_wounded'], u"With enough fighting spirit even untrained peasants become a serious fighting force. They easily throw back and injure the dragon with their weapons."],
             [['foe_alive', 'dragon_undamaged'], u"The %(dragon_type)s bursts into a crowd of peasants, but they immediately scatter around him. While fighting one enemy, another comes from behind. The fire, smoke, and shouts confuse him. This battle threatens to drag."],
             [['foe_alive', 'lost_head'], u"A big lumberjack with an axe seizes the moment and jumps on the back of the wounded dragon, and with a powerful blow cuts off one of his heads!"],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds... the farmers will sing of this day for centuries!"]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds... the farmers will sing of this day for centuries!"]
         ]
     },
 
@@ -791,10 +791,10 @@ mob = {
             [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses of the mounted guard scatter, throwing off and trampling their own riders."],
             [['foe_dead', 'dragon_undamaged'], u"One by one the heavy riders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip %(dragon_type)s kicks the cavalry out of their saddles."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to overturn a horse and rider with a single blow, but there are so many of them that he does not leave the battle uninjured."],
-            [['foe_alive', 'dragon_wounded'], u"(wounded) \n %(dragon_type_cap)s отвлекается на одного из всадников The %(dragon_type) is distracted by one of the riders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
+            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s is distracted by one of the riders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
             [['foe_alive', 'dragon_undamaged'], u"The mounted guardsmen deftly maneuver, avoiding the fangs of the dragon, and trying to get him with their lances. Such tactics are unlikely to bring them victory, but they save lives."],
-            [['foe_alive', 'lost_head'], u"The %(dragon_type) knocks down an armored horse and rushes to the rider, but he quickly jumps on his feet and lands a perfect swing with a sharp sword. The head of the dragon falls to the ground. It\'s a good thing there are more heads in stock..."],
-            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type) wins, but one of his heads lies on the field, severed by a heavy cavalry sword."],
+            [['foe_alive', 'lost_head'], u"The %(dragon_type)s knocks down an armored horse and rushes to the rider, but he quickly jumps on his feet and lands a perfect swing with a sharp sword. The head of the dragon falls to the ground. It\'s a good thing there are more heads in stock..."],
+            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type)s wins, but one of his heads lies on the field, severed by a heavy cavalry sword."],
             [['dragon_dead'], u"The wounded %(dragon_type)s tries to fight, but there are too many riders. After killing many men and horses, %(dragon_name_full)s finally falls to the ground, bleeding."]
         ]
     },
@@ -811,9 +811,9 @@ mob = {
             [['foe_intro'], u"The ogre clutches an enormous club, almost an uprooted tree."],
             [['foe_fear'],  u"Considering the enemy, the ogre shirks and retreats."],
             [['foe_dead', 'dragon_undamaged'], u"The clumsy giant deals powerful, methodical blows in a pattern that is easy to figure out. Moving like flowing mercury, %(dragon_name)s attacks over and over, pulling bloody chunks out of the ogre\'s body. The man eating giant had no chance..."],
-            [['foe_dead', 'dragon_wounded'], u"Not wanting to risk a strike from the club, %(dragon_name) jumps on the ogre, grappling viciously. This strategy is successful, though the dragon suffers many blows from the giant\'s fists."],
+            [['foe_dead', 'dragon_wounded'], u"Not wanting to risk a strike from the club, %(dragon_name)s jumps on the ogre, grappling viciously. This strategy is successful, though the dragon suffers many blows from the giant\'s fists."],
             [['foe_alive', 'dragon_wounded'], u"A sweeping strike from the giant\'s cudgel casts the dragon aside. %(dragon_name)s hisses from the pain."],
-            [['foe_alive', 'dragon_undamaged'], u"The ogre howls and waves his huge club like a reed in all directions. Moving closer to him is dangerous so the %(dragon_type) circles around, waiting for the right moment to attack."],
+            [['foe_alive', 'dragon_undamaged'], u"The ogre howls and waves his huge club like a reed in all directions. Moving closer to him is dangerous so the %(dragon_type)s circles around, waiting for the right moment to attack."],
             [['foe_alive', 'lost_head'], u"A blow from the the giant\'s club is so heavy that it breaks the neck of the dragon, completely crippling one of his heads. Luckily, %(dragon_name_full)s is able to survive."],
             [['foe_dead', 'lost_head'], u"In a fierce battle with the ogre the %(dragon_type)s wins, but one of his heads is broken from a mighty blow of the giant\'s club."],
             [['dragon_dead'], u"The wounded %(dragon_name)s fights bravely, but the ogre gains the upper hand. His huge club goes up and down again and again until the lizard is stamped down into a gory mess of blood and bones..."]
@@ -828,7 +828,7 @@ mob = {
         'image': 'knight/knight1',  # background image for the fight "img/scene/fight/%s.jpg"
         # descriptions of battle events
         'descriptions': [
-            [['foe_intro'], u"The old knight puts a bucket-like helmet on his head and picks up a two-handed sword with a shabby hilt. he is determined to defend his home."],
+            [['foe_intro'], u"The old knight puts a bucket-like helmet on his head and picks up a two-handed sword with a shabby hilt. He is determined to defend his home."],
             [['foe_fear'],  u"Seeing the enemy he has to fight, the old knight runs away, dropping his weapon."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s fiercely strikes the knight\'s armor, bending it like paper. The old man is too slow to win the battle with the dragon - his best years are long past."],
             [['foe_dead', 'dragon_wounded'], u"With a scathing attack of his tail, %(dragon_name)s knocks the sword from the hands of the old knights and pounces on him to finish him. But before he gives up the ghost, the veteran manages to stick a knife into the dragon\'s belly!"],
@@ -836,7 +836,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The fight continues for some time, but neither side gains the advantage.."],
             [['foe_alive', 'lost_head'], u"Years of combat experience allow the old knight to judge very accurately when to attack. The %(dragon_type)s barely begins to move forward when he is hit by a stroke of the two-handed sword, losing one of his heads."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds.."]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds.."]
         ]
     },
 
@@ -852,7 +852,7 @@ mob = {
             [['foe_intro'], u"The palace is protected by elite royal guards. They bravely face the dragon in open battle, not wanting to sit behind walls."],
             [['foe_fear'],  u"When the dragon attacks, the royal guards flee in all directions. The gates of the fortress are wide open..."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. Even the king\'s knights are unable to put up decent resistance to this dreadful onslaught."],
-            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The scattered fighters put up fierce resistance, but the %(dragon_type) emerges from the battle victorious, though wounded."],
+            [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s bursts into the formation of soldiers and begins to tear them to pieces. The scattered fighters put up fierce resistance, but the %(dragon_type)s emerges from the battle victorious, though wounded."],
             [['foe_alive', 'dragon_wounded'], u"Using organized tactics, the palace guards manage to repulse the dragon, even inflicting serious injury. A few men are killed, but the rest are determined."],
             [['foe_alive', 'dragon_undamaged'], u"The guards fight desperately, and for a while they manage to keep the dragon at bay."],
             [['foe_alive', 'lost_head'], u"The %(dragon_type)s attacks thoughtlessly, exposing his back to several heavily armed guards. This mistake costs him his head. Well, one of his heads..."],
@@ -871,13 +871,13 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"The shark swims in circles and grins."],
             [['foe_fear'],  u"The shark times to swim away, but the %(dragon_type)s swims faster and overtakes him. The predator becomes the prey."],
-            [['foe_dead', 'dragon_undamaged'], u"Grabbing the shark by the gills %(dragon_name) completely breaks its resistance. The marine predator is unable to do anything but gnash its teeth."],
+            [['foe_dead', 'dragon_undamaged'], u"Grabbing the shark by the gills %(dragon_name)s completely breaks its resistance. The marine predator is unable to do anything but gnash its teeth."],
             [['foe_dead', 'dragon_wounded'], u"The two terrible sea predators weave around each other in the depths, wounding each other with their teeth. The salt water is red with blood, but %(dragon_name)s emerges victorious from the fight fight."],
             [['foe_alive', 'dragon_wounded'], u"Using his speed and maneuverability, the shark lures the dragon into murky water, and then suddenly speeds by, tearing off a chunk of the dragon!"],
             [['foe_alive', 'dragon_undamaged'], u"The two terrible sea predators circle each other in the water, each trying to attack the other from behind. So far they are equal..."],
             [['foe_alive', 'lost_head'], u"The shark bites off one of the dragon\'s heads!"],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds..."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds.."]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds.."]
         ]
     },
 
@@ -897,8 +897,8 @@ mob = {
             [['foe_alive', 'dragon_wounded'], u"Coordinated volleys of cannonfire smash into the dragon and he is forced to retreat, throwing up swirling columns of water."],
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_name)s dives under the ship and tries to punch a hole below the waterline, but to no avail."],
             [['foe_alive', 'lost_head'], u"A cast-iron bomb stuffed with black powder detonates directly on the dragon\'s forehead. From such a wound few can recover..."],
-            [['foe_dead', 'lost_head'], u"The %(dragon_type) climbs onto the deck of the ship and happily makes a bloodbath out of the crew. The sailors scatter in panic, and in his enthusiastic pursuit %(dragon_name)s fails to notice the captain climbing on a yardarm. Jumping from above, the captain slices off the dragon\'s head with a blow from his sword. Unfortunately for him, it isn\'t enough for victory. The merchant ship is doomed."],
-            [['dragon_dead'], u"%(dragon_name_full) is too weak to withstand another volley from the warship. Pummeled by iron projectiles, the dragon sinks beneath the depths, no longer able to cling to life."]
+            [['foe_dead', 'lost_head'], u"The %(dragon_type)s climbs onto the deck of the ship and happily makes a bloodbath out of the crew. The sailors scatter in panic, and in his enthusiastic pursuit %(dragon_name)s fails to notice the captain climbing on a yardarm. Jumping from above, the captain slices off the dragon\'s head with a blow from his sword. Unfortunately for him, it isn\'t enough for victory. The merchant ship is doomed."],
+            [['dragon_dead'], u"%(dragon_name_full)s is too weak to withstand another volley from the warship. Pummeled by iron projectiles, the dragon sinks beneath the depths, no longer able to cling to life."]
         ]
     },
 
@@ -914,11 +914,11 @@ mob = {
             [['foe_intro'], u"The dwarves are busy with their steam gun, preparing it to fire."],
             [['foe_fear'],  u"Hearing the thunderous roar of the dragon, the steam gun engineers flee, leaving the powerful fighting machine standing as a useless piece of junk."],
             [['foe_dead', 'dragon_undamaged'], u"Zigzagging, %(dragon_name)s closes with the steam cannon, avoiding its deadly shells. When the distance has shrunk to a minimum the panicking engineers try to escape, but it is too late..."],
-            [['foe_dead', 'dragon_wounded'], u"Deciding to destroy the hated siege engine in one stroke the %(dragon_type) shatters it into pieces, but the exploding boiler injures the dragon more than the gunfire did!"],
+            [['foe_dead', 'dragon_wounded'], u"Deciding to destroy the hated siege engine in one stroke the %(dragon_type)s shatters it into pieces, but the exploding boiler injures the dragon more than the gunfire did!"],
             [['foe_alive', 'dragon_wounded'], u"Explosive shells strike the dragon directly in the chest, throwing him back from the steam gun."],
             [['foe_alive', 'dragon_undamaged'], u"The steam gun fires rapidly and continuously. %(dragon_name)s maneuvers around, not daring to approach."],
             [['foe_alive', 'lost_head'], u"A powerful high explosive shell falls directly onto the dragon\'s head, blasting it into bloody chunks."],
-            [['foe_dead', 'lost_head'], u"A powerful high explosive shell falls directly onto the dragon\'s head, blasting it into bloody chunks. But %(dragon_name_full) is not stopped, and breaks through to the defenseless engineers."],
+            [['foe_dead', 'lost_head'], u"A powerful high explosive shell falls directly onto the dragon\'s head, blasting it into bloody chunks. But %(dragon_name_full)s is not stopped, and breaks through to the defenseless engineers."],
             [['dragon_dead'], u"Pummeled by explosions %(dragon_name)s slow and stumbles. He is no longer able to fight. A final shell rends his only living head asunder."]
         ]
     },
@@ -935,10 +935,10 @@ mob = {
             [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses of the crusaders scatter, throwing off and trampling their own riders."],
             [['foe_dead', 'dragon_undamaged'], u"One by one the crusaders attack the dragon, but %(dragon_name)s cleverly evades these awkward and predictable attacks. Flicking his tail like a gigantic whip the %(dragon_type)s kicks the cavalry out of their saddles."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to overturn a horse and rider with a single blow, but there are so many of them that he does not leave the battle uninjured."],
-            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type) is distracted by one of the crusaders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
+            [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s is distracted by one of the crusaders and does not notice a second passing close, thrusting his lance into the scaled side of the lizard at full gallop."],
             [['foe_alive', 'dragon_undamaged'], u"The crusaders deftly maneuver, avoiding the fangs of the dragon, and trying to get him with their long lances. Such tactics are unlikely to bring them victory, but they save lives."],
-            [['foe_alive', 'lost_head'], u"The %(dragon_type) knocks down an armored horse and rushes to the rider, but he quickly jumps to his feet and lands a perfect swing with a sharp sword. The head of the dragon falls to the ground. It\'s a good thing there are more heads in stock..."],
-            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type) wins, but one of his heads lies on the field, severed by a blessed sword."],
+            [['foe_alive', 'lost_head'], u"The %(dragon_type)s knocks down an armored horse and rushes to the rider, but he quickly jumps to his feet and lands a perfect swing with a sharp sword. The head of the dragon falls to the ground. It\'s a good thing there are more heads in stock..."],
+            [['foe_dead', 'lost_head'], u"In a fierce battle the %(dragon_type)s wins, but one of his heads lies on the field, severed by a blessed sword."],
             [['dragon_dead'], u"The wounded %(dragon_type)s tries to fight, but there are too many riders. After killing many men and horses, %(dragon_name_full)s finally falls to the ground, bleeding."]
         ]
     },
@@ -954,7 +954,7 @@ mob = {
             [['foe_intro'], u"Clad in golden armor the titan calls on the forces of wind and thunder. He is as strong with with magic as he is with physical force!"],
             [['foe_fear'],  u"Even the godlike titan runs in fear when %(dragon_name_full)s attacks."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s breaks through the sheets of lightning and doesn\'t even seem to notice the gale-force winds. The titan raises his shield and and points his spear, but the %(dragon_type)s swipes the titan\'s legs with his tail, and then attacks the helplessly overturned giant."],
-            [['foe_dead', 'dragon_wounded'], u"The sky darkens and the air smells of the thunder as the two giants face each other in a deadly battle. The titan strikes with lightning and a magic spear, putting wounds in the dragon, but %(dragon_name_full) is stronger. The giant falls prostrate on the ground, bleeding bright blue blood."],
+            [['foe_dead', 'dragon_wounded'], u"The sky darkens and the air smells of the thunder as the two giants face each other in a deadly battle. The titan strikes with lightning and a magic spear, putting wounds in the dragon, but %(dragon_name_full)s is stronger. The giant falls prostrate on the ground, bleeding bright blue blood."],
             [['foe_alive', 'dragon_wounded'], u"The titan throws a sheet of sparkling lighting at the dragon, and slams it back with a gust of hurricane wind."],
             [['foe_alive', 'dragon_undamaged'], u"Powerful gusts of wind protect the titan, giving the dragon no chance to approach within striking distance."],
             [['foe_alive', 'lost_head'], u"The wounded %(dragon_type)s manages to break through the gusts of gale and reach the giant, but the titan meets him with a well aimed spear blow directly into his open jaws!"],
@@ -999,7 +999,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"The fight continues for some time, but neither side gains the advantage."],
             [['foe_alive', 'lost_head'], u"The enemy aims a blow at the dragon\'s head."],
             [['foe_dead', 'lost_head'], u"The %(dragon_type)s wins, but one of his heads is dying from its wounds."],
-            [['dragon_dead'], u"%(dragon_name_full) dies of his wounds."]
+            [['dragon_dead'], u"%(dragon_name_full)s dies of his wounds."]
         ]
     },
 
@@ -1013,7 +1013,7 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"The sea giant moves his enormous trident and the water responds, swirling in whirlpools and boiling towers of foam. The triton commands the abyss!"],
             [['foe_fear'],  u"The triton lifts his magic trident and calls forth a huge school of tuna. The bodies of the fish block it from view, and when they swim away, it is nowhere to be seen. The coward escaped!"],
-            [['foe_dead', 'dragon_undamaged'], u"The triton creates a seething maelstrom, trying to pull the dragon to the bottom, but %(dragon_name) overcomes the force of the water and bites his teeth into the startled triton."],
+            [['foe_dead', 'dragon_undamaged'], u"The triton creates a seething maelstrom, trying to pull the dragon to the bottom, but %(dragon_name)s overcomes the force of the water and bites his teeth into the startled triton."],
             [['foe_dead', 'dragon_wounded'], u"Swimming through a whirlpool, %(dragon_name)s rushes towards the triton. He is struck hard by its trident, but it doesn\'t stop the furious dragon. %(dragon_name)s tears the sea giant into pieces."],
             [['foe_alive', 'dragon_wounded'], u"%(dragon_name)s cannot cope with the magic whirlpool of the triton, and the churning water dashes him onto the jagged reefs."],
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_name)s tries in vain to reach the triton, but over and over the whirlpools pull him back towards the depths."],
@@ -1036,7 +1036,7 @@ mob = {
             [['foe_dead', 'dragon_undamaged'], u"The sorcerer uses a fireball spell, but the magical flames do nothing. Cutting through the fire, the %(dragon_type)s squashes the frail old man like a bug!"],
             [['foe_dead', 'dragon_wounded'], u"The warlock shoots arrows of pure magical power, easily puncturing the dragon\'s scales. But even wounded, %(dragon_name)s is able to tear the frail old man to bloody shreds."],
             [['foe_alive', 'dragon_wounded'], u"The sorcerer conjures a huge ghostly fist that falls on the dragon with the weight of an ore-laden minecart."],
-            [['foe_alive', 'dragon_undamaged'], u"The sorcerer calls a stone elemental to protect him. %(dragon_name_full) deals with the spirit of the earth for a few minutes, as the wizard stands safe and sound on the sidelines."],
+            [['foe_alive', 'dragon_undamaged'], u"The sorcerer calls a stone elemental to protect him. %(dragon_name_full)s deals with the spirit of the earth for a few minutes, as the wizard stands safe and sound on the sidelines."],
             [['foe_alive', 'lost_head'], u"The wizard summons a sword of pure magic energy. The blade flies and cuts by itself, and it is so sharp that it cleanly slices through one of the dragon\'s heads."],
             [['foe_dead', 'lost_head'], u"The wizard summons a sword of pure magic energy. The blade flies and cuts by itself, and it is so sharp that it cleanly slices through one of the dragon\'s heads. However, this is of no help to the wizard, the %(dragon_name)s survives the wound and crushes him like a cockroach."],
             [['dragon_dead'], u"Weakened and wounded, the %(dragon_type)s is an easy target. The wizard calls a 9th level sphere of total annihilation, which consumes the lizard\'s body like a miniature black hole."]
@@ -1073,7 +1073,7 @@ mob = {
         'descriptions': [
             [['foe_intro'], u"Mounted crossbowmen gather loosely at range, ready for battle."],
             [['foe_fear'],  u"%(dragon_name_full)s emits a terrifying roar and the horses throw their own riders loose, trampling them."],
-            [['foe_dead', 'dragon_undamaged'], u"One by one, the riders discharge their crossbows, but %(dragon_name)s does not even notice the flying arrows. One by one, the %(dragon_type) knocks the riders down and rips them to shreds with his teeth."],
+            [['foe_dead', 'dragon_undamaged'], u"One by one, the riders discharge their crossbows, but %(dragon_name)s does not even notice the flying arrows. One by one, the %(dragon_type)s knocks the riders down and rips them to shreds with his teeth."],
             [['foe_dead', 'dragon_wounded'], u"%(dragon_name)s is able to knock over a rider and his horse with a single blow, but there are so many of them that the dragon does not make it out of the battle uninjured."],
             [['foe_alive', 'dragon_wounded'], u"The %(dragon_type)s is distracted by one of the riders and does notice another passing by at full gallop, shooting a bolt into the vulnerable side of the dragon."],
             [['foe_alive', 'dragon_undamaged'], u"The riders deftly maneuver, avoiding the fangs of the dragon, and try to shoot him with their crossbows from long range. Such tactics are unlikely to bring them victory, but it preserves their lives."],

@@ -18,7 +18,7 @@ label lb_location_sea_main:
         return
         
     if not game.dragon.can_swim: 
-        '[game.dragon.name] claws at the salty seawater. If only he knew how to breathe underwater...'
+        '[game.dragon.name] paws at the salty seawater. If only he knew how to breathe underwater...'
     else:
         call lb_encounter_sea from _call_lb_encounter_sea
     return

@@ -21,7 +21,7 @@ label lb_event_knight_challenge_start(knight):
     show expression "img/scene/quest_knight.jpg" as bg
     nvl clear
     $ game.foe = knight
-    "[knight.title] I have found the lair where [game.dragon.name] [game.dragon.surname] sleeps! I will call it out to fight."
+    "[knight.title] has found the lair where [game.dragon.name] [game.dragon.surname] sleeps! He will call it out to fight."
     knight "Come forth, sneaking [game.dragon.kind]! Give an honest battle!!!"
     $ narrator(knight.intro % game.format_data)
     $ narrator(show_chances(knight))  #TODO: danger level of battle

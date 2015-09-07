@@ -129,7 +129,7 @@ label lb_enc_carriage:
     menu:
         'Attack the coach':
             call lb_fight from _call_lb_fight_14
-            'Now that the bodyguards are not a threat, the dragon can inspect the carriage. Tearing off its body like gift wrap, [game.dragon.name] finds three women inside - a mother, a daughter, and a servant. Old women are of no interest to a fiend like you, but with a girl, you can have a perfectly good time!'
+            'Now that the bodyguards are not a threat, the dragon can inspect the carriage. Tearing off its body like gift wrap, [game.dragon.name] finds three women inside - a mother, a daughter, and a servant. Old women are of no interest to a fiend like you, but with a girl, you can have a wonderful time!'
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
             $ description = game.girls_list.new_girl('princess')
