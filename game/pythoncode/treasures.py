@@ -475,7 +475,7 @@ class Ingot(object):  # Class for generating ingots
             return u"%s %s bar" % (
                 Ingot.weights_description_rus[metal_weight], metal_description_rus[metal_type])
         else:
-            return u"Some %s bars weighing %d pound%s." % (
+            return u"Some %s bars weighing %d pound%s" % (
                 metal_description_rus[metal_type], metal_weight, number_pluralizer(metal_weight))
 
                 
@@ -1844,11 +1844,11 @@ class Treasury(store.object):
         # случайный выбор стиля вещи из списка
         item = Treasure(treasure_type, alignment)
         quality_options = {
-            'rough': u"с rough crafting",
-            'common': u"с normal crafting",
-            'skillfully': u"с skillful crafting",
-            'mastery': u"с masterful crafting",
-            'random': u"со random crafting"
+            'rough': u"Rough crafting",
+            'common': u"Normal crafting",
+            'skillfully': u"Skillful crafting",
+            'mastery': u"Masterful crafting",
+            'random': u"Random quality"
         }
         item.quality = quality[0]
         # первоначальный выбор качества - первый в списке

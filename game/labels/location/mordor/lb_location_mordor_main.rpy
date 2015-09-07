@@ -118,7 +118,7 @@ label lb_location_mordor_questtime:
 label lb_mistress_fuck:
     mistress 'I can take any shape that pleases you. Choose how you want to see me.'
     menu:
-        'I like your shapes as it is':
+        'I like your shape as it is':
             show expression sex_imgs("mistress") as xxx
             pause (500.0)
             $ txt = game.interpolate(random.choice(txt_human_mistress_fuck[game.dragon.kind]))

@@ -502,8 +502,8 @@ girls_texts = {
         'escape': (  # Описание успешного побега
             u"%(girl_name)s escapes",
         ),
-        'spawn_common': (  # Описание родов
-            u"%(girl_name)s lays eggs from which new %(spawn_name)s will hatch, under the supervision of the servants.",
+        'spawn_common': (  # Описание родовfrom which
+            u"%(girl_name)s lays eggs from which new monsters hatch, under the supervision of the servants. %(spawn_name)s",
         ),
         'spawn_elite': (  # Описание родов
             u"%(girl_name)s painfully lays a huge egg with a thick scaly shell. \n %(spawn_name)s.",

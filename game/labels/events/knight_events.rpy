@@ -12,7 +12,7 @@ label lb_event_knight_receive_item(knight, item):
     scene
     show expression "img/scene/quest_knight.jpg" as bg
     nvl clear
-    "Knight performs his quest and receives [item.name]"
+    "Knight performs a quest and receives [item.name]"
     knight "Now the dragon will have no escape from my vengeance!"
     return
 

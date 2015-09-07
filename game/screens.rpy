@@ -287,11 +287,20 @@ screen navigation:
 
         textbutton _("Go back") ypos 285 action Return()
         textbutton _("Options") ypos 295 action ShowMenu("preferences")
-        # textbutton _("Сохранить игру") action ShowMenu("save")
-        # textbutton _("Загрузить игру") action ShowMenu("load")
+        textbutton _("Save game") ypos 305 action ShowMenu("save")
+        textbutton _("Load game") ypos 315 action ShowMenu("load")
+        textbutton _("Main Menu") ypos 325 action MainMenu()
+        
+        """
         textbutton _("Main menu") ypos 305 action MainMenu()
         textbutton _("Authors note") ypos 315 action Help()
         textbutton _("Save & Quit") ypos 325 action Quit()
+        
+        CHEAT/DEBUG: Put these as the bottom three buttons to enable saving and loading. 
+        textbutton _("Save game") ypos 305 action ShowMenu("save")
+        textbutton _("Load game") ypos 315 action ShowMenu("load")
+        textbutton _("Main Menu") ypos 325 action MainMenu()
+        """
 
 init -2 python:
     style.gmnav_frame.background = None

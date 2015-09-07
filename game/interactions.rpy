@@ -20,7 +20,7 @@ label lb_nature_sex:
         'Mock and rob' if game.girl.treasure:
             $ description = game.girls_list.rob_girl()
             game.girl.third "[description]"
-        'Drop in the jail' if game.girl.jailed:
+        'Put back in jail' if game.girl.jailed:
             $ description = game.girls_list.jail_girl()
             game.girl.third "[description]"
             return
