@@ -102,7 +102,7 @@ label lb_choose_dragon:
             fixed:
                 xalign 1.0
                 xmaximum 320
-                textbutton "Выбрать":
+                textbutton "Choose":
                     pos(72, 649)
                     xysize(174, 36)
                     text_xalign 0.5

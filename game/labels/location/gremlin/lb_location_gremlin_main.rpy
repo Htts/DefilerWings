@@ -1,4 +1,5 @@
 # coding=utf-8
+#Proofread and spellchecked
 label lb_location_gremlin_main:
     python:
         if not renpy.music.is_playing():
@@ -21,12 +22,12 @@ label lb_location_gremlin_main:
             menu:
                 "Promise to pay" if servant_cost <= game.lair.treasury.wealth:
                     $ game.lair.upgrades.add('gremlin_servant', deepcopy(data.lair_upgrades['gremlin_servant']))
-                    "Gremlins heed the call of {s}treasure.{/s} They will take care of the captives, and won\'t sleep on the job."
+                    "Gremlins obey {s}treasure{/s} their master. They will take care of the captives, and won\'t sleep on the job."
                 "Go back":
                     call lb_location_gremlin_main from _call_lb_location_gremlin_main
         'Install lair traps' if (not game.lair.type.provide or 'mechanic_traps' not in game.lair.type.provide) and 'mechanic_traps' not in game.lair.upgrades:
             menu:
-                "Cost of traps: [mechanic_traps_cost] f."
+                "Cost of traps: [mechanic_traps_cost] farthings."
                 "Install traps" if mechanic_traps_cost <= game.lair.treasury.money:
                     $ game.lair.upgrades.add('mechanic_traps', deepcopy(data.lair_upgrades['mechanic_traps']))
                     $ game.lair.treasury.money -= mechanic_traps_cost
@@ -35,7 +36,7 @@ label lb_location_gremlin_main:
                     call lb_location_gremlin_main from _call_lb_location_gremlin_main_1
         'Fortify lair' if 'gremlin_fortification' not in game.lair.upgrades:
             menu:
-                "Cost to construct fortifications: [fortification_cost] f."
+                "Cost to construct fortifications: [fortification_cost] farthings."
                 "Reinforce lair" if fortification_cost <= game.lair.treasury.money:
                     $ game.lair.upgrades.add('gremlin_fortification', deepcopy(data.lair_upgrades['gremlin_fortification']))
                     $ game.lair.treasury.money -= fortification_cost

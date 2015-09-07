@@ -1,4 +1,5 @@
 # coding=utf-8
+#checked, proofread
 label lb_event_knight_spawn(knight):
     scene
     show expression "img/scene/oath.jpg" as bg

@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked, proofread
 init python:
     from pythoncode.characters import Talker
     
@@ -12,7 +13,7 @@ label lb_location_ruin_main:
     python:
         witch = Talker(game_ref=game)
         witch.avatar = "img/avahuman/witch.jpg"
-        witch.name = "Ведьма"
+        witch.name = "Witch"
     
     if game.dragon.energy() == 0:
         '[game.dragon.name] needs to sleep!'
@@ -33,7 +34,7 @@ label lb_location_ruin_main:
     
 label lb_witch_agree:
     nvl clear
-    witch 'I\'ll give you help if you do me a favor. Share your unique sperm with me. I need it for alchemical purposes. Don\'t worry, the process is enjoyable, you\'ll like it. Only consider - I will suck every drop from you!' 
+    witch 'I\'ll give you help if you do me a favor. Share your unique sperm with me. I need it for alchemical purposes. Don\'t worry, the process is enjoyable, you\'ll like it. But be warned - I will suck every drop from you!' 
     menu:
         'Let her milk you':
             $ game.dragon.drain_energy()            
@@ -41,7 +42,7 @@ label lb_witch_agree:
             show expression "img/scene/witch_sex.jpg" as xxx
             play sound "sound/milking.ogg"
             pause (500.0)
-            'The witch takes out a bucket and begins a long but pleasurable process. In order to milk the dragon dry, she has to work tirelessly with her hands and mouth for several hours. But she REALLY wants dragon seed, all that she can possibly take.'
+            'The witch takes out a bucket and begins a long but pleasurable process. In order to milk the dragon dry, she has to work tirelessly with her hands and mouth for several hours. But she REALLY wants dragon seed, all that she can possibly get.'
             hide xxx  
             $ game.dragon.lust = 0
             stop sound fadeout 1.0

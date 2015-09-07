@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/env python
 # coding=utf-8
+#spellchecked
 
 import collections
 
@@ -7,7 +8,7 @@ import collections
 class Modifier(object):
     """
     Various modifiers class.
-    Examples: mistress gifhts, knight's equipment, spells etc.
+    Examples: mistress fights, knight's equipment, spells etc.
     """
 
     def __init__(self, attack=('base', (0, 0)), protection=('base', (0, 0)), magic=0, fear=0, energy=0):
@@ -42,7 +43,7 @@ class Container(collections.defaultdict):
     def add(self, container_id, data):
         """
         :param container_id: property/modifier identifier
-        :param data: dict which contais properties of this property/modifier
+        :param data: dict which contains properties of this property/modifier
         """
         if container_id not in self:
             if type(data) is dict:
@@ -105,7 +106,7 @@ class Container(collections.defaultdict):
     def select(self, query):
         """
         Return a list of IDs that fits conditions that set in query. Not recursively.
-        :param query: tuples list (key, value) which object of serach must meet
+        :param query: tuples list (key, value) which object of search must meet
         :return: list of satisfying elements
         """
         result = []
@@ -188,7 +189,7 @@ thief_first_names = [
     u"Duaein",
     u"Duke",
     u"Zack",
-    u"isie",
+    u"Isie",
     u"Kennie",
     u"Kirk",
     u"Klaive",
@@ -343,7 +344,7 @@ thief_items = Container(
         "plan": {
             "name": u"Great Plan",
             "level": 1,
-            "description": u"more chances to suceed"
+            "description": u"more chances to succeed"
         },
         "scheme": {
             "name": u"Secret passage map",
@@ -388,7 +389,7 @@ thief_items = Container(
             "provide": ["fireproof"]
         },
         "warming_amulet": {
-            "name": u"Firey amulet",  # Applied
+            "name": u"Fiery amulet",  # Applied
             "dropable": True,
             "description": u"protection from cold",
             "provide": ["coldproof"]
@@ -819,7 +820,7 @@ knight_items = Container(
         "basic_shield": {
             "id": "basic_shield",
             "name": u"Heraldic shield",
-            "description": u"standart",
+            "description": u"standard",
             "type": "shield",
             "basic": True,
             "modifiers": []
@@ -835,7 +836,7 @@ knight_items = Container(
         "mirror_shield": {
             # Implemented at Knight._item_modifiers
             "id": "mirror_shield",
-            "name": u"Mirror shild",
+            "name": u"Mirror shield",
             "description": u"reflects your breath weapon",
             "type": "shield",
             "basic": False,
@@ -918,7 +919,7 @@ knight_items = Container(
         "veteran": {
             "id": "veteran",
             "name": u"Veteran squire",
-            "description": u"stronger deffence",
+            "description": u"stronger defense",
             "type": "follower",
             "basic": False,
             "modifiers": ['sdef_up']
@@ -1096,7 +1097,7 @@ lair_upgrades = Container(
             "name": u"Magic trap",
             "protection": 1,
             "success": [
-                u'Cunning thief spots a glimer and avoids a magical trap.',
+                u'Cunning thief spots a glimmer and avoids a magical trap.',
             ],
             "fail": [
                 u'Magical trap disintegrates the trespasser.',
@@ -1122,7 +1123,7 @@ lair_upgrades = Container(
             ],
             "fail": [
                 u'Guard spots the thief and raises the alarm. '
-                u'After a short but brutal fight thef is defeated and executed.',
+                u'After a short but brutal fight thief is defeated and executed.',
             ]
         },
         "smuggler_guards": {
@@ -1134,7 +1135,7 @@ lair_upgrades = Container(
             ],
             "fail": [
                 u'Guard spots the thief and raises the alarm. '
-                u'After a short but brutal fight thef is defeated and executed.',
+                u'After a short but brutal fight thief is defeated and executed.',
             ]
         },
         "elite_guards": {
@@ -1145,7 +1146,7 @@ lair_upgrades = Container(
                 u'the elite guard and into the treasure chamber.',
             ],
             "fail": [
-                u'Thef tried to sneak on an guard of treasure chamber but fails.'
+                u'Thief tried to sneak on an guard of treasure chamber but fails.'
                 u'The bloodthirsty monster rips him apart.',
 
             ]
@@ -1299,7 +1300,7 @@ dragon_surnames = [
     u'the Ugly',
     u'the Spikescaled',
     u'the Isidious',
-    u'the Defiller',
+    u'the Defiler',
     u'the Devourer',
     u'the Vivisector',
     #u'the Doomuide', #what?
@@ -1374,7 +1375,7 @@ head_description = {
     'bronze': u'can dig the earth',
     'silver': u'spews lightning bolts',
     'gold': u'can see the unseen',
-    'shadow': u'commands sininster necromantic powers'
+    'shadow': u'commands sinister necromantic powers'
 }
 
 wings_description = [
@@ -1394,7 +1395,7 @@ paws_description = [
 special_features = ('tough_scale', 'poisoned_sting', 'clutches', 'horns', 'fangs', 'ugly')
 
 special_description = [
-    u'He has an inpenetrable scales.',
+    u'He has an impenetrable scales.',
 
     u'He has a deadly poison sting in the tip of the tail.',
 
@@ -1402,7 +1403,7 @@ special_description = [
 
     u'Mighty horns top his head, providing protection and a scary appearance.',
 
-    u'He has a saber-claws.',
+    u'He has saber-claws.',
 
     u'He is so ugly and terrifying that no one can look straight at him, '
     u'and weaklings simply flee in terror.',
@@ -1410,7 +1411,7 @@ special_description = [
 
 special_features_rus = {
     "tough_scale": u"Tough scales",
-    "poisoned_sting": u"Venemous sting",
+    "poisoned_sting": u"Venomous sting",
     "clutches": u"Razor claws",
     "horns": u"Magnificent horns",
     "fangs": u"Sabertooth fangs",
@@ -1423,7 +1424,7 @@ cunning_description = [
     u'The flame of magic fires in his eyes. '
     u'His magical power is great.',
 
-    u'He comands immense magical powers.',
+    u'He commands immense magical powers.',
 ]
 
 # TODO: Text module with numerals
@@ -1436,7 +1437,7 @@ head_num = [
     u'sixth',
     u'seventh',
     u'eighth',
-    u'nineth',
+    u'ninth',
     u'tenth'
 ]
 
@@ -1451,7 +1452,7 @@ head_count = {
     8: u"eight-headed",
     9: u"many-headed",
     10: u"many-headed",
-    11: u"many=headed",
+    11: u"many-headed",
 }
 
 # Head types(colors)
@@ -1671,7 +1672,7 @@ quest_list = (
         'min_lvl': 1,  # минимальный уровень дракона для получения квеста
         'max_lvl': 1,  # максимальный уровень дракона для получения квеста
         # текст квеста, {0} будет заменён на требуемый уровень
-        'text': u"My son, you're all grown up, and it\'s time to get down to real business. Beyond my possession are the Free Peoples of the earth, they humiliated me and drove me into the barren wasteland. You will be start of a bloodline that will bring them destruction. \n Let\'s see what you are capable of. Travel to the land of the Free Peoples and make a name for yourself - let them speak of you and fear you. But do not go on a thoughtless rampage, we don\'t want you to die without leaving a son, right? If you see that the enemy is strong - run away. Fight stealthily. Scour the woods and fields, kill lone women and ruin herds. When the people begin to whisper, come back to me and I\'ll give you a son, who will become stronger and achieve more than you. \n My advice - do not sleep in the Free Lands. When you sleep, you will slumber for a year, or more if you must heal wounds, and in the meantime men will hunt for you and your treasure. The more infamous you are the more attention you attract, though that is not a concern just yet. If you have time before you are exhausted, return here. If unable, stay in a flood gulley as a last resort. \n If you are unable to accomplish this within five years, I will find another successor. ",
+        'text': u"My son, you're all grown up, and it\'s time to get down to real business. Beyond my possession are the Free Peoples of the earth, they humiliated me and drove me into the barren wasteland. You will be start of a bloodline that will bring them destruction. \n Let\'s see what you are capable of. Travel to the land of the Free Peoples and make a name for yourself - let them speak of you and fear you. But do not go on a thoughtless rampage, we don\'t want you to die without leaving a son, right? If you see that the enemy is strong - run away. Fight stealthily. Scour the woods and fields, kill lone women and ruin herds. When the people begin to whisper, come back to me and I\'ll give you a son, who will become stronger and achieve more than you. \n My advice - do not sleep in the Free Lands. When you sleep, you will slumber for a year, or more if you must heal wounds, and in the meantime men will hunt for you and your treasure. The more infamous you are the more attention you attract, though that is not a concern just yet. If you have time before you are exhausted, return here. If unable, stay in a flood gully as a last resort. \n If you are unable to accomplish this within five years, I will find another successor. ",
         'fixed_time': 5,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         # ключевое слово для описания задачи, 'reputation' - проверяется уровень дурной славы
         'task': 'reputation',
@@ -1680,7 +1681,7 @@ quest_list = (
     {   # Породить любое потомство.
         'min_lvl': 2,  # минимальный уровень дракона для получения квеста
         'max_lvl': 2,  # максимальный уровень дракона для получения квеста
-        'text': u"Well, you too have grown up. You are stronger than your father, but still are not mighty enough to avenge me - that is a task for your descendants. And do you know what to do to make children? No, not with me, silly. \n   You have a very strong seed, you will be able to impregnate any whom you desire. But not all will be able to bear strong children to term. The greater the strength of the woman, the better the reproduction will be. Be sure to take virgins who have not known the male touch. For giantesses it makes no difference, they will give you one offspring even if they have already had ordinary children. Look for the best blood. \n   You'\re the first in the family, and it\'s too early for you to chase magic maidens, for your first time peasants are enough. Somewhere near the village you must catch not just one, but several. Fertilize them and set them free, because there is no one in your den to guard them while you sleep. If they are not killed by their own people, in a year when you wake up they will have spawned creatures. Not dragons of course, dragons only I can produce, but monsters that will run rampant among the Free People. When something hatches come back to me, and I will give you a special reward! \n    For this you have five years. If you cannot handle it in that time, don'\t come back.",  # текст квеста
+        'text': u"Well, you too have grown up. You are stronger than your father, but still are not mighty enough to avenge me - that is a task for your descendants. And do you know what to do to make children? No, not with me, silly. \n   You have a very strong seed, you will be able to impregnate any whom you desire. But not all will be able to bear strong children to term. The greater the strength of the woman, the better the reproduction will be. Be sure to take virgins who have not known the male touch. For giantesses it makes no difference, they will give you one offspring even if they have already had ordinary children. Look for the best blood. \n   You\'re the first in the family, and it\'s too early for you to chase magic maidens, for your first time peasants are enough. Somewhere near the village you must catch not just one, but several. Fertilize them and set them free, because there is no one in your den to guard them while you sleep. If they are not killed by their own people, in a year when you wake up they will have spawned creatures. Not dragons of course, dragons only I can produce, but monsters that will run rampant among the Free People. When something hatches come back to me, and I will give you a special reward! \n    For this you have five years. If you cannot handle it in that time, don\'t come back.",  # текст квеста
         'fixed_time': 5,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'offspring',  # ключевое слово для описания задачи, 'offspring' - породить потомство
         # кортеж с требованиями, для выполнения задания нужно выполнить любое из них,
@@ -1690,7 +1691,7 @@ quest_list = (
     {   # Снизить боеспособность королевства.
         'min_lvl': 3,  # минимальный уровень дракона для получения квеста
         'max_lvl': 3,  # максимальный уровень дракона для получения квеста
-        'text': u"Today you have reached maturity. That means the time has come for you, like your ancestors before, to go to the Free Peoples of the earth. The People are the most vile things of all. They are numerous and organized. Their kingdom is enormous. And they already know about the appearance of the dragons, and thus will have protections. \n   When your notoriety increases, the kingdom will mobilize. They will increase their army size and begin to patrol the roads. The higher the mobilization, the better the kingdom will be protected. But we can prevent them from gathering strength. To do this, you can use many methods. You can ruin the countryside, burning barns and mills, reducing their ability to field armies. You can flood the kingdom with spawn, and troops will be diverted to deal with them. And you may simply pay robbers from the loney island to plunder and sabotage. One way or another, you should be able to cope with the threat. This is what you have to do: \n   First, acquire notoriety and go to sleep. When you wake up, the people will have arisen. Then, you must do something to reduce their enthusiasm. When their mobilization falls, I think that is all that is needed. Come back to me for a reward! \n     I will give you a term of ten years. That should be than enough for such a simple task.",  # текст квеста
+        'text': u"Today you have reached maturity. That means the time has come for you, like your ancestors before, to go to the Free Peoples of the earth. The humans are the most vile species of all. They are numerous and organized. Their kingdom is enormous. And they already know about the appearance of the dragons, and thus will have protection. \n   When your notoriety increases, the kingdom will mobilize. They will increase their army size and begin to patrol the roads. The higher the mobilization, the better the kingdom will be protected. But we can prevent them from gathering strength. To do this, you can use many methods. You can ruin the countryside, burning barns and mills, reducing their ability to field armies. You can flood the kingdom with spawn, and troops will be diverted to deal with them. And you may simply pay robbers from the lonely island to plunder and sabotage. One way or another, you should be able to cope with the threat. This is what you have to do: \n   First, acquire notoriety and go to sleep. When you wake up, the people will have arisen. Then, you must do something to reduce their enthusiasm. When their mobilization falls, I think you will have done all that I need from you. Come back to me for a reward! \n     I will give you a term of ten years. That should be than enough for such a simple task.",  # текст квеста
         'fixed_time': 10,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         # ключевое слово для описания задачи, 'poverty' - проверяется уровень понижения мобилизации из-за разрухи
         'task': 'poverty',
@@ -1702,7 +1703,7 @@ quest_list = (
         # максимальный уровень дракона для получения квеста
         'max_lvl': 4,
         # текст квеста
-        'text': u"     Already you\'re quite an adult, son. And you\'re a lot stronger than the first of your kind were at your age. The time has come for dragons to behave like kings. I want you thoroughly settled on the lands of the free. You need to have a dragon\'s lair, not some crude gully or hole in the ground. It is better to find a good cave, or take from a knight a small estate or castle. You will need servants and guards. It is best to be protected by your own spawn, but for a start mercenaries are found on the predatory island. As servants hire gremlins, who will look after the captives while you sleep. Creatures born in your den can be told what to do. If you want them to harrass the people - let them go free. If you need protection or servants who will not steal from you, leave them in the den. There are roles for servants, chained poisonous creatures, guards and elite treasure defenders. If your den is protected enough, send intelligent spawn to me - they will be added to my army along with my goblins, and multiply under my hand. \n     Gremlins are skilled craftsmen - be sure to order them to build traps and fortifications for the new lair, so it is more difficult for thieves to get to the treasure. Attend carefully to the arrangement of the den, because if you are forced to move you will lose everything that you had made, keeping only the treasure. When you have decent housing with servants, guards, traps, and fortifications, call me to look. Ten years I give you, if you can handle this you will become the successor of your race.",
+        'text': u"     Already you\'re quite an adult, son. And you\'re a lot stronger than the first of your kind were at your age. The time has come for dragons to behave like kings. I want you thoroughly settled on the lands of the free. You need to have a dragon\'s lair, not some crude gully or hole in the ground. It is better to find a good cave, or take from a knight a small estate or castle. You will need servants and guards. It is best to be protected by your own spawn, but for a start mercenaries are found on the predatory island. As servants hire gremlins, who will look after the captives while you sleep. Creatures born in your den can be told what to do. If you want them to harass the people - let them go free. If you need protection or servants who will not steal from you, leave them in the den. There are roles for servants, chained poisonous creatures, guards and elite treasure defenders. If your den is protected enough, send intelligent spawn to me - they will be added to my army along with my goblins, and multiply under my hand. \n     Gremlins are skilled craftsmen - be sure to order them to build traps and fortifications for the new lair, so it is more difficult for thieves to get to the treasure. Attend carefully to the arrangement of the den, because if you are forced to move you will lose everything that you had made, keeping only the treasure. When you have decent housing with servants, guards, traps, and fortifications, call me to look. Ten years I give you, if you can handle this you will become the successor of your race.",
         # количество лет на выполнение квеста, не зависящее от уровня дракона
         'fixed_time': 10,
         # ключевое слово для описания задачи, 'lair' - проверяется тип логова и его улучшений
@@ -1723,7 +1724,7 @@ quest_list = (
     {   # Поймать вора или одолеть рыцаря в собственном логове.
         'min_lvl': 5,  # минимальный уровень дракона для получения квеста
         'max_lvl': 5,  # максимальный уровень дракона для получения квеста
-        'text': u" \n   At your age, your father went to the land of the Free and made a great lair. The truth is, he never dealt with the real concerns that a lair is necessary for. In the lair you keep your treasures and captives hatching your offspring. The more notorious you become, the more villains will come to harm you. \n     Knights will come while you sleep, wake you up with the sound of a battle horn, and call you out to fight. If the knight overpowers you, you can run, but all the treasures and prisoners will be lost forever! \n Thieves are not as dangerous, but they are very irritating. Like flies to honey, they come for gold. The thief will try to sneak into the treasury while you sleep and steal the most valuable things from right under your nose! \n   Here'\s the value of guards, fortifications, and traps.  \n Make yourself an unapproachable den and test it in action - catch the thief or overcome the night. Then I will be able to sleep peacefully, knowing that my children can take care of themselves and live a long life in the land of our enemies. \n A quarter century should be enough, but if you can handle it faster - come earlier.",  # текст квеста
+        'text': u" \n   At your age, your father went to the land of the Free and made a great lair. The truth is, he never dealt with the real concerns that a lair is necessary for. In the lair you keep your treasures and captives hatching your offspring. The more notorious you become, the more villains will come to harm you. \n     Knights will come while you sleep, wake you up with the sound of a battle horn, and call you out to fight. If the knight overpowers you, you can run, but all the treasures and prisoners will be lost forever! \n Thieves are not as dangerous, but they are very irritating. Like flies to honey, they come for gold. The thief will try to sneak into the treasury while you sleep and steal the most valuable things from right under your nose! \n   Here\'s the value of guards, fortifications, and traps.  \n Make yourself an unapproachable den and test it in action - catch the thief or overcome the night. Then I will be able to sleep peacefully, knowing that my children can take care of themselves and live a long life in the land of our enemies. \n A quarter century should be enough, but if you can handle it faster - come earlier.",  # текст квеста
         'fixed_time': 25,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'event',  # ключевое слово для описания задачи, 'event' - должно произойти какое-то событие
         # кортеж с требованиями, нужно либо 'thief_killer' - поймать вора, либо 'knight_killer' - убить рыцаря
@@ -1766,7 +1767,7 @@ quest_list = (
     {   # Породить потомка от великанши.
         'min_lvl': 7,  # минимальный уровень дракона для получения квеста
         'max_lvl': 11,  # максимальный уровень дракона для получения квеста
-        'text': u"Congratulations on your day of maturity. You'\ve grown up and are ready, I see you looking at me. All in good time. First prove you'\re a real male. Knocking up peasants is easy, the goblins can handle it. But if you get offspring from a giantess, that is an an achievement. Then I would agree that you are worthy to become the successor of the dragon race. \n     Just please do not forget that in addition to cannon fodder, we need gold. The more you gather, the better we will be prepared for war. Now go, sow terror in the land of the Free Peoples!",  # текст квеста
+        'text': u"Congratulations on your day of maturity. You\'ve grown up and are ready, I see you looking at me. All in good time. First prove you\'re a real male. Knocking up peasants is easy, the goblins can handle it. But if you get offspring from a giantess, that is an an achievement. Then I would agree that you are worthy to become the successor of the dragon race. \n     Just please do not forget that in addition to cannon fodder, we need gold. The more you gather, the better we will be prepared for war. Now go, sow terror in the land of the Free Peoples!",  # текст квеста
         'fixed_time': 50,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'offspring',  # ключевое слово для описания задачи, 'offspring' - породить потомство
         # кортеж с требованиями, для выполнения задания нужно выполнить любое из них, 'giantess' - потомок от великанши
@@ -1782,7 +1783,7 @@ quest_list = (
     {   # Разорить рощу альвов
         'min_lvl': 8,  # минимальный уровень дракона для получения квеста
         'max_lvl': 12,  # максимальный уровень дракона для получения квеста
-        'text': u"You grew up. You'\ve become so large and powerful. Stronger than any of your ancestors, I remember them all. A little more and dragons will be ready to fulfill their destiny. But not you. For you, I have a test worthy of your power and splendor. Until now, we have attacked men, and they are really the most vile race of all. But there are others. The forests are hiding cowardly elves, children of the goddess Danu. Show them what dragons are capable of. Find and destroy their sacred tree, kill their rulers, defile their magical grove. Waiting for you are untold wealth and eternally young and beautiful maidens. But remember, none of them hold a candle to me. And you will only have me when you overcome the forest people. Now go!",  # текст квеста
+        'text': u"You grew up. You\'ve become so large and powerful. Stronger than any of your ancestors, I remember them all. A little more and dragons will be ready to fulfill their destiny. But not you. For you, I have a test worthy of your power and splendor. Until now, we have attacked men, and they are really the most vile race of all. But there are others. The forests are hiding cowardly elves, children of the goddess Danu. Show them what dragons are capable of. Find and destroy their sacred tree, kill their rulers, defile their magical grove. Waiting for you are untold wealth and eternally young and beautiful maidens. But remember, none of them hold a candle to me. And you will only have me when you overcome the forest people. Now go!",  # текст квеста
         'fixed_time': 75,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'prerequisite': 'giantess',  # ключ для game.unique, который необходим для получения этой задачи
         'task': 'event',  # ключевое слово для описания задачи, 'event' - должно произойти какое-то событие
@@ -1796,7 +1797,7 @@ quest_list = (
     {   # Устроить логово в подгорном царстве цвергов
         'min_lvl': 9,  # минимальный уровень дракона для получения квеста
         'max_lvl': 12,  # максимальный уровень дракона для получения квеста
-        'text': u"Oh, how did you become so big! Stronger than all the others, I think I know exactly who will become the sucessor of the draconic race. But like all your ancestors, first you have to prove that you deserve it, my dear. Men are not a threat to you. Even elves cannot resist. But in the Free Lands there is no greater wealth than that concealed in the halls of the dwarves. To impose your paw on them should be an easy task for a mighty snake like you. Defeat the dwarves, and build your den in their palace in mockery of their king. Then I will be yours. \n     Go. The hour is close when all free people bow before the power of my children.",  # текст квеста
+        'text': u"Oh, how did you become so big! Stronger than all the others, I think I know exactly who will become the successor of the draconic race. But like all your ancestors, first you have to prove that you deserve it, my dear. Men are not a threat to you. Even elves cannot resist. But in the Free Lands there is no greater wealth than that concealed in the halls of the dwarves. To impose your paw on them should be an easy task for a mighty snake like you. Defeat the dwarves, and build your den in their palace in mockery of their king. Then I will be yours. \n     Go. The hour is close when all free people bow before the power of my children.",  # текст квеста
         'fixed_time': 75,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'prerequisite': 'ravage_sacred_grove',  # ключ для game.unique, который необходим для получения этой задачи
         'task': 'lair',  # ключевое слово для описания задачи, 'lair' - проверяется тип логова и его улучшений
@@ -1810,7 +1811,7 @@ quest_list = (
     {   # Захватить столицу
         'min_lvl': 13,  # минимальный уровень дракона для получения квеста
         'max_lvl': 20,  # максимальный уровень дракона для получения квеста
-        'text': u"Come to me, my son. How big and strong you'\ve grown up. We need not wait any longer, you will be the one who will avenge me. You will fulfill the purpose of your existence, and put the crowns of the rulers of the Free Peoples at my feet. \n     Do not hurry, I will give you enough time for preparation. Take care that our army is at full readiness, we need more fighters, the more varied the better. When the time comes to act, remember that there will be many battles without time to rest. In each fight we will have losses, many if you stand aside and fewer if you spearhead the attack. If necessary, I will once myself. When the capital of man falls, the rest will surrender themselves...",  # текст квеста
+        'text': u"Come to me, my son. How big and strong you\'ve grown up. We need not wait any longer, you will be the one who will avenge me. You will fulfill the purpose of your existence, and put the crowns of the rulers of the Free Peoples at my feet. \n     Do not hurry, I will give you enough time for preparation. Take care that our army is at full readiness, we need more fighters, the more varied the better. When the time comes to act, remember that there will be many battles without time to rest. In each fight we will have losses, many if you stand aside and fewer if you spearhead the attack. If necessary, I will once myself. When the capital of man falls, the rest will surrender themselves...",  # текст квеста
         'fixed_time': 1000,  # количество лет на выполнение квеста, не зависящее от уровня дракона
         'task': 'event',  # ключевое слово для описания задачи, 'event' - должно произойти какое-то событие
         # кортеж с требованиями, для выполнения задания нужно выполнить любое из них,
@@ -2202,9 +2203,9 @@ game_events = {
 
 dark_army = {
     "grunts": {
-        0: u"After defeat in the Battle of Six Armies, pathetic lumps of the Mistress'\s army remain. "
+        0: u"After defeat in the Battle of Six Armies, pathetic lumps of the Mistress\'s army remain. "
            u"The few surviving goblins hide in their caves and "
-           u"multiply like rabits in an attempt to join the ranks of the troops. ",
+           u"multiply like rabbits in an attempt to join the ranks of the troops. ",
         10: u"The good news: in the barren plain enough aggressive creatures are gathered, "
            u"that one could assemble an army now. "
            u"The bad: this army will be inferior in number to that the free people can gather.",
@@ -2219,25 +2220,25 @@ dark_army = {
             u"This huge horde would engulf the armies of the Free Peoples like the surf."
     },
     "elites": {
-        0: u"But whatever the number of these soliders, the biggest weakness is the lack of elite fighters. "
+        0: u"But whatever the number of these common soldiers, the biggest weakness is the lack of elite fighters. "
            u"Having faced giants, elven mages, and dwarven fighting machines on the battlefield, "
            u"Mistress learned that the only beings that can resist them "
-           u"surpass the strength of men or goblins. Dragons must generate such, "
+           u"surpass the strength of men or goblins. Dragons must generate such fighters, "
            u"the army desperately needs them.",
-        1: u"Here andthere, you notice huge silhouettes of elite fighters. "
+        1: u"Here and there, you notice huge silhouettes of elite fighters. "
            u"There are not many, but they stand ready to attack at the crucial time and place. ",
         5: u"Each detachment of small creatures includes at least one elite fighter, "
            u"generated by the dragon from the most powerful blood of the Free Peoples. "
            u"Each of these mighty giants is worth an army in a fight.",
         10: u"In this army are so many elite fighters, "
-           u"that trifling creatures like goblins serve only as reconnassance and support. "
+           u"that trifling creatures like goblins serve only as reconnaissance and support. "
            u"This shock power comes from ugly giants produced by dragons from the mightiest blood of the Free Peoples."
     },
     "diversity": {
         0: u"The Army of Darkness lacks variety, "
            u"the vast majority of fighters are from a single species. "
            u"Warriors of the Free people are used to fighting with these creatures, "
-           u"and have proven tactics against them.",
+           u"and have developed tactics against them.",
         2: u"The variety of forces is not too great, "
            u"though the dragonspawn will be beneficial supplements to the usual goblins on the battlefield. "
            u"Nevertheless, the free people will have little difficulty working out tactics "
@@ -2246,7 +2247,7 @@ dark_army = {
            u"There are short and lanky, rapid spies and massive ground fighters, of all colors, shapes and sizes."
            #u"Кого-то украшает чеушая, кого-то рога. " #trans: ??
            u"Favorably complementing each other on the battlefield. "
-           u"All this motely company makes it impossible for the Free People to use simple and familiar battle tactics.",
+           u"All this motley company makes it impossible for the Free People to use simple and familiar battle tactics.",
         7: u"There are so many different creatures that even the Mistress could probably not distinguish between them all. "
            u"Mixing together uncontrollably "
            u"the dragon\'s offspring generate new mutant hybrids with incredible properties. "

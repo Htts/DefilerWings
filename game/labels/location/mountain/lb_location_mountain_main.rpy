@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked
 init python:
     from pythoncode.utils import weighted_random
     from pythoncode.characters import Enemy
@@ -200,7 +201,7 @@ label lb_enc_slavers:
     return
 
 label lb_enc_mines_silver:
-    'Silver mine. Protected by a small detatchment of crossbowmen.'
+    'Silver mine. Protected by a small detachment of crossbowmen.'
     $ game.foe = Enemy('xbow', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
@@ -239,7 +240,7 @@ label lb_enc_mines_silver:
     return
 
 label lb_enc_mines_gold:
-    'Gold mine. Protected by a small detatchement of heavy armor-clad infantry.'
+    'Gold mine. Protected by a small detachment of heavy armor-clad infantry.'
     $ game.foe = Enemy('heavy_infantry', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
@@ -321,9 +322,9 @@ label lb_enc_mines_adamantine:
     $ game.foe = Enemy('golem', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
-        'Demand some adamanthine' if game.dragon.fear > 8:
+        'Demand some adamantine' if game.dragon.fear > 8:
             $ game.dragon.drain_energy()
-            'The chief dwarf hands over a small bar of adamntine to avoid conflict.'
+            'The chief dwarf hands over a small bar of adamantine to avoid conflict.'
             python:
                 gold_trs = treasures.Ingot('adamantine')
                 gold_trs.weight = 4
@@ -357,7 +358,7 @@ label lb_enc_mines_adamantine:
 
 
 label lb_enc_mines_gem_low:
-    'On a mountain slope a mine entrance is visible. Judging from the smell, semi-precious stones are mined here. The entrance is guarded by a small detatchment of crossbowmen.'
+    'On a mountain slope a mine entrance is visible. Judging from the smell, semi-precious stones are mined here. The entrance is guarded by a small detachment of crossbowmen.'
     $ game.foe = Enemy('xbow', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
@@ -403,7 +404,7 @@ label lb_enc_mines_gem_low:
     return
 
 label lb_enc_mines_gem_high:
-    'On a mountain slope a mine entrance is visible. Judging from the smell, gems are mined here of very high quality. Already the dragon drools. But the entrance is guarded by a detatchment of heavy infantry.'
+    'On a mountain slope a mine entrance is visible. Judging from the smell, gems are mined here of very high quality. Already the dragon drools. But the entrance is guarded by a detachment of heavy infantry.'
     $ game.foe = Enemy('heavy_infantry', game_ref=game)
     $ narrator(show_chances(game.foe))
     menu:
@@ -469,7 +470,7 @@ label lb_enc_cannontower:
             'Inside the bastion there is no treasure, only armaments, supplies, and documents. There was a deep passage into the mountain kingdom, but after realizing the battle was lost, the dwarves set off a gunpowder charge, bringing down tons of stone. Nobody can get through that blockage.'
             menu:
                 'Decipher the papers':
-                    'The bulk of the material is a variety of technical schematics, as well as invoices for ammunition and provisions. But in addition there are some very amusing architectural plans. According to this data, in addition to the fortified main gate and cannon bunkers, the dwarven kingdom has one more little disguised and guarded "backdoor". As needed it can be "spread open"... ' #trans: some sort of weird russian innuendo here. Originally read " в подгорное царство есть ещё один почти не охраняемый но замаскированный "задний проход". При случае можно будет его "раздраконить"..."
+                    'The bulk of the material is a variety of technical schematics, as well as invoices for ammunition and provisions. But in addition there are some very amusing architectural plans. According to this data, in addition to the fortified main gate and cannon bunkers, the dwarven kingdom has one more little disguised and guarded "backdoor". As needed it can be "spread open"... ' #Originally read " в подгорное царство есть ещё один почти не охраняемый но замаскированный "задний проход". При случае можно будет его "раздраконить"..."
                     $ game.dragon.add_special_place('backdor', 'backdor_open')
                 'Leave':
                     $ game.dragon.gain_rage()
@@ -487,7 +488,7 @@ label lb_patrool_mountain:
             dtxt = 'In a valley overgrown with low shrubs, %s runs into an ambush by patrolling mountain rangers.' % game.dragon.name
         elif chance < 7:
             patrool = 'footman'
-            dtxt = 'On the pass %s is suddenly faced by a detatchment of well-armed infantry in an organized formation.' % game.dragon.name
+            dtxt = 'On the pass %s is suddenly faced by a detachment of well-armed infantry in an organized formation.' % game.dragon.name
         elif chance < 11:
             patrool = 'heavy_infantry'
             dtxt = '%s gets caught in a cunning trap and covered in a vast net of thick rope. Such a net will not hold a dragon for long, but around the bend come the sound of loud horns and heavy infantry on the move.' % game.dragon.name

@@ -1,4 +1,5 @@
 # coding=utf-8
+#checked and proofread
 init python:
     from pythoncode.utils import get_random_image
     

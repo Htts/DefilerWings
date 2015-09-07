@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked
 init python:
     from pythoncode import treasures
     from pythoncode.characters import Enemy
@@ -133,12 +134,12 @@ label lb_city_palace_atk:
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
         'Flee':
-            'Having decided not to tempt fate and instead use the commotion for a safe withdrawl, [game.dragon.kind] leaves the city.'
+            'Having decided not to tempt fate and instead use the commotion for a safe withdrawal, [game.dragon.kind] leaves the city.'
     return
 
 label lb_city_market:
     show expression 'img/bg/city/market.jpg' as bg
-    'The market square is full of humans. They buy and sell all sorts of unnecessary things like potatos and clothing. The foolish mortals have no idea that their most terrifying nightmare is here. They are vulnerable to a surprise attack.'
+    'The market square is full of humans. They buy and sell all sorts of unnecessary things like potatoes and clothing. The foolish mortals have no idea that their most terrifying nightmare is here. They are vulnerable to a surprise attack.'
     nvl clear
     menu:
         'Drop the disguise':
@@ -204,7 +205,7 @@ label lb_city_cathedral_atk:
     return
 
 label lb_city_jewler:
-    'In this quarter the most affluent craftsmen work. Armorers, jewlers, cabinetmakers. All around are intoxicating treasures and noblewomen shopping. Unfortunately, guards stand on every corner.'
+    'In this quarter the most affluent craftsmen work. Armorers, jewelers, cabinetmakers. All around are intoxicating treasures and noblewomen shopping. Unfortunately, guards stand on every corner.'
     $ game.foe = Enemy('city_guard', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear

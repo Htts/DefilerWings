@@ -1,5 +1,5 @@
 # coding=utf-8
-
+#spellchecked
 init python:
     from pythoncode.utils import weighted_random
     from pythoncode.characters import Enemy
@@ -75,7 +75,7 @@ label lb_enc_inn:
     menu:
         'Breathe fire' if doit:
             $ game.dragon.drain_energy()
-            "Unleashing his fiery breath, [game.dragon.name] torches the building on all four sides. The wooden inn burns rapidly, buring the people barricaded inside in flaming wreckage."
+            "Unleashing his fiery breath, [game.dragon.name] torches the building on all four sides. The wooden inn burns rapidly, burning the people barricaded inside in flaming wreckage."
             $ game.poverty.value += 1
             $ game.dragon.reputation.points += 5
             '[game.dragon.reputation.gain_description]'
@@ -169,7 +169,7 @@ label lb_enc_questing_knight:
     return
     
 label lb_enc_trader:
-    'On the road is a big colorful wagon covered in painted advertisements. It\'s some kind of traveling mechant, not very successful but judging by the smell there is some silver to be found in his pockets. Someone should ease his burden.'
+    'On the road is a big colorful wagon covered in painted advertisements. It\'s some kind of traveling merchant, not very successful but judging by the smell there is some silver to be found in his pockets. Someone should ease his burden.'
     menu:
         'Extort money':
             python:
@@ -193,7 +193,7 @@ label lb_enc_trader:
     return
     
 label lb_enc_caravan:
-    '[game.dragon.name] stumbles on a caravan that promises to be a good catch. Unfortunately, the traders did not skimp on protection - they are accompainied by a platoon of mounted crossbowmen.'
+    '[game.dragon.name] stumbles on a caravan that promises to be a good catch. Unfortunately, the traders did not skimp on protection - they are accompanied by a platoon of mounted crossbowmen.'
     $ game.foe = Enemy('xbow_rider', game_ref=game)
     $ chances = show_chances(game.foe)
     menu:

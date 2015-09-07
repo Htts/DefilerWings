@@ -1,4 +1,5 @@
 # coding=utf-8
+#proofread
 label lb_event_thief_spawn(thief):
     show expression "img/scene/thief.jpg" as bg
     nvl clear
@@ -28,7 +29,7 @@ label lb_event_thief_prepare(thief):
 
 label lb_event_thief_prepare_usefull(thief):
     nvl clear    
-    thief "Hehe...just as I planned." #Alternate translation: just according to keikaku 
+    thief "Hehe...just as I planned." #planovyy means planned
     return
 
 label lb_event_thief_receive_item(thief, item):

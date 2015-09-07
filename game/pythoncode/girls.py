@@ -276,7 +276,7 @@ class GirlsList(object):
             # TODO: Возможно стоит сделать умирание слуги, если оно не морское и в морском логове.
             marine_check = ('marine' not in spawn_mod) or \
                            (self.game.lair.type.require and 'swimming' in self.game.lair.type.require)
-            spawn_menu = [(u"Comes to you and asks what to do with" % spawn['name'], None)]  # меню отродий
+            spawn_menu = [(u"Comes to you and asks what to do with %s" % spawn['name'], None)]  # меню отродий
             # Possible menu points
             if ('poisonous' in spawn_mod) and ('poison_guards' not in self.game.lair.upgrades) and marine_check:
                 spawn_menu.append((u"Release into lair", u'poison_guards'))

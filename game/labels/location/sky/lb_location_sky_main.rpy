@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked and proofread
 init python:
     from pythoncode.utils import weighted_random
     from pythoncode.characters import Enemy
@@ -61,7 +62,7 @@ label lb_enc_swan:
     return
     
 label lb_enc_griffin:
-    'In the sky soars an experienced wild griffon. He flies over his lands in search of prey and trespassers, and that second category includes dragons. Maybe it will be worth it to show Feathers his place?'
+    'In the sky soars an experienced wild griffon. He flies over his lands in search of prey and trespassers, and that second category includes dragons. Maybe someone should show Feathers his place.'
     $ game.dragon.drain_energy()
     $ game.foe = Enemy('griffin', game_ref=game)
     $ narrator(show_chances(game.foe))
@@ -131,8 +132,8 @@ label lb_patrool_sky:
             patrool = 'archer'
             dtxt = 'The dragon is flying along, not bothering anyone, and then sharp arrows come from below! An overly zealous archer decided to show their prowess.'
         elif chance < 7:
-            patrool = 'catapult' #ballista? check mob_data
-            dtxt = 'Trying to protect their posessions from flying monsters, the people have set up catapults on the top of hills, shooting massive feathered spears tipped with hardened steel.'
+            patrool = 'catapult' #actually a ballista? check mob_data
+            dtxt = 'Trying to protect their possessions from flying monsters, the people have set up catapults on the top of hills, shooting massive feathered spears tipped with hardened steel.'
         elif chance < 11:
             patrool = 'griffin_rider'
             dtxt = 'The sky has been disturbed, so it is not surprising that the people have sent out one of their flying knights - a griffon rider is a real threat to any winged monster.'

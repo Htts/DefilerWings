@@ -466,7 +466,7 @@ girls_texts = {
         'impregnate': (  # Оплодотворение
             u"Squeezed in the pitiless embrance of a lizard, %(girl_title) felt the dragon moving faster. "
             u"The pain became almost unbearable, but the girl\'s screams "
-            u"were drowned out by her rapist'\s roar of pleasure. "
+            u"were drowned out by her rapist\'s roar of pleasure. "
             u"The convulsing %(dragon_type)s poured liters of thick, sticky seed "
             u"into her womb, causing her belly to swell. When "
             u"%(dragon_name)s finally pulled away from his victim a waterfall of seed poured out,"
@@ -485,7 +485,7 @@ girls_texts = {
             u"%(dragon_name)s carries the captive into his lair...",
         ),
         'jail': (  # Описание процесса заточения в темницу
-            u"...and I put it under lock and key.",
+            u"...and puts her under lock and key.",
         ),
         'jailed': (  # Описание процесса возврата в темницу
             u"%(dragon_name)s returns the girl to the dungeon.",
@@ -579,7 +579,7 @@ girls_texts = {
             u"Ah. No, no, no...not there...oh...",
             u"Just don\'t eat me, I\'ll do anything, I beg you. I know what you want...",
             #u"Ой нет, убеерите эту... это... от меня. Стыд то какой!",
-            u"Ah, what are you doing?! It hurts...no, I beg you, it'\s too big... uuuy it hurts!!!",
+            u"Ah, what are you doing?! It hurts...no, I beg you, it\'s too big... uuuy it hurts!!!",
             u"What are you doing, you spawn of an anteater? Let go...ah, wait!",
             u"I have heard what dragons do with girls...please don\'t growl...don\'t tear it, I\'ll take it off, I\'ll take it off...", 
             #u"Ох, Господи, я такого срама даже у коня в деревне не видала! Жуть то какая...",

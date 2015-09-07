@@ -1,5 +1,5 @@
 # coding=utf-8
-
+#spellchecked and proofread
 init python:
     import random
     

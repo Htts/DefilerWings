@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked
 
 init python:
     from pythoncode.utils import weighted_random
@@ -12,7 +13,7 @@ label lb_special_places:
             # Add to the list of investigated points of interest
             special_stage = game.dragon.special_places[special_place]
             special_places_menu.append((data.special_places[special_stage][0], special_stage))
-        special_places_menu.append(('Вернуться', 'back'))
+        special_places_menu.append(('Back', 'back'))
         special_stage = renpy.display_menu(special_places_menu)
         
         if special_stage == 'back':
@@ -27,7 +28,7 @@ label lb_enchanted_forest:
     menu:
         'Open the elvenpath (magic)' if game.dragon.mana > 0:
             $ game.dragon.drain_mana()
-            '[game.dragon.fullname] uses black magic to break the veil of illusion, confusion, and sleep that the elves hide their possessions under. Unnoticed, the deadily [game.dragon.kind] comes under the shadow of the ancient trees.'
+            '[game.dragon.fullname] uses black magic to break the veil of illusion, confusion, and sleep that the elves hide their possessions under. Unnoticed, the deadly [game.dragon.kind] comes under the shadow of the ancient trees.'
             nvl clear
             call lb_enchanted_forest_enter from _call_lb_enchanted_forest_enter
         'Go back':
@@ -600,7 +601,7 @@ label lb_enc_fight_ogre:
 label lb_enc_explore_ogre_den:
     menu:
         'Rob the den':
-            'В пещере прячется испуганная великанша. То ли дочь, то ли жена того огра, труп которого валяется снаружи.'
+            'In the cave a frightened giantess is hiding. Either a daughter or the wife of the ogre whose body is lying outside.'
             $ description = game.girls_list.new_girl('ogre')
             nvl clear
             game.girl.third "[description]"
@@ -613,7 +614,7 @@ label lb_enc_explore_ogre_den:
  
 label lb_enc_create_ogre_lair:
     menu:
-        'Пещера, в которой жил огр, теперь пуста. Но тут можно устроить своё логово, не слишком раскошное, однако всё же получше, чем открытый овраг в буреломной чащобе.'
+        'The cave where the ogre lived is now empty. Here you could make a den, not a very nice one, but still better than an open ravine in a thicket.'
         'Make a lair here':
             $ game.create_lair('ogre_den')
             $ game.dragon.del_special_place('ogre')
@@ -626,7 +627,7 @@ label lb_enc_create_ogre_lair:
 # Frost giant\'s home  
 
 label lb_jotun_found:
-    'Высоко в горах, где всё покрыто льдом и снегом стоит гигантский ледяной дворец. Интересно...'
+    'High in the mountains, where everything is covered with ice and snow, there is a giant ice palace. Interesting...'
     nvl clear
     jump lb_jotun
     
@@ -846,7 +847,7 @@ label lb_backdor:
             play music "mus/moria.ogg"
             $ renpy.music.queue(get_random_files('mus/ambient'))           
             show expression 'img/bg/special/moria.jpg' as bg
-            'Pressing an inconspicious stone in the right place, [game.dragon.name] opens a secret passage into the dwarven kingdom. There won\'t be a second chance at this, if the dragon retreats the dwarves will seal their "backdoor" and strengthen it more thoroughly.'
+            'Pressing an inconspicuous stone in the right place, [game.dragon.name] opens a secret passage into the dwarven kingdom. There won\'t be a second chance at this, if the dragon retreats the dwarves will seal up their "backdoor" and strengthen it more thoroughly.'
             $ game.dragon.add_special_place('backdor', 'backdor_sealed')
             jump lb_dwarf_army    
         'More preparation is needed...':
@@ -867,7 +868,7 @@ label lb_frontgates:
     nvl clear
     menu:
         'Crush the Mountain Gates' if game.dragon.size > 3:
-            'The pathetic fortifications of the fat little gnomes cannot resist the violent offpsring of the Mistress. [game.dragon.fullname] is huge and powerful enough to break through the gates and into the dwarven kingdom. But now there is no going back - if the dwarves are not driven out now, they will rebuild stronger than ever.'
+            'The pathetic fortifications of the fat little gnomes cannot resist the violent offspring of the Mistress. [game.dragon.fullname] is huge and powerful enough to break through the gates and into the dwarven kingdom. But now there is no going back - if the dwarves are not driven out now, they will rebuild stronger than ever.'
             $ game.dragon.add_special_place('backdor', 'backdor_sealed')
             $ game.dragon.drain_energy()
             call lb_golem_guard from _call_lb_golem_guard
@@ -941,7 +942,7 @@ label lb_dwarf_treashury:
     $ narrator(show_chances(game.foe))
     nvl clear
     menu:
-        'Fight the champon':
+        'Fight the champion':
             call lb_fight from _call_lb_fight_41
             $ game.dragon.reputation.points += 25
             '[game.dragon.reputation.gain_description]'     

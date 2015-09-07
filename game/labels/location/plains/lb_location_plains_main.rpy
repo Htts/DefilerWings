@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked
 init python:
     from pythoncode.characters import Enemy, Talker
     from pythoncode.utils import weighted_random
@@ -20,7 +21,7 @@ label lb_location_plains_main:
         'Prowl around':
             call lb_encounter_plains from _call_lb_encounter_plains
             return
-        'Lonley farmstead':
+        'Lonely farmstead':
             $ village_size = 1
             call lb_village from _call_lb_village
         'Small village':
@@ -71,16 +72,16 @@ label lb_enc_redhood:
     $ persistent.easter_eggs.append("redhood_done") #отмечаем что энкаунтер с красной шапочкой произошел
     "[game.dragon.fullname] notices a small figure in a bright red cape in the distance, straying off the forest path. She holds in her hand a heavy basket of pastries. Farmers don\'t usually wear red capes...the [game.dragon.kind] decides to follow the girl, but she has already disappeared behind some trees, so he follows her smell."
     show expression 'img/bg/forest/1.jpg' as bg    
-    "Judging from her trail, the red hooded girl met an unusual creature on the crossroads. The smell is strange, reminiscent of wet dog, human flesh, and the Mistress\'s spawn. The creature did not attack the girl, there is a spot with many footprints, and from there they went away seperately - but in the same direction. Interesting... "
+    "Judging from her trail, the red hooded girl met an unusual creature on the crossroads. The smell is strange, reminiscent of wet dog, human flesh, and the Mistress\'s spawn. The creature did not attack the girl, there is a spot with many footprints, and from there they went away separately - but in the same direction. Interesting... "
     "The tracks of the red hooded girl lead to a clearing with a small house, very tidy for a home in a remote forest. Inside noises are heard - a girl\'s screams, a hollow roar, and overturned furniture. "
     nvl clear
     show expression 'img/scene/wolf_sex.jpg' as bg
     pause (50.0)
     "Peering through the window, [game.dragon.name] sees the aftermath of the fight. A huge anthropomorphic wolf brutally raping the girl in the red cape, next to the corpse of an old gray-haired woman. She squeals and struggles, but it only seems to inflame the wolf. With an incredibly happy expression on his face, he twists her hands behind her back and fucks her doggy style, growling. "
-    "The long, sharp claws of the monster leave bloody rips in her delicate skin, as the wolf squeezes his paws in pleasure, filling her tormented womb with seed. Satisfied, the monster lies panting on the floor. His bleeding victim tries to crawl to the door, but the werewof isn\'t finished."
+    "The long, sharp claws of the monster leave bloody rips in her delicate skin, as the wolf squeezes his paws in pleasure, filling her tormented womb with seed. Satisfied, the monster lies panting on the floor. His bleeding victim tries to crawl to the door, but the werewolf isn\'t finished."
     "With an easy movement he grabs the girls thigh and pulls her back. The poor girl screams and begs him to stop, but the wolf just smiles with his tongue out. Roughly he grabs her delicious ass with his clawed feet, and with a visible effort, jams his impressive canine rod right in her anus. Judging from the force required, Fluffy just tore her sphincter to squeeze inside."
     nvl clear
-    "Little Red Rding Hood squeals so loudly that the werewolf\'s ears flatten, but it does not stop his abuse. On the contrary, incensed by her bloody screams he bites his teeth into her right hand and tears it off. [game.dragon.name] knows from is own experience how to combine sex and a good breakfast, and the wolf crunches bone with such gusto that the dragon starts to salivate."
+    "Little Red Riding Hood squeals so loudly that the werewolf\'s ears flatten, but it does not stop his abuse. On the contrary, incensed by her bloody screams he bites his teeth into her right hand and tears it off. [game.dragon.name] knows from is own experience how to combine sex and a good breakfast, and the wolf crunches bone with such gusto that the dragon starts to salivate."
     "After a few minutes of this bloody feast the girl, or what is left of her, lays quiet on the floor. Satisfied and satiated, the wolf methodically bites off an undamaged leg, along with a large chunk of buttock. Then, taking human form and throwing the bloody trophy on his shoulder, he goes out and encounters the dragon."
     show expression 'img/bg/forest/1.jpg' as bg
     game.dragon "Hello. Are you one of my mother\'s flock? Somehow I don\'t recall you, brother..."
@@ -91,7 +92,7 @@ label lb_enc_redhood:
     wolf "Nyet, I need to feed children. But in house is left something still, and old woman is almost whole."
     game.dragon "Very well. Children are sacred, we need the little freeloaders to keep the world running. Godspeed, Sergei Wolkov from Moscow."
     nvl clear
-    "Nodding slighty to each other, the monsters went their seperate ways and continued their adventures."    
+    "Nodding slightly to each other, the monsters went their separate ways and continued their adventures."    
 
     return
 
@@ -139,14 +140,14 @@ label lb_enc_fair:
     
     
 label lb_enc_berries:
-    'Girls at the edge of the woods gather berries and sing. But when the dragon appears, the singing gives way to wild squealing. Pretty girls scatter in all directions, dropping baskets of sugary ripe berries. One beauty doesn\'t won\'t let go of her basket for anything and runs slowly away - a girl so sweet should be loved! But it may be better not to catch the sweet tooth, and instead look for an innocent virgin to bring up offpsring.'
+    'Girls at the edge of the woods gather berries and sing. But when the dragon appears, the singing gives way to wild squealing. Pretty girls scatter in all directions, dropping baskets of sugary ripe berries. One beauty doesn\'t won\'t let go of her basket for anything and runs slowly away - a girl so sweet should be loved! But it may be better not to catch the sweet tooth, and instead look for an innocent virgin to bring up offspring.'
     nvl clear
     $ description = game.girls_list.new_girl('peasant')
     nvl clear
     menu:
         'Snatch a virgin':
             $ game.dragon.drain_energy()
-            'Forgetting the useless berries, the [game.dragon.kind] rushes after the virgin girl. Althrough she runs from the lust obsessed lizard as fast as she can, the frightened maiden cannot escape.'
+            'Forgetting the useless berries, the [game.dragon.kind] rushes after the virgin girl. Although she runs from the lust obsessed lizard as fast as she can, the frightened maiden cannot escape.'
             nvl clear
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
@@ -175,10 +176,10 @@ label lb_enc_berries:
                             nvl clear
                             game.dragon 'If you want to live, do what I say.'
                             game.girl 'Okay, okay. Just don\'t eat me, please, I\'ll do anything.'
-                            game.girl.third 'Following the dragon\'s instructions, [game.girl.name] takes a generous scoop of berries from the basket and smears herelf head to toe in their sticky juice. Another generous handful she pushes between her legs, stuffing a mix of beries into her tight vagina. Next, the [game.dragon.kind] orders the girl to tenderly smear the rest of the berry juice on his intimidating shaft.'
+                            game.girl.third 'Following the dragon\'s instructions, [game.girl.name] takes a generous scoop of berries from the basket and smears herself head to toe in their sticky juice. Another generous handful she pushes between her legs, stuffing a mix of berries into her tight vagina. Next, the [game.dragon.kind] orders the girl to tenderly smear the rest of the berry juice on his intimidating shaft.'
                             nvl clear
                             game.dragon 'Yes, that\'s right. Good girl. Now, sit on my chest, so I can see your sweet ass. The rules of the game: I will eat berries from your cunt, and you lick my cock clean. If you finish first, I\'ll let you go.'
-                            game.girl.third 'The frightened peasant immediately began licking berries off the dragon\'s meat as if it was the most delicious thing in the world, choking and gasping. Happily [game.dragon.name] slowly opened his mouth, and wish relish launched his flexible forked tongue into her sticky, berry filled pussy. For some time the forest glade was filled with the sounds of intent chomping and squelching, but soon the berries stuffed in the girl ran out. [game.dragon.name] pushed his tongue even deeper into her dark and sticky passafe, all the way to the entrance of her convulsively contracting womb. Writhing in pain, [game.girl.name] continued trying in vain to lick off the last drops of berry juice from the base of the dragon\'s cock, even though it was too late.'
+                            game.girl.third 'The frightened peasant immediately began licking berries off the dragon\'s meat as if it was the most delicious thing in the world, choking and gasping. Happily [game.dragon.name] slowly opened his mouth, and wish relish launched his flexible forked tongue into her sticky, berry filled pussy. For some time the forest glade was filled with the sounds of intent chomping and squelching, but soon the berries stuffed in the girl ran out. [game.dragon.name] pushed his tongue even deeper into her dark and sticky passage, all the way to the entrance of her convulsively contracting womb. Writhing in pain, [game.girl.name] continued trying in vain to lick off the last drops of berry juice from the base of the dragon\'s cock, even though it was too late.'
                             menu:
                                 'Devour the maiden' if game.dragon.hunger > 0:
                                     play sound "sound/eat.ogg"
@@ -195,7 +196,7 @@ label lb_enc_berries:
                             hide xxx
                             return
                 'Take the berries and let her go':
-                    '[game.dragon.name] snacks on the sweet berries and leaves. The confused peasant farmgirl looks at the crushed basket, and shakes her fist at impudent retreating dragon\'s ass.'
+                    '[game.dragon.name] snacks on the sweet berries and leaves. The confused peasant farm girl looks at the crushed basket, and shakes her fist at impudent retreating dragon\'s ass.'
                     game.girl 'Уууу, you devil! I will tell the baron, he will send knights after you, worm!'
                     python:
                         if game.dragon.lust < 3:
@@ -322,7 +323,7 @@ label lb_enc_laundry:
     return
     
 label lb_enc_bath:
-    'Loud splashing sounds and girlish laughter bring the dragon to a river bank. Naked girls are swimming in a creek overgrown with reeds and water lillies. How nice, you won\'t even have to run...'
+    'Loud splashing sounds and girlish laughter bring the dragon to a river bank. Naked girls are swimming in a creek overgrown with reeds and water lilies. How nice, you won\'t even have to run...'
     nvl clear
     menu:
         'Snatch a girl from the river':
@@ -668,13 +669,13 @@ label lb_patrool_plains:
             dtxt = 'Along the outskirts of the village a bearded man patrols with a longbow. The local sheriff sent him to protect the village.'
         elif chance < 7:
             patrool = 'xbow_rider'
-            dtxt = 'On the country road a detatchement of light cavalry are patrolling. They can respond quickly to any threat, whether it is bandits, monsters, or even a dragon.'
+            dtxt = 'On the country road a detachment of light cavalry are patrolling. They can respond quickly to any threat, whether it is bandits, monsters, or even a dragon.'
         elif chance < 11:
             patrool = 'heavy_cavalry'
-            dtxt = 'The draogn runs into a detachment of heavy cavalry. The people in the region are so frightened, they\'ve begun to send knights to the borders.'
+            dtxt = 'The dragon runs into a detachment of heavy cavalry. The people in the region are so frightened, they\'ve begun to send knights to the borders.'
         elif chance < 16:
             patrool = 'griffin_rider'
-            dtxt = 'A shrill cry is heard from heaven - a rider on a gryphon swoops down from the sky, having spotted the shine of dragonscale in the fields.'
+            dtxt = 'A shrill cry is heard from heaven - a rider on a griffon swoops down from the sky, having spotted the shine of dragonscale in the fields.'
         else:
             patrool = 'angel'
             dtxt = '%s is forced to close his eyes from a bright glare. A loud announcement: "Die, vile offspring of sin!". This guardian angel was sent by heaven to protect the people.' % game.dragon.name

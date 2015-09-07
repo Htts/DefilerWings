@@ -16,12 +16,12 @@ label lb_dragon_creator:
         game.dragon.anatomy = ['size']
         special_features_rus = {
             "tough_scale": "Tough scales",
-            "poisoned_sting": "poisoned sting",
-            "clutches": "claws",
-            "horns": "horns",
-            "fangs": "fangs",
-            "ugly": "uglieness",
-            "cunning": "cunning"
+            "poisoned_sting": "Poisoned sting",
+            "clutches": "Claws",
+            "horns": "Horns",
+            "fangs": "Fangs",
+            "ugly": "Ugliness",
+            "cunning": "Cunning"
         }
         colored_heads = ["red", "white", "blue", "black", "iron", "bronze", "silver", "gold", "shadow"]
     init python:
@@ -52,25 +52,25 @@ label lb_dragon_creator:
                 vbox:
                     text "Add..."
                     if len(game.dragon.heads) < 10:
-                        textbutton "head" action SetVariable("mods_left", mods_left - 1), AddModifier("green", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
+                        textbutton "Head" action SetVariable("mods_left", mods_left - 1), AddModifier("green", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
                     if game.dragon.paws < 3:
-                        textbutton "paws" action SetVariable("mods_left", mods_left - 1), AddModifier("paws", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
+                        textbutton "Paws" action SetVariable("mods_left", mods_left - 1), AddModifier("paws", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
                     if game.dragon.wings < 3:
-                        textbutton "wings" action SetVariable("mods_left", mods_left - 1), AddModifier("wings", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
+                        textbutton "Wings" action SetVariable("mods_left", mods_left - 1), AddModifier("wings", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
                     if game.dragon.size < 6:
-                        textbutton "size" action SetVariable("mods_left", mods_left - 1), AddModifier("size", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
+                        textbutton "Size" action SetVariable("mods_left", mods_left - 1), AddModifier("size", game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
                     for i in special_features_rus.keys():
                         textbutton special_features_rus[i] action SetVariable("mods_left", mods_left - 1), AddModifier(i, game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
                 if game.dragon.heads.count("green") > 0: 
                     vbox:
-                        text "Color the head"
+                        text "Color head"
                         for i in colored_heads:
                             textbutton data.heads_name_rus[i].capitalize() action SetVariable("mods_left", mods_left - 1), AddModifier(i, game.dragon), If(mods_left == 1, (Hide("creator"), Return("return")))
             use status_bar
             fixed:
                 xalign 1.0
                 xmaximum 320
-                textbutton "{font=fonts/Tchekhonin2.ttf}В{/font}{font=fonts/times.ttf}ыпустить{/font}":
+                textbutton "{font=fonts/times.ttf}Return{/font}":
                     pos(72, 649)
                     xysize(174, 36)
                     text_xalign 0.5
@@ -81,7 +81,7 @@ label lb_dragon_creator:
             fixed:
                 xalign 1.0
                 xmaximum 320
-                textbutton "{font=fonts/Tchekhonin2.ttf}О{/font}{font=fonts/times.ttf}писание{/font}":
+                textbutton "{font=fonts/times.ttf}Description{/font}":
                     pos(72, 600)
                     xysize(174, 36)
                     text_xalign 0.5
@@ -90,7 +90,7 @@ label lb_dragon_creator:
                     text_size 22
                     action Show("sc_dragon_description")
                 if not config.developer:
-                    textbutton "{font=fonts/Tchekhonin2.ttf}Д{/font}{font=fonts/times.ttf}остижения{/font}":
+                    textbutton "{font=fonts/times.ttf}Achievements{/font}":
                         pos(72, 549)
                         xysize(174, 36)
                         text_xalign 0.5

@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked
 init python:
     from pythoncode import battle
     from pythoncode.characters import Enemy, Talker
@@ -106,7 +107,7 @@ label lb_location_mordor_questtime:
         $ game.dragon.die()
         mistress 'Your allotted time has passed, [game.dragon.name]. I will only ask you once: have you performed your task?'
         game.dragon 'I did not, Mistress. I need a little more time. Forgive me.'
-        mistress 'I am not angry. But I have no pity for you. You have dissapointed me, and that can only be done once. Another dragon will be the successor of your race, you will live out your days as you wish. Get out of my sight!'
+        mistress 'I am not angry. But I have no pity for you. You have disappointed me, and that can only be done once. Another dragon will be the successor of your race, you will live out your days as you wish. Get out of my sight!'
         menu:
             "Choose another dragon":
                 call lb_choose_dragon from _call_lb_choose_dragon_2
@@ -207,7 +208,7 @@ label lb_kali:
 
 label lb_garuda:
     show expression 'img/scene/fight/mistress/garuda.jpg' as bg    
-    'Becoming covered entirely in bright feathers and growing sharp copper clwas, Mistress takes on the aspect of Garuda. There is no place on heaven or earth to hide from her falcon strike, but she is vulnerable to attack.' 
+    'Becoming covered entirely in bright feathers and growing sharp copper claws, Mistress takes on the aspect of Garuda. There is no place on heaven or earth to hide from her falcon strike, but she is vulnerable to attack.' 
     call lb_tactics_choice from _call_lb_tactics_choice_1
     if atk_tp == 'earth': #never happens, currently no option to attack with earth? so no need to translate?
         game.dragon 'Под землёй тебе меня не достать, пернатая тварь!'
@@ -376,7 +377,7 @@ label lb_gekata:
     if atk_tp != 'hide':
         game.dragon 'I will take cover in the darkness.'
     else:
-        'Deadly hecate easily tears off the dragon\'s head.'
+        'Deadly Hecate easily tears off the dragon\'s head.'
         if 'dragon_dead' in game.dragon.decapitate():
             mistress 'I\'ll feed your body to the jackals, since you are nothing but dog meat!'
             jump lb_game_over
@@ -459,7 +460,7 @@ label lb_war_border:
 label lb_war_border_continue:
     nvl clear
     show expression 'img/scene/dark_march.jpg' as bg
-    'The battle is almost won on the ground, but the dragon notices a new danger. From the mountains a fleet of dwarven flying machines are coming through the air. If left unchecked they will drop barrels filled with alechmical fire into the thick of the monster army. The losses will be enormous.'
+    'The battle is almost won on the ground, but the dragon notices a new danger. From the mountains a fleet of dwarven flying machines are coming through the air. If left unchecked they will drop barrels filled with alchemical fire into the thick of the monster army. The losses will be enormous.'
     $ game.foe = Enemy('airfleet', game_ref=game)
     $ narrator(show_chances(game.foe))
     
@@ -711,7 +712,7 @@ label lb_orgy:
     show expression 'img/scene/girls.jpg' as bg
     pause (500.0)
     nvl clear
-    'The dragonspawn combed the burning city, siezing all the pretty young women, stripping them bare and putting them in the throne room of the devasted citadel. Hundreds of nude beauties filled the hall so full that the dragon had to swim through a sea of naked bodies to reach the middle.'
+    'The dragonspawn combed the burning city, seizing all the pretty young women, stripping them bare and putting them in the throne room of the devastated citadel. Hundreds of nude beauties filled the hall so full that the dragon had to swim through a sea of naked bodies to reach the middle.'
     game.dragon 'Today, you can enjoy the victory with me, my children! Do everything you wish to these girls.' 
     show expression 'img/scene/orgy.jpg' as bg
     pause (500.0)    

@@ -1,4 +1,5 @@
 ﻿# coding=utf-8
+#spellchecked
 init python:
     from pythoncode.utils import weighted_random
     from pythoncode.characters import Enemy
@@ -47,11 +48,11 @@ label lb_enc_domiki:
     $ game.foe = Enemy('domik', game_ref=game)    
     $ chances = show_chances(game.foe)   
     call lb_fight from _call_lb_fight_69    
-    'Amongst the wreckage of the house is a sign: "Made by the request of the the wicked one (I have not yet come up with a name). What a mad and brilliant creation...'
+    'Amongst the wreckage of the house is a sign: "Made by the request of the the wicked one (I have not yet come up with a name for it). What a mad and brilliant creation...'
     return
 
 label lb_enc_lumberjack:
-    'Nearby, rythmic cracks are heard, echoing throughout the forest. It sounds like lumberjacks\' axes. By itself, wood production is completely uninteresting, but the time is right for lunch, and in the human tradition the eldest unmarried daughter brings food to a man working far from home. It\'s worth a look...'
+    'Nearby, rhythmic cracks are heard, echoing throughout the forest. It sounds like lumberjacks\' axes. By itself, wood production is completely uninteresting, but the time is right for lunch, and in the human tradition the eldest unmarried daughter brings food to a man working far from home. It\'s worth a look...'
     nvl clear
     python:
         if game.dragon.size < 3: 
@@ -59,14 +60,14 @@ label lb_enc_lumberjack:
         else:
             succes = False
     if succes: 
-        '[game.dragon.name] drops to the ground and slowly, trying not to make a sound, creps towards the noise. Fortunately the dumb woodcutters are too busy with their stimulating and creative occupation to notice a giant lizard hiding in the bushes. Now we need only wait...'
+        '[game.dragon.name] drops to the ground and slowly, trying not to make a sound, creeps towards the noise. Fortunately the dumb woodcutters are too busy with their stimulating and creative occupation to notice a giant lizard hiding in the bushes. Now we need only wait...'
         nvl clear
         menu:
             'Watch secretly':
                 $ game.dragon.drain_energy()
                 $ description = game.girls_list.new_girl('peasant')
                 'Within the hour, another figure appears on the path, a female figure. In her hands is a heavy basket covered with a white rag. [game.dragon.name] sniffs and determines with certainty - a virgin! Although, a peasant...'
-                game.girl 'Papaaaa! I brought you something to eat. I\ve got sweet bread in a basket.'
+                game.girl 'Papaaaa! I brought you something to eat. I\'ve got sweet bread in a basket.'
                 nvl clear
                 'The girl runs to her father to hug him, but he freezes in horror, looking behind her. There stands [game.dragon.name], stretched to full length. Not giving them time to react, [game.dragon.name] kills the woodcutter and knocks down his daughter.'
                 $ game.dragon.reputation.points += 1
@@ -137,7 +138,7 @@ label lb_enc_deer:
     return
 
 label lb_enc_boar:
-    'The wind carries the smell of a large animal. In the underbrush rustles a huge wild boar. More than a meter at the shouler, the thick-skinned and massive beast is armed with huge curved tusks. The boar is not afraid of anything in the forest - it is not easy prey, but it is a good way to gain strength before more serious battles.'
+    'The wind carries the smell of a large animal. In the underbrush rustles a huge wild boar. More than a meter at the shoulder, the thick-skinned and massive beast is armed with huge curved tusks. The boar is not afraid of anything in the forest - it is not easy prey, but it is a good way to gain strength before more serious battles.'
     $ game.foe = Enemy('boar', game_ref=game)
     $ chances = show_chances(game.foe)
     nvl clear
@@ -207,7 +208,7 @@ label lb_enc_lumbermill:
             '[game.dragon.reputation.gain_description]'
         'Investigate' if game.dragon.size <= 3 and game.dragon.magic == 0:
             $ game.dragon.drain_energy()
-            "[game.dragon.name] carefully exames the unusual structure for its purpose and weaknesses. The roating flow of water drives a saw hidden inside the building, which the people use to saw logs into board. Nearby are huge stacks of finished boards. What if they all burned? "
+            "[game.dragon.name] carefully examines the unusual structure for its purpose and weaknesses. The rotating flow of water drives a saw hidden inside the building, which the people use to saw logs into board. Nearby are huge stacks of finished boards. What if they all burned? "
             'A waste of time. I leave as wise as I was before.'
         'Ignore' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
@@ -243,7 +244,7 @@ label lb_patrool_forest:
         chance = random.randint(0, game.mobilization.level)
         if chance < 4:
             patrool = 'jagger'
-            dtxt = 'The woods are patrolled by a royal hunstman -  a ranger armed with a long yew bow and a sharp knife.'
+            dtxt = 'The woods are patrolled by a royal huntsman -  a ranger armed with a long yew bow and a sharp knife.'
         elif chance < 7:
             patrool = 'footman'
             dtxt = 'On the forest road a detachment of soldiers march. it seems they patrol the area in search of robbers and monsters. Well, they\'ve found one...'
@@ -252,7 +253,7 @@ label lb_patrool_forest:
             dtxt = 'The forest roads are patrolled by a troop of heavy infantry. If the people care so much about the security of the forests that they send in elite fighters, then they really must be scared.'
         elif chance < 16:
             patrool = 'griffin_rider'
-            dtxt = 'A shrill cry is heard from heaven - a rider on a gryphon swoops down from the sky, having glimpsed the shine of dragon scales between the trees. '
+            dtxt = 'A shrill cry is heard from heaven - a rider on a griffon swoops down from the sky, having glimpsed the shine of dragon scales between the trees. '
         else:
             patrool = 'angel'
             dtxt = '%s is forced to close his eyes against a brilliant glare. There is a loud announcement: "Die, vile offspring of sin!". This guardian angel was sent by heaven to protect the people.' % game.dragon.name

@@ -47,7 +47,7 @@ class Girl(Talker):
                 self.name += " " + random.choice(girls_data.girls_names[girl_type + '_last'])
         # Не найти имя для девушки, считаем ее неизвестной
         else:
-            self.name = 'Неизвестная Красавица'
+            self.name = 'Unknown Beauty'
         self.jailed = False  # была ли уже в тюрьме, пригодится для описания
         self.treasure = []
         

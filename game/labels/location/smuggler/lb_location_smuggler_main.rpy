@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked, proofread
 init python:
     from pythoncode import treasures
     
@@ -43,11 +44,11 @@ label lb_location_smuggler_main:
             python:
                 if (item_index is None):
                     description = u"Sell all for %s?" % (
-                        treasures.number_conjugation_rus(game.lair.treasury.all_jewelries * 75 // 100, u"farthings"))
+                        treasures.number_conjugation_rus(game.lair.treasury.all_jewelries * 75 // 100, u"farthing"))
                 else:
                     description = u"%s.\n Sell for %s?" % (
                         game.lair.treasury.jewelry[item_index].description().capitalize(),
-                        treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost * 75 // 100, u"farthings"))
+                        treasures.number_conjugation_rus(game.lair.treasury.jewelry[item_index].cost * 75 // 100, u"farthing"))
             menu:
                 "[description]"
                 'Sell':
@@ -69,7 +70,7 @@ label lb_location_smuggler_main:
         'Finance terrorists' if game.mobilization.level > 0:
             show expression 'img/scene/thief.jpg' as bg
             $ terror_cost = game.mobilization.level * 100
-            'The troops of the kingdom are too organized and alert for you to do evil with impunity.  But if you can provide local bandits with money for weapons, equipment, and supplies, they can become a threat that will distract the patrolling soldiers. [terror_cost] farthings will be enough to increase internal strife and make supply convoys disappear.'
+            'The troops of the kingdom are too organized and alert for you to do evil with impunity.  But if you provide local bandits with money for weapons, equipment, and supplies, they can become a threat that will distract the patrolling soldiers. [terror_cost] farthings will be enough to increase internal strife and make supply convoys disappear.'
             menu:
                 'Pay [terror_cost] to terrorists' if terror_cost <= game.lair.treasury.money:
                     $ game.lair.treasury.money -= terror_cost
@@ -106,7 +107,7 @@ label lb_location_smuggler_main:
                 "Go away." if game.lair.treasury.money >= price:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_11 
         'Information on knight' if game.knight is not None:
-            "There are a lot of rumors and people in the know. Just pour drinks and tongues will loosen, and no one will remember that they are talking to a lizard."
+            "There are a lot of rumors and informants here. Just pour some drinks and tongues will loosen, and no one will remember that they are talking to a giant lizard."
             nvl clear
             menu:
                 "Beer for all (10 f.)" if game.lair.treasury.money >= 10:
@@ -119,7 +120,7 @@ label lb_location_smuggler_main:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_12 
                 "Decline" if game.lair.treasury.money < 10:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_13 
-                "go away." if game.lair.treasury.money >= 10:
+                "Go away." if game.lair.treasury.money >= 10:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_14 
         'Pay to rob the knight' if game.knight is not None:
             $ price = game.knight.enchanted_equip_count * 100

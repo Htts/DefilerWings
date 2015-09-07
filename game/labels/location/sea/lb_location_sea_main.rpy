@@ -1,4 +1,5 @@
 # coding=utf-8
+#spellchecked
 init python:
     from pythoncode.utils import weighted_random
     from pythoncode.characters import Enemy
@@ -54,7 +55,7 @@ label lb_enc_tuna:
                     game.dragon.bloodiness = 0
         'Slaughter the whole school' if game.dragon.bloodiness >= 5 and game.dragon.hunger == 0:
             $ game.dragon.drain_energy()
-            'Swimming at top speed [game.dragon.name] crashes into the school of fish, breaking it apart. He frantically beats the water with teeth and claws, cutting the fish into ribbons and turing the water red with clouds of bloods. As if out of nowhere, bloodthirsty sharks appear, adding to the chaos and slaughter. A good way to release rage, who would have thought that you could go so much pleasure from a single shoal?'    
+            'Swimming at top speed [game.dragon.name] crashes into the school of fish, breaking it apart. He frantically beats the water with teeth and claws, cutting the fish into ribbons and turning the water red with clouds of bloods. As if out of nowhere, bloodthirsty sharks appear, adding to the chaos and slaughter. A good way to release rage, who would have thought that you could go so much pleasure from a single shoal?'    
         'Swim away' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
     return
@@ -75,7 +76,7 @@ label lb_enc_shark:
                     game.dragon.hunger -= 1
                     game.dragon.add_effect('shark_meat')
             else:
-                '[game.dragon.fullname] is not hungry right now, so he leaves the wounded shark to the mercy of its smaller bretheren, who have come smelling blood.'
+                '[game.dragon.fullname] is not hungry right now, so he leaves the wounded shark to the mercy of its smaller brethren, who have come smelling blood.'
         'Dive deeper' if game.dragon.bloodiness < 5:
             $ game.dragon.gain_rage()
     return
@@ -109,7 +110,7 @@ label lb_enc_yacht:
             $ chance = random.choice(['citizen', 'citizen', 'citizen', 'princess'])
             $ game.dragon.drain_energy()
             $ description = game.girls_list.new_girl(chance)
-            'Carefully, so the yacht does not see it coming, the [game.dragon.kind] swims by the boat on a parallel course, waiting for the right moment. And he does not have to wait long. A beautiful young [game.girl.type] comes out on the deck and leans on the railing, watching fish frolick on the waves. Without hesistating, [game.dragon.name] grabs her and drags her through the sea and onto the beach, in a cozy quiet place suitable for a romantic dinner... '
+            'Carefully, so the yacht does not see it coming, the [game.dragon.kind] swims by the boat on a parallel course, waiting for the right moment. And he does not have to wait long. A beautiful young [game.girl.type] comes out on the deck and leans on the railing, watching fish frolic on the waves. Without hesitating, [game.dragon.name] grabs her and drags her through the sea and onto the beach, in a cozy quiet place suitable for a romantic dinner... '
             $ game.dragon.reputation.points += 1
             '[game.dragon.reputation.gain_description]'
             nvl clear
@@ -120,7 +121,7 @@ label lb_enc_yacht:
     return
     
 label lb_enc_bark:
-    'Knowing that trade routes lie along the coast, the [game.dragon.kind] decides to swim along one of them and runs into a heavily laiden ship. Judging by the small, it carries a cargo of wine, oil, and spices from countries overseas. Certainly on board there must be ringing coins to decorate the dragon\'s hoard...'
+    'Knowing that trade routes lie along the coast, the [game.dragon.kind] decides to swim along one of them and runs into a heavily laden ship. Judging by the small, it carries a cargo of wine, oil, and spices from countries overseas. Certainly on board there must be ringing coins to decorate the dragon\'s hoard...'
     menu:
         'Extort money':
             python:
@@ -294,7 +295,7 @@ label lb_patrool_sea:
             dtxt = 'Along the shores of the inhabited areas, an armed ship prowls. The people have begun to take the protection of their coasts seriously.'
         else:
             patrool = 'triton'
-            dtxt = 'Usually in the deep sea a serpent does not meet any enemies besides the ocassional crazy shark, but this time, fate brought him to a mighty sea giant. A triton is armed and likely came hunting for the reptile vexing his subjects.'
+            dtxt = 'Usually in the deep sea a serpent does not meet any enemies besides the occasional crazy shark, but this time, fate brought him to a mighty sea giant. A triton is armed and likely came hunting for the reptile vexing his subjects.'
     '[dtxt]'
     python:
         game.foe = Enemy(patrool, game_ref=game)
