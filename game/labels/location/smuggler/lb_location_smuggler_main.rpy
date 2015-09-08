@@ -96,7 +96,7 @@ label lb_location_smuggler_main:
                     call lb_location_smuggler_main from _call_lb_location_smuggler_main_8 
         'Sabotage thief' if game.thief is not None:
             $ price = game.dragon.reputation.level * 50
-            $ game.thief.third("For a bribe of %d farthings the thieves\' informants will not tell their boss the dragon\'s location." % price)
+            $ game.thief.third("For a bribe of %d farthings the thieves\' informants will lie to their boss about the dragon\'s location." % price)
             menu:
                 "Pay [price] f." if game.lair.treasury.money >= price:
                     $ game.lair.treasury.money -= price

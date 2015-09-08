@@ -275,7 +275,7 @@ mob = {
             [['foe_intro'], u"The tournament winner picks up a lance and readies his steed for an attack."],
             [['foe_fear'],  u"The winner of the tournament is spoiling for a fight, but his horse is too scared - it gets up on his hind legs and throws the rider into the mud, leaving him defenseless."],
             [['foe_dead', 'dragon_undamaged'], u"%(dragon_name)s deftly dodges the sharp lance and with a vicious attack knocks the champion spinning out of his saddle."],
-            [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s and the champion collide together with a terrible roar. The knight topples from his horse, but %(dragon_names is also injured."],
+            [['foe_dead', 'dragon_wounded'], u"The %(dragon_type)s and the champion collide together with a terrible roar. The knight topples from his horse, but %(dragon_name)s is also injured."],
             [['foe_alive', 'dragon_wounded'], u"A lance blow with all the weight and speed of the horse behind it throws the dragon aside."],
             [['foe_alive', 'dragon_undamaged'], u"The opponents battle, producing sounds of clashing metal and a neighing steed, but the foes are of equal strength."],
             [['foe_alive', 'lost_head'], u"An aimed blow from the knight pierces one of the dragon\'s heads, but the fight is not yet over."],
@@ -520,7 +520,7 @@ mob = {
             [['foe_alive', 'dragon_undamaged'], u"%(dragon_type)s and the golem hit each other hard, but both are so well protected that they escape with only minor wounds. The walls of the tunnel shake from this clash of giants."],
             [['foe_alive', 'lost_head'], u"The iron giant lifts his arms above his head, and dropping them like hammers on the dragon\'s head smashes it into paste."],
             [['foe_dead', 'lost_head'], u"In a hard struggle the %(dragon_type)s rips the shrieking steel body of the golem to pieces, leaving the guards fingers on the ground still grasping the dragon\'s head."],
-            [['dragon_dead'], u"The iron giant lifts his arms above his head, and dropping them like hammers on the dragon\'s head smashes it into paste. %(dragon_name_full_ dies from his wounds."]
+            [['dragon_dead'], u"The iron giant lifts his arms above his head, and dropping them like hammers on the dragon\'s head smashes it into paste. %(dragon_name_full)s dies from his wounds."]
         ]
     },
 

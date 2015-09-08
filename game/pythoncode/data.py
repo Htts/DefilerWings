@@ -1299,7 +1299,7 @@ dragon_surnames = [
     u'the Longtailed',
     u'the Ugly',
     u'the Spikescaled',
-    u'the Isidious',
+    u'the Insidious',
     u'the Defiler',
     u'the Devourer',
     u'the Vivisector',
@@ -1321,7 +1321,7 @@ dragon_surnames = [
     u'the Indolent',
     u'the Slimy',
     u'the Destroyer',
-    u'the Snakeeater',
+    u'the Snake Eater',
     u'the Cursed',
     u'the Bloodthirsty',
     u'the Molester',
@@ -2206,9 +2206,9 @@ dark_army = {
         0: u"After defeat in the Battle of Six Armies, pathetic lumps of the Mistress\'s army remain. "
            u"The few surviving goblins hide in their caves and "
            u"multiply like rabbits in an attempt to join the ranks of the troops. ",
-        10: u"The good news: in the barren plain enough aggressive creatures are gathered, "
-           u"that one could assemble an army now. "
-           u"The bad: this army will be inferior in number to that the free people can gather.",
+        10: u"The good news: in the barren plain there are enough aggressive creatures, "
+           u"that one could form an army with them. "
+           u"The bad news: this army will be inferior in number to what the free people can gather.",
         25: u"Caves and holes no longer suffice to give shelter to all the hideous soldiers gathered before Mistress. "
             u"The barren plains are the scene of a huge construction site - here and there, there are whole towns of tents. "
             u"Ditches, embankments, and palisades are laboriously dug. "
@@ -2243,8 +2243,8 @@ dark_army = {
            u"though the dragonspawn will be beneficial supplements to the usual goblins on the battlefield. "
            u"Nevertheless, the free people will have little difficulty working out tactics "
            u"to counter the strengths and weaknesses of all the Mistress\'s fighters.",
-        4: u"Under the banner of the Mistress are gathered many diverse     dragonspawn."
-           u"There are short and lanky, rapid spies and massive ground fighters, of all colors, shapes and sizes."
+        4: u"Under the banner of the Mistress are gathered many diverse dragonspawn. "
+           u"There are short soldiers and lanky soldiers, rapid spies and massive ground fighters, of all colors, shapes and sizes. "
            #u"Кого-то украшает чеушая, кого-то рога. " #trans: ??
            u"Favorably complementing each other on the battlefield. "
            u"All this motley company makes it impossible for the Free People to use simple and familiar battle tactics.",
@@ -2259,7 +2259,7 @@ dark_army = {
            u"Only a few can afford a crude armor of badly treated skins.",
         2: u"The army is armed to a minimum. The rank and file soldiers can hope to obtain an iron spear, "
            u"woven shield, and a simple quilted armor. The elite are armed a little better, but still far from the ideal.",
-        3: u"Treasures of the dragon allow decent equipment for the Mistress\'s fighters. "
+        3: u"The accumulated dragon treasures allow decent equipment for the Mistress\'s fighters. "
            u"Even ordinary soldiers have a full set of arms and armor "
            u"And the elite are clad in blue steel from head to toe. "
            u"Ranks of shields and iron points will look very impressive on the battlefield.",

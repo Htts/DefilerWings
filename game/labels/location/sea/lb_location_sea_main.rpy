@@ -268,7 +268,7 @@ label lb_enc_shipwreck:
         trs_list = game.lair.treasury.treasures_description(trs)
         trs_descrptn = '\n'.join(trs_list)
     menu:
-        'dive for treasure':
+        'Dive for treasure':
             $ game.dragon.drain_energy()
             'Peeling off rotten boards from the wreck, [game.dragon.fullname] reaches its valuable content. In the dark flooded hold rests a treasure chest, and inside the chest:'
             '[trs_descrptn]'

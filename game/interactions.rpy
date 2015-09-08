@@ -80,7 +80,7 @@ label lb_gigant_sex:
         'Mock and rob' if game.girl.treasure:
             $ description = game.girls_list.rob_girl()
             game.girl.third "[description]"
-        'Flitch to the lair' if not game.girl.jailed:
+        'Take back to the lair' if not game.girl.jailed:
             $ description = game.girls_list.steal_girl()
             game.girl.third "[description]"
             $ place = game.lair.type_name

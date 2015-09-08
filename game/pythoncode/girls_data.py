@@ -704,7 +704,7 @@ girls_texts = {
             u"%(girl_name)s, dimwitted ogre.",
         ),
         'shout': (  # Реакция девушки, прямой речью
-            u"You won\'t fuck me! I\'ll fuck you! ARRRGHh! DEATH BY SNU-SNU!", #yes, it really says that xD 
+            u"You can\'t fuck me! I\'ll fuck you! ARRRGHh! DEATH BY SNU-SNU!", #yes, it really says that 
         ),
         'eat': (  # Описание процесса поедания девушки
             u"The lizard is going to bite me? I bite him back! WHO WILL BITE OFF MORE!?.",

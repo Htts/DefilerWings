@@ -591,7 +591,7 @@ label lb_enc_fight_ogre:
         'Challenge the ogre':
             $ game.dragon.drain_energy()
             call lb_fight from _call_lb_fight_33
-            '[game.dragon.name] победил.'
+            '[game.dragon.name] is victorious.'
             jump lb_enc_explore_ogre_den
         'Remember this place and leave' if game.dragon.bloodiness < 5:
             $ game.dragon.add_special_place('ogre', 'enc_ogre')
