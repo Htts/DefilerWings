@@ -69,7 +69,7 @@ label lb_enc_shark:
             $ game.foe = Enemy('shark', game_ref=game)
             call lb_fight from _call_lb_fight_20
             if game.dragon.hunger > 0:
-                'The hungry [game.dragon.type] tears the defeated sharks into pieces and swallows the biggest one, while smaller sharks appear to fight for the scraps.'
+                'The hungry [game.dragon.kind] tears the defeated sharks into pieces and swallows the biggest one, while smaller sharks appear to fight for the scraps.'
                 python:
                     if game.dragon.bloodiness > 0:
                         game.dragon.bloodiness = 0

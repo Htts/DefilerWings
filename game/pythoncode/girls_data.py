@@ -509,7 +509,7 @@ girls_texts = {
             u"%(girl_name)s painfully lays a huge egg with a thick scaly shell. \n %(spawn_name)s.",
         ),
         'anguish': (  # Описание смерти от тоски
-            u"%(girl_name)s wastes away from her long captivity.",
+            u"%(girl_name)s wastes away from her rape and long captivity.",
         ),
         'hunger_death': (  # Описание смерти от голода
             u"%(girl_name)s starves to death.",

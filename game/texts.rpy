@@ -178,7 +178,7 @@ python early:
     
     txt_place_ifrit = [
         ['Fortified forge, built of black obsidian blocks, located in the crater of an active volcano. Judging by the smell there is something valuable - but the fire giants - Ifrit - will not give up their treasures without a fight.'],
-        ['The fire giantess tries to put up a fight, but it is much weaker than the men and not armed, so the Dragon can do with her whatever he wants.'],
+        ['The fire giantess tries to put up a fight, but she is much weaker than the male and not armed, so the Dragon can do whatever he wants with her.'],
         ['The volcanic forge of the molten giants is now empty. Here you can make a great den, because it is protected by thick walls, cliffs, and the unbearable heat of the magma lake.']
     ]
 
