@@ -1783,7 +1783,7 @@ class Treasury(store.object):
             if gem_size == 'small':
                 # изменение размера для хака описания
                 gem_params[1] = 'common'
-            gem_types_keys = sorted(gem_types.keys(), key=lambda gt: gem_description_rus[gt]['it'])
+            gem_types_keys = sorted(gem_types.keys(), key=lambda gt: gem_description_rus[gt]['singular'])
             for gem_type in gem_types_keys:
                 gem_params[0] = gem_type
                 if gem_type == "pearl" or gem_type == "black_pearl":

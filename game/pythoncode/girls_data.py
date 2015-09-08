@@ -16,7 +16,7 @@ girls_names = {
         u'Victoria', u'Irma', u'Caroline', u'Kristiana', u'Caterine', u'Lione', u'Lorely', u'Margarett', u'Franciska',
         u'Henelore', u'Hilda', u'Eleonor', u'Abbigail', u'Antonya', u'Dolores', u'Dorothy',
         u'Jenevieve', u'Josefine', u'Iness', u'Carmelitta', u'Consuella', u'Lethiscia', u'Marcella', u'Priscilla',
-        u'Ramone', u'Sofia', u'Ephimia', u'Ephania', u'Lydia', u'Beatrix',
+        u'Ramone', u'Sofia', u'Ephimia', u'Ephania', u'Lydia', u'Beatrix'
     ],
     'princess_first': [
         u'Annabele', u'Adelia', u'Eveline', u'Icedora', u'Alberthine', u'Anastasia', u'Anthuanette',
@@ -26,7 +26,7 @@ girls_names = {
         u'Peneloppe', u'Rosalinde', u'Rosamunde', u'Celestine', u'Ceraphine', u'Susan', u'Spehanie', u'Teresa',
         u'Flavia', u'Felicia', u'Henriet', u'Gertrude', u'Charlotte', u'Emmanuelle', u'Alberthine', u'Amelinde',
         u'Brunhild', u'Vilhelmina', u'Raphaella', u'Amaranta', u'Delphinia', u'Dorothea',
-        u'Mercedes', u'Ophelia',
+        u'Mercedes', u'Ophelia'
     ],
     'princess_last': [
         u"d'Musie", u'von Baugraff', u"d'Albere", u"d'Blua", u"d'Virgie", u"d'Guisse", u"d'Brienn",
@@ -35,7 +35,7 @@ girls_names = {
         u'von Gogenshaufen', u'von Zalts', u'von Ludenshtaff', u'von Mirbach', u'von Rozen', u'von Zeringer',
         u'von Grunnberg', u'von Shturnberg', u'von Shellengaupf', u'Strotzzi', u'Sforza', u'Albizi',
         u'Barbarigo', u'Pazzi', u'Brancattio', u'da Verana', u'Viscontti', u'Grimaldi', u'da Polenta', u'della Tori',
-        u'da Camino', u'Montrefelto', u'Manfreddi', u'Farnezze', u'Fregozo', u'da Mendoza', u'la Sarda',
+        u'da Camino', u'Montrefelto', u'Manfreddi', u'Farnezze', u'Fregozo', u'da Mendoza', u'la Sarda'
     ],
     'elf_first': [
         u'Breunvehn', u'Fanaveihn', u'Arveihn', u'Luthien', u'Fealinde', u'Esthelindel', u'Astherra', u'Theolinvenn',
@@ -45,43 +45,43 @@ girls_names = {
     'ogre_first': [
         u'Xunn', u'Yorva', u'Dirga', u'Velga', u'Siga', u'Yalghull', u'Dorba', u'Girga', u'Daviri', u'Shalgha',
         u'Orva', u'Dezra', u'Argha', u'Bighra', u'Vargha', u'Enza', u'Zartha', u'Ikla', u'Cordha', u'Loghaza',
-        u'Mirbu', u'Nira',
+        u'Mirbu', u'Nira'
     ],
     'mermaid_first': [
-        u'Ariel', u'Blazhena', u'Budimila', u'Vedana', u'Velina', u'Ventseslava', u'Vereya', u'Велезара',
-        u'Веселина', u'Витана', u'Влада', u'Весемлиа', u'Годица', u'Горлина', u'Далина', u'Ждана',
-        u'Деяна', u'Дивина', u'Доляна', u'Есена', u'Жилена', u'Завида', u'Зоряна', u'Златина', u'Ивица',
-        u'Калёна', u'Красоя', u'Купава', u'Лада', u'Леля', u'Малиша', u'Млава', u'Милана', u'Младлена',
-        u'Мирана', u'Невена', u'Обрица', u'Пава', u'Пригода', u'Рада', u'Ракита', u'Ружана',
-        u'Силимина', u'Серебрина', u'Славена', u'Станимира', u'Стояна', u'Томила', u'Умила', u'Ундина',
-        u'Цветана', u'Чаруна', u'Янина', u'Яромила', u'Ясмания'
+        u'Ariel', u'Blazhena', u'Budimila', u'Vedana', u'Velina', u'Ventseslava', u'Vereya', u'Velezara',
+         u'Veselina', u'Vitana', u'Vlada', u'Vesemlia', u'Goditsa',u'Gorlina', u'Dalina', u'Zhdana',
+         u'Deyana', u'Divina', u'Dolyana', u'Esena', u'Zhilena', u'Zavida', u'Zoryana', u'Zlatina', u'Ivitsa',
+         u'Kalёna', u'Krasoya', u'Kupava', u'Lada', u'Lelya', u'Malisha', u'Mlava', u'Milana', u'Mladlena',
+         u'Mirana', u'Nevena', u'Obritsa', u'Pava', u'Prigoda', u'Rada', u'Rakita', u'Ruzhana',
+         u'Silimina', u'Serebrina', u'Slavena', u'Stanimira', u'Stoyana', u'Tomila', u'Umila', u'Undina',
+         u'Tsvetana', u'Charuna', u'Yanina', u'Yaromila', u'Yasmaniya'
     ],
     'siren_first': [
-        u'Ариэль', u'Блажена', u'Будимила', u'Ведана', u'Велина', u'Венцеслава', u'Верея', u'Велезара',
-        u'Веселина', u'Витана', u'Влада', u'Весемлиа', u'Годица', u'Горлина', u'Далина', u'Ждана', u'Деяна',
-        u'Дивина', u'Доляна', u'Есена', u'Жилена', u'Завида', u'Зоряна', u'Златина', u'Ивица', u'Калёна',
-        u'Красоя', u'Купава', u'Лада', u'Леля', u'Малиша', u'Млава', u'Милана', u'Младлена', u'Мирана',
-        u'Невена', u'Обрица', u'Пава', u'Пригода', u'Рада', u'Ракита', u'Ружана', u'Силимина', u'Серебрина',
-        u'Славена', u'Станимира', u'Стояна', u'Томила', u'Умила', u'Ундина', u'Цветана', u'Чаруна',
-        u'Янина', u'Яромила', u'Ясмания'
+        u'Ariel', u'Blazhena', u'Budimila', u'Vedana', u'Velina', u'Ventseslava', u'Vereya', u'Velezara',
+        u'Veselina', u'Vitana', u'Vlada', u'Vesemlia', u'Goditsa', u'Gorlina', u'Dalina', u'Zhdana', u'Deyana',
+        u'Divina', u'Dolyana', u'Yesena', u'Zhilena', u'Zavida', u'Zoryana', u'Zlatina', u'Ivitsa', u'Kalona',
+        u'Krasoya', u'Kupava', u'Lada', u'Lelya', u'Malisha', u'Mlava', u'Milana', u'Mladlena', u'Mirana',
+        u'Nevena', u'Obritsa', u'Pava', u'Prigoda', u'Rada', u'Rakita', u'Ruzhana', u'Silimina', u'Serebrina',
+        u'Slavena', u'Stanimira', u'Stoyana', u'Tomila', u'Umila', u'Undina', u'Tsvetana', u'Charuna',
+        u'Yanina', u'Yaromila', u'Yasmaniya'
     ],
     'ice_first': [
-        u'Астрид', u'Бригита', u'Боргильда', u'Вигдис', u'Вилла', u'Гурдун', u'Гунхильд', u'Дорта', u'Ингрид',
-        u'Ингеборга', u'Йорнун', u'Матильда', u'Рангильда', u'Руна', u'Сигурд', u'Сванхильда', u'Сигюнд',
-        u'Ульрика', u'Фрида', u'Хлодвен', u'Хильда', u'Эрика'
+        u'Astrid', u'Brigita', u'Borgilda', u'Vigdis', u'Villa', u'Gurdun', u'Gunkhild', u'Dorta', u'Ingrid',
+        u'Ingeborga', u'Yornun', u'Matilda', u'Rangilda', u'Runa', u'Sigurd', u'Svankhilda', u'Sigyund',
+        u'Ulrika', u'Frida', u'Khlodven', u'Khilda', u'Erika'
     ],
     'fire_first': [
-        u'Азиль', u'Азиза', u'Базайна', u'Багира', u'Будур', u'Бушра', u'Гюльчатай', u'Гуля', u'Гульнара',
-        u'Гулистан', u'Фируза', u'Фатима', u'Ясмин', u'Айгюль', u'Зульфия', u'Ламия', u'Лейла', u'Марьям',
-        u'Самира', u'Хурма',
-        u'Чинара', u'Эльмира'
+        u'Azil', u'Aziza', u'Bazayna', u'Bagira', u'Budur', u'Bushra', u'Gyulchatay', u'Gulya', u'Gulnara',
+        u'Gulistan', u'Firuza', u'Fatima', u'Yasmin', u'Aygyul', u'Zulfiya', u'Lamiya', u'Leyla', u'Maryam',
+        u'Samira', u'Khurma',
+        u'Chinara', u'Elmira'
     ],
     'titan_first': [
-        u'Агата', u'Адонисия', u'Алексино', u'Амброзия', u'Антигона', u'Ариадна', u'Артемисия', u'Афродита',
-        u'Гликерия', u'Дельфиния', u'Деметра', u'Зиновия', u'Калисто', u'Калипсо', u'Кора', u'Ксения',
-        u'Медея', u'Мельпомена', u'Мнемозина', u'Немезида', u'Олимпия', u'Пандора', u'Персефона',
-        u'Таисия', u'Персея', u'Персея', u'Психея', u'Сапфо', u'Талия', u'Терпсихора', u'Фаломена',
-        u'Гаромония', u'Хрисеида', u'Эфимия', u'Юнона'
+        u'Agata', u'Adonisiya', u'Aleksino', u'Ambroziya', u'Antigona', u'Ariadna', u'Artemisiya', u'Afrodita',
+        u'Glikeriya', u'Delfiniya', u'Demetra', u'Zinoviya', u'Kalisto', u'Kalipso', u'Kora', u'Kseniya',
+        u'Medeya', u'Melpomena', u'Mnemozina', u'Nemezida', u'Olimpiya', u'Pandora', u'Persefona',
+        u'Taisiya', u'Perseya', u'Perseya', u'Psikheya', u'Sapfo', u'Taliya', u'Terpsikhora', u'Falomena',
+        u'Garomoniya', u'Khriseida', u'Efimiya', u'Yunona'
     ]
 }
 
@@ -509,7 +509,7 @@ girls_texts = {
             u"%(girl_name)s painfully lays a huge egg with a thick scaly shell. \n %(spawn_name)s.",
         ),
         'anguish': (  # Описание смерти от тоски
-            u"%(girl_name)s dies in anguish.",
+            u"%(girl_name)s wastes away from her long captivity.",
         ),
         'hunger_death': (  # Описание смерти от голода
             u"%(girl_name)s starves to death.",

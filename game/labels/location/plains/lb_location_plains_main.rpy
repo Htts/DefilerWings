@@ -101,7 +101,7 @@ label lb_enc_fair:
     '[txt]'
     nvl clear
     menu:
-        'Get the beauty':
+        'Get a beauty':
             python:
                 game.dragon.drain_energy()
                 description = game.girls_list.new_girl('peasant')
@@ -114,13 +114,13 @@ label lb_enc_fair:
             call lb_nature_sex from _call_lb_nature_sex_3      
             return
 
-        'Get the beast':
+        'Get a beast':
             $ game.dragon.drain_energy()
             $ game.foe = Enemy('bull_champion', game_ref=game)
             call lb_fight from _call_lb_fight_2
             menu:
-                'Сожрать призового быка' if game.dragon.hunger > 0:
-                    'Бык съеден. -1 к голоду, +1 к похоти. Ярость обнуляется.'
+                'Devour the prize bull' if game.dragon.hunger > 0:
+                    'The dragon satisfies his hunger and rage.' #For some reason the original russian read like a debug statement: -1 hunger +1 lust, rage reset. But this event is enabled in the game...
                     $ game.dragon.reputation.points += 1
                     '[game.dragon.reputation.gain_description]'
                     python:

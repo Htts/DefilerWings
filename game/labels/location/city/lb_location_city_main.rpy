@@ -210,14 +210,14 @@ label lb_city_jewler:
     $ chances = show_chances(game.foe)
     nvl clear
     menu:
-        'Buy jewels':
+        'Buy trinkets':
             $ new_item = game.lair.treasury.craft(**data.craft_options['jeweler_buy'])
             if new_item:
                 $ game.lair.treasury.receive_treasures([new_item])
                 $ test_description = new_item.description()
                 "Purchased: [test_description]."
             call lb_city_jewler from _call_lb_city_jewler_1
-        'Sell jewels':
+        'Sell trinkets':
             menu:
                 'Most expensive' if len(game.lair.treasury.jewelry) > 0:
                     $ item_index = game.lair.treasury.most_expensive_jewelry_index

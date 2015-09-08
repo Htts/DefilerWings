@@ -98,7 +98,7 @@ label lb_event_thief_trying_to_avoid_traps_and_guards(thief):
 label lb_event_thief_retreat_and_try_next_year(thief):
     # Could not get past traps and guards but did not die either:
     # Debug message: thief(u"Ниосилить, попробую в следущем году")
-    thief "That's as far as I can go...I have to plan this better. I won\'t give up!" #Translator: a word didn't translate. "it's necessary to prepare крутовато better".  
+    thief "I can\'t get through...I have to plan this better. I won\'t give up!" #Translator: a word didn't translate. "it's necessary to prepare крутовато better".  
     return
     
 label lb_event_thief_starting_to_rob_the_lair(thief):
