@@ -7,9 +7,9 @@
 Every class of loot has a description() function that describes a single loot object, like "Rough common agate". This is always used for treasures, because they're so unique that you only ever deal with single treasure objects.
 
 The treasury class also has functions that take all the gems and stuff and put them in a dictionary like ["agate;common;rough"] : [5], to add up all the duplicates.
-And then there will be a function like gem.number_conjugation that takes that key and value and outputs "5 rough common agates". There are also extra functions like number_pluralizer and number_conjugation_rus that do similar things, it's pretty much redundant code that I wrote when I was confused. 
+And then there will be a function like gem.number_conjugation that takes that key and value and outputs "5 rough common agates". There are also extra functions at the start of this file like number_pluralizer and number_conjugation_rus that do similar things, it's mostly redundant. 
 
-
+I could improve this, but this version is thoroughly tested and doesn't crash, so I don't want to touch it right now.
 
 """
 #file encoded utf-8

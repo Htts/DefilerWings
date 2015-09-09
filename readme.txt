@@ -2,6 +2,14 @@
 -----Version 1.0.0 en-----
 Translation version 1.0
 
+WARNING: Manual saves enabled for this release.
+When playing in story mode, keep manual saves in the right column (3 and 4) or they can be overwritten.
+
+(Specifically, when you sleep in story mode, slot 2 is destroyed and replaced with slot 1 to make room for a new autosave.
+The same happens when you sleep in free play mode with 3 and 4.) 
+
+
+
 ----------------DISCLAIMER---------------------
 This game contains multiple scenes of extreme violence and strong sexual content, and thus cannot be recommended to anyone. PG-99.
 By clicking “proceed” you confirm that you are an adult and choose to play at your own risk. This game is NOT meant to be commercially distributed. All graphical, audio, and text elements used in the game are either freely aviable on the internet or created by authors of the game, and used for the sake of parody.
@@ -40,6 +48,23 @@ http://www.hongfire.com/forum/showthread.php/444716-OldHunterGames-Defiler-Wings
 Also check out Jack o' Nine tails, an even better game by Oldhuntsman! Thread at:
 http://www.hongfire.com/forum/showthread.php/441353-Free-Software-Jack-o-nine-tails-%28%C9%94%29-%28thread-reboot-v2%29
 
+
+----Hints---
+Magic is a very important stat when picking a dragon. It allows you to breed better minions, buff yourself up for difficult fights, and access many locations.
+
+Fear can make weak enemies run from battle or give tribute to avoid it, but it is useless against more challenging opponents.
+
+Walking away from an encounter to pick a better one does not waste an action point, but it does increase rage. When too enraged, the dragon will charge into every encounter.
+
+Wounds require extra turns of sleeping to heal, but the witch can heal them instantly.
+
+Devour maidens to increase lust and reduce rage.
+
+The services on the Smuggler's island are cheap and invaluable. 
+
+Wings give an extra action point at the start of each turn.
+
+
 ------------ WALKTHROUGH---------------
 1. Do not attack the Mistress in your first game
 
@@ -69,4 +94,7 @@ http://www.hongfire.com/forum/showthread.php/441353-Free-Software-Jack-o-nine-ta
 
 
 Please enjoy the game!
+
+
+
 

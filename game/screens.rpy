@@ -248,12 +248,13 @@ screen main_menu:
         # size 60
         # bold False
         # color "#607080"
-    #text "{font=fonts/PFMonumentaPro-Regular.ttf}Version: %s" % config.version:
-    #    xalign 0.96
-     #   yalign 0.29
-      #  text_align 0.5
-       #bold False
-        #color "#241511"
+    text "{font=fonts/PFMonumentaPro-Regular.ttf}Version: %s" % config.version:
+        xalign 0.95
+        yalign 0.28
+        text_align 0.5
+        size 12
+        bold False
+        color "#241511"
 
 init -2 python:
     style.mm_button.size_group = "mm"
@@ -291,15 +292,13 @@ screen navigation:
         textbutton _("Load game") ypos 315 action ShowMenu("load")
         textbutton _("Main Menu") ypos 325 action MainMenu()
         
-        
+        #Originally the last three buttons looked like this. 
+        #I've enabled saving and loading right now.
         #textbutton _("Main menu") ypos 305 action MainMenu()
         #textbutton _("Authors note") ypos 315 action Help()
         #textbutton _("Save & Quit") ypos 325 action Quit()
         
-        #CHEAT/DEBUG: Put these as the bottom three buttons to enable saving and loading. 
-        #textbutton _("Save game") ypos 305 action ShowMenu("save")
-        #textbutton _("Load game") ypos 315 action ShowMenu("load")
-        #textbutton _("Main Menu") ypos 325 action MainMenu()
+        
         
 
 init -2 python:
