@@ -402,7 +402,7 @@ label lb_enc_granary:
         if 'fire_breath' in game.dragon.modifiers(): 
             doit = True
     menu:
-        'Breath fire' if doit:
+        'Breathe fire' if doit:
             $ game.dragon.drain_energy()
             "[game.dragon.name] spews a stream of liquid flame directly onto the thatched roof of the granary. The people will be unable to extinguish the fire, and when the grain is burned up, they will have less time to think about how to slay dragons, and more time to think about how they will fill their stomachs..."
             $ game.poverty.value += 1

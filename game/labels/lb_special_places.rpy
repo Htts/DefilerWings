@@ -917,7 +917,7 @@ label lb_dwarf_army:
                     'It is a shame to retreat when victory is so close, but cornered dwarves can be extremely dangerous opponents. Sometimes it is better not to risk it!'
                     $ game.dragon.gain_rage()
                     
-        'Running tail between his legs':
+        'Run, tail between legs':
             'Today shorty is lucky, but even if they restore the gate, they will not be left alone for long...'
             $ game.dragon.gain_rage()
     return

@@ -246,7 +246,7 @@ thief_last_names = [
     u"the Crawler",
     u"the Rhymer",
     u"the Indecent",
-    u"the Unprincipled",
+    u"the Immoral",
     u"the Cocky",
     u"the Nervous",
     u"the Scretchy",
@@ -272,10 +272,10 @@ thief_last_names = [
     u"the Hellspawn",
     u"the Greasy",
     u"Fast one",
-    u"the Rasp",
-    u"the Woomaniser",
+    u"the Rake",
+    u"the Womaniser",
     u"the Bull",
-    u"the Cord",
+    u"the Noose",
     u"Masterkey",
     u"the Pig Nose",
     u"the Daredevil",
@@ -1089,7 +1089,7 @@ lair_upgrades = Container(
                 u'Thief bypasses the traps.',
             ],
             "fail": [
-                u'Unlucky thief steps on a shift-plate and activates'
+                u'The unlucky thief steps on a pressure plate and activates '
                 u'a deadly blade trap.',
             ]
         },
@@ -1097,10 +1097,10 @@ lair_upgrades = Container(
             "name": u"Magic trap",
             "protection": 1,
             "success": [
-                u'Cunning thief spots a glimmer and avoids a magical trap.',
+                u'The cunning thief spots a glimmer and avoids a magical trap.',
             ],
             "fail": [
-                u'Magical trap disintegrates the trespasser.',
+                u'A magical trap disintegrates the trespasser.',
             ]
         },
         "poison_guards": {
@@ -1110,7 +1110,7 @@ lair_upgrades = Container(
                 u"Venomous beasts can't stop the trespasser.",
             ],
             "fail": [
-                u'Sneaky venomous beast bites the unlucky thief. '
+                u'A sneaky venomous beast bites the unlucky thief. '
                 u'He dies in great pain...',
             ]
         },
@@ -1119,10 +1119,10 @@ lair_upgrades = Container(
             "replaces": "smuggler_guards",  # какое улучшение автоматически заменяет
             "protection": 2,
             "success": [
-                u'Burglar stealthily stabs guards with his dagger, one by one.',
+                u'The burglar stealthily stabs guards with his dagger, one by one.',
             ],
             "fail": [
-                u'Guard spots the thief and raises the alarm. '
+                u'A guard spots the thief and raises the alarm. '
                 u'After a short but brutal fight thief is defeated and executed.',
             ]
         },
@@ -1131,7 +1131,7 @@ lair_upgrades = Container(
             "cost": 100,
             "protection": 2,
             "success": [
-                u'Burglar stealthily stabs guards with his dagger, one by one.',
+                u'The burglar stealthily stabs guards with his dagger, one by one.',
             ],
             "fail": [
                 u'Guard spots the thief and raises the alarm. '
@@ -1146,7 +1146,7 @@ lair_upgrades = Container(
                 u'the elite guard and into the treasure chamber.',
             ],
             "fail": [
-                u'Thief tried to sneak on an guard of treasure chamber but fails.'
+                u'Thief tried to sneak up on an guard of the treasure chamber but fails. '
                 u'The bloodthirsty monster rips him apart.',
 
             ]
@@ -1358,7 +1358,7 @@ dragon_size_description = [
     u'There are few animals in the local forests that come close to his size. '
     u'Only the most well fed bulls or cave bears compare with him.',
 
-    u'He can give even an elephant a run for it\'s money in size and weight. '
+    u'He can give even an elephant a run for its money in size and weight. '
     u'Other than that there is no equal in the forests and fields of the kingdom.',
 
     u'Even titans pale in comparison, only whales and krakens come even close in weight. '
@@ -1395,9 +1395,9 @@ paws_description = [
 special_features = ('tough_scale', 'poisoned_sting', 'clutches', 'horns', 'fangs', 'ugly')
 
 special_description = [
-    u'He has an impenetrable scales.',
+    u'He has impenetrable scales.',
 
-    u'He has a deadly poison sting in the tip of the tail.',
+    u'He has a deadly poison sting on the tip of his tail.',
 
     u'His claws are razor sharp.',
 
@@ -2272,8 +2272,8 @@ dark_army = {
         500: u"Although the army of darkness has become stronger in recent years, it is not yet ready to battle the free people. The dragon will have to take the brunt of each fight to stand a chance.",
         1000: u"Overall, the Army of Darkness is good enough to have a chance in battles with the armies of the Free People. "
               u"However, there cannot be full confidence in victory. The dragon will have to support the troops by example.",
-        1800: u"Over the years of preparation the Army of Darkness has soared to incredible heights of power. "
-              u"The army of the Free Peoples will be crushed and tramped by this invincible force. Even ignoring the help the dragon and Mistress can personally render."
+        1800: u"Through years of preparation the Army of Darkness has soared to incredible heights of power. "
+              u"The army of the Free Peoples will be crushed and trampled by this invincible force. Even ignoring the help the dragon and Mistress can personally render."
     }
 }
 #Achievements

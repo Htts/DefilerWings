@@ -157,7 +157,7 @@ python early:
     txt_place_enfr = [
         ['An elven castle. Bingo!'],
         ['The sacred tree of the elves, grown from a gift of the goddess Danu, is huge and immense. In its branches, under the roots and in the hollows, elves have arranged a splendid palace in which the king and queen reside. Inside reside many treasures, but a large forest guard protects this place, and will be difficult to combat.'],
-        ['Elves carry their treasures on themselves, and here there are enough of them to borrow a few things from:'],
+        ['Elves carry their treasures on themselves, and here there are enough elves to borrow a few things from:'],
         ['%(dragon_name)s finds the Queen of the Elves.'],
         ['Now the grove is empty, but the old magic still glimmers in the trunk of the great tree, protecting the surrounding area. Here you can make a secret lair.'],
         ['%(dragon_name_full)s roars in victory. No one else stands in his way, and the elven forest palace is now defenseless.']

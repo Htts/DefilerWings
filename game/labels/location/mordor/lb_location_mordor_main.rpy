@@ -166,7 +166,7 @@ label lb_tactics_choice:
             $ atk_tp = 'physical'
         'Spell' if game.dragon.mana > 0:
             $ atk_tp = 'magic'
-        'Breath fire' if 'fire_breath' in game.dragon.modifiers():
+        'Breathe fire' if 'fire_breath' in game.dragon.modifiers():
             $ atk_tp = 'fire'
         'Icy breath' if 'ice_breath' in game.dragon.modifiers():
             $ atk_tp = 'ice'
@@ -341,7 +341,7 @@ label lb_nemesis:
         game.dragon 'But she is also injured!'
         $ mistress_hp -= 1
     else:
-        mistress 'It\'s smart to hide, you can live an extra minute, or maybe even two!'  
+        mistress 'You\'re smart to hide, you can live an extra minute, or maybe even two!'  
                             
     call lb_new_round from _call_lb_new_round_7
     return
@@ -427,7 +427,7 @@ label lb_war_border:
         army_decimator = 10
     
     show expression 'img/scene/dark_march.jpg' as bg
-    'A battle near the border, the Army of Darkness enters the battle. The defenders rely on catapults.'
+    'The Army of Darkness enters into a skirmish near the border. The defense is based around catapults.'
     
     $ game.foe = Enemy('catapult', game_ref=game)
     $ narrator(show_chances(game.foe))
@@ -506,7 +506,7 @@ label lb_war_field:
             $ game.army.power_percentage -= army_decimator
             
         'Slay the Titan': #Дракон бережёт армию и сам уничтожает наиболее опасных врагов
-            '[game.dragon.fullname] you personally enter into battle with the titan in order to save the troops.'
+            '[game.dragon.fullname] personally enters into battle with the titan in order to save the troops.'
             call lb_fight from _call_lb_fight_44
 
         'Plead for help': #Владычица вступает в бой и выигрывает его вместо дракона и армии
